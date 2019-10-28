@@ -1,0 +1,65 @@
+#include <DHT.h>
+#include <Wire.h>
+#include <BH1750.h>
+
+#define dataPin PA1
+#define DHTType DHT22
+#define SensorPin PA3
+
+
+
+DHT dht = DHT(dataPin, DHTType);
+BH1750 lightMeter(0x23);
+
+String getTempAndHum(){
+  delay(2000);
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  
+  if (isnan(h) || isnan(t)) {
+    return "Failed to read from the DHT sensor, check wiring.";
+  }  
+  return "Temperature = "+String(t)+" °C || Humidity = "+String(h)+"%";  
+}
+
+
+String getMoisture(){
+  float sensorValue = 0; 
+  for (int i = 0; i <= 100; i++) 
+ { 
+   sensorValue = sensorValue + analogRead(SensorPin); 
+   delay(1); 
+ } 
+ sensorValue = map(sensorValue,-60000, -40000, 0, 100);
+ sensorValue = map(sensorValue,1500, 2500, 100, 0); 
+ sensorValue = map(sensorValue,120, 14, 100, 0); 
+ return "Moisture level = "+String(sensorValue)+" %"; 
+}
+
+
+String getLux(){
+  if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
+  }
+  else {
+    return "Error initialising BH1750";
+  }
+  float lux = lightMeter.readLightLevel();
+  return "Light = "+String(lux)+" lx";
+}
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+  Wire.begin();
+  pinMode(SensorPin,INPUT_ANALOG);
+  
+
+}
+
+void loop() {
+  Serial.println(getTempAndHum());
+  Serial.println(getLux());
+  Serial.println(getMoisture());
+  Serial.println();
+  delay(1000);
+}
