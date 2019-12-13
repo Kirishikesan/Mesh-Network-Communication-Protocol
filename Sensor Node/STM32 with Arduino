@@ -6,7 +6,7 @@
 #define DHTType DHT22
 #define SensorPin PA3
 
-
+/* pull request from denuwan */
 
 DHT dht = DHT(dataPin, DHTType);
 BH1750 lightMeter(0x23);
