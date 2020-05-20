@@ -1,0 +1,143 @@
+table.table-expandable
+{
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+th {
+    color: black;
+}
+
+table.table-expandable > thead > tr > th.table_edit_links {
+    width: 1.5em;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow:hover {
+    background-color: #37637f;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow {
+    background:transparent url(../images/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;
+    
+    cursor: pointer;
+}
+
+table.table-expandable > thead > tr div.table-expandable-arrow:hover {
+    background-color: #37637f;
+}
+
+table.table-expandable > thead > tr div.table-expandable-arrow {
+    background:transparent url(../images/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;
+    
+    cursor: pointer;
+}
+
+table.table-expandable > thead > tr div.table-expandable-arrow.up {
+    background-position:0px 0px;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow.up {
+    background-position:0px 0px;
+}
+
+table.table-expandable > tbody > tr div.table-delete:hover {
+    background-color: #37637f;
+}
+
+table.table-expandable > tbody > tr div.table-delete {
+    background:transparent url(../images/icons8-cancel-26.png) no-repeat scroll; width:26px; height:26px; display:block;
+    
+    cursor: pointer;
+}
+
+
+table.table-expandable > tbody > tr div.table-edit:hover {
+    background-color: #37637f;
+}
+
+table.table-expandable > tbody > tr div.table-edit {
+    background:transparent url(../images/icons8-edit-26.png) no-repeat scroll; width:26px; height:26px; display:block;
+    
+    cursor: pointer;
+}
+
+table.table-expandable > tbody > tr div.table-schedule:hover {
+    background-color: #37637f;
+}
+
+table.table-expandable > tbody > tr div.table-schedule {
+    background:transparent url(../images/icons8-schedule-26.png) no-repeat scroll; width:26px; height:26px; display:block;
+    
+    cursor: pointer;
+}
+
+.table-scroll {
+  height:250px;
+  overflow:auto;
+  margin-top:20px;
+}
+
+table.table-expandable a:hover{
+    background-color: #37637f;
+}
+
+.motesUL { 
+  list-style: none;
+  margin: 5px 30px;
+}
+.motesUL > li {
+  margin: 10px 0;
+}
+
+.container {
+    border-bottom: solid #37637f;
+    border-right: solid #37637f;
+    border-top: solid #37637f;
+}
+
+.container > .box-title {
+    padding: 0 3px;
+    margin-top: -0.8em;
+}
+.box-title {
+    background: #3f9fc9 none repeat scroll 0 0;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+a.expand {
+    cursor: pointer;
+    margin: 0 5px;
+    color: black;
+}
+
+.howToUseOL { 
+  list-style-type: decimal;
+  margin: 5px 30px;
+}
+.howToUseOL > li {
+    display: list-item;
+    list-style-position: inside;
+    margin: 10px 0;
+}
+
+caption {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+table.table-expandable > tbody > td {
+    text-overflow: "-";
+}
+
+td {
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a {
+    cursor: pointer;
+    color: blue;
+}

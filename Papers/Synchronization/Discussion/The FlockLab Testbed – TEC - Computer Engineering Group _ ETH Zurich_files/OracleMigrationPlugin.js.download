@@ -1,0 +1,889 @@
+/* global ORAreplicate, ORA, cookie, Webtrends, WT, WebTrends */
+/* jshint -W069 */
+/**
+ * we are essentially replicating the tag(s) cookie code to set a second cookie ORA_FPC and
+ * disabling third party cookies for that cookie/data collector
+ * @returns {undefined}
+ */
+(function () {
+    // each of the individual tags have their own cookie functions
+    // we'll create our own set so we are not dependent on what's in
+    // the tags if it changes
+    var dcs = null;
+    var ORAcookie = {
+        /*
+         * All the cookie related functionality
+         */
+        FPCConfig: {
+            enabled: true,
+            domain: '',
+            name: '',
+            expiry: '',
+            expireDate: '',
+            sessionOnly: ''
+        },
+        // third party cookie config - we want this to always be disabled
+        TPCConfig: {
+            enabled: false
+        },
+        // the local cookie data to merge with the replicated outgoing hit to the new endpoint
+        cookiePayload: {},
+        // got the cookie so we can move forward
+        setReady: function () {
+            //shell for legacy function
+        },
+        // stuff to do when the cookie has been set
+        destinations: {},
+        timezone: null,
+        /**
+         * This function takes the name of the store and returns an object which has
+         * the key value pairs from that store.
+         * @param {type} name
+         * @param {type} object
+         * @returns {Boolean}
+         */
+        _dcsGetCookie: function (name, object) {
+            var element = this.extendArray(document.cookie.split('; ')).filter(function (el) {
+                return el.indexOf(name + '=') !== -1;
+            })[0];
+            if (!element || element.length < name.length + 1) {
+                return false;
+            }
+            var crumbs = element.split(name + '=')[1].split(':');
+            this.extendArray(crumbs).forEach(function (a) {
+                var b = a.split('=');
+                object[b[0]] = b[1];
+            });
+            return true;
+        },
+        /**
+         * This function returns an object which has
+         * the key value pairs from that store.
+         * @returns {obj}
+         */
+        _dcsGetCookieObj: function () {
+            var element = this.extendArray(document.cookie.split('; '));
+            var obj = {};
+            for (var o in element) {
+                if (element.hasOwnProperty(o) && typeof element[o] === 'string' && element[o].indexOf('=') > -1) {
+                    var name = element[o].split('=')[0];
+                    obj[name] = {};
+                    var crumbs = element[o].split(name + '=')[1].split(':');
+                    var eA = this.extendArray(crumbs);
+                    for (var c = 0; c < eA.length; c++) {
+                        var b = eA[c].split('=');
+                        obj[name][b[0]] = b[1];
+                    }
+                }
+            }
+            return obj;
+        },
+        /**
+         * this function saves the cookie
+         * @param {type} storename
+         * @param {type} object
+         * @param {type} cookieMetaData
+         * @returns {undefined}
+         */
+        _dcsSaveCookie: function (storename, object, cookieMetaData) {
+            var data = [];
+            var kvpArr = this.objectToKVPArray(object);
+            this.extendArray(kvpArr).forEach(function (el) {
+                data.push(el['k'] + '=' + el['v']);
+            });
+            data = data.sort().join(':');
+            document.cookie = storename + '=' + data + cookieMetaData;
+        },
+        /**
+         *
+         * delete the cookie
+         *
+         * @param {type} name
+         * @param {type} path
+         * @param {type} domain
+         * @returns {undefined}
+         */
+        _dcsDeleteCookie: function (name, path, domain) {
+            var cDelete = name + '=';
+            cDelete += '; expires=expires=Thu, 01 Jan 1970 00:00:01 GMT';
+            cDelete += '; path=' + path;
+            if (domain) {
+                cDelete += ';domain=';
+            } else {
+                cDelete += '';
+            }
+            document.cookie = cDelete;
+        },
+        /**
+         * ensure the cookie is set - if we don't have permissions to create
+         * a cookie for the domain provided, we will fail to set the cookie
+         *
+         * @param {type} name
+         * @param {type} id
+         * @param {type} lv
+         * @param {type} ss
+         * @returns {Number}
+         */
+        _dcsIsFpcSet: function (name, id, lv, ss) {
+            var c = {};
+            if (this._dcsGetCookie(name, c)) {
+                if (id === c['id'] && lv === c['lv'] && ss === c['ss']) {
+                    return 0;
+                } else {
+                    return 3;
+                }
+            }
+            return 2;
+        },
+        /**
+         * _isEloquaOptOut - determind if the eqoqua optout is set
+         * @param {type} c
+         * @returns {Boolean}
+         */
+        _isEloquaOptOut: function (c) {
+            var eGuid = c['ELOQUA'] && (c['ELOQUA']['guid'] !== undefined && c['ELOQUA']['guid'] === '000000000000000000000000000000');
+            var e33 = c['ELOQUA'] && (c['ELOQUA']['s33'] !== undefined && c['ELOQUA']['s33'] === '0');
+
+            return eGuid || e33;
+        },
+        /*
+         * _isInfinityOptOut - determine if the infinity oprotu is set
+         * @param {type} c
+         * @returns {Boolean}
+         */
+        _isInfinityOptOut: function (c) {
+            return c['Infnity.optout'] && c['infinity.optout']['state'] !== undefined && c['infinity.optout']['state'] === '1';
+        },
+        /**
+         * _isWtOptOut - determind if the webtrends optout is set
+         * @param {type} c
+         * @returns {Boolean}
+         */
+        _isWtOptOut: function (c) {
+            return c['WTOPTOUT'] && c['WTOPTOUT']['1'];
+        },
+        /**
+         * determine if they are opted out of tracking
+         *
+         * @returns {bool}
+         */
+        _isOptedOut: function () {
+
+            var c = this._dcsGetCookieObj();
+
+            return this._isEloquaOptOut(c) || this._isInfinityOptOut(c) || this._isWtOptOut(c);
+        },
+        /**
+         * get/set the first-party cookie
+         *
+         * @returns {undefined}
+         */
+        dcsFPC: function () {
+            // if they are opted out don't set a cookie
+            if (this._isOptedOut()) {
+                return;
+            }
+            if (!this.FPCConfig.enabled && !this.TPCConfig.enabled) {
+                this.cookiePayload['ce'] = '0';
+            } else if (this.FPCConfig.enabled && !this.TPCConfig.enabled) {
+                this.cookiePayload['ce'] = '1';
+            } else {
+                this.cookiePayload['ce'] = '2';
+            }
+            if (!this.FPCConfig.enabled) {
+                if (this.vtid) {
+                    this.cookiePayload['vtid'] = this.vtid;
+                } else {
+                    this.cookiePayload['vtid'] = '';
+                }
+                this._dcsDeleteCookie(this.FPCConfig.name, '/', this.FPCConfig.domain);
+                return;
+            }
+            // create our cookie payload
+            var cookiePayload = this.cookiePayload;
+            var name = this.FPCConfig.name;
+            // adjsut based ont he local time zone
+            var dCur = new Date();
+            var adj = (dCur.getTimezoneOffset() * 60000) + (this.timezone * 3600000);
+            dCur.setTime(dCur.getTime() + adj);
+            var dSes = new Date(dCur.getTime());
+            cookiePayload['co_f'] = cookiePayload['vtid'] = cookiePayload['vtvs'] = '';
+            cookiePayload['vt_f'] = cookiePayload['vt_f_a'] = cookiePayload['vt_f_s'] = '';
+            cookiePayload['vt_f_tlh'] = cookiePayload['vt_f_tlv'] = '';
+            var c = {};
+            if (!this._dcsGetCookie(name, c)) {
+                // generate a unique random cookie value
+                cookiePayload['co_f'] = '2';
+                var curt = dCur.getTime().toString();
+                for (var i = 2; i <= (32 - curt.length); i++) {
+                    cookiePayload['co_f'] += Math.floor(Math.random() * 16.0).toString(16);
+                }
+                cookiePayload['co_f'] += curt;
+                // new cookie means first visit
+                cookiePayload['vt_f'] = cookiePayload['vt_f_a'] = cookiePayload['vt_f_s'] = '1';
+                cookiePayload['vt_f_tlh'] = cookiePayload['vt_f_tlv'] = '0';
+            } else {
+                var id = c['id'];
+                var lv = parseInt(c['lv'], 10);
+                var ss = parseInt(c['ss'], 10);
+                if ((id === null) || (id === 'null') || isNaN(lv) || isNaN(ss)) {
+                    return;
+                }
+                cookiePayload['co_f'] = id;
+                var dLst = new Date(lv);
+                cookiePayload['vt_f_tlh'] = Math.floor((dLst.getTime() - adj) / 1000);
+                dSes.setTime(ss);
+                if ((dCur.getTime() > (dLst.getTime() + 1800000)) || (dCur.getTime() > (dSes.getTime() + 28800000))) {
+                    cookiePayload['vt_f_tlv'] = Math.floor((dSes.getTime() - adj) / 1000);
+                    dSes.setTime(dCur.getTime());
+                    cookiePayload['vt_f_s'] = '1';
+                }
+            }
+            cookiePayload['co_f'] = escape(cookiePayload['co_f']);
+            if (typeof (this.vtid) === 'undefined') {
+                cookiePayload['vtid'] = cookiePayload['co_f'];
+            } else {
+                cookiePayload['vtid'] = this.vtid || '';
+            }
+            cookiePayload['vtvs'] = (dSes.getTime() - adj).toString();
+            this.FPCConfig.expireDate = new Date(dCur.getTime() + this.FPCConfig.expiry);
+            var expiry;
+            if (this.FPCConfig.sessionOnly) {
+                expiry = '';
+            } else {
+                expiry = '; expires=' + this.FPCConfig.expireDate.toGMTString();
+            }
+            var cookieMetaData;
+            if (this.FPCConfig.domain !== '') {
+                cookieMetaData = expiry + '; path=/' + '; domain=' + this.FPCConfig.domain;
+            } else {
+                cookieMetaData = expiry + '; path=/' + '';
+            }
+            var cur = dCur.getTime().toString();
+            var ses = dSes.getTime().toString();
+            c['id'] = cookiePayload['co_f'];
+            c['lv'] = cur;
+            c['ss'] = ses;
+            this._dcsSaveCookie(name, c, cookieMetaData);
+            var rc = this._dcsIsFpcSet(name, cookiePayload['co_f'], cur, ses);
+            if (rc !== 0) {
+                cookiePayload['co_f'] = cookiePayload['vtvs'] = cookiePayload['vt_f_s'] = cookiePayload['vt_f_tlh'] = cookiePayload['vt_f_tlv'] = '';
+                if (typeof this.vtid === 'undefined') {
+                    cookiePayload['vtid'] = '';
+                }
+                cookiePayload['vt_f'] = cookiePayload['vt_f_a'] = rc;
+            }
+        },
+        /**
+         * extend an array
+         * @param {type} in_array
+         * @returns {unresolved}
+         */
+        extendArray: function (in_array) {
+            if (in_array) {
+                if (!in_array.forEach) {
+                    in_array.forEach = function (D, E) {
+                        var C = E || window;
+                        for (var B = 0, A = this.length; B < A; ++B) {
+                            D.call(C, this[B], B, this);
+                        }
+                    };
+                }
+                if (!in_array.filter) {
+                    in_array.filter = function (E, F) {
+                        var D = F || window;
+                        var A = [];
+                        for (var C = 0, B = this.length; C < B; ++C) {
+                            if (!E.call(D, this[C], C, this)) {
+                                continue;
+                            }
+                            A.push(this[C]);
+                        }
+                        return A;
+                    };
+                }
+                if (!in_array.indexOf) {
+                    in_array.indexOf = function (B) {
+                        for (var A = 0; A < this.length; ++A) {
+                            if (this[A] === B) {
+                                return A;
+                            }
+                        }
+                        return -1;
+                    };
+                }
+            }
+            return in_array;
+        },
+        /**
+         * Useful when you want to convert key value pair objects {foo:"boo", goo:"foo"} to arrays like so [{foo:"boo}, {goo:"foo"}]
+         * so you can use the array filter, foreach, indexOf methods...
+         * @param {type} object
+         * @returns {Array|cookie.objectToKVPArray.tmp}
+         */
+        objectToKVPArray: function (object) {
+            var tmp = [];
+            for (var key in object) {
+                if (object.hasOwnProperty(key) && object[key] !== '' && object[key] !== undefined && (typeof object[key] !== 'function')) {
+                    tmp.push({
+                        'k': key,
+                        'v': object[key]
+                    });
+                }
+            }
+            return tmp;
+        },
+        /**
+         *
+         *  If not First Party Cookie (FPC) then do a JSONP call to wtid.js to load the ID.
+         *  returns true: if we already have a FPC
+         *          false: if we need needed to call wtid.js
+         * @param {type} _dcs
+         * @returns {Boolean}
+         */
+        dcsGetId: function () {
+            // since we disable third party cookies for oracle data collection we no longer need this callback
+            return true;
+        },
+        /**
+         * set up the cookie
+         * @param {object} cfg host tags config so we can copy over their general cookie settings
+         * @returns {undefined}
+         */
+        setUp: function (cfg) {
+            // respect their current cookie settings and pull them over - make dependent on the tag dom setting
+            for (var e in cfg.FPCConfig) {
+                if (cfg.FPCConfig.hasOwnProperty(e)) {
+                    this.FPCConfig[e] = cfg.FPCConfig[e];
+                }
+            }
+
+            // set our new cookie name
+            this.FPCConfig.name = fpcName;
+        }, /**
+         * setDestinations
+         * @param {type} dst
+         * @returns {undefined}
+         */
+        setDestinations: function (dst) {
+            this.destinations = dst;
+        },
+        /**
+         * getDestinations
+         * @returns {type}
+         */
+        getDestinations: function () {
+            return this.destinations;
+        }
+    };
+    // private locals
+    this.timeout = null;
+    this.timezone = null;
+    this.requestCount = 0;
+    this.origCallback = null;
+    this.infinityRoot = 'WT';
+    this.fpcName = 'ORA_FPC';
+    this.l_dcsid = true;
+    this.sendQryStrAsParam = true;
+    this.version = '1.4';
+    this.addParams = '';
+    this.oi18n = false;
+
+    /**
+     * replicate an infinity hit
+     *
+     * @returns {undefined}
+     */
+
+    var SendImageClass = function () {
+        var requestCount = 0;
+        var self = this;
+        // closure
+        var decReq = function () {
+            return function () {
+                requestCount--;
+            };
+        };
+        /**
+         * make an img call
+         *
+         * @param {object} dest
+         * @param {string} query
+         * @returns {undefined}
+         */
+        self.sendImage = function (dest, query) {
+            for (var e in dest) {
+                if (dest.hasOwnProperty(e)) {
+                    // build the hit and send it replicated
+                    // break point
+                    var replicatedServer = dest[e];
+                    var repSrc;
+                    if (location.protocol.indexOf('https:') === 0) {
+                        repSrc = 'http' + 's' + '://';
+                    } else {
+                        repSrc = 'http' + '://';
+                    }
+
+                    repSrc += replicatedServer.server + '/' + replicatedServer.accountGuid + '/dcs.gif?' + query;
+                    requestCount++;
+                    if (document.images) {
+                        var img = new Image();
+                        img.onload = decReq();
+                        img.src = repSrc;
+                    }
+                }
+            }
+        };
+    };
+    /**
+     * transform query string to object
+     *
+     * @param {string} o
+     * @returns {object}
+     */
+    var queryStringToObj = function (o) {
+        var payload = {};
+        var p = o.split('&');
+        for (var c = 0; c < p.length; c++) {
+            var paramData = p[c].split('=')[1];
+            if (p[c] !== '') {
+                // special case - put dcsqry into new Infinity format
+                if (p[c].split(/=(.+)/)[0] === 'dcsqry' && this.sendQryStrAsParam) {
+                    paramData = unescape(unescape(p[c].split(/=(.+)/)[1]));
+                    // strip the first character if its a ?
+                    if (paramData.charAt(0) === '?' && paramData.length > 1) {
+                        paramData = paramData.slice(1);
+
+                        //split into separate parameters
+                        var paramSplit = paramData.split('&');
+                        for (var d = 0; d < paramSplit.length; d++) {
+                            payload[paramSplit[d].split(/=(.+)/)[0]] = paramSplit[d].split(/=(.+)/)[1];
+                        }
+                    }
+                } else {
+                    payload[p[c].split(/=(.+)/)[0]] = paramData;
+                }
+            }
+        }
+        // don't send vt_f_d - its been depreciated
+        delete payload['WT.vt_f_d'];
+        return payload;
+    };
+    /**
+     * transform obj to query string
+     *
+     * @param {object} p
+     * @returns {string}
+     */
+    var objtoQrystring = function (p) {
+        /**
+* dcsEscape
+* @param {string} S
+* escapes 16 byte characters (international)
+*/
+        var dcsEscape = function (S) {
+            REL = (function () {
+                return (window['RegExp'] ? (this.oi18n ? {
+                    "%25": /\%/g,
+                    "%26": /\&/g,
+                    "%23": /\#/g
+                } : {
+                        "%09": /\t/g,
+                        "%20": / /g,
+                        "%23": /\#/g,
+                        "%26": /\&/g,
+                        "%2B": /\+/g,
+                        "%3F": /\?/g,
+                        "%5C": /\\/g,
+                        "%22": /\"/g,
+                        "%7F": /\x7F/g,
+                        "%A0": /\xA0/g
+                    }) : "");
+            })();
+            if (REL != "") {
+                if (S === null || S === undefined) {
+                    return "";
+                }
+                S = S.toString();
+                for (var R in REL) {
+                    if (REL[R] instanceof RegExp) {
+                        S = S.replace(REL[R], R);
+                    }
+                }
+                return S;
+            } else {
+                return escape(S);
+            }
+        };
+        var exre = (function () {
+            return (window['RegExp'] ? new RegExp("dcs(uri)|(ref)|(aut)|(met)|(sta)|(sip)|(pro)|(byt)|(dat)|(p3p)|(cfg)|(redirect)|(cip)", "i") : "");
+        })();
+        var parms = [];
+        for (var c in p) {
+            if (p.hasOwnProperty(c)) {
+                if (this.oi18n && !exre.test(p[c])) {
+                    parms.push(c + '=' + dcsEscape(encodeURIComponent(p[c])));
+                } else {
+                    parms.push(c + '=' + dcsEscape(p[c]));
+                }
+            }
+        }
+        // add in any added params
+        for (var q in this.addParams) {
+            if (this.addParams.hasOwnProperty(q)) {
+                parms.push(q + '=' + this.addParams[q]);
+            }
+        }
+        return parms.join('&');
+    };
+    /**
+     * replicate the Infinity Hit
+     * @param {type} msg
+     * @returns {undefined}
+     */
+    var replicateInf = function (msg) {
+        var dest = ORAcookie.getDestinations();
+        ORAcookie.dcsFPC();
+        var localPayload = {};
+        var query, i;
+        for (var p in msg.payload) {
+            if (msg.payload.hasOwnProperty(p)) {
+                var paramData = unescape(unescape(msg.payload[p]));
+                if (p === 'dcsqry' && paramData.charAt(0) === '?' && paramData.length > 1) {
+                    paramData = paramData.slice(1);
+
+                    //split into separate parameters
+                    var paramSplit = paramData.split('&');
+                    for (var d = 0; d < paramSplit.length; d++) {
+                        localPayload[paramSplit[d].split(/=(.+)/)[0]] = paramSplit[d].split(/=(.+)/)[1];
+                    }
+                } else {
+                    localPayload[p] = msg.payload[p];
+                }
+            }
+        }
+        // overlay our parms into the data
+        for (var r in ORAcookie.cookiePayload) {
+            if (ORAcookie.cookiePayload.hasOwnProperty(r) && ORAcookie.cookiePayload[r] !== null && ORAcookie.cookiePayload[r] !== '') {
+                localPayload['wt.' + r] = ORAcookie.cookiePayload[r];
+            }
+        }
+        // add the local dcsid if requested
+        if (this.l_dcsid) {
+            localPayload['ora.l_dcsid'] = window[this.infinityRoot].analytics.dcsRef.dcsid;
+        }
+        // add in the plugin versioning
+        localPayload['wt.omp_ver'] = this.version;
+        // make it back into qry string
+        query = objtoQrystring(localPayload);
+        i = new SendImageClass();
+        i.sendImage(dest, query);
+        if (this.disableWT) {
+            // remove the endpoints to disable Infinity WT data
+            msg.endpoints = [];
+        }
+        this.origCallback(msg);
+    };
+    /**
+     * replicate an A10 hit
+     *
+     * @param {object} d
+     * @param {object} o
+     * @param {object} oracleImage
+     * @returns {undefined}
+     */
+
+    var replicateA10 = function (d, o, oracleImage) {
+        var dest = ORAcookie.getDestinations();
+        // get the hit that was just sent
+        var src = d.images[d.images.length - 1].src;
+        // get the query string
+        var query = src.substr(src.indexOf('?') + 1);
+        // slice it up
+        var payload = queryStringToObj(query);
+        ORAcookie.dcsFPC();
+        // overlay our parms into the data
+        for (var p in ORAcookie.cookiePayload) {
+            if (ORAcookie.cookiePayload.hasOwnProperty(p) && ORAcookie.cookiePayload[p] !== null && ORAcookie.cookiePayload[p] !== '') {
+                payload['WT.' + p] = ORAcookie.cookiePayload[p];
+            }
+        }
+        payload['WT.omp_ver'] = this.version;
+        // make it back into qry string
+        var qry = objtoQrystring(payload);
+        oracleImage.sendImage(dest, qry, d, o);
+    };
+    /**
+     * Replicates the basic multitrack functionality
+     *
+     *
+     * @param {type} o
+     * @returns {undefined}
+     */
+    var multiTrackShim = function (o) {
+        // legacy dcsMultitrak shim
+        var payload = {},
+            i,
+            d = WT.analytics.dcsRef;
+        d.WT = {};
+
+        if (!o.argsa) {
+            o.argsa = [];
+        }
+        // deal with the callback objects
+        if (typeof o === 'object') {
+            if (o.transform) {
+                o.transform(d, o);
+            }
+            if (o.arg) {
+                for (i = 0; i < o.arg.length; i += 2) {
+                    payload[o.argsa[i]] = o.argsa[i + 1];
+                }
+            }
+            if (o.argsa) {
+                for (i = 0; i < o.argsa.length; i += 2) {
+                    payload[o.argsa[i]] = o.argsa[i + 1];
+                }
+            }
+        }
+        if (typeof o === 'string') {
+            var args = o.split(',');
+            for (i = 0; i < args.length; i += 2) {
+                payload[args[i]] = args[i + 1];
+            }
+        }
+        // deal with the finish and callback if defined
+        var finishShim = function () {
+            if (o.finish) {
+                o.finish(d, o.argsa);
+            }
+            if (o.callback) {
+                o.callback(d, o.argsa);
+            }
+        };
+        // end the data
+        WT.click({ 'data': payload, config: { 'callbacks': { 'success': finishShim } } });
+    };
+    /**
+     * init for the Infinity Tag
+     *
+     * @param {object} c
+     * @param {function} fnReady
+     * @returns {initInfinity}
+     */
+    var initInfinity = function (c, fnReady) {
+        var cfg = c && c.config || {};
+
+        try {
+            if (window[this.infinityRoot] && window[this.infinityRoot].Debug) {
+                window[this.infinityRoot].Debug.debug('OMP - Init starting', 'ANA');
+            }
+            if (ORAcookie._isOptedOut()) {
+                // they are opted out - no tracking
+                if (window[this.infinityRoot] && window[this.infinityRoot].Debug) {
+                    window[this.infinityRoot].Debug.debug('Opted out - no tracking', 'ANA');
+                }
+                return;
+            }
+
+            this.timeout = 50;
+            // set up teh configs
+            if (cfg.timeout) {
+                this.timeout = cfg.timeout;
+            }
+            if (cfg.fpcName) {
+                this.fpcName = cfg.fpcName;
+            }
+            if (cfg.i18n !== undefined) {
+                this.oi18n = cfg.i18n;
+            }
+
+            // legacy multitrack configurations
+            if (cfg.legacy) {
+                if (!window.Webtrends) {
+                    window.Webtrends = {};
+                }
+                if (!Webtrends.multiTrack) {
+                    Webtrends.multiTrack = multiTrackShim;
+                }
+                if (!window.dcsMultiTrack) {
+                    window.dcsMultiTrack = multiTrackShim;
+                }
+                if (!window.WebTrends) {
+                    window.WebTrends = {};
+                }
+                WebTrends.multiTrack = multiTrackShim;
+            }
+            if (cfg.sendDcsid) {
+                this.l_dcsid = cfg.sendDcsid;
+            }
+            this.timezone = window[this.infinityRoot].analytics.dcsRef.timezone;
+            ORAcookie.setUp(window[this.infinityRoot].analytics.dcsRef);
+            ORAcookie.setDestinations(cfg.destinations);
+            window[this.infinityRoot].analytics.addMutation('OMP', function (msg) {
+                if (window[this.infinityRoot] && window[this.infinityRoot].Debug) {
+                    window[this.infinityRoot].Debug.debug('Replicating hit to Oracle collector', 'ANA');
+                }
+                replicateInf(msg);
+            });
+            // if they have a blockCollect set 0 unblock
+            if (fnReady) {
+                fnReady();
+            }
+        } catch (ignore) {
+            if (fnReady) {
+                fnReady();
+            }
+        }
+    };
+    /**
+     * Init for the A10 tag
+     * @param {object} d
+     * @param {object} c
+     * @returns {initA10}
+     */
+    var initA10 = function (d, c) {
+        var cfg = c || {};
+        var dcs = d;
+        if (ORAcookie._isOptedOut()) {
+            // theyare opted out - no tracking
+            return;
+        }
+        ORAcookie.setUp(dcs);
+        ORAcookie.setDestinations(c.destinations);
+        this.timeout = 50;
+        // set up teh config
+        if (cfg.timeout !== undefined) {
+            this.timeout = cfg.timeout;
+        }
+        if (cfg.fpcName !== undefined) {
+            this.fpcName = cfg.fpcName;
+        }
+        if (cfg.sendQryStrAsParam !== undefined) {
+            this.sendQryStrAsParam = cfg.sendQryStrAsParam;
+        }
+        if (cfg.sendDcsid !== undefined) {
+            this.l_dcsid = cfg.sendDcsid;
+        }
+        if (cfg.addParams !== undefined && typeof c.addParams === 'object') {
+            this.addParams = cfg.addParams;
+        }
+        if (cfg.i18n !== undefined) {
+            this.oi18n = cfg.i18n;
+        }
+
+        this.timezone = dcs.timezone;
+        // replicate mutation
+        var oracleReplicate = function (dcs, o) {
+            var oracleImage = new SendImageClass();
+            if (d.images.length > 0) {
+                replicateA10(dcs, o, oracleImage);
+            }
+        };
+
+        // this is a secret tag function that runs a function after all the processing has taken place on the hit.  So we have the final datum
+        Webtrends.bindEvent('finish.all', oracleReplicate, dcs);
+
+        // if they have chosen to  disable the webtrends tag then disable it now
+        d.addTransform(function (dcs, o) {
+            try {
+                if (this.l_dcsid) {
+                    o.argsa.push('DCS.ORA.l_dcsid', dcs.dcsid);
+                }
+            } catch (ignore) {
+            }
+        }, 'all');
+
+        // there is a bug in the Webtrends minified tag where the callback is obfuscated.  If so use the obfuscated name
+        try {
+            if (dcs.registerPluginCallback) {
+                dcs.registerPluginCallback('omp');
+            } else {
+                dcs.vb('omp');
+            }
+        } catch (ignore) {
+            // if there was an error - exit
+        }
+
+    };
+    /*
+     * removeInfinity
+     * @returns {undefined}
+     */
+    var removeInfinity = function () {
+        window[this.infinityRoot].analytics.rmMutation('OMP');
+    };
+    /*
+     *  Init functions
+     */
+    // look to see what tag we are in
+    // then run the approproate inif for the tag
+    if (window.Webtrends && Webtrends.registerPlugin) {
+        // this is for the Webtrends tag init
+        try {
+            // force the tag to wait for the plugins to init
+
+            if (Webtrends.plugins.omp.inline && window.utag && Webtrends.plugins.replicate) {
+                // add a blocking event into the tag
+                // if the tag is minimized, then the object is ba otherwise plugInCallbackWaitCount
+                if (Webtrends.dcss.dcsobj_0.plugInCallbackWaitCount !== undefined) {
+                    Webtrends.dcss.dcsobj_0.plugInCallbackWaitCount++;
+                }
+                if (Webtrends.dcss.dcsobj_0.ba !== undefined) {
+                    Webtrends.dcss.dcsobj_0.ba++;
+                }
+                var timeout = 500;
+                var transformPoll = setInterval(function () {
+                    timeout--;
+                    if (timeout <= 0) {
+                        clearInterval(transformPoll);
+                        if (dcs.registerPluginCallback) {
+                            dcs.registerPluginCallback();
+                        } else {
+                            dcs.vb();
+                        }
+                    }
+                    // look for the replicate transform to be added to the tag
+                    // when it is, then the replicate plugin is ready
+                    var wtEvent = Webtrends.events && Webtrends.events['transform.all'] && Webtrends.events['transform.all']['dcsobj_0'];
+                    var wtH = Webtrends.h['transform.all'] && Webtrends.h['transform.all']['dcsobj_0'];
+                    var transformDiscover = wtEvent || wtH || [];
+                    for (var t = 0; t < transformDiscover.length; t++) {
+                        if (String(transformDiscover[t] + '').indexOf('new requestReplicator') > -1) {
+                            clearInterval(transformPoll);
+                            dcs.registerPluginCallback ? dcs.registerPluginCallback() : dcs.vb();
+                        }
+                    }
+                }, 10);
+            }
+
+        } catch (ignore) {
+            if (Webtrends.dcss.dcsobj_0.plugInCallbackWaitCount !== undefined) {
+                Webtrends.dcss.dcsobj_0.plugInCallbackWaitCount--;
+            }
+            if (Webtrends.dcss.dcsobj_0.ba !== undefined) {
+                Webtrends.dcss.dcsobj_0.ba--;
+            }
+        }
+        // register the plugin so init is called
+        Webtrends.registerPlugin('omp', initA10);
+    } else if (window.WT) {
+        // this is for the Webtrends infinity tag init
+        this.infinityRoot = 'WT';
+        WT.regPlugin('omp', initInfinity);
+    } else if (window.ORA) {
+        // this is for the Oracle infinity tag init
+        this.infinityRoot = 'ORA';
+        ORA.regPlugin('omp', initInfinity);
+        //expose for unit testing
+        if (!ORA.analytics.plugins.omp) {
+            ORA.analytics.plugins.omp = {};
+        }
+        ORA.analytics.plugins.omp.init = initInfinity;
+        ORA.analytics.plugins.omp.removeInfinity = removeInfinity;
+    } else {
+        // there is some sort of config error if we reach here
+        return;
+    }
+}
+)();

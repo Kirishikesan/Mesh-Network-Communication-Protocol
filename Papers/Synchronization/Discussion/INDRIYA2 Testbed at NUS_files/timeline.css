@@ -1,0 +1,16 @@
+.vis-item.red {
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.vis-item.blue {
+  background-color: #37637f;
+  border-color: #37637f;
+}
+
+.vis-timeline {
+      border: 2px solid purple;
+      /*font-family:  purisa, 'comic sans', cursive;*/
+      font-size: 12pt;
+      background: #ffecea;
+}

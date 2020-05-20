@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets -->
+<html class="" lang="en"><head prefix="og: http://ogp.me/ns#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="Targets · Wiki · TEC / Public / FlockLab" property="og:title">
+<meta content="FlockLab is a wireless sensor network (WSN) testbed, developed and run by the ​Computer Engineering and Networks Laboratory at the ​Swiss Federal Institute of Technology Zurich in Switzerland." property="og:description">
+<meta content="/uploads/-/system/project/avatar/4360/FlockLab_GitLab_avatar_public.png" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="Targets · Wiki · TEC / Public / FlockLab" property="twitter:title">
+<meta content="FlockLab is a wireless sensor network (WSN) testbed, developed and run by the ​Computer Engineering and Networks Laboratory at the ​Swiss Federal Institute of Technology Zurich in Switzerland." property="twitter:description">
+<meta content="/uploads/-/system/project/avatar/4360/FlockLab_GitLab_avatar_public.png" property="twitter:image">
+
+<title>Targets · Wiki · TEC / Public / FlockLab · GitLab</title>
+<meta content="FlockLab is a wireless sensor network (WSN) testbed, developed and run by the ​Computer Engineering and Networks Laboratory at the ​Swiss Federal Institute of Technology Zurich in Switzerland." name="description">
+<link rel="shortcut icon" type="image/png" href="https://gitlab.ethz.ch/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" id="favicon" data-original-href="/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png">
+<link rel="stylesheet" media="all" href="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/application-5440e2dd89d3c803295cc924699c93eb762e75d42178eb3fe8b42a5093075c71.css">
+<link rel="stylesheet" media="print" href="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/print-74c3df10dad473d66660c828e3aa54ca3bfeac6d8bb708643331403fe7211e60.css">
+
+
+
+<link rel="stylesheet" media="all" href="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/white-a165d47ce52cf24c29686366976ae691bd9addb9641a6abeb3ba6d1823b89aa8.css">
+<script>
+//<![CDATA[
+window.gon={};gon.api_version="v4";gon.default_avatar_url="https://gitlab.ethz.ch/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=10;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.shortcuts_path="/help/shortcuts";gon.user_color_scheme="white";gon.gitlab_url="https://gitlab.ethz.ch";gon.revision="e3eeb779d72";gon.gitlab_logo="/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.sprite_icons="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg";gon.sprite_file_icons="/assets/file_icons-7262fc6897e02f1ceaf8de43dc33afa5e4f9a2067f4f68ef77dcc87946575e9e.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-289eccffb1183c188b630297431be837765d9ff4aed6130cf738586fb307c170.css";gon.test_env=false;gon.suggested_label_colors=["#0033CC","#428BCA","#44AD8E","#A8D695","#5CB85C","#69D100","#004E00","#34495E","#7F8C8D","#A295D6","#5843AD","#8E44AD","#FFECDB","#AD4363","#D10069","#CC0033","#FF0000","#D9534F","#D1D100","#F0AD4E","#AD8D43"];gon.first_day_of_week=0;gon.ee=false;
+//]]>
+</script>
+
+
+<script src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/runtime.dcc23e0b.bundle.js.download" defer="defer"></script>
+<script src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/main.0a47e0c8.chunk.js.download" defer="defer"></script>
+<script src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/commons_pages.admin.clusters_pages.admin.clusters.destroy_pages.admin.clusters.edit_pages.admin.clus_67737a73.7f036ed5.chunk.j.download" defer="defer"></script>
+<script src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/commons_pages.groups.milestones.edit_pages.groups.milestones.new_pages.projects.blame.show_pages.pro_bedd5722.86affde9.chunk.j.download" defer="defer"></script>
+<script src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/pages.projects.wikis.661b6006.chunk.js.download" defer="defer"></script>
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="VLZAxxdgO9ifeZb3Nyh6O44MlTxkvouTe1Cto2mNIc/nGMoOhv7LIbBAkKjfaBNJkz48xw1GgjZnh69q6qsNmw==">
+<meta content="origin-when-cross-origin" name="referrer">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<meta content="#474D57" name="theme-color">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.ethz.ch/assets/touch-icon-iphone-5a9cee0e8a51212e70b90c87c12f382c428870c0ff67d1eb034d884b78d2dae7.png">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.ethz.ch/assets/touch-icon-ipad-a6eec6aeb9da138e507593b464fdac213047e49d3093fc30e90d9a995df83ba3.png" sizes="76x76">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.ethz.ch/assets/touch-icon-iphone-retina-72e2aadf86513a56e050e7f0f2355deaa19cc17ed97bbe5147847f2748e5a3e3.png" sizes="120x120">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.ethz.ch/assets/touch-icon-ipad-retina-8ebe416f5313483d9c1bc772b5bbe03ecad52a54eba443e5215a22caed2a16a2.png" sizes="152x152">
+<link color="rgb(226, 67, 41)" href="https://gitlab.ethz.ch/assets/logo-d36b5212042cebc89b96df4bf6ac24e43db316143e89926c0db839ff694d2de4.svg" rel="mask-icon">
+<meta content="/assets/msapplication-tile-1196ec67452f618d39cdd85e2e3a542f76574c071051ae7effbfde01710eb17d.png" name="msapplication-TileImage">
+<meta content="#30353E" name="msapplication-TileColor">
+
+
+
+<style type="text/css">.toasted{padding:0 20px}.toasted.rounded{border-radius:24px}.toasted .primary,.toasted.toasted-primary{border-radius:2px;min-height:38px;line-height:1.1em;background-color:#353535;padding:0 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted .primary.success,.toasted.toasted-primary.success{background:#4caf50}.toasted .primary.error,.toasted.toasted-primary.error{background:#f44336}.toasted .primary.info,.toasted.toasted-primary.info{background:#3f51b5}.toasted .primary .action,.toasted.toasted-primary .action{color:#a1c2fa}.toasted.bubble{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#ff7043;padding:0 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted.bubble.success{background:#4caf50}.toasted.bubble.error{background:#f44336}.toasted.bubble.info{background:#3f51b5}.toasted.bubble .action{color:#8e2b0c}.toasted.outline{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#fff;border:1px solid #676767;padding:0 20px;font-size:15px;color:#676767;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-weight:700}.toasted.outline.success{color:#4caf50;border-color:#4caf50}.toasted.outline.error{color:#f44336;border-color:#f44336}.toasted.outline.info{color:#3f51b5;border-color:#3f51b5}.toasted.outline .action{color:#607d8b}.toasted-container{position:fixed;z-index:10000}.toasted-container,.toasted-container.full-width{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.toasted-container.full-width{max-width:86%;width:100%}.toasted-container.full-width.fit-to-screen{min-width:100%}.toasted-container.full-width.fit-to-screen .toasted:first-child{margin-top:0}.toasted-container.full-width.fit-to-screen.top-right{top:0;right:0}.toasted-container.full-width.fit-to-screen.top-left{top:0;left:0}.toasted-container.full-width.fit-to-screen.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.full-width.fit-to-screen.bottom-right{right:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-left{left:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.top-right{top:10%;right:7%}.toasted-container.top-left{top:10%;left:7%}.toasted-container.top-center{top:10%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.toasted-container.bottom-right{right:5%;bottom:7%}.toasted-container.bottom-left{left:5%;bottom:7%}.toasted-container.bottom-center{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:7%}.toasted-container.bottom-left .toasted,.toasted-container.top-left .toasted{float:left}.toasted-container.bottom-right .toasted,.toasted-container.top-right .toasted{float:right}.toasted-container .toasted{top:35px;width:auto;clear:both;margin-top:10px;position:relative;max-width:100%;height:auto;word-break:normal;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;box-sizing:inherit}.toasted-container .toasted .fa,.toasted-container .toasted .fab,.toasted-container .toasted .far,.toasted-container .toasted .fas,.toasted-container .toasted .material-icons,.toasted-container .toasted .mdi{margin-right:.5rem;margin-left:-.4rem}.toasted-container .toasted .fa.after,.toasted-container .toasted .fab.after,.toasted-container .toasted .far.after,.toasted-container .toasted .fas.after,.toasted-container .toasted .material-icons.after,.toasted-container .toasted .mdi.after{margin-left:.5rem;margin-right:-.4rem}.toasted-container .toasted .action{text-decoration:none;font-size:.8rem;padding:8px;margin:5px -7px 5px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:.03em;font-weight:600;cursor:pointer}.toasted-container .toasted .action.icon{padding:4px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}.toasted-container .toasted .action.icon .fa,.toasted-container .toasted .action.icon .material-icons,.toasted-container .toasted .action.icon .mdi{margin-right:0;margin-left:4px}.toasted-container .toasted .action.icon:hover{text-decoration:none}.toasted-container .toasted .action:hover{text-decoration:underline}@media only screen and (max-width:600px){#toasted-container{min-width:100%}#toasted-container .toasted:first-child{margin-top:0}#toasted-container.top-right{top:0;right:0}#toasted-container.top-left{top:0;left:0}#toasted-container.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}#toasted-container.bottom-right{right:0;bottom:0}#toasted-container.bottom-left{left:0;bottom:0}#toasted-container.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}#toasted-container.bottom-center,#toasted-container.top-center{-ms-flex-align:stretch!important;align-items:stretch!important}#toasted-container.bottom-left .toasted,#toasted-container.bottom-right .toasted,#toasted-container.top-left .toasted,#toasted-container.top-right .toasted{float:none}#toasted-container .toasted{border-radius:0}}</style><script charset="utf-8" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/vendors_select2.40c1ef71.chunk.js.download"></script><script charset="utf-8" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/vendors_gfm_copy_extra.a35ffb9d.chunk.js.download"></script><script charset="utf-8" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/gfm_copy_extra.247705f0.chunk.js.download"></script></head>
+
+<body class="ui-indigo  gl-browser-chrome gl-platform-windows" data-find-file="/tec/public/flocklab/find_file/master" data-group="" data-page="projects:wikis:show" data-project="flocklab">
+
+<script>
+  gl = window.gl || {};
+  gl.client = {"isChrome":true,"isWindows":true};
+</script>
+
+
+
+<header class="navbar navbar-gitlab qa-navbar navbar-expand-sm js-navbar">
+<a class="sr-only gl-accessibility" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets#content-body" tabindex="1">Skip to content</a>
+<div class="container-fluid">
+<div class="header-content">
+<div class="title-container">
+<h1 class="title">
+<a title="Dashboard" id="logo" href="https://gitlab.ethz.ch/"><img class="brand-header-logo js-lazy-loaded qa-js-lazy-loaded" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/ETH-Logo.PNG">
+</a></h1>
+<ul class="list-unstyled navbar-sub-nav">
+<li class="home"><a title="Projects" class="dashboard-shortcuts-projects" href="https://gitlab.ethz.ch/explore">Projects
+</a></li><li class=""><a title="Groups" class="dashboard-shortcuts-groups" href="https://gitlab.ethz.ch/explore/groups">Groups
+</a></li><li class=""><a title="Snippets" class="dashboard-shortcuts-snippets" href="https://gitlab.ethz.ch/explore/snippets">Snippets
+</a></li><li>
+<a title="About GitLab CE" href="https://gitlab.ethz.ch/help">Help</a>
+</li>
+</ul>
+
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item d-none d-sm-none d-md-block m-auto">
+<div class="search search-form" data-track-event="activate_form_input" data-track-label="navbar_search">
+<form class="form-inline" action="https://gitlab.ethz.ch/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"><div class="search-input-container">
+<div class="search-input-wrap">
+<div class="dropdown" data-url="/search/autocomplete">
+<input type="search" name="search" id="search" placeholder="Search or jump to…" class="search-input dropdown-menu-toggle no-outline js-search-dashboard-options disabled" spellcheck="false" tabindex="1" autocomplete="off" data-issues-path="/dashboard/issues" data-mr-path="/dashboard/merge_requests" aria-label="Search or jump to…">
+<button class="hidden js-dropdown-search-toggle" data-toggle="dropdown" type="button"></button>
+<div class="dropdown-menu dropdown-select">
+<div class="dropdown-content"><ul>
+<li class="dropdown-menu-empty-item">
+<a>
+Loading...
+</a>
+</li>
+</ul>
+</div><div class="dropdown-loading"><i aria-hidden="true" data-hidden="true" class="fa fa-spinner fa-spin"></i></div>
+</div>
+<svg class="s16 search-icon"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#search"></use></svg>
+<svg class="s16 clear-icon js-clear-input"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#close"></use></svg>
+</div>
+</div>
+</div>
+<input type="hidden" name="group_id" id="group_id" class="js-search-group-options">
+<input type="hidden" name="project_id" id="search_project_id" value="4360" class="js-search-project-options" data-project-path="flocklab" data-name="FlockLab" data-issues-path="/tec/public/flocklab/issues" data-mr-path="/tec/public/flocklab/merge_requests" data-issues-disabled="false">
+<input type="hidden" name="scope" id="scope" value="wiki_blobs">
+<input type="hidden" name="repository_ref" id="repository_ref">
+
+<div class="search-autocomplete-opts hide" data-autocomplete-path="/search/autocomplete" data-autocomplete-project-id="4360"></div>
+</form></div>
+
+</li>
+<li class="nav-item d-inline-block d-sm-none d-md-none">
+<a title="Search" aria-label="Search" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://gitlab.ethz.ch/search?project_id=4360"><svg class="s16"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#search"></use></svg>
+</a></li>
+<li class="nav-item header-help dropdown">
+<a class="header-help-dropdown-toggle" data-toggle="dropdown" href="https://gitlab.ethz.ch/help"><svg class="s16"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#question"></use></svg>
+<svg class="caret-down"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-down"></use></svg>
+</a><div class="dropdown-menu dropdown-menu-right">
+<ul>
+<li>
+<a href="https://gitlab.ethz.ch/help">Help</a>
+</li>
+
+<li class="divider"></li>
+<li>
+<a href="https://about.gitlab.com/submit-feedback">Submit feedback</a>
+</li>
+<li>
+<a target="_blank" class="text-nowrap" href="https://about.gitlab.com/contributing">Contribute to GitLab
+</a></li>
+
+</ul>
+
+</div>
+</li>
+<li class="nav-item">
+<div>
+<a class="btn btn-sign-in" href="https://gitlab.ethz.ch/users/sign_in?redirect_to_referer=yes">Sign in / Register</a>
+</div>
+</li>
+</ul>
+</div>
+<button class="navbar-toggler d-block d-sm-none" type="button">
+<span class="sr-only">Toggle navigation</span>
+<svg class="s12 more-icon js-navbar-toggle-right"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#ellipsis_h"></use></svg>
+<svg class="s12 close-icon js-navbar-toggle-left"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#close"></use></svg>
+</button>
+</div>
+</div>
+</header>
+
+<div class="layout-page page-gutter page-with-contextual-sidebar right-sidebar-expanded wiki-sidebar">
+<div class="nav-sidebar">
+<div class="nav-sidebar-inner-scroll">
+<div class="context-header">
+<a title="FlockLab" href="https://gitlab.ethz.ch/tec/public/flocklab"><div class="avatar-container rect-avatar s40 project-avatar">
+<img alt="FlockLab" class="avatar s40 avatar-tile js-lazy-loaded qa-js-lazy-loaded" width="40" height="40" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/FlockLab_GitLab_avatar_public.png">
+</div>
+<div class="sidebar-context-title">
+FlockLab
+</div>
+</a></div>
+<ul class="sidebar-top-level-items">
+<li class="home"><a class="shortcuts-project" href="https://gitlab.ethz.ch/tec/public/flocklab"><div class="nav-icon-container">
+<svg><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#home"></use></svg>
+</div>
+<span class="nav-item-name">
+Project
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><a href="https://gitlab.ethz.ch/tec/public/flocklab"><strong class="fly-out-top-item-name">
+Project
+</strong>
+</a></li><li class="divider fly-out-top-item"></li>
+<li class=""><a title="Project details" class="shortcuts-project" href="https://gitlab.ethz.ch/tec/public/flocklab"><span>Details</span>
+</a></li><li class=""><a title="Activity" class="shortcuts-project-activity qa-activity-link" href="https://gitlab.ethz.ch/tec/public/flocklab/activity"><span>Activity</span>
+</a></li><li class=""><a title="Releases" class="shortcuts-project-releases" href="https://gitlab.ethz.ch/tec/public/flocklab/releases"><span>Releases</span>
+</a></li>
+<li class=""><a title="Cycle Analytics" class="shortcuts-project-cycle-analytics" href="https://gitlab.ethz.ch/tec/public/flocklab/cycle_analytics"><span>Cycle Analytics</span>
+</a></li>
+</ul>
+</li><li class=""><a class="shortcuts-tree qa-project-menu-repo" href="https://gitlab.ethz.ch/tec/public/flocklab/tree/master"><div class="nav-icon-container">
+<svg><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#doc-text"></use></svg>
+</div>
+<span class="nav-item-name">
+Repository
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><a href="https://gitlab.ethz.ch/tec/public/flocklab/tree/master"><strong class="fly-out-top-item-name">
+Repository
+</strong>
+</a></li><li class="divider fly-out-top-item"></li>
+<li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/tree/master">Files
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/commits/master">Commits
+</a></li><li class=""><a class="qa-branches-link" href="https://gitlab.ethz.ch/tec/public/flocklab/branches">Branches
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/tags">Tags
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/graphs/master">Contributors
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/network/master">Graph
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/compare?from=master&amp;to=master">Compare
+</a></li><li class=""><a href="https://gitlab.ethz.ch/tec/public/flocklab/graphs/master/charts">Charts
+</a></li>
+</ul>
+</li><li class=""><a class="shortcuts-issues qa-issues-item" href="https://gitlab.ethz.ch/tec/public/flocklab/issues"><div class="nav-icon-container">
+<svg><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#issues"></use></svg>
+</div>
+<span class="nav-item-name">
+Issues
+</span>
+<span class="badge badge-pill count issue_counter">
+0
+</span>
+</a><ul class="sidebar-sub-level-items fly-out-list" style="">
+<li class="fly-out-top-item"><a href="https://gitlab.ethz.ch/tec/public/flocklab/issues"><strong class="fly-out-top-item-name">
+Issues
+</strong>
+<span class="badge badge-pill count issue_counter fly-out-badge">
+0
+</span>
+</a></li><li class="divider fly-out-top-item"></li>
+<li class=""><a title="Issues" href="https://gitlab.ethz.ch/tec/public/flocklab/issues"><span>
+List
+</span>
+</a></li><li class=""><a title="Board" href="https://gitlab.ethz.ch/tec/public/flocklab/boards"><span>
+Board
+</span>
+</a></li><li class=""><a title="Labels" class="qa-labels-link" href="https://gitlab.ethz.ch/tec/public/flocklab/labels"><span>
+Labels
+</span>
+</a></li>
+<li class=""><a title="Milestones" class="qa-milestones-link" href="https://gitlab.ethz.ch/tec/public/flocklab/milestones"><span>
+Milestones
+</span>
+</a></li></ul>
+</li><li class="active"><a class="shortcuts-wiki qa-wiki-link" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/home"><div class="nav-icon-container">
+<svg><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#book"></use></svg>
+</div>
+<span class="nav-item-name">
+Wiki
+</span>
+</a><ul class="sidebar-sub-level-items is-fly-out-only">
+<li class="fly-out-top-item active"><a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/home"><strong class="fly-out-top-item-name">
+Wiki
+</strong>
+</a></li></ul>
+</li><li class=""><a title="Members" class="shortcuts-tree" href="https://gitlab.ethz.ch/tec/public/flocklab/settings/members"><div class="nav-icon-container">
+<svg><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#users"></use></svg>
+</div>
+<span class="nav-item-name">
+Members
+</span>
+</a><ul class="sidebar-sub-level-items is-fly-out-only">
+<li class="fly-out-top-item"><a href="https://gitlab.ethz.ch/tec/public/flocklab/project_members"><strong class="fly-out-top-item-name">
+Members
+</strong>
+</a></li></ul>
+</li><a class="toggle-sidebar-button js-toggle-sidebar" role="button" title="Toggle sidebar" type="button">
+<svg class="icon-angle-double-left"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-double-left"></use></svg>
+<svg class="icon-angle-double-right"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-double-right"></use></svg>
+<span class="collapse-text">Collapse sidebar</span>
+</a>
+<button name="button" type="button" class="close-nav-button"><svg class="s16"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#close"></use></svg>
+<span class="collapse-text">Close sidebar</span>
+</button>
+<li class="hidden">
+<a title="Activity" class="shortcuts-project-activity" href="https://gitlab.ethz.ch/tec/public/flocklab/activity"><span>
+Activity
+</span>
+</a></li>
+<li class="hidden">
+<a title="Network" class="shortcuts-network" href="https://gitlab.ethz.ch/tec/public/flocklab/network/master">Graph
+</a></li>
+<li class="hidden">
+<a title="Charts" class="shortcuts-repository-charts" href="https://gitlab.ethz.ch/tec/public/flocklab/graphs/master/charts">Charts
+</a></li>
+<li class="hidden">
+<a class="shortcuts-new-issue" href="https://gitlab.ethz.ch/tec/public/flocklab/issues/new">Create a new issue
+</a></li>
+<li class="hidden">
+<a title="Commits" class="shortcuts-commits" href="https://gitlab.ethz.ch/tec/public/flocklab/commits/master">Commits
+</a></li>
+<li class="hidden">
+<a title="Issue Boards" class="shortcuts-issue-boards" href="https://gitlab.ethz.ch/tec/public/flocklab/boards">Issue Boards</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="content-wrapper">
+
+<div class="mobile-overlay"></div>
+<div class="alert-wrapper">
+<div dir="auto" class="broadcast-message" style="background-color: #e75e40; color: #ffffff"><i aria-hidden="true" data-hidden="true" class="fa fa-bullhorn"></i> <p>To receive notifications about scheduled maintenance, please subscribe to the mailing-list <a href="mailto:gitlab-operations@sympa.ethz.ch">gitlab-operations@sympa.ethz.ch</a>. You can subscribe to the mailing-list at <a href="https://sympa.ethz.ch/" rel="nofollow noreferrer noopener" target="_blank">https://sympa.ethz.ch</a></p></div>
+
+
+
+
+
+<nav class="breadcrumbs container-fluid container-limited limit-container-width" role="navigation">
+<div class="breadcrumbs-container">
+<button name="button" type="button" class="toggle-mobile-nav"><span class="sr-only">Open sidebar</span>
+<i aria-hidden="true" data-hidden="true" class="fa fa-bars"></i>
+</button><div class="breadcrumbs-links js-title-container">
+<ul class="list-unstyled breadcrumbs-list js-breadcrumbs-list">
+<li><a class="group-path breadcrumb-item-text js-breadcrumb-item-text " href="https://gitlab.ethz.ch/tec"><img class="avatar-tile js-lazy-loaded qa-js-lazy-loaded" width="15" height="15" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/tec.png">TEC</a><svg class="s8 breadcrumbs-list-angle"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-right"></use></svg></li><li><a class="group-path breadcrumb-item-text js-breadcrumb-item-text " href="https://gitlab.ethz.ch/tec/public">Public</a><svg class="s8 breadcrumbs-list-angle"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-right"></use></svg></li> <li><a href="https://gitlab.ethz.ch/tec/public/flocklab"><img alt="FlockLab" class="avatar-tile js-lazy-loaded qa-js-lazy-loaded" width="15" height="15" src="./Targets · Wiki · TEC _ Public _ FlockLab · GitLab_files/FlockLab_GitLab_avatar_public(1).png"><span class="breadcrumb-item-text js-breadcrumb-item-text">FlockLab</span></a><svg class="s8 breadcrumbs-list-angle"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-right"></use></svg></li>
+<li><a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/home">Wiki</a><svg class="s8 breadcrumbs-list-angle"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-right"></use></svg></li>
+<li class="dropdown">
+<button aria-label="Show parent pages" class="text-expander has-tooltip js-breadcrumbs-collapsed-expander" data-container="body" data-toggle="dropdown" title="Show parent pages" type="button">
+<i aria-hidden="true" data-hidden="true" class="fa fa-ellipsis-h"></i>
+</button>
+<svg class="s8 breadcrumbs-list-angle"><use xlink:href="/assets/icons-09fdf2c02921bad2ec7257465016a755f359ab7b598e5fe42c22381fe1a25045.svg#angle-right"></use></svg>
+<div class="dropdown-menu">
+<ul>
+<li style="text-indent: 0px;"><a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/">Man</a></li>
+</ul>
+</div>
+</li>
+
+<li>
+<h2 class="breadcrumbs-sub-title"><a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets">Targets</a></h2>
+</li>
+</ul>
+</div>
+
+</div>
+</nav>
+
+<div class="flash-container flash-container-page">
+</div>
+
+<div class="d-flex"></div>
+</div>
+<div class="container-fluid container-limited limit-container-width">
+<div class="content" id="content-body">
+<div class="wiki-page-header has-sidebar-toggle">
+<button class="btn btn-default sidebar-toggle js-sidebar-wiki-toggle" role="button" type="button">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-double-left"></i>
+</button>
+<div class="nav-text">
+<h2 class="wiki-page-title">Targets</h2>
+<span class="wiki-last-edit-by">
+Last edited by <strong>Roman Trüb</strong>
+<time class="js-timeago" title="" datetime="2019-04-18T04:43:02Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Apr 18, 2019 4:43am">2 months ago</time>
+</span>
+</div>
+<div class="nav-controls">
+<a class="btn" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets/history">Page history
+</a>
+</div>
+</div>
+<div class="prepend-top-default append-bottom-default">
+<div class="md md-file">
+<h1 data-sourcepos="1:1-1:18" dir="auto">
+<a id="user-content-flocklab-targets" class="anchor" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets#flocklab-targets" aria-hidden="true"></a>FlockLab Targets</h1>
+<p data-sourcepos="3:1-3:101" dir="auto">Here is a list of currently mounted <em>FlockLab targets</em> (aka <em>Sensor Nodes</em> aka <em>Devices under test</em>):</p>
+<table data-sourcepos="5:1-11:361" dir="auto">
+<thead>
+<tr data-sourcepos="5:1-5:354">
+<th data-sourcepos="5:2-5:32">Node Name</th>
+<th data-sourcepos="5:34-5:47">Manufacturer</th>
+<th data-sourcepos="5:49-5:102">MCU</th>
+<th data-sourcepos="5:104-5:139">Radio</th>
+<th data-sourcepos="5:141-5:179">#Targets Installed (indoor / outdoor)</th>
+<th data-sourcepos="5:181-5:193">Name in XML</th>
+<th data-sourcepos="5:195-5:297">Comments</th>
+<th data-sourcepos="5:299-5:353">More Info</th>
+</tr>
+</thead>
+<tbody>
+<tr data-sourcepos="7:1-7:354">
+<td data-sourcepos="7:2-7:32">TinyNode184</td>
+<td data-sourcepos="7:34-7:47">Shockfish SA</td>
+<td data-sourcepos="7:49-7:102">MSP430F2417 (16 MHz)</td>
+<td data-sourcepos="7:104-7:139">Semtech SX1211 (868/915 MHz)</td>
+<td data-sourcepos="7:141-7:179">14</td>
+<td data-sourcepos="7:181-7:193"><code>tinynode</code></td>
+<td data-sourcepos="7:195-7:297">512kB external flash; On-board chip antenna (footprint for SMA/MMBX connector)</td>
+<td data-sourcepos="7:299-7:353"><a href="http://www.tinynode.com/" rel="nofollow noreferrer noopener" target="_blank">Link</a></td>
+</tr>
+<tr data-sourcepos="8:1-8:354">
+<td data-sourcepos="8:2-8:32">Tmote Sky (TelosB)</td>
+<td data-sourcepos="8:34-8:47">Moteiv</td>
+<td data-sourcepos="8:49-8:102">MSP430F1611 (8 MHz)</td>
+<td data-sourcepos="8:104-8:139">CC2420 (IEEE 802.15.4, 2.4 GHz)</td>
+<td data-sourcepos="8:141-8:179">27</td>
+<td data-sourcepos="8:181-8:193"><code>tmote</code></td>
+<td data-sourcepos="8:195-8:297">On-board chip antenna (footprint for SMA connector); On-board humidity, temperature and light sensors</td>
+<td data-sourcepos="8:299-8:353"><a href="http://www.snm.ethz.ch/Projects/TmoteSky" rel="nofollow noreferrer noopener" target="_blank">Link</a></td>
+</tr>
+<tr data-sourcepos="9:1-9:354">
+<td data-sourcepos="9:2-9:32">OpenMote</td>
+<td data-sourcepos="9:34-9:47">OpenMote</td>
+<td data-sourcepos="9:49-9:102">ARM 32-bit Cortex-M3 (32 MHz) (CC2538 SoC)</td>
+<td data-sourcepos="9:104-9:139">CC2520-like (2.4 GHz) (CC2538 SoC)</td>
+<td data-sourcepos="9:141-9:179">9</td>
+<td data-sourcepos="9:181-9:193"><code>openmote</code></td>
+<td data-sourcepos="9:195-9:297">Runs up to 32 MHz and includes 32k RAM and 512k flash memory; compatible with IEEE 802.15.4-2006</td>
+<td data-sourcepos="9:299-9:353"><a href="http://www.openmote.com/" rel="nofollow noreferrer noopener" target="_blank">Link</a></td>
+</tr>
+<tr data-sourcepos="10:1-10:354">
+<td data-sourcepos="10:2-10:32">DPP (Dual Processor Platform)</td>
+<td data-sourcepos="10:34-10:47">custom</td>
+<td data-sourcepos="10:49-10:102">CC430F5147, MSP432P401R (Rev.B), MSP430FR5969 (BOLT)</td>
+<td data-sourcepos="10:104-10:139">CC430 SoC, CC1101-based (868 MHz)</td>
+<td data-sourcepos="10:141-10:179">29</td>
+<td data-sourcepos="10:181-10:193"><code>dpp</code></td>
+<td data-sourcepos="10:195-10:297">All 3 cores can be programmed.</td>
+<td data-sourcepos="10:299-10:353"><a href="https://gitlab.ethz.ch/tec/public/dpp/wikis">Link</a></td>
+</tr>
+<tr data-sourcepos="11:1-11:361">
+<td data-sourcepos="11:2-11:32">DPP2 LoRa</td>
+<td data-sourcepos="11:34-11:47">custom</td>
+<td data-sourcepos="11:49-11:102">STM32L433CC</td>
+<td data-sourcepos="11:104-11:139">SX1262 (868 MHz)</td>
+<td data-sourcepos="11:141-11:179">28 / 2</td>
+<td data-sourcepos="11:181-11:193"><code>dpp2lora</code></td>
+<td data-sourcepos="11:195-11:297"></td>
+<td data-sourcepos="11:299-11:360"><a href="https://gitlab.ethz.ch/tec/public/dpp/wikis/DPP2Lora">Link</a></td>
+</tr>
+</tbody>
+</table>
+<p data-sourcepos="13:1-13:140" dir="auto">Other sensors can be attached to the testbed easily due to FlockLabs generic hardware interface. <a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/People">Contact us</a> for more information.</p>
+</div>
+</div>
+<aside class="right-sidebar right-sidebar-expanded wiki-sidebar js-wiki-sidebar js-right-sidebar" data-offset-top="50" data-spy="affix">
+<div class="sidebar-container">
+<div class="block wiki-sidebar-header append-bottom-default">
+<a class="gutter-toggle float-right d-block d-sm-block d-md-none js-sidebar-wiki-toggle" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets#">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-double-right"></i>
+</a>
+<a class="" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/git_access"><i aria-hidden="true" data-hidden="true" class="fa fa-cloud-download append-right-5"></i>
+<span>Clone repository</span>
+</a></div>
+<div class="blocks-container">
+<div class="block block-first">
+<ul class="wiki-pages">
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/CoojaPlugin">CoojaPlugin
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/HowtoCite-FlockLab">HowtoCite FlockLab
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Issues">Issues
+</a></li>
+
+<li>
+Man
+<ul>
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Description">Description
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Examples">Examples
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/GpioAssignmentTargetAdapter">GpioAssignmentTargetAdapter
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/HowTo">HowTo
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/QuickStart">QuickStart
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Services">Services
+</a></li>
+
+<li class="active">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Targets">Targets
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Tutorials">Tutorials
+</a></li>
+
+
+</ul>
+</li>
+<li>
+Man/Tutorials
+<ul>
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Tutorials/Tutorial1">Tutorial1
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Tutorials/Tutorial2">Tutorial2
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Tutorials/Tutorial3">Tutorial3
+</a></li>
+
+<li class="">
+<a href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/Man/Tutorials/Tutorial4">Tutorial4
+</a></li>
+
+
+</ul>
+</li>
+
+</ul>
+</div>
+<div class="block">
+<a class="btn btn-block" href="https://gitlab.ethz.ch/tec/public/flocklab/wikis/pages">More Pages
+</a></div>
+</div>
+</div>
+</aside>
+<div class="modal" id="modal-new-wiki">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="page-title">New Wiki Page</h3>
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form class="new-wiki-page">
+<div class="form-group">
+<label for="new_wiki_path"><span>Page slug</span>
+</label><input type="text" name="new_wiki_path" id="new_wiki_path" placeholder="how-to-setup" class="form-control" required="required" data-wikis-path="/tec/public/flocklab/wikis" autofocus="autofocus">
+<span class="new-wiki-page-slug-tip">
+<i aria-hidden="true" data-hidden="true" class="fa fa-lightbulb-o"></i>
+Tip: You can specify the full path for the new file. We will automatically create any missing directories.
+</span>
+</div>
+<div class="form-actions">
+<button name="button" type="submit" class="build-new-wiki btn btn-success">Create page</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,142 @@
+// ==================================================================
+// 2. Globale Anpassungen, fuer alle Auftritte gleich
+// ==================================================================
+
+window.webtrendsCustom = function(dcsobj) {
+
+    var DL = DataLayer;
+
+    if (DL.page_lang === '') {
+        DL.page_lang = $('html').attr('lang');
+    }
+
+    if (DL.oss_term === '') {
+        DL.oss_term = $('input#form-searchfield-searchinputMain').attr('value');
+    }
+
+    if (typeof DL.oss_term == 'string' && DL.oss_term != '') {
+        DL.oss_results = ($('div.searchResultList div.nav-hint').first().text().split(/\s/i).pop() || '0');
+    }
+
+    if (DL.site === '') {
+        DL.site = window.location.hostname;
+    }
+
+    dcsobj.WT.sp = DL.site;
+    dcsobj.DCSext.iuri = DL.uri_internal;
+    dcsobj.WT.oss = DL.oss_term;
+    dcsobj.WT.oss_r = DL.oss_results;
+    dcsobj.WT.oss_e = DL.oss_engine || 'ethz';
+    dcsobj.DCSext.lang = DL.page_lang;
+    dcsobj.WT.cg_n = DL.page_group;
+    dcsobj.WT.cg_s = DL.page_subgroup;
+    dcsobj.DCSext.ext = DL.visit_ext;
+
+    try{
+        var canonical = document.head.querySelector("[property='og:url'][content]").content;
+
+        if (canonical) {
+            var aCanonical = document.createElement('a');
+            aCanonical.href = canonical;
+
+            dcsobj.WT.es = aCanonical.hostname + aCanonical.pathname;
+            $('head').append('<meta name="WT.es" content="' + aCanonical.hostname + aCanonical.pathname + '" />');
+            $('head').append('<meta name="DCS.dcssip" content="' + aCanonical.hostname + '" />');
+            $('head').append('<meta name="DCS.dcsuri" content="' + aCanonical.pathname + '" />');
+        }
+    }catch(e){};
+}
+
+window.webtrendsTrackEvent = function(ev) {
+
+    var tgt = $(ev.currentTarget);
+    var data = JSON.parse(tgt.attr('data-track'));
+
+    Webtrends.multiTrack({
+        argsa: [
+            "DCSext.ev_cat", data.ev_cat || '',
+            "DCSext.ev_label", data.ev_label ||
+            (tgt.attr('title') || '').replace(/^\s+|\s+$/gm, '') ||
+            (tgt.attr('alt') || '').replace(/^\s+|\s+$/gm, '') ||
+            (tgt.text() || '').replace(/^\s+|\s+$/gm, '') ||
+            (tgt.find('img').attr('title') || '').replace(/^\s+|\s+$/gm, '') ||
+            (tgt.find('img').attr('alt') || '').replace(/^\s+|\s+$/gm, '') ||
+            '',
+            "DCSext.ev_target", data.ev_target || tgt.attr('href') || '',
+            "WT.dl", "99"
+        ]
+    });
+
+}
+
+window.webtrendsRegisterEvents = function() {
+    $('a.track').live('click', webtrendsTrackEvent)
+}
+
+if (DataLayer.events) webtrendsRegisterEvents();
+
+// ==================================================================
+// 3. Spezifische Anpassungen, pro Auftritt verschieden
+// ==================================================================
+
+// im Moment leer, da keine Anpassungen definiert
+
+
+
+// ==================================================================
+// 4. Standard Page Code, fuer alle Seiten gleich
+// ==================================================================
+
+// WebTrends SmartSource Data Collector Tag v10.4.1
+// Copyright (c) 2014 Webtrends Inc.  All rights reserved.
+// Tag Builder Version: 4.1.3.2
+// Created: 2014.03.27
+window.webtrendsAsyncInit = function() {
+    var DL = DataLayer;
+    var dcs = new Webtrends.dcs().init({
+        dcsid: DL.od_dcsid,
+        domain: DL.od_domain,
+        timezone: 1,
+        i18n: false,
+        onsitedoms: "",
+        download: true,
+        downloadtypes: "xls,doc,pdf,txt,csv,zip,docx,xlsx",
+        navigationtag: "div,table",
+        enabled: true,
+        paidsearchparams: "gclid",
+        splitvalue: "",
+        preserve: false,
+        cookieTypes: "all",
+        FPCConfig: {
+            enabled: (this.cookieTypes === "all" || this.cookieTypes == "firstPartyOnly"),
+            name: "WT_FPC",
+            domain: DL.wt_fpc_domain || ".ethz.ch",
+            expires: 63113851500
+        },
+        TPCConfig: {
+            enabled: (this.cookieTypes === "all"),
+            cfgType: (this.cookieTypes === "all") ? "" : "1"
+        },
+        plugins: {
+            omp: { src: "/etc/designs/ethz/js/OracleMigrationPlugin.js", destinations: [{ accountGuid: "qavjwd2etc", server: "dc.oracleinfinity.io" }], 'waitForCallback': true, Qb: true },
+            replicate: { src: "/etc/designs/ethz/js/webtrends.replicate.js", servers: [{ domain: DL.op_domain, dcsid: DL.op_dcsid }] }
+        }
+    });
+
+    if (typeof(window.webtrendsCustom) == "function") {
+        window.webtrendsCustom(dcs);
+    }
+
+    dcs.DCS.dcsipa = 1;
+
+
+    dcs.track();
+
+};
+(function() {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "/etc/designs/ethz/js/webtrends.min.js";
+    var s2 = document.getElementsByTagName("script")[0];
+    s2.parentNode.insertBefore(s, s2);
+}());

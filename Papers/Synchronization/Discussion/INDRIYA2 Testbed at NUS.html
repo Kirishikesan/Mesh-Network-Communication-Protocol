@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://indriya.comp.nus.edu.sg/ -->
+<html lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>INDRIYA2 Testbed at NUS</title>
+		<link rel="icon" href="https://indriya.comp.nus.edu.sg/images/icon.ico">
+		<link rel="shortcut icon" href="https://indriya.comp.nus.edu.sg/images/icon.ico">
+		
+        <link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/style.css">
+		<link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/zerogrid.css">
+		<link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/camera.css">
+		<link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/form.css">
+		<link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/responsive.css">
+		
+        <script src="./INDRIYA2 Testbed at NUS_files/cb=gapi.loaded_0" async=""></script><script src="./INDRIYA2 Testbed at NUS_files/jquery.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/jquery-migrate-1.1.1.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/superfish.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/forms.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/jquery.ui.totop.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/jquery.equalheights.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/jquery.easing.1.3.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/jquery.ui.totop.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/tms-0.4.1.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/css3-mediaqueries.js.download"></script>
+		<script src="./INDRIYA2 Testbed at NUS_files/conf.js.download"></script>
+        
+        <!--signin-->
+        <script src="./INDRIYA2 Testbed at NUS_files/googleSignin.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/platform.js.download" async="" defer="" gapi_processed="true"></script>
+        <meta name="google-signin-client_id" content="737051389558-b9opscgkrvhbn5ualmj1ct4uatfn2keo.apps.googleusercontent.com">
+
+	<!-- indriya 737051389558-b9opscgkrvhbn5ualmj1ct4uatfn2keo.apps.googleusercontent.com -->        
+        <!--localhost 916654777170-ughlilni7l5a6iu30e9m84ehqaiab6p2.apps.googleusercontent.com -->
+        <!--ocean 916654777170-12aubmb5qp0moq66epq82bq66ovgbt4n.apps.googleusercontent.com -->
+        
+
+        <link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/tabMenu.css">
+        <script src="./INDRIYA2 Testbed at NUS_files/tabMenu.js.download"></script>
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/showUser.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/updateUserInfo.js.download"></script>
+        
+        <link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/table.css">
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/showStatistics.js.download"></script>
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/print.js.download"></script>
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/editJob.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/addJob.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/loadMotes.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/moteTypesTable.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/clustersTable.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/motesTable.js.download"></script>
+        <script src="./INDRIYA2 Testbed at NUS_files/scheduleJob.js.download"></script>
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/vis.js.download"></script>
+        <link href="./INDRIYA2 Testbed at NUS_files/vis.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="./INDRIYA2 Testbed at NUS_files/timeline.css">
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/popup.js.download"></script>
+        <link href="./INDRIYA2 Testbed at NUS_files/popup.css" rel="stylesheet" type="text/css">
+        
+        <script src="./INDRIYA2 Testbed at NUS_files/connectivity.js.download"></script>
+
+        <script src="./INDRIYA2 Testbed at NUS_files/paho-mqtt.js.download"></script>
+        
+        <script>
+			$(document).ready(function(){
+				$('.slider_wrapper')._TMS({
+					show:0,
+					pauseOnHover:false,
+					prevBu:'.prev',
+					nextBu:'.next',
+					playBu:false,
+					duration:800,
+					preset:'fade',
+					pagination:true,//'.pagination',true,'<ul></ul>'
+					pagNums:false,
+					slideshow:8000,
+					numStatus:false,
+					banners: 'fade',
+					waitBannerAnimation:false,
+					progressBar:false
+				});
+			});
+			$(document).ready(function(){
+				!function(){
+			var map=[]
+			 ,names=[]
+			 ,win=$(window)
+			 ,header=$('header')
+			 ,currClass
+			$('.content').each(function(n){
+			 map[n]=this.offsetTop
+			 names[n]=$(this).attr('id')
+			})
+			win
+			 .on('scroll',function(){
+				var i=0
+				while(map[i++]<=win.scrollTop());
+				if(currClass!==names[i-2])
+				currClass=names[i-2]
+				header.removeAttr("class").addClass(names[i-2])
+			 })
+			}(); });
+					function goToByScroll(id){
+				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+				$(document).ready(function(){
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	<style>.abcRioButton{-webkit-border-radius:1px;border-radius:1px;-webkit-box-shadow 0 2px 4px 0px rgba(0,0,0,.25);box-shadow:0 2px 4px 0 rgba(0,0,0,.25);-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s,box-shadow .218s;transition:background-color .218s,border-color .218s,box-shadow .218s;-webkit-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;color:#262626;cursor:pointer;outline:none;overflow:hidden;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}.abcRioButton:hover{-webkit-box-shadow:0 0 3px 3px rgba(66,133,244,.3);box-shadow:0 0 3px 3px rgba(66,133,244,.3)}.abcRioButtonBlue{background-color:#4285f4;border:none;color:#fff}.abcRioButtonBlue:hover{background-color:#4285f4}.abcRioButtonBlue:active{background-color:#3367d6}.abcRioButtonLightBlue{background-color:#fff;color:#757575}.abcRioButtonLightBlue:active{background-color:#eee;color:#6d6d6d}.abcRioButtonIcon{float:left}.abcRioButtonBlue .abcRioButtonIcon{background-color:#fff;-webkit-border-radius:1px;border-radius:1px}.abcRioButtonSvg{display:block}.abcRioButtonContents{font-family:Roboto,arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:.21px;margin-left:6px;margin-right:6px;vertical-align:top}.abcRioButtonContentWrapper{height:100%;width:100%}.abcRioButtonBlue .abcRioButtonContentWrapper{border:1px solid transparent}.abcRioButtonErrorWrapper,.abcRioButtonWorkingWrapper{display:none;height:100%;width:100%}.abcRioButtonErrorIcon,.abcRioButtonWorkingIcon{margin-left:auto;margin-right:auto}.abcRioButtonErrorState,.abcRioButtonWorkingState{border:1px solid #d5d5d5;border:1px solid rgba(0,0,0,.17);-webkit-box-shadow:0 1px 0 rgba(0,0,0,.05);box-shadow:0 1px 0 rgba(0,0,0,.05);color:#262626}.abcRioButtonErrorState:hover,.abcRioButtonWorkingState:hover{border:1px solid #aaa;border:1px solid rgba(0,0,0,.25);-webkit-box-shadow:0 1px 0 rgba(0,0,0,.1);box-shadow:0 1px 0 rgba(0,0,0,.1)}.abcRioButtonErrorState:active,.abcRioButtonWorkingState:active{border:1px solid #aaa;border:1px solid rgba(0,0,0,.25);-webkit-box-shadow:inset 0 1px 0 #ddd;box-shadow:inset 0 1px 0 #ddd;color:#262626}.abcRioButtonWorkingState,.abcRioButtonWorkingState:hover{background-color:#f5f5f5}.abcRioButtonWorkingState:active{background-color:#e5e5e5}.abcRioButtonErrorState,.abcRioButtonErrorState:hover{background-color:#fff}.abcRioButtonErrorState:active{background-color:#e5e5e5}.abcRioButtonWorkingState .abcRioButtonWorkingWrapper,.abcRioButtonErrorState .abcRioButtonErrorWrapper{display:block}.abcRioButtonErrorState .abcRioButtonContentWrapper,.abcRioButtonWorkingState .abcRioButtonContentWrapper,.abcRioButtonErrorState .abcRioButtonWorkingWrapper{display:none}.-webkit-keyframes abcRioButtonWorkingIconPathSpinKeyframes{0%{-webkit-transform:rotate(0)}} </style></head>
+	<body class="">
+<!--==============================header=================================-->
+		<header class="page3">
+			<div class="zerogrid">
+				<div class="col-full">
+					<div class="wrap-col">
+						<div class="menu_block">
+							<nav class="">
+								<ul id="menu-list" class="sf-menu sf-js-enabled">
+									
+                                    <li class="current men"><a onclick="goToByScroll(&#39;page1&#39;); if(updateTimeInterval != null) {clearInterval(updateTimeInterval); updateTimeInterval = null;} return false;" href="https://indriya.comp.nus.edu.sg/#">Home </a> <strong class="hover"></strong></li>
+                                    
+                                    <li class="men1"><a onclick="goToByScroll(&#39;page2&#39;); if(updateTimeInterval != null) {clearInterval(updateTimeInterval); updateTimeInterval = null;} return false;" href="https://indriya.comp.nus.edu.sg/#">About</a><strong class="hover"></strong></li>
+									
+                                    <li class=" men2"><a onclick="goToByScroll(&#39;page3&#39;); if(updateTimeInterval != null) {clearInterval(updateTimeInterval); updateTimeInterval = null;} return false;" href="https://indriya.comp.nus.edu.sg/#">People</a> <strong class="hover"></strong></li>
+									
+                                    <li class=" men3"><a onclick="goToByScroll(&#39;page4&#39;); if(updateTimeInterval != null) {clearInterval(updateTimeInterval); updateTimeInterval = null;} return false;" href="https://indriya.comp.nus.edu.sg/#">Connectivity</a> <strong class="hover"></strong></li>
+                                    
+                                    <li class=" men4" id="myAccountMenu" style="display:none;"><a onclick="goToByScroll(&#39;page5&#39;); openTab(event, &#39;myJobs&#39;); return false;" href="https://indriya.comp.nus.edu.sg/#">My Account</a> <strong class="hover"></strong></li>
+                                    <li class=" men4">
+                                        <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" style="padding: 30px 10px;" data-gapiscan="true" data-onload="true"><div style="height:36px;width:120px;" class="abcRioButton abcRioButtonLightBlue"><div class="abcRioButtonContentWrapper"><div class="abcRioButtonIcon" style="padding:8px"><div style="width:18px;height:18px;" class="abcRioButtonSvgImageWithFallback abcRioButtonIconImage abcRioButtonIconImage18"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48" class="abcRioButtonSvg"><g><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></g></svg></div></div><span style="font-size:13px;line-height:34px;" class="abcRioButtonContents"><span id="not_signed_inpodvq6f4n7lx">Sign in</span><span id="connectedpodvq6f4n7lx" style="display:none">Signed in</span></span></div></div></div>
+                                    </li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+                        <h1><a href="http://www.comp.nus.edu.sg/" target="_blank">
+                            <img src="./INDRIYA2 Testbed at NUS_files/CoBrand-SchoolofComp_H.jpg" alt=""></a></h1>
+                        <h1><a href="https://indriya.comp.nus.edu.sg/#" onclick="goToByScroll(&#39;page1&#39;); return false;">
+                        <img src="./INDRIYA2 Testbed at NUS_files/icon.png" alt=""></a></h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+<!--=======content================================-->
+		<div id="page1" class="content">
+			<div class="zerogrid">
+				<div class="col-full">
+					<div class="wrap-col">
+				        <h2>A Wireless Sensor Network Testbed</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <div id="page2" class="content">
+			<div class="zerogrid">
+				<div class="col-full">
+					<div class="wrap-col">
+						<div class="slogan">
+							<!--
+                            <h3>Only Professional <a onClick="goToByScroll('page3'); return false;" href="#"><span>Services</span></a> for Our <a onClick="goToByScroll('page4'); return false;" href="#"><em>Clients</em></a></h3>
+							<div class="text1">
+								<a href="http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="tm_link"> Click here</a> for more info about this free website template created by TemplateMonster.com <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis erat mattis neque facilisis, sit amet ultricies
+							</div>
+                            -->
+                            <h3>INDRIYA2</h3>
+                            <div class="text1">
+                                Is a three-dimensional wireless sensor network deployed across three floors of the <a href="http://www.comp.nus.edu.sg/" target="_blank">School of Computing</a>, at the <a href="http://www.nus.edu.sg/" target="_blank">National University of Singapore</a>.
+                            </div>
+                            For more details about the design of indriya2, please proceed to <a onclick="goToByScroll(&#39;page4&#39;); return false;" href="https://indriya.comp.nus.edu.sg/#"><em>Connectivity</em></a>.
+                            <br>
+                            <br>
+                            <div class="text1">
+                                The Testbed facilitates research in sensor network programming environments, communication protocols, system design, and applications. It provides a public, permanent framework for development and testing of sensor network protocols and applications.
+                            </div>
+                            <div class="text1">
+                                <br>
+                                Users can upload executables, associate those executables with motes to create a job, and schedule the job to run on the Testbed. During the job execution, users can monitor all messages and other data in real time through the web-based interface. Also, these data are logged to a database which is presented to the user upon job completion and then can be used for processing and visualization.
+                            </div>
+                            <br>
+                            <div class="text1">
+                                The design details of Indriya2 can be found in the paper <a href="https://indriya.comp.nus.edu.sg/Appavoo2019_Chapter_Indriya2AHeterogeneousWireless.pdf" target="_blank">here</a> published in Tridentcom [1]. Please use it for all the references of this testbed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            [1] P. Appavoo, Ebram K. William, M.C. Chan, and Mobashir Mohammad, "Indriya2: A Heterogeneous Wireless Sensor Network(WSN) Testbed," In TRIDENTCOM, 2018.
+            <br>
+            In 2004, the interface was originally conceived by <a href="https://www.bluegroup.systems/" target="_blank">Geoffrey Werner-Allen</a> and Matt Welsh for Harvard's <a href="http://motelab.eecs.harvard.edu/" target="_blank">Motelab</a> Testbed.
+        </div>
+		
+        <div id="page3" class="content">
+			<div class="zerogrid">
+				<h3>NUS iot</h3>
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="box maxheight1" style="height: 330px;"><div class="box_inner">
+                            <img style="width: 150px; height: 150px;" src="./INDRIYA2 Testbed at NUS_files/chanmc2.jpg" alt="">
+                            <p class="text1" style="height: 50px;">Associate Professor</p>
+                            <p style="height: 50px;"><a href="http://www.comp.nus.edu.sg/~chanmc" target="_blank">Prof. Chan Mun Choon</a></p>
+                            <p>Designer</p>
+						</div></div>
+					</div>
+				</div>
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="box maxheight1" style="height: 330px;"><div class="box_inner">
+                            <img style="width: 150px; height: 150px;" src="./INDRIYA2 Testbed at NUS_files/vara.jpg" alt="" class="hoverZoomLink">
+                            <p class="text1" style="height: 50px;">PhD Student</p>
+                            <p style="height: 50px;"><a href="http://www.comp.nus.edu.sg/~pappavoo/" target="_blank">Paramasiven Appavoo</a></p>
+                            <p>Designer &amp; Administrator</p>
+						</div></div>
+					</div>
+				</div>
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="box maxheight1" style="height: 330px;"><div class="box_inner">
+                            <img style="width: 150px; height: 150px;" src="./INDRIYA2 Testbed at NUS_files/ebramkw2.jpg" alt="" class="hoverZoomLink">
+                            <p class="text1" style="height: 50px;">PhD Student</p>
+                            <p style="height: 50px;"><a href="https://www.comp.nus.edu.sg/~ebramkw" target="_blank">Ebram Kamal William</a></p>
+                            <p>Designer &amp; Administrator</p>
+                        </div></div>
+					</div>
+				</div>
+                <p>
+                    <a href="http://www.cir.nus.edu.sg/" target="_blank">Communications and Internet Research Lab</a><br>
+                    <a href="http://www.comp.nus.edu.sg/" target="_blank">School of Computing, National University of Singapore</a><br>
+                </p>
+
+                <br>
+                <br>
+
+                <h3><a onclick="showAlumnusModal()">Alumnus</a></h3>
+
+                <!-- The Modal -->
+                <div id="alumnusModal" class="modal" style="display: none;">
+                    <!-- Modal content -->
+                    <div class="modal-content" style="background-color: #32ac97;">
+                        <span class="close" onclick="spanAlumnusClick()">×</span>
+                    	<h3>INDRIYA2</h3>
+		                <div class="col-1-4">
+							<div class="wrap-col">
+								<div class="box maxheight0">
+		                            <img style="width: 100px; height: 100px;" src="./INDRIYA2 Testbed at NUS_files/Mobashir_ICA.jpg" alt="" class="hoverZoomLink">
+		                            <!--<p class="text1" style="height: 50px;">PhD Student</p>-->
+		                            <p style="height: 50px;"><a href="http://www.comp.nus.edu.sg/~mobashir" target="_blank">Mohammad Mobashir</a></p>
+		                            <p>Administrator</p>
+		                        </div>
+							</div>
+						</div>
+						<div class="col-1-4">
+							<div class="wrap-col">
+								<div class="box maxheight0">
+		                            <img style="width: 100px; height: 100px;" src="./INDRIYA2 Testbed at NUS_files/1manjunath.jpg" alt="">
+		                            <!--<p class="text1" style="height: 50px;">Research Staff</p>-->
+		                            <p style="height: 50px;"><a href="http://indriya.comp.nus.edu.sg/motelab/html/manjunath/index.html" target="_blank">Manjunath Doddavenkatappa</a></p>
+		                            <p>Primary designer</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-4">
+							<div class="wrap-col">
+								<div class="box maxheight0">
+		                            <img style="width: 100px; height: 100px;" src="./INDRIYA2 Testbed at NUS_files/2ananda.jpg" alt="">
+		                            <!--<p class="text1" style="height: 50px;">Professor</p>-->
+		                            <p style="height: 50px;"><a href="http://www.comp.nus.edu.sg/~ananda" target="_blank">Prof. Ananda A.L</a></p>
+		                            <p>Designer</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-4">
+							<div class="wrap-col">
+								<div class="box maxheight0">
+		                            <img style="width: 100px; height: 100px;" src="./INDRIYA2 Testbed at NUS_files/4chetan.jpg" alt="">
+									<!--<p class="text1" style="height: 50px;">Research Assistant</p>-->
+		                            <p style="height: 50px;"><a href="http://www.comp.nus.edu.sg/~chetan" target="_blank">Chetan Ganjihal</a></p>
+		                            <p>Designer</p>
+								</div>
+							</div>
+						</div>
+		                <p>
+		                    <a href="http://www.cir.nus.edu.sg/" target="_blank">Communications and Internet Research Lab</a><br>
+		                    <a href="http://www.comp.nus.edu.sg/" target="_blank">School of Computing, National University of Singapore</a><br>
+		                </p>
+                    </div>
+                </div>
+			</div>
+		</div>
+		
+        <div id="page4" class="content">
+			<div class="zerogrid">
+				<div class="col-full">
+					<div class="wrap-col">
+                        <h3>Connectivity</h3>
+                        
+                        <h3>
+                            Indriya2 has
+                            <ul id="pullets">
+                                <li>74 TelosBs</li>
+                                <li>28 CC2650 sensortags</li>
+                                <!--<li>5 motes of ZigBee</li>-->
+                            </ul>
+                        </h3>
+                        
+                        <input type="button" class="button2 add" value="Show map" onclick="showMap()">
+                        <!-- The Modal -->
+                        <div id="mapModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close" onclick="spanMapClick()">×</span>
+                                <img src="./INDRIYA2 Testbed at NUS_files/map.png">
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <div id="page0" class="content"></div>
+        
+        <div id="page5" class="content" style="display:none;">
+			<div class="zerogrid">
+                <div class="text1" id="userIDText" align="right"></div>
+                
+                <div class="col-full">
+					<div class="wrap-col">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, &#39;myJobs&#39;)" id="myJobsTab">My Jobs</button>
+                            
+                            <button class="tablinks" onclick="openTab(event, &#39;howToUse&#39;)" id="howToUseTab">How to use &amp; FAQ</button>
+                            
+                            <button class="tablinks" onclick="openTab(event, &#39;userAccounts&#39;)" id="userAccountsTab">Admin</button>
+                            
+                            <button class="tablinks" onclick="openTab(event, &#39;Motes&#39;)" id="motesTab">Motes</button>
+                            
+                            <button class="buttonClass" onclick="signOut();">Sign out</button>
+                        </div>
+
+                        <div id="myJobs" class="tabcontent">
+
+                            <label class="text1" style="color: black;" id="quotaReportLabel"></label>
+                            
+                            <br>
+                            <br>
+                            
+                            <div id="jobsTableDiv" class="text1">
+                                <button onclick="addJob();" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-plus-36.png"></button>
+                                <button onclick="refreshJobs();" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-synchronize-filled-36.png"></button>
+                                
+                                <br>
+                                <br>
+                                
+                                <label class="text1" id="jobsNumLabel" style="float: left; color: black;"></label>
+                                
+                                <br>
+                                <br>
+                                
+                                <label id="jobsReportLabel"></label>
+                                
+                                <div class="table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="jobsTable" style="text-align: left;">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <br>
+                                <br>
+                                
+                                <label class="text1" id="waitingJobsNumLabel" style="float: left; color: black;"></label>
+                                
+                                <br>
+                                <br>
+                                
+                                <div class="table-scroll" style="display: none;" id="waiting-table-scroll">
+                                    <table style="text-align: left;" class="table table-hover table-expandable table-striped" width="100%" id="waitingJobsTable">
+                                        <thead>
+                                            <tr><th>Job</th>
+                                            <th>Starts in (dd.hh:mm)</th>
+                                            <th>Duration (dd.hh:mm)</th>
+                                            <th></th>
+                                        </tr></thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <br>
+                                <br>
+                                
+                                <label class="text1" id="runningJobsNumLabel" style="float: left; color: black;"></label>
+                                
+                                <br>
+                                <br>
+
+                                <a class="a" id="showMQTT" onclick="connectMQTT()" style="display: none">Subscribe OR Publish in real time</a>
+		                        <!-- The Modal -->
+		                        <div id="mqttModal" class="modal">
+		                            <!-- Modal content -->
+		                            <div class="modal-content" style="color: #37637f">
+		                            	<span class="close" onclick="spanMQTTClick()">×</span>
+		                                <div style="border: 1px #37637f solid; position: fixed; height: 130px; background: white;" id="publish">
+		                                	<span class="close" onclick="spanMQTTPublishClick()">×</span>
+
+		                                	<table style="text-align: left; border-collapse:separate; border-spacing:15px 15px;">
+		                                		<tbody><tr>
+		                                			<td>
+			                                			<label class="text1" for="publish_msg">Message: <abbr title="">*</abbr></label>
+			                                		</td>
+			                                		<td>
+					                                	<input class="text1" type="text" id="publish_msg" placeholder="Message" required="">
+					                            	</td>
+					                        	</tr>
+					                        	<tr>
+					                        		<td>
+					                            		<label class="text1" for="publish_moteID">Mote ID: <abbr title="">*</abbr></label>
+					                        		</td>
+					                        	<td>
+					                                <input class="text1" type="text" id="publish_moteID" placeholder="Mote ID" required="">
+					                            </td>
+					                        </tr>
+					                        <tr>
+					                        	<td></td>
+					                        	<td>
+					                        		<input style="float: right;" class="button" type="button" id="btnPublish" onclick="publishToMQTT()" value="Publish">
+					                        	</td>
+					                        </tr>
+				                            </tbody></table>
+		                                </div>
+
+		                                <br>
+		                                <br>
+
+		                                <div class="wordwrap" style="margin-top: 130px; text-align: left;" id="mqttContainer"></div>
+		                            </div>
+		                        </div>
+                                
+                                <div class="table-scroll" style="display: none;" id="running-table-scroll">
+                                    <table style="text-align: left;" class="table table-hover table-expandable table-striped" width="100%" id="runningJobsTable">
+                                        <thead>
+                                            <tr><th>Job</th>
+                                            <th>Finish in (dd.hh:mm)</th>
+                                            <th>Duration (dd.hh:mm)</th>
+                                            <th></th>
+                                        </tr></thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <br>
+                                <br>
+                                
+                                <label class="text1" id="terminatedJobsNumLabel" style="float: left; color: black;"></label>
+                                
+                                <br>
+                                <br>
+                                
+                                <div class="table-scroll" style="display: none;" id="terminated-table-scroll">
+                                    <table style="text-align: left;" class="table table-hover table-expandable table-striped" width="100%" id="terminatedJobsTable">
+                                        <thead>
+                                            <tr><th>Job</th>
+                                            <th>Start run time</th>
+                                            <th>Result</th>
+                                            <th></th>
+                                        </tr></thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <br>
+                                <br>
+
+                                <p>JOB DETAILS WILL BE AVAILABLE FOR UP TO SIX MONTHS AFTER CREATED.</p>
+                            </div>
+                            
+                            <div id="cancelScheduleModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content" style="color: #37637f">
+                                    <label class="text1">Canceling schedule...</label>
+                                    <br>
+                                    <br>
+                                    <label>This process will take more than one minute.</label>
+                                    <br>
+                                    <label>This windows will be closed automatically, please don't refresh or close your browser.</label>
+                                </div>
+                            </div>
+                            
+                            <iframe id="frame1" style="display:none" src="./INDRIYA2 Testbed at NUS_files/saved_resource.html"></iframe>
+                            
+                            <br>
+                            <br>
+                            
+                            <div class="border" id="addJobDiv" style="display: none" align="left">
+                                <legend id="addJobLegend">Add a job</legend>
+                                
+                                <table id="addJobTable" style="text-align: left; border-collapse:separate; border-spacing:0 15px;">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <label class="text1" for="jobNametxt">Job name: <abbr title="">*</abbr></label>
+                                            </td>
+                                            <td>
+                                                <input class="text1" type="text" maxlength="89" onkeypress="return isNumberKey(event);" oncopy="return false" ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" id="jobNametxt" placeholder="Job name" required="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="text1" for="moteTypesList">Mote Type: <abbr title="">*</abbr></label>
+                                            </td>
+                                            <td>
+                                                <select class="text1" id="moteTypesList" onchange="moteTypeSelected();" required=""></select>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	</tbody></table><table id="add_job_telosb_table" style="text-align: left; border-collapse:separate; border-spacing:0 15px;">
+		                                    <tbody></tbody>
+		                              	</table>
+                                    
+                                
+                                
+                                <div id="nextAddJobButtons" align="right">
+                                    <input class="button" type="button" id="btnNextCancelJob" onclick="nextCancelJob()" value="Cancel">
+                                    
+                                    <input class="button" type="button" id="btnNextAddJob" onclick="nextAddJobDB()" title="" value="Next">
+                                </div>
+                                
+                                <div id="nextUpdateJobButtons" align="right">
+                                    <input class="button" type="button" id="btnNextCancelJob" onclick="nextCancelJob()" value="Cancel">
+                                    
+                                    <input class="button" type="button" id="btnNextUpdateJob" onclick="nextUpdateJobDB()" title="" value="Next">
+                                </div>
+                            </div>
+                            
+                            <div class="border" id="associationJobDiv" style="display: none" align="left">
+                                <legend id="associationJobLegend">association of files</legend>
+                                
+                                <br>
+                                
+                                <label class="text1" id="associationJobNameLabel"></label>
+                                
+                                <br>
+                                <br>
+                                
+                                <div class="col-1-2">
+                                    <div class="wrap-col">
+                                        <label class="text1">Mote Type(s)</label>
+                                        <br>
+                                        <select class="text1" id="associationMoteTypesList" size="5" style="width: 100%" onchange="associationMoteTypeSelected()"></select>
+                                        
+                                        <input type="button" class="button add" value="Resources state" onclick="showResourcesState()">
+                                        <!-- The Modal -->
+                                        <div id="resourcesStateModal" class="modal">
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                                <span class="close" onclick="spanClick()">×</span>
+                                                <label class="text1" style="color: #37637f"> Real time resources state</label>
+                                                <br>
+                                                <div id="resourcesStateInfoModal" style="color: #37637f; float: left">
+	                                                <label id="timeNowLabelResourcesState"></label>
+	                                                <br>
+	                                                <label>Use ctrl key and mouse scroll to zoom the timeline.</label>
+	                                                <br>
+					                                <label>Hold and drage to move backwards and forwards in the time range.</label>
+				                            	</div>
+                                				
+                                				<label id="loadingResourcesState" style="color: #37637f; float: center;">Loading...</label>
+                                                <div id="resourcesStateVisualization" style="display: none"></div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="col-1-2">
+                                    <div class="wrap-col">
+                                        <label class="text1">File(s)</label>
+                                        <br>
+                                        <select class="text1" id="associationFilesList" size="5" style="width: 100%"></select>
+                                        <br>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-full">
+                                    <div class="wrap-col">
+                                        <label class="text1" id="moteLabel">Mote(s)</label>
+                                        <label class="text1" id="clustersListState">No more free motes to select from!</label>
+                                        <div class="table-scroll" id="table-scroll" style="border: solid 0.5px orange">
+                                            <ul class="motesUL text1" id="clustersUL"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                
+                                <div id="addAssociationButton" align="right">
+                                    <input class="button" type="button" title="" id="btnAddAssociation" onclick="addAssociation()" value="Add Association">
+                                </div>
+                                
+                                <br>
+                                
+                                <div class="container" id="associationTablesContainer">
+                                    <div class="box-title">Associated Files</div>
+                                </div>
+                                
+                                <br>
+                                <br>
+                                
+                                <div id="associationAddJobButtons" align="right">
+                                    <input class="button" type="button" id="btnCancelAddJob" onclick="cancelJob()" value="Cancel">
+                                    
+                                    <input class="button" type="button" id="btnBackAddJob" onclick="backJob()" value="Back">
+                                    
+                                    <input class="button" type="button" id="btnAddJob" onclick="addJobDB()" value="Add Job">
+                                </div>
+                                
+                                <div id="associationUpdateJobButtons" align="right">
+                                    <input class="button" type="button" id="btnCancelUpdateJob" onclick="cancelJob()" value="Cancel">
+                                    
+                                    <input class="button" type="button" id="btnBackUpdateJob" onclick="backJob()" value="Back">
+                                    
+                                    <input class="button" type="button" id="btnUpdateJob" onclick="updateJobDB()" value="Update Job">
+                                </div>
+                                
+                                <div id="addJobModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="color: #37637f">
+                                        <div style="display: none" id="uploadingAddJob">
+                                            <label style="text1">Uploading...</label>
+                                            <br>
+                                            <br>
+                                            <label>Please don't refresh or close your browser.</label>
+                                        </div>
+                                        
+                                        <div style="display: none" id="errorAddJob">
+                                            <span class="close" onclick="spanErrorAddJobClick()">×</span>
+                                            
+                                            <label style="text1">Error occurred, please try again later!</label>
+                                        </div>
+
+                                        <div style="display: none" id="errorAddJobUnsupportedFile">
+                                            <span class="close" onclick="spanErrorAddJobClick()">×</span>
+                                            
+                                            <label style="text1">Error, unsupported file format</label>
+
+                                            <br>
+
+                                            <label style="text1">File(s): </label>
+                                            <div style="text1" id="unsupportedFiles"></div>
+                                        </div>
+                                        
+                                        <div style="display: none" id="successAddJob">
+                                            <span class="close" onclick="spanSuccessAddJobClick()">×</span>
+                                            
+                                            <label style="text1">Job submitted successfully.</label>
+                                            
+                                            <br>
+                                            <br>
+                                            
+                                            <label style="text1">Would you like to schedule this job now?</label>
+                                            
+                                            <br>
+                                            
+                                            <div id="nextUpdateJobButtons" align="right">
+                                                <input class="button" type="button" id="btnCancelScheduleJobAddJob" onclick="spanSuccessAddJobClick()" value="Schedule later">
+
+                                                <input class="button" type="button" id="btnScheduleNowJobAddJob" onclick="scheduleNowJobAddJobClick()" value="Schedule now">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border" id="scheduleJobDiv" style="display: none">
+                                <legend id="scheduleJobLegend">Schedule a job</legend>
+                                <table style="text-align: left; border-collapse:separate; border-spacing:0 15px;">
+                                    <tbody><tr>
+                                        <td>
+                                            <label class="text1" for="durationJob">Duration:</label>
+                                        </td>
+                                        <td>
+                                            <input class="text1" style="width: 7em" type="number" value="5" min="10" step="5" id="durationJob" onkeypress="return isNumberDurationKey(event);" onchange="durationChanged();">
+                                            <label class="text1">Minutes</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1">Start at:</label>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                
+                                <div id="zoomButtons">
+                                    <button style="float: right;" onclick="zoomOut();" onmousedown="zoomOutDown();" onmouseup="zoomOutUp();" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-ZoomOut_16.png"></button>
+                                    <button style="float: right;" onclick="zoomIn();" onmousedown="zoomInDown();" onmouseup="zoomInUp();" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-ZoomIn_16.png"></button>
+                                </div>
+                                
+                                <label style="float: left">Use zoom buttons or mouse scroll to zoom the timeline.</label>
+                                <label style="float: left">Hold and drage to move backwards and forwards in the time range.</label>
+                                <label style="float: left">To select, double click a free slot.</label>
+                                <label style="float: left">To cancel your selection, select it and tap the delete button top right.</label>
+                                
+                                <div>
+                                    <div id="visualization"></div>
+                                </div>
+                                
+                                <br>
+                                <br>
+                                
+                                <div id="scheduleButtons" align="right">
+                                    <input class="button" type="button" id="btnCancelScheduleJob" onclick="cancelScheduleJob()" value="Cancel">
+                                    
+                                    <input class="button" type="button" id="btnScheduleJob" onclick="ScheduleJobDB()" value="Schedule Job">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="howToUse" class="tabcontent">
+				<div style="border-top: solid;">
+                                        <br>
+
+                                        <h3>How to use</h3>
+
+                                        <br>
+					<iframe src="./INDRIYA2 Testbed at NUS_files/pub.html" width="100%" height="200"></iframe>
+                           	</div>
+				<!--  <div style="text-align: left" class="text1">
+                            	<h3>How to use</h3>
+                            	<ol style="list-style-type: disc">
+	                                <li>To add a job:</li>
+	                                <ol class="howToUseOL">
+	                                    <li>Go to my jobs.</li>
+	                                    <li>Add a new job:
+	                                        <ol style="list-style-type: disc" class="howToUseOL">
+	                                            <li>Type in the job name.</li>
+	                                            <li>Choose mote type.</li>
+	                                            <li>Upload executable file(s).</li>
+	                                            <li>Go to next.</li>
+	                                            <li>Associate file(s) with mote(s).</li>
+	                                            <li>Submit.</li>
+	                                        </ol>
+	                                    </li>
+	                                </ol>
+	                                
+	                                <br>
+	                                
+	                                <li>To schedule a job:</li>
+	                                <ol class="howToUseOL">
+	                                    <li>Go to my jobs.</li>
+	                                    <li>Click on schedule button on the right.</li>
+	                                    <li>Determine the duration.</li>
+	                                    <li>Choose a free time slot on the timeline.</li>
+	                                </ol>
+	                            </ol> -->
+
+                                <br>
+
+                                <div style="border-top: solid;">
+                                	<br>
+                                	
+	                                <h3>FAQ</h3>
+
+	                                <br>
+
+	                                <iframe src="./INDRIYA2 Testbed at NUS_files/pub(1).html" width="100%" height="200"></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div id="userAccounts" class="tabcontent">
+                            <br>
+                            
+                            <label class="text1" for="userIDtxt">email: <abbr title="">*</abbr>
+
+                                <input class="text1" type="text" id="userIDtxt" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;btnSearch&#39;).click(); else return isNumberKeyUserID(event);" oncopy="return false" ondrag="return false" ondrop="return false" autocomplete="off" placeholder="User&#39;s email" required="">
+                            
+
+                                <input class="button" type="button" id="btnSearch" onclick="showUser(document.getElementById(&#39;userIDtxt&#39;).value)" value="Search">
+                            </label>
+
+                            <br>
+                            <br>
+                            
+                            <input class="button" type="button" id="btnShowStatistics" onclick="showStatistics()" value="Show Statistics">
+
+                            <input class="button" type="button" id="btnShowAllTimeUsage" onclick="showAllTimeUsage()" value="Show Current Month Usage">
+
+                            <br>
+                            <br>
+
+                            <input class="button" type="button" id="btnClearAllUpcomingJobs" onclick="clearAllUpcomingJobs()" value="Clear all upcoming jobs">
+
+                            <!-- The Modal -->
+                            <div id="resourcesAllTimeUsageModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close" onclick="spanClick()">×</span>
+                                    <label class="text1" style="color: #37637f; float: left;"> Real time resources state</label>
+                                    <br>
+                                    <div style="color: #37637f;" id="resourcesAllTimeUsageInfoModal">
+	                                    <label style="float: left;" id="timeNowLabelResourcesAllTimeUsage"></label>
+	                                    <br>
+	                                    <label style="float: left;">Use ctrl key and mouse scroll to zoom the timeline.</label>
+	                                    <br>
+		                                <label style="float: left;">Hold and drage to move backwards and forwards in the time range.</label>
+		                            </div>
+                                	<label id="loadingResourcesAllTimeUsage" style="color: #37637f; float: center;">Loading...</label>
+                                    <div id="resourcesStateAllTimeUsageVisualization"></div>
+                                </div>
+                            </div>
+                                
+                            <br>
+                            <br>
+                            
+                            <div class="text1" id="tableUsersInfo" style="display: none">
+                                <button style="float: right;" onclick="printDiv(&#39;usersTable&#39;)" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-Print_26.png"></button>
+                                
+                                <br>
+                                <br>
+                                
+                                <div class="table-scroll" id="table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="usersTable">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                
+                                <br>
+                                <br>
+                                
+                                <button style="float: right;" onclick="printDiv(&#39;motesTable&#39;)" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-Print_26.png"></button>
+                                
+                                <br>
+                                <br>
+                                
+                                <div class="table-scroll" id="table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="motesTable">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="text1" id="userAccountForm" align="left" style="display:none;">
+                            	<button style="float: right;" onclick="printDiv(&#39;userInfoTable&#39;)" title=""><img src="./INDRIYA2 Testbed at NUS_files/icons8-Print_26.png"></button>
+
+                                <table id="userInfoTable" style="text-align: left; border-collapse:separate; border-spacing:0 15px;">
+                                	<caption style="color: black" class="text1" id="userIDLabelFill"></caption>
+                                    <tbody><tr>
+                                        <td>
+                                            <label class="text1" for="quotatxt">Quota: <abbr title="">*</abbr></label>
+                                        </td>
+                                        <td>
+                                            <input class="text1" type="number" min="0" step="5" id="quotatxt" style="width: 7em" onchange="itemChanged()" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;btnUpdate&#39;).click(); else return isNumberDurationKey(event);">Minutes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1" for="adminList">Admin: <abbr title="">*</abbr></label>
+                                        </td>
+                                        <td>
+                                            <select class="text1" id="adminList" onchange="itemChanged()" required="">
+                                                <option value="1">True</option>
+                                                <option value="0">False</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1" for="allMotesList">Use all Motes: <abbr title="">*</abbr></label>
+                                        </td>
+                                        <td>
+                                            <select class="text1" id="allMotesList" onchange="itemChanged()" required="">
+                                                <option value="1">True</option>
+                                                <option value="0">False</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1">Total number of submissions</label>
+                                        </td>
+                                        <td>
+                                            <label class="text1" id="userNumberOfSubmissions"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1">Total running time</label>
+                                        </td>
+                                        <td>
+                                            <label class="text1" id="userNumberOfRunningTime"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1">Created date</label>
+                                        </td>
+                                        <td>
+                                            <label class="text1" id="userCreatedDate"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="text1">Details</label>
+                                        </td>
+                                        <td>
+                                            <textarea rows="4" cols="200" wrap="soft" class="text1" id="userDetails" onchange="itemChanged()"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                
+                                <input class="button" type="button" id="btnCancel" value="Cancel" onclick="cancelUserUpdate()">
+                                
+                                <input class="button" type="button" id="btnUpdate" value="Update" onclick="updateUserInfo(document.getElementById(&#39;userIDLabelFill&#39;).innerHTML);">
+
+                                <br>
+                                <br>
+                                
+                                <input class="button" type="button" id="btnremove" value="Remove User" onclick="removeUser()">
+                                
+                                <br>
+                                <br>
+                                
+                                <label class="text1" id="updateNotify"></label>
+                            </div>
+                        </div>
+                        
+                        <div id="Motes" class="tabcontent">
+                            <div class="border">
+                                <legend>Mote Types</legend>
+                                
+                                <div class="text1 table-scroll" id="table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="moteTypes_data_table">
+                                    <tbody><tr>
+                                    <th>Mote Type Name</th>
+                                    <th style="width: 110px"></th>
+                                    </tr>
+
+                                    <tr>
+                                    <td><input type="text" class="text1" id="new_moteType_name" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMoteTypebtn&#39;).click();" required=""></td>
+                                    <td><input id="addMoteTypebtn" class="button" type="button" onclick="add_moteType_row();" value="Add Row" style="float: left"></td>
+                                    </tr>
+
+                                    </tbody></table>
+                                </div>
+                                
+                            </div>
+                            
+                            <br>
+                            
+                            <div class="border">
+                                <legend>Clusters</legend>
+                                
+                                <div class="text1 table-scroll" id="table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="clusters_data_table">
+                                    <tbody><tr>
+                                    <th>Cluster Name</th>
+                                    <th>Floor Level</th>
+                                    <th style="width: 110px"></th>
+                                    </tr>
+
+                                    <tr>
+                                    <td><input type="text" class="text1" id="new_cluster_name" style="width: 180px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addClusterbtn&#39;).click();" required=""></td>
+                                    <td><input type="text" class="text1" id="new_floorLevel_name" style="width: 180px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addClusterbtn&#39;).click();" required=""></td>
+                                    <td><input id="addClusterbtn" type="button" class="button add" onclick="add_cluster_row();" value="Add Row" style="float: left"></td>
+                                    </tr>
+
+                                    </tbody></table>
+                                </div>
+                                
+                            </div>
+                            
+                            <br>
+                            
+                            <div class="border">
+                                <legend>Motes</legend>
+                                
+                                <div id="table-scroll" class="text1 table-scroll">
+                                    <table class="table table-hover table-expandable table-striped" width="100%" id="motes_data_table">
+                                    <tbody><tr>
+                                        <th style="padding-right:10px">Physical ID</th>
+                                        <th style="padding-right:10px">Virtual ID</th>
+                                        <th style="padding-right:10px">Gateway IP</th>
+                                        <th style="padding-right:10px">Gateway ttyid</th>
+                                        <th style="padding-right:10px">Gateway Port</th>
+                                        <th style="padding-right:10px">Coordinates</th>
+                                        <th style="padding-right:10px">Mote Type</th>
+                                        <th style="padding-right:10px">Cluster</th>
+                                        <th style="padding-right:10px">Status</th>
+                                        
+                                        <th style="width: 110px"></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="text" class="text1" id="new_mote_physical_id" placeholder="manufacturer id" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><input type="text" class="text1" id="new_mote_virtual_id" placeholder="nodeid when running experiment" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><input type="text" class="text1" id="new_mote_gateway_ip" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><input type="text" class="text1" id="new_mote_gateway_ttyid" placeholder="/dev/ttyUSB0" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><input type="text" class="text1" id="new_mote_gateway_port" placeholder="4000" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><input type="text" class="text1" id="new_mote_coordinates" placeholder="x,y" style="width: 80px" onkeypress="if (event.keyCode == 13)document.getElementById(&#39;addMotebtn&#39;).click();" required=""></td>
+                                        
+                                        <td><select class="text1" id="moteTypesList_load" required=""></select></td>
+                                        
+                                        <td><select class="text1" id="clustersList_load" required=""></select></td>
+                                        
+                                        <td>Automatically</td>
+                                        
+                                        <td><input id="addMotebtn" type="button" class="button add" onclick="add_mote_row();" value="Add Row" style="float: left"></td>
+                                    </tr>
+
+                                    </tbody></table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		
+<!--==============================footer=================================-->
+		<footer>
+			<div id="footer" class="zerogrid">
+				<div class="col-full">
+					<div class="wrap-col">
+                        <a onclick="goToByScroll(&#39;page1&#39;); return false;" href="https://indriya.comp.nus.edu.sg/#"><img src="./INDRIYA2 Testbed at NUS_files/icon.png" alt=""></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	
+
+<a href="https://indriya.comp.nus.edu.sg/#" id="toTop" style="margin-right: -55px; right: 50%; display: inline;"><span id="toTopHover"></span></a><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;" src="./INDRIYA2 Testbed at NUS_files/iframe.html"></iframe></body></html>

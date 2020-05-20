@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta http-equiv="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    
+    <meta property="og:url" content="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html">
+    <meta property="og:title" content="The FlockLab Testbed">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    
+    
+    <meta name="Systemueberwachung" content="ETHZ">
+    <meta name="ethz_lmd" content="2019-03-06T17:57:56Z">
+    
+    
+    
+    
+    
+    <meta name="pagetype" content="web">
+    
+    
+    
+
+    
+    <link rel="shortcut icon" href="https://ethz.ch/etc/designs/ethz/img/icons/red.ico">
+
+    
+<link rel="stylesheet" href="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/css.css" type="text/css">
+<script type="text/javascript" async="" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/wtid.js.download"></script><script type="text/javascript" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/webtrends.replicate.js.download"></script><script type="text/javascript" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/OracleMigrationPlugin.js.download"></script><script async="" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/webtrends.min.js.download"></script><script type="text/javascript" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/default.js.download"></script>
+
+
+
+    
+    
+    
+    <meta name="msapplication-TileColor" content="#A8322D">
+    <meta name="theme-color" content="#A8322D">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#A8322D-translucent">
+    <meta name="apple-mobile-web-app-title" content="The FlockLab Testbed – TEC - Computer Engineering Group | ETH Zurich">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    
+    <link rel="apple-touch-icon-precomposed" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/58-Settings.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/72-hdpi.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/76-iPad-(@1x).png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/120-iPhone.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/144-xxhdpi.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/152-iPad.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/180-iPhone-6-Plus.png">
+    <link rel="icon" sizes="192x192" href="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/192-xxxhpdi.png">
+    <meta name="msapplication-TileImage" content="https://ethz.ch/etc/designs/ethz/img/icons/ETH-APP-Icons-Theme-red/144-xxhdpi.png">
+	
+	
+    
+    
+        <link href="https://plus.google.com/102210084705128240018" rel="publisher">
+    
+       
+    <title>The FlockLab Testbed – TEC - Computer Engineering Group | ETH Zurich</title>
+    
+<meta name="WT.es" content="tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html"><meta name="DCS.dcssip" content="tec.ee.ethz.ch"><meta name="DCS.dcsuri" content="/research/networked-embedded-systems/flocklab.html"></head>
+    
+
+<body id="red" class="style960 content noImageTeaser"><div id="focusHelperRight" style="display: none;"></div><div id="focusHelperLeft" style="display: none;"></div><div id="focusHelperBottom" style="display: none;"></div><div id="focusHelperTop" style="display: none;"></div>
+    <div id="controllBar">&nbsp;</div>
+    <!-- skipLinks -->
+    
+
+
+
+
+
+
+
+
+
+
+<div id="skipLinksDiv">
+        <ul id="skipLinks">
+            
+            
+            
+
+            
+                
+                                    
+                    
+                
+            
+            
+            
+        <li order="0"><a accesskey="0" href="https://tec.ee.ethz.ch/" class="accesskey" title="Directly go to the homepage">Homepage</a></li><li order="1"><a accesskey="1" href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#navTopRoot" class="accesskey" title="Directly go to the navigation">Navigation</a></li><li order="2"><a accesskey="2" href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#mainContent" class="accesskey" title="Directly go to the content">Content</a></li><li order="4"><a accesskey="4" href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en/footer/sitemap.html" class="accesskey" title="Sitemap">Sitemap</a></li><li order="5"><a accesskey="5" href="https://tec.ee.ethz.ch/utils/search.html" class="accesskey" title="Directly go to the search">Search</a></li></ul>
+</div>
+
+   
+
+    <!-- header -->
+    <div id="userStatusBar" style="display: none;"></div>
+<script type="text/javascript">
+    jQuery(document).ready(function loadStatusbar() {
+    	
+    	var statusbar = $('#userStatusBar');
+    	if (!isImpersonationOverlayOpen(statusbar)) {
+	        $.ajax({
+	            type:     'GET',
+	            dataType: 'HTML',
+	            cache:    false,
+	            url:      'https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab/_jcr_content.statusbar.html',
+	            success:  function (response) {          
+	                if (response) {
+	                	if (response.lastIndexOf("</" + "html" + ">") != -1) {
+	                   		// We got a complete HTML document -> replace whole document
+	                   		document.open("text/html","replace");
+	                   		document.write(response);
+	                   		document.close();
+	                   	} else {
+	                   	    statusbar.html(response);
+	                        registerDropDown(statusbar);
+	                        registerImpersonation(statusbar);
+	
+	                        $('body').addClass('loggedin');
+	                        statusbar.show();
+	                        
+	                        // Remove the login link when logged in
+	                        $('a.login').remove();
+	                   	}
+	                }            
+	            },
+	                
+	            
+	        });
+    	}
+    	
+    });
+</script><div id="banner"></div>
+
+<header id="header" class="container_10">
+    <div class="grid_6">
+        <div id="logo">
+		     <a href="https://www.ethz.ch/en.html">
+                 <img src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/ethz_logo_white.svg" id="Logo" alt="Logo of ETH Zurich">
+             </a>
+		</div>
+		<div id="printlogo" class="print">
+             <img src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/eth_logo_kurz_schwarz_D_print_300dpi.png" alt="Logo of ETH Zurich">
+        </div>
+        
+        <div class="mobile-header-top">
+            <a class="mobile-header-search" href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.ethz_search.html">
+                <span class="mobile-header-search-label">Search</span>
+            </a>
+            <div id="header-langswitch-mobile" class="wrapper-dropdown-langswitch " tabindex="0" role="navigation" aria-label="Language Switch">
+	<span aria-haspopup="true" tabindex="0" title="Currently selected: English">en</span>
+	<ul aria-hidden="true" class="dropdown" tabindex="0">
+		</ul>
+</div></div>
+        
+        <div class="mobile-header-bottom">
+            <div class="menu-button-area mobile-header-burger">
+                <button type="button" class="mobile-menu-button" aria-controls="mobile-menu" style="outline: none;">
+                    <span>Menu</span>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-nav-wrapper" class="hide" data-mobilenav-url="https://tec.ee.ethz.ch/.mobnav.html" data-mobilenav-originaldescendant="navitem2295281702" data-mobilenav-level="2" data-mobilenav-ethhome-url="/content/specialinterest/itet/cen-lab/comp-eng-group/en.html" data-mobilenav-ethhome-string="To homepage" data-mobilenav-back-string="Back"><ul id="mobile-navlist" class="navlist" role="tree" aria-activedescendant="navitem2295281702" data-level="2">
+    <li role="treeitem" id="navitem75479743">
+       <a href="https://tec.ee.ethz.ch/"><nobr>Homepage</nobr></a>
+    </li>
+
+    <li class="first children" role="treeitem" id="navitem1605979859">
+             <a href="https://tec.ee.ethz.ch/the-group.html">The Group</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#">Back</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/the-group.html">The Group</a></li>
+        <li class="" role="treeitem" id="navitem3817996619">
+             <a href="https://tec.ee.ethz.ch/the-group/people.html">People</a>
+        </li>
+        <li class="" role="treeitem" id="navitem2512720739">
+             <a href="https://tec.ee.ethz.ch/the-group/open-positions.html">Open Positions</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3936442937">
+             <a href="https://tec.ee.ethz.ch/the-group/how-to-find-us.html">How to Find Us</a>
+        </li>
+        <li class="" role="treeitem" id="navitem992123569">
+             <a href="https://tec.ee.ethz.ch/the-group/group-meeting.html">Group Meeting</a>
+        </li></ul></li><li class="children active" role="treeitem" id="navitem1560481515">
+             <a href="https://tec.ee.ethz.ch/research.html">Research</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#">Back</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/research.html">Research</a></li>
+        <li class="children active" role="treeitem" id="navitem1011976197">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems.html">Networked Embedded Systems</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research.html">Research</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems.html">Networked Embedded Systems</a></li>
+        <li class="" role="treeitem" id="navitem1188510503">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/permasense.html">PermaSense</a>
+        </li>
+        <li class="" role="treeitem" id="navitem682287194">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/dpp.html">The Dual Processor Platform</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3970973279">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/bolt.html">BOLT</a>
+        </li>
+        <li class="deepest" role="treeitem" id="navitem2295281702">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html">FlockLab</a>
+        </li>
+        <li class="" role="treeitem" id="navitem120496894">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/transient-computing-systems.html">Transient Computing Systems</a>
+        </li>
+        <li class="" role="treeitem" id="navitem2661536147">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/rocketloger.html">RocketLogger</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1765352986">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/opensense.html">OpenSense</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1058837196">
+             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/on-device-deep-learning.html">On-device Deep Learning</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem2531324276">
+             <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems.html">Multiprocessor Systems</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research.html">Research</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/research/multiprocessor-systems.html">Multiprocessor Systems</a></li>
+        <li class="" role="treeitem" id="navitem3213262467">
+             <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/mixed-critical-systems.html">Mixed-Critical Systems</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1426604511">
+             <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/security-in-the-mpsoc-domain.html">Security in the MPSoC Domain</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3216596451">
+             <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/transient-computing-systems0.html">Transient Computing Systems</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem2725802194">
+             <a href="https://tec.ee.ethz.ch/research/past-research.html">Past Research Areas</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research.html">Research</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/research/past-research.html">Past Research Areas</a></li>
+        <li class="" role="treeitem" id="navitem3301799315">
+             <a href="https://tec.ee.ethz.ch/research/past-research/systems-optimization.html">Systems Optimization</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1781445857">
+             <a href="https://tec.ee.ethz.ch/research/past-research/speech-processing.html">Speech processing</a>
+        </li>
+        <li class="" role="treeitem" id="navitem905931345">
+             <a href="https://tec.ee.ethz.ch/research/past-research/data-exchange-optimization.html">Data Exchange Optimization</a>
+        </li></ul></li></ul></li><li class=" children" role="treeitem" id="navitem3127362648">
+             <a href="https://tec.ee.ethz.ch/education.html">Education</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#">Back</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/education.html">Education</a></li>
+        <li class=" children" role="treeitem" id="navitem3611402892">
+             <a href="https://tec.ee.ethz.ch/education/lectures.html">Lectures</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/education.html">Education</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/education/lectures.html">Lectures</a></li>
+        <li class="" role="treeitem" id="navitem119448488">
+             <a href="https://tec.ee.ethz.ch/education/lectures/computer-engineering-1.html">Computer Engineering I</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1754608384">
+             <a href="https://tec.ee.ethz.ch/education/lectures/discrete-event-systems.html">Discrete Event Systems</a>
+        </li>
+        <li class="" role="treeitem" id="navitem905294084">
+             <a href="https://tec.ee.ethz.ch/education/lectures/embedded-systems.html">Embedded Systems</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3700232014">
+             <a href="https://tec.ee.ethz.ch/education/lectures/hardware-software-codesign.html">Hardware/Software Codesign</a>
+        </li>
+        <li class="" role="treeitem" id="navitem884825560">
+             <a href="https://tec.ee.ethz.ch/education/lectures/low-power-system-design.html">Low-Power System Design</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1007680904">
+             <a href="https://tec.ee.ethz.ch/education/lectures/pps-social-sensing.html">P+S Social Sensing with Smartphones</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1251389981">
+             <a href="https://tec.ee.ethz.ch/education/lectures/seminar--advanced-topics-in-networked-embedded-systems.html">Seminar: Advanced Topics in Networked Embedded Systems</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem2051595449">
+             <a href="https://tec.ee.ethz.ch/education/student-theses.html">Student Theses</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/education.html">Education</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/education/student-theses.html">Student Theses</a></li>
+        <li class="" role="treeitem" id="navitem2529039729">
+             <a href="https://tec.ee.ethz.ch/education/student-theses/general-information.html">General Information</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3223260097">
+             <a href="https://tec.ee.ethz.ch/education/student-theses/current-past-theses.html">Current &amp; Past Theses</a>
+        </li></ul></li></ul></li><li class=" children" role="treeitem" id="navitem1053937982">
+             <a href="https://tec.ee.ethz.ch/TEC-News.html">TEC News</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#">Back</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News.html">TEC News</a></li>
+        <li class="" role="treeitem" id="navitem1831013143">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2019.html">2019</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1831013142">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2018.html">2018</a>
+        </li>
+        <li class=" children" role="treeitem" id="navitem1831013141">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017.html">2017</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News.html">TEC News</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2017.html">2017</a></li>
+        <li class=" children" role="treeitem" id="navitem1627871035">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/01.html">01</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2017.html">2017</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2017/01.html">01</a></li>
+        <li class="" role="treeitem" id="navitem1753283545">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/01/new-doctoral-student.html">New Doctoral Student</a>
+        </li>
+        <li class="" role="treeitem" id="navitem4061601361">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/01/invited-talk---prof-kay-roemer-graz-university-of-technology-austria-.html">Invited Talk - Prof. Kay Römer, Graz University of Technology, Austria </a>
+        </li>
+        <li class="" role="treeitem" id="navitem982402619">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/01/phd-examination-of-roman-lim.html">PhD examination of Roman Lim</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627871036">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/02.html">02</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2017.html">2017</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2017/02.html">02</a></li>
+        <li class="" role="treeitem" id="navitem215453790">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/02/edaa-dissertation-award.html">EDAA Outstanding Dissertation Award</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3397899790">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/02/best-poster-award--ak-permafrost-2017.html">Best Poster Award @ AK Permafrost 2017</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1468973710">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2017/02/1st-place--ewsn-2017-dependability-competition.html">1st place @ EWSN 2017 Dependability Competition</a>
+        </li></ul></li></ul></li><li class=" children" role="treeitem" id="navitem1831013140">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News.html">TEC News</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li>
+        <li class=" children" role="treeitem" id="navitem1627841244">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/01.html">01</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/01.html">01</a></li>
+        <li class="" role="treeitem" id="navitem2758869689">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/01/new-phd-students.html">New PhD Students</a>
+        </li>
+        <li class="" role="treeitem" id="navitem698756864">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/01/tik-new-years-dinner.html">TIK New Year's Dinner</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627841246">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/03.html">03</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/03.html">03</a></li>
+        <li class="" role="treeitem" id="navitem1155749801">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/03/new-post-doc.html">New Post-Doc</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3834124404">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/03/tec-ski-day.html">TEC Ski-day</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627841248">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05.html">05</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/05.html">05</a></li>
+        <li class="" role="treeitem" id="navitem2937786716">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/acm-sigbed-paul-caspi-memorial-dissertation-award.html">ACM SIGBED Paul Caspi Memorial Dissertation Award</a>
+        </li>
+        <li class="" role="treeitem" id="navitem130514500">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/invited-talk1.html">Invited Talk - June 06, 03.15, HG G26.1 </a>
+        </li>
+        <li class=" children" role="treeitem" id="navitem3782929638">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/nano-tera-annual-plenary-meeting.html">Nano-Tera Annual Plenary Meeting</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/05.html">05</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/05/nano-tera-annual-plenary-meeting.html">Nano-Tera Annual Plenary Meeting</a></li>
+        <li class="" role="treeitem" id="navitem1755774698">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/nano-tera-annual-plenary-meeting/nano-teraAPM2016-posters.html">Posters</a>
+        </li></ul></li><li class="" role="treeitem" id="navitem1553703102">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/my-thesis-in-180s-finalist.html">My Thesis in 180s Finalist</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3057124337">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/05/invited-talk-060616.html">Invited Talk - May 31, 01.15, HG E1.1 </a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627841250">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/07.html">07</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/07.html">07</a></li>
+        <li class="" role="treeitem" id="navitem517113547">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/07/invited-talk.html">Invited Talk - July 11, 11.15, ETZ E81</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627841252">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/09.html">09</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/09.html">09</a></li>
+        <li class="" role="treeitem" id="navitem4294815405">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/09/studieninformationstage--der-eth-zuerich.html">Studieninformationstage  der ETH Zürich</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3809137370">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/09/tec-autumn-group-hike.html">TEC Autumn Group Hike</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627841274">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/10.html">10</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2016/10.html">10</a></li>
+        <li class="" role="treeitem" id="navitem1517394137">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/10/participation-in-the-d-itet-research-photo-competition.html">Participation in the D-ITET Research Photo Competition</a>
+        </li>
+        <li class="" role="treeitem" id="navitem4042545155">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2016/10/best-paper-award---estimedia-symposium.html">Best Paper Award @  Estimedia symposium</a>
+        </li></ul></li></ul></li><li class=" children" role="treeitem" id="navitem1831013139">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015.html">2015</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News.html">TEC News</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2015.html">2015</a></li>
+        <li class=" children" role="treeitem" id="navitem1627811485">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/12.html">12</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2015.html">2015</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2015/12.html">12</a></li>
+        <li class="" role="treeitem" id="navitem1332237613">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/12/4th-place-texas-instruments-innovation-challenge.html">4th place @ Texas Instruments Innovation Challenge</a>
+        </li></ul></li><li class=" children" role="treeitem" id="navitem1627811483">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/10.html">10</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2015.html">2015</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/TEC-News/2015/10.html">10</a></li>
+        <li class="" role="treeitem" id="navitem2928784743">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/10/best-paper-award.html">Best Paper Award @ SenseApp</a>
+        </li>
+        <li class="" role="treeitem" id="navitem1638455684">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/10/european-satellite-navigation-competition-prizes0.html">European Satellite Navigation Competition Prizes</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3827878585">
+             <a href="https://tec.ee.ethz.ch/TEC-News/2015/10/new-phd-student.html">New PhD Student</a>
+        </li></ul></li></ul></li></ul></li><li class=" children" role="treeitem" id="navitem2391617762">
+             <a href="https://tec.ee.ethz.ch/publications-and-awards.html">Publications &amp; Awards</a>
+        <ul class="subnav" role="group"><li class="back-to-top" role="treeitem"><a href="https://tec.ee.ethz.ch/content/specialinterest/itet/cen-lab/comp-eng-group/en.html">To homepage</a></li><li class="back" role="treeitem"><a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#">Back</a></li><li class="current" role="treeitem"><a href="https://tec.ee.ethz.ch/publications-and-awards.html">Publications &amp; Awards</a></li>
+        <li class="" role="treeitem" id="navitem225123701">
+             <a href="https://tec.ee.ethz.ch/publications-and-awards/papers-with-ecitations.html">Publications</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3665277483">
+             <a href="https://tec.ee.ethz.ch/publications-and-awards/PhDThesis.html">PhD Thesis</a>
+        </li>
+        <li class="" role="treeitem" id="navitem3096190851">
+             <a href="https://tec.ee.ethz.ch/publications-and-awards/awards.html">Awards</a>
+        </li>
+    
+    </ul>
+        </li>
+    </ul>
+
+<div id="mobile-dep-wrapper">
+    <div id="mobile-department">
+		<nav role="navigation">
+	       
+	           
+	               <div id="mobile-departemente" class="list-dropdown hideFocusBox">
+	                   <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#" title="Select a department">Departments</a>
+	               </div>
+	               <ul class="list-dropdown-select" style="display: none;">
+	                   
+	                       <li>
+	                           <span class="header">Architecture and Civil Engineering</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://arch.ethz.ch/en" title="">D-ARCH: Architecture </a></li>
+	                               
+	                                   <li><a href="https://baug.ethz.ch/en/" title="">D-BAUG: Civil, Environmental and Geomatic Engineering</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Engineering Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://bsse.ethz.ch/" title="">D-BSSE: Biosystems Science and Engineering</a></li>
+	                               
+	                                   <li><a href="https://inf.ethz.ch/" title="">D-INFK: Computer Science</a></li>
+	                               
+	                                   <li><a href="https://ee.ethz.ch/" title="">D-ITET: Information Technology and Electrical Engineering</a></li>
+	                               
+	                                   <li><a href="https://mat.ethz.ch/" title="">D-MATL: Department of Materials</a></li>
+	                               
+	                                   <li><a href="https://mavt.ethz.ch/" title="">D-MAVT: Mechanical and Process Engineering</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Natural Sciences and Mathematics</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://biol.ethz.ch/en/" title="">D-BIOL: Biology</a></li>
+	                               
+	                                   <li><a href="https://chab.ethz.ch/en/" title="">D-CHAB: Chemistry and Applied Biosciences</a></li>
+	                               
+	                                   <li><a href="https://math.ethz.ch/" title="">D-MATH: Mathematics</a></li>
+	                               
+	                                   <li><a href="https://www.phys.ethz.ch/" title="">D-PHYS: Physics</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">System-oriented Natural Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://erdw.ethz.ch/en/" title="">D-ERDW: Earth Sciences</a></li>
+	                               
+	                                   <li><a href="https://hest.ethz.ch/en" title="">D-HEST: Health Sciences and Technology</a></li>
+	                               
+	                                   <li><a href="https://usys.ethz.ch/en/" title="">D-USYS: Environmental Systems Science</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Management and Social Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://mtec.ethz.ch/" title="">D-MTEC: Management, Technology and Economics</a></li>
+	                               
+	                                   <li><a href="https://gess.ethz.ch/en/" title="">D-GESS: Humanities, Social and Political Sciences</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	               </ul>
+	           
+	           
+	       
+		</nav>
+	</div></div>
+
+<ul id="mobile-portal-link">
+	<li><a href="https://ethz.ch/students/en.html" title="Information for students of ETH Zurich">Student portal</a></li>
+	<li><a href="http://www.alumni.ethz.ch/en/" title="Website of the ETH Alumni association">Alumni association</a></li>
+	<li><a href="https://www.tik.ee.ethz.ch/intranet/" title="TIK Intranet">TIK Intranet</a></li>
+	<li><a href="http://wiki.tik.ee.ethz.ch/" title="TIK Wiki">TIK Wiki</a></li>
+	</ul>
+
+
+</div>
+</div>
+	
+    <div class="grid_6">
+	<div id="headline">
+	            <div class="headlineSmall ">
+	                <div class="line1">
+                      <a href="https://ee.ethz.ch/" title="">Dept. of Information Technology and Electrical Engineering </a>
+                          </div>                        
+	                <div class="line2">
+                       <a href="http://www.tik.ee.ethz.ch/" title="">Computer Engineering &amp; Networks Lab</a>
+                           </div>
+	            </div>
+	            <div class="headlineBig"><a href="https://tec.ee.ethz.ch/">TEC - Computer Engineering Group
+</a></div>
+	        </div>
+	    </div><div class="grid_2">
+	<nav role="navigation">
+		<ul id="portal-link">
+			<li class="first">
+					<a href="https://ethz.ch/students/en.html">Student portal</a>
+				</li>
+			<li class="">
+					<a href="http://www.alumni.ethz.ch/en/">Alumni association</a>
+				</li>
+			<li class="last">
+					<a href="https://www.tik.ee.ethz.ch/intranet/">TIK Intranet</a>
+				</li>
+			<li class="">
+					<a href="http://wiki.tik.ee.ethz.ch/">TIK Wiki</a>
+				</li>
+			</ul>
+	</nav>
+</div><div id="JumpStation" class="grid_2">
+        <div id="contact">
+            <a class="login" href="https://tec.ee.ethz.ch/login/en.html?resource=%2Fcontent%2Fspecialinterest%2Fitet%2Fcen-lab%2Fcomp-eng-group%2Fen%2Fresearch%2Fnetworked-embedded-systems%2Fflocklab.html">Login</a>
+<a class="contact" href="https://tec.ee.ethz.ch/utils/contact.html">
+	    Contact</a>
+<div id="header-langswitch" class="wrapper-dropdown-langswitch " tabindex="0" role="navigation" aria-label="Language Switch">
+	<span aria-haspopup="true" tabindex="0" title="Currently selected: English">en</span>
+	<ul aria-hidden="true" class="dropdown" tabindex="0">
+		</ul>
+</div></div>
+        <div class="div_bottom">
+            <div id="search">
+                <form action="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab/.ethz_search.html" method="GET" accept-charset="UTF-8">
+                    <label for="searchinput" class="hidden">Keyword or person</label>
+                    <input type="text" id="searchinput" placeholder="Keyword or person" data-placeholder="Keyword or person" name="search" aria-required="false">
+                    <input type="image" alt="Start search" id="searchsubmit" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/icon-search-neg.svg" aria-required="false">
+                    <input type="hidden" name="language" value="en">
+                </form>
+            </div>
+            
+            
+
+
+	
+
+	<div id="department">
+		<nav role="navigation">
+	       
+	           
+	               <div id="departemente" class="list-dropdown hideFocusBox">
+	                   <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#" title="Select a department">Departments</a>
+	               </div>
+	               <ul class="list-dropdown-select" style="display: none;">
+	                   
+	                       <li>
+	                           <span class="header">Architecture and Civil Engineering</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://arch.ethz.ch/en" title="">D-ARCH: Architecture </a></li>
+	                               
+	                                   <li><a href="https://baug.ethz.ch/en/" title="">D-BAUG: Civil, Environmental and Geomatic Engineering</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Engineering Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://bsse.ethz.ch/" title="">D-BSSE: Biosystems Science and Engineering</a></li>
+	                               
+	                                   <li><a href="https://inf.ethz.ch/" title="">D-INFK: Computer Science</a></li>
+	                               
+	                                   <li><a href="https://ee.ethz.ch/" title="">D-ITET: Information Technology and Electrical Engineering</a></li>
+	                               
+	                                   <li><a href="https://mat.ethz.ch/" title="">D-MATL: Department of Materials</a></li>
+	                               
+	                                   <li><a href="https://mavt.ethz.ch/" title="">D-MAVT: Mechanical and Process Engineering</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Natural Sciences and Mathematics</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://biol.ethz.ch/en/" title="">D-BIOL: Biology</a></li>
+	                               
+	                                   <li><a href="https://chab.ethz.ch/en/" title="">D-CHAB: Chemistry and Applied Biosciences</a></li>
+	                               
+	                                   <li><a href="https://math.ethz.ch/" title="">D-MATH: Mathematics</a></li>
+	                               
+	                                   <li><a href="https://www.phys.ethz.ch/" title="">D-PHYS: Physics</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">System-oriented Natural Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://erdw.ethz.ch/en/" title="">D-ERDW: Earth Sciences</a></li>
+	                               
+	                                   <li><a href="https://hest.ethz.ch/en" title="">D-HEST: Health Sciences and Technology</a></li>
+	                               
+	                                   <li><a href="https://usys.ethz.ch/en/" title="">D-USYS: Environmental Systems Science</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	                       <li>
+	                           <span class="header">Management and Social Sciences</span>
+	                           <ul class="list-dropdown-select-sub">
+	                               
+	                                   <li><a href="https://mtec.ethz.ch/" title="">D-MTEC: Management, Technology and Economics</a></li>
+	                               
+	                                   <li><a href="https://gess.ethz.ch/en/" title="">D-GESS: Humanities, Social and Political Sciences</a></li>
+	                               
+	                           </ul>
+	                       </li>
+	                   
+	               </ul>
+	           
+	           
+	       
+		</nav>
+	</div>
+<div id="services-tablet">
+                </div>
+		</div>
+	</div>
+</header>
+    
+    <!-- navigation -->
+    
+
+
+
+<a id="navTopRoot"></a>
+<nav id="nav" class="container_10" role="navigation">
+    <!-- navigation -->
+<h1 class="screenreader">Navigation Area</h1> 
+<button class="nav-button nav-button-left">
+    <span class="hidden">Move navigation left</span>
+</button>
+<div class="nav-scrollcontainer">
+	<div class="nav-scroll-shadow nav-scroll-shadow-left"></div>
+	<div class="nav-scroll-shadow nav-scroll-shadow-right"></div>
+	<div class="nav-scrollarea" style="margin-left: 0px;">
+		<ul style="width: auto;">
+		    <li id="nav-first" aria-haspopup="true">
+			            <div class="placeholder"></div>
+			            <div class="zIndex">
+			                <a href="https://tec.ee.ethz.ch/the-group.html" title="The Group">                
+			                    <div class="overlayContainer">
+			                        <div class="linkContainer">
+			                            <div class="borderBox">
+			                                <div class="maxWidth" style="width: 86px;">
+                                                <span class="navText">The Group</span>
+			                                </div>
+			                            </div>
+			                            <div class="subOverview-overlay" aria-haspopup="false">
+			                                <div class="subOverview" style="width: 13.75rem;">
+			                                   	Overview</div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </a>
+			                <nav class="nav-sub" aria-haspopup="false" style="width: 13.75rem;">
+			                	<ul>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/the-group/people.html">People</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/the-group/open-positions.html">Open Positions</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/the-group/how-to-find-us.html">How to Find Us</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/the-group/group-meeting.html">Group Meeting</a>
+				                           </li>
+				                       </ul>
+		                    	</nav>
+		                </div>
+		            </li>
+		        <li class="active" aria-haspopup="true">
+			            <div class="placeholder"></div>
+			            <div class="zIndex">
+			                <a href="https://tec.ee.ethz.ch/research.html" title="Research">                
+			                    <div class="overlayContainer">
+			                        <div class="linkContainer">
+			                            <div class="borderBox">
+			                                <div class="maxWidth" style="width: 76px;">
+                                                <span class="navText">Research</span>
+			                                </div>
+			                            </div>
+			                            <div class="subOverview-overlay" aria-haspopup="false">
+			                                <div class="subOverview" style="width: 13.75rem;">
+			                                   	Overview</div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </a>
+			                <nav class="nav-sub" aria-haspopup="false" style="width: 13.75rem;">
+			                	<ul>
+				                       <li class="active">
+				                               <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems.html">Networked Embedded Systems</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems.html">Multiprocessor Systems</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/research/past-research.html">Past Research Areas</a>
+				                           </li>
+				                       </ul>
+		                    	</nav>
+		                </div>
+		            </li>
+		        <li aria-haspopup="true">
+			            <div class="placeholder"></div>
+			            <div class="zIndex">
+			                <a href="https://tec.ee.ethz.ch/education.html" title="Education">                
+			                    <div class="overlayContainer">
+			                        <div class="linkContainer">
+			                            <div class="borderBox">
+			                                <div class="maxWidth" style="width: 82px;">
+                                                <span class="navText">Education</span>
+			                                </div>
+			                            </div>
+			                            <div class="subOverview-overlay" aria-haspopup="false">
+			                                <div class="subOverview" style="width: 13.75rem;">
+			                                   	Overview</div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </a>
+			                <nav class="nav-sub" aria-haspopup="false" style="width: 13.75rem;">
+			                	<ul>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/education/lectures.html">Lectures</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/education/student-theses.html">Student Theses</a>
+				                           </li>
+				                       </ul>
+		                    	</nav>
+		                </div>
+		            </li>
+		        <li aria-haspopup="true">
+			            <div class="placeholder"></div>
+			            <div class="zIndex">
+			                <a href="https://tec.ee.ethz.ch/TEC-News.html" title="TEC News">                
+			                    <div class="overlayContainer">
+			                        <div class="linkContainer">
+			                            <div class="borderBox">
+			                                <div class="maxWidth" style="width: 83px;">
+                                                <span class="navText">TEC News</span>
+			                                </div>
+			                            </div>
+			                            <div class="subOverview-overlay" aria-haspopup="false">
+			                                <div class="subOverview" style="width: 13.75rem;">
+			                                   	Overview</div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </a>
+			                <nav class="nav-sub" aria-haspopup="false" style="width: 13.75rem;">
+			                	<ul>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/TEC-News/2019.html">2019</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/TEC-News/2018.html">2018</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/TEC-News/2017.html">2017</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/TEC-News/2016.html">2016</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/TEC-News/2015.html">2015</a>
+				                           </li>
+				                       </ul>
+		                    	</nav>
+		                </div>
+		            </li>
+		        <li aria-haspopup="true">
+			            <div class="placeholder"></div>
+			            <div class="zIndex">
+			                <a href="https://tec.ee.ethz.ch/publications-and-awards.html" title="Publications &amp; Awards">                
+			                    <div class="overlayContainer">
+			                        <div class="linkContainer">
+			                            <div class="borderBox">
+			                                <div class="maxWidth" style="width: 117px;">
+                                                <span class="navText">Publications &amp; Awards</span>
+			                                </div>
+			                            </div>
+			                            <div class="subOverview-overlay two-line" aria-haspopup="false">
+			                                <div class="subOverview" style="width: 13.75rem;">
+			                                   	Overview</div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </a>
+			                <nav class="nav-sub two-line" aria-haspopup="false" style="width: 13.75rem;">
+			                	<ul>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/publications-and-awards/papers-with-ecitations.html">Publications</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/publications-and-awards/PhDThesis.html">PhD Thesis</a>
+				                           </li>
+				                       <li>
+				                               <a href="https://tec.ee.ethz.ch/publications-and-awards/awards.html">Awards</a>
+				                           </li>
+				                       </ul>
+		                    	</nav>
+		                </div>
+		            </li>
+		        </ul>
+		</div>
+</div>
+<button class="nav-button nav-button-right">
+    <span class="hidden">Move navigation right</span>
+</button>
+
+<div id="services">
+    </div>
+
+<div class="clear">&nbsp;</div>
+</nav>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $.ajax({
+            type:     'GET',
+            dataType: 'HTML',
+            cache:    false,
+            url:      'https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab/_jcr_content.navigation.html?type=top',
+            success:  function(response) {          
+                if (response) {
+                    if (response.lastIndexOf("</" + "html" + ">") != -1) {
+                        // We got a complete HTML document -> replace whole document
+                        document.open("text/html","replace");
+                        document.write(response);
+                        document.close();
+                    } else {
+                        $('#nav').html(response);
+                        initHeaderNavigation();
+                    }
+                }                
+            }
+        });
+    });
+</script>
+
+    
+    <!-- container -->
+    <!-- content -->
+<section id="content" class="container_10">
+
+    <!-- breadcrumb -->
+    <div id="breadcrumb">
+        <ul>
+            <li>
+	            <a href="https://ethz.ch/en.html" title="Home">ETH Zurich<span class="arrowBreadcrumb">&nbsp;</span>
+	            </a>
+            </li>
+            <li>
+                    <a href="https://ee.ethz.ch/" title="Dept. of Information Technology and Electrical Engineering ">
+                        D-ITET<span class="arrowBreadcrumb">&nbsp;</span>
+                    </a>
+                </li>
+            <li>
+                    <a href="http://www.tik.ee.ethz.ch/" title="Computer Engineering and Networks Laboratory">
+                        TIK<span class="arrowBreadcrumb">&nbsp;</span>
+                    </a>
+                </li>
+            <li>
+                    <a title="" href="https://tec.ee.ethz.ch/">
+                        Computer Engineering Group<span class="arrowBreadcrumb">&nbsp;</span>
+                    </a>
+                </li>
+            </ul>
+	</div>
+
+    
+    <div id="contentContainer" class="grid_10" style="min-height: 194.2px;">
+    
+        <!-- contentNav -->
+        
+
+
+
+<nav class="grid_3" id="contentNav">
+    <h1 class="screenreader">Navigation Area</h1>  
+<ul class="level0">
+		<ul>
+			<li class="par">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems.html">
+				 Networked Embedded Systems</a>
+			<ul>
+			<li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/permasense.html">
+				 PermaSense</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/dpp.html">
+				 The Dual Processor Platform</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/bolt.html">
+				 BOLT</a>
+			</li>
+	        <li class="cur">
+			     <em>Current Subcategory: </em>                  
+                 <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html">
+				 FlockLab</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/transient-computing-systems.html">
+				 Transient Computing Systems</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/rocketloger.html">
+				 RocketLogger</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/opensense.html">
+				 OpenSense</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/on-device-deep-learning.html">
+				 On-device Deep Learning</a>
+			</li></ul></li><li class="">
+			     <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems.html">
+				 Multiprocessor Systems</a>
+			<ul>
+			<li class="">
+			     <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/mixed-critical-systems.html">
+				 Mixed-Critical Systems</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/security-in-the-mpsoc-domain.html">
+				 Security in the MPSoC Domain</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/multiprocessor-systems/transient-computing-systems0.html">
+				 Transient Computing Systems</a>
+			</li></ul></li><li class="">
+			     <a href="https://tec.ee.ethz.ch/research/past-research.html">
+				 Past Research Areas</a>
+			<ul>
+			<li class="">
+			     <a href="https://tec.ee.ethz.ch/research/past-research/systems-optimization.html">
+				 Systems Optimization</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/past-research/speech-processing.html">
+				 Speech processing</a>
+			</li>
+	        <li class="">
+			     <a href="https://tec.ee.ethz.ch/research/past-research/data-exchange-optimization.html">
+				 Data Exchange Optimization</a>
+			</li>
+    
+    </ul>
+        </li>
+    </ul>
+        
+    </ul>
+
+
+&nbsp;
+
+</nav>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $.ajax({
+            type:     'GET',
+            dataType: 'HTML',
+            cache:    false,
+            url:      'https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab/_jcr_content.navigation.html?type=left',
+            success:  function(response) {
+                if (response) {
+                    if (response.lastIndexOf("</" + "html" + ">") != -1) {
+                        // We got a complete HTML document -> replace whole document
+                        document.open("text/html","replace");
+                        document.write(response);
+                        document.close();
+                    } else {                	
+                        $('#contentNav').html(response);
+                    }
+                }                
+            }
+        });
+    });
+</script>
+
+        
+        <!-- START main content -->
+        <section class="grid_5 hyphenate" id="contentMain">
+            
+
+
+<h1 class="donthyphenate">The FlockLab Testbed</h1>
+
+
+
+
+    <h1 class="screenreader">Main con­tent</h1> 
+    <a id="mainContent"></a>    
+    
+
+
+
+
+
+
+<div class="par basecomponent parsys contains-fullwidthimage contains-linklist contains-textimage">
+
+
+    
+        
+        <a name="par_textimage" style="visibility:hidden"></a>
+        <div class="basecomponent textimage">
+
+
+	
+		<div>
+			<div class="textimage ">
+		        
+		        
+				    <p>Flock­Lab is a sec­ond gen­er­a­tion wire­less sen­sor net­work test­bed. It fea­tures a co-lo­cated and tightly cou­pled ob­server plat­form di­rectly con­nected to every WSN node un­der test (tar­get de­vice). The ob­servers can re­pro­gram tar­get de­vices, log data se­r­ial ports, trace and stim­u­late dig­i­tal GPIOs, con­trol the power sup­ply and pro­file power con­sump­tion. Us­ing an ex­ter­nal trac­ing unit, Flock­Lab is ca­pa­ble of trac­ing at very high rates (100s kbit/sec) and with high net­work syn­chro­niza­tion. This al­lows to cre­ate test­ing sce­nar­ios that are much more re­al­is­tic and hence com­plex than with stan­dard bus-based test­bed ar­chi­tec­tures. The test­bed is set up on cam­pus in and around our de­part­ment build­ing with re­cent ex­ten­sions ac­cross the city Zurich al­low­ing for joint in- and out­door test­ing of WSN ap­pli­ca­tions.</p>
+<p>If you use Flock­Lab for your re­search be sure to prop­erly cite the test­bed in your work:</p>
+<p><span>Ro­man Lim, Fed­erico Fer­rari, Marco Zim­mer­ling, Christoph Walser, Philipp Som­mer, and Jan Beu­tel. <i><a iconoption="AUTO" href="ftp://ftp.tik.ee.ethz.ch/pub/people/rlim/LFZWSB2013.pdf">Flock­Lab: A Test­bed for Dis­trib­uted, Syn­chro­nized Trac­ing and Pro­fil­ing of Wire­less Em­bed­ded Sys­tems<span class="icon"></span></a>.</i> In Pro­ceed­ings of the 12th In­ter­na­tional Con­fer­ence on In­for­ma­tion Pro­cess­ing in Sen­sor Net­works (IPSN '13), ACM, New York, NY, USA, 153-166, 2013, <a iconoption="AUTO" href="https://doi.org/10.1145/2461381.2461402">https://​doi.​org/​10.​1145/​2461381.​2461402<span class="icon extern"></span></a>.</span></p>
+<h3>Ac­cess to Flock­Lab Doc­u­men­ta­tion</h3>
+<p><a href="http://www.flocklab.ethz.ch/">http://​www.​flo​ckla​b.​ethz.​ch<span class="icon"></span></a></p>
+<h3><span>Lo­gin to Flock­Lab</span></h3>
+<p><span><a iconoption="AUTO" href="https://user.flocklab.ethz.ch/">https://​user.​flo​ckla​b.​ethz.​ch<span class="icon"></span></a></span></p>
+		        
+		    </div>
+		</div>	
+	
+	
+
+</div>
+
+    
+        
+        <a name="par_linklist" style="visibility:hidden"></a>
+        <div class="reference">
+
+
+	
+		<div class="linkliste">
+			
+			
+				
+					
+						<h2>Con­tact</h2>
+					
+					
+					
+				
+			
+			
+				
+				<ul class="linklist   ">
+			
+			
+				
+					<li>
+				
+				
+				
+
+
+     
+    
+        <a title="" href="https://tec.ee.ethz.ch/the-group/people/person-detail.html?persid=59596">Dr. Jan Beu­tel<span class="icon"></span>
+        </a>       
+    
+
+
+				
+					</li>
+				
+			
+				
+					<li>
+				
+				
+				
+
+
+     
+    
+        <a title="" href="https://tec.ee.ethz.ch/the-group/people/person-detail.html?persid=147294">Reto Da Forno<span class="icon"></span>
+        </a>       
+    
+
+
+				
+					</li>
+				
+			
+				
+					<li>
+				
+				
+				
+
+
+     
+    
+        <a title="" href="https://tec.ee.ethz.ch/the-group/people/person-detail.html?persid=179483">Ro­man Trüb<span class="icon"></span>
+        </a>       
+    
+
+
+				
+					</li>
+				
+			
+			
+				</ul>
+			
+		</div>
+	
+	
+
+</div>
+
+    
+        
+        <a name="par_fullwidthimage" style="visibility:hidden"></a>
+        <div class="basecomponent fullwidthimage">
+
+
+
+    
+        
+        
+        
+            <div class="fullwidthimage">
+<figure class="fullwidthimage">
+            <img alt="FlockLab Layout" title="" src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/image.imageformat.fullwidth.782220254.png">
+			</figure>
+    </div>	
+        
+    
+
+
+</div>
+
+    
+
+
+
+</div> 
+
+
+        </section>
+        <!-- END main content -->
+        
+        <!-- contentSidebar -->
+        <aside class="grid_2 omega hyphenate" role="complementary">
+              
+
+
+
+
+
+
+
+
+
+<h1 class="screenreader">Ad­di­tional In­for­ma­tion</h1>
+<!-- no logo and no box -->
+        
+
+
+
+
+
+
+	
+	
+	    
+	       <div class="rightpar parsys iparsys"><div class="section"><div class="new"></div>
+</div><div class="iparys_inherited"><div class="rightpar parsys iparsys"><a name="rightpar_contextinfo" style="visibility:hidden"></a><div class="basecomponent contextinfo section">
+
+
+ 
+
+
+
+
+
+	
+	    <div class="contentSubContainer noBorder ">
+		   
+		   
+		   
+		       <div class="basecomponent contactbox">
+
+
+		
+			 
+<div class="vcard">
+<h4>Con­tact</h4>
+<div class="org">
+<p class="organization-name">ETH Zurich</p>
+<p class="organization-unit">Inst. f. Techn. In­for­matik u. K.
+</p>
+</div>
+<div class="adr">
+<p class="contact-name donthyphenate">Prof. Dr. Lothar Thiele</p>
+<p class="contact-function">Head of Com­puter Eng. and Net­works Lab.</p>
+<p class="contact-address">ETZ&nbsp;G&nbsp;87</p>
+<p class="street-address">Glo­ri­as­trasse 35</p>
+<span class="postal-code">8092</span>
+<span class="locality">Zürich</span>
+<p class="country">Switzer­land</p>
+</div>
+</div>
+<div class="vcard" style="clear:both">
+<ul class="contactlist donthyphenate">
+<li class="tel">
+<span class="icons tel"></span>
+<span class="type hidden">Work</span>
+<a href="tel:+41446327031" class="tel">+41 44 632 70 31<span class="icon"></span></a>
+</li>
+<li class="fax">
+<span class="icons fax"></span>
+<span class="type hidden">Fax</span>
+<a href="tel:+41446321036" class="tel">+41 44 632 10 36<span class="icon"></span></a>
+</li>
+<li class="email">
+<span class="icons mail"></span>
+<script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%63%6c%61%73%73%3d%22%65%6d%61%69%6c%22%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%74%68%69%65%6c%65%40%74%69%6b%2e%65%65%2e%65%74%68%7a%2e%63%68%22%20%74%69%74%6c%65%3d%22%53%65%6e%64%20%65%2d%6d%61%69%6c%22%3e%45%2d%6d%61%69%6c%3c%73%70%61%6e%20%63%6c%61%73%73%3d%22%69%63%6f%6e%22%3e%3c%2f%73%70%61%6e%3e%3c%2f%61%3e%27%29'))</script><a class="email" href="mailto:thiele@tik.ee.ethz.ch">E-mail<span class="icon"></span></a>
+</li>
+<li>
+<span class="icons vcard"></span>
+<a class="note" href="https://tec.ee.ethz.ch/Thiele.vcard.vcf?persid=79038&amp;addressType=1&amp;lang=en">
+V-Card (vcf, 1kb)<span class="icon download"></span>
+</a>
+</li> 
+</ul>
+</div> 
+
+
+		
+		
+
+</div>
+
+		   
+		   <div class="new"></div>
+
+	    </div>
+	
+
+</div>
+</div>
+</div>
+</div>
+
+	    
+	
+	
+
+
+
+        </aside>
+        <div class="clear">&nbsp;</div>
+        <nav id="mobile-main-nav-bottom">
+	    <ul>
+	        <li class="back">
+	             <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems.html">
+	              Back to&nbsp;Networked Embedded Systems</a>
+	         </li>
+	        <li class="here">
+	            <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html">FlockLab</a>
+	        </li>
+	        </ul>
+	</nav>
+
+    </div>
+    <div class="clear">&nbsp;</div>    
+               
+</section>
+
+    <!-- footer -->
+    <div class="container_10" id="social_media_container">
+	<div class="grid_10" id="social_media">
+        <ul>
+		    <li>
+	                    <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#" id="iconFacebook"><img alt="2 clicks for more data protection: this button will only become active and you can only send your suggestion to Facebook once you&#39;ve clicked here. Data will be transferred to others as soon as you have activated this." src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/empty_pixel.png"></a>
+					</li>
+	                <li>
+	                    <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#" id="iconTwitter"><img alt="2 clicks for more data protection: this button will only become active and you can only send your suggestion to Twitter once you&#39;ve clicked here. Data will be transferred to others as soon as you have activated this." src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/empty_pixel.png"></a>
+					</li>
+	                <li>
+	                    <a href="https://tec.ee.ethz.ch/research/networked-embedded-systems/flocklab.html#" id="iconGplus"><img alt="2 clicks for more data protection: this button will only become active and you can only send your suggestion to Google+ once you&#39;ve clicked here. Data will be transferred to others as soon as you have activated this." src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/empty_pixel.png"></a>
+					</li>
+                  </ul>
+	</div>
+</div>
+<footer class="container_10" id="footer">
+	<div class="clear">&nbsp;</div>
+	<div class="grid_10 footerContainer" id="footerContainer">
+		<div id="footerLinks">
+			<ul>
+						<li><a href="https://tec.ee.ethz.ch/footer/sitemap.html"> Sitemap</a></li>
+						<li><a href="https://tec.ee.ethz.ch/footer/imprint.html"> Imprint</a></li>
+						<li><a href="https://tec.ee.ethz.ch/footer/disclaimer.html"> Disclaimer</a></li>
+						<li><a href="https://tec.ee.ethz.ch/footer/copyright.html"> Copyright</a></li>
+						<li><a href="https://tec.ee.ethz.ch/footer/data-protection.html"> Data protection</a></li>
+						</ul>
+				</div>
+		<div id="copyright">
+			<span> © 2019 &nbsp;<a href="http://www.ethz.ch/">Eidgenössische
+					Technische Hochschule Zürich</a>
+			</span>
+		</div>
+	</div>
+	<div class="clear">&nbsp;</div>
+</footer>
+<footer class="container_10" id="footer-mobile">
+	<div class="clear">&nbsp;</div>
+	<div class="grid_10 footerContainer">
+		<div class="grid_5 footer-mobile-login-contact">
+			<p>
+                <a class="login" href="https://tec.ee.ethz.ch/login/en.html?resource=%2Fcontent%2Fspecialinterest%2Fitet%2Fcen-lab%2Fcomp-eng-group%2Fen%2Fresearch%2Fnetworked-embedded-systems%2Fflocklab.html" title="Login with ETH user account">Login</a>
+</p>
+		</div>
+		<div class="grid_5 footer-mobile-login-contact">
+			<p>
+                <a class="contact" href="https://tec.ee.ethz.ch/utils/contact.html" title="Open contact information">
+	    Contact</a>
+</p>
+		</div>
+		<hr class="borderBottom">
+		<div class="grid_5">
+            <ul>
+                        <li><a href="https://tec.ee.ethz.ch/footer/sitemap.html"> Sitemap</a></li>
+                        <li><a href="https://tec.ee.ethz.ch/footer/imprint.html"> Imprint</a></li>
+                        <li><a href="https://tec.ee.ethz.ch/footer/disclaimer.html"> Disclaimer</a></li>
+                        <li><a href="https://tec.ee.ethz.ch/footer/copyright.html"> Copyright</a></li>
+                        <li><a href="https://tec.ee.ethz.ch/footer/data-protection.html"> Data protection</a></li>
+                        </ul>
+                </div>
+		<div class="clear">&nbsp;</div>
+		<div id="copyright-mobile" class="container_10">
+            <span> © 2019 &nbsp;<a href="http://www.ethz.ch/">Eidgenössische Technische Hochschule Zürich</a>
+            </span>
+		</div>
+	</div>
+</footer>
+    
+    <!-- lightbox by photoswipe -->
+    
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!--This is only used for image-lightboxes. HTML inside lightboxes / modals is handled by the Magnific Popup plugin-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader: element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- access statistics -->
+    
+
+    
+        <!-- Access statistics -->
+		<script type="text/javascript">
+		// ==================================================================
+		// 1. Data Layer, fuer jede Seite anders, von AEM befuellt
+		// ==================================================================
+
+		var DataLayer = {
+		    od_dcsid:      '',
+		    od_domain:     'statse.webtrendslive.com',
+		    op_dcsid:      '',
+		    op_domain:     'wtsdc.ethz.ch',
+		
+		    wt_fpc_domain: '', // Cookie Domain, default ist .ethz.ch
+		
+		    site:          'The FlockLab Testbed', // Site name
+		    uri_internal:  'research/networked-embedded-systems/flocklab', // interne URL nur ab site root (ohne Sprache)
+		    oss_term:      '', // gesuchter Begriff
+		    oss_results:   '0', // Anzahl Resultate fuer oss_results
+		    oss_engine:    '', // onsite | ethz (default)  --> WT Parameter abfuellen  
+            oss_lang:      '', // falls Suche auf Sprache gefiltert: Sprache  
+		    page_lang:     'en', // Sprache der Seite
+		    page_group:    'research', // Inhaltsgruppe der Seite (Navigation Level 1)
+		    page_subgroup: 'networked-embedded-systems',  // Inhaltsuntergruppe der Seite (Navigation Level 2)
+		    //visit_ext:   '',   // '0' = internal, '1' = external
+		
+		    events:        false  // Steuert, ob Events fuer die aktuelle Seite getrackt werden
+		}
+		</script>
+        
+
+        <script src="./The FlockLab Testbed – TEC - Computer Engineering Group _ ETH Zurich_files/webtrends.datacollector.js.download"></script>
+    
+    
+
+<div id="powerTip" style="top: 294px; left: 856px; right: auto; bottom: auto; display: none;" class="">Home</div><div id="breadcrumbPowerTip"></div></body></html>
