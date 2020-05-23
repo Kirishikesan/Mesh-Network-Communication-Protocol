@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;AgrIoT_6.1_RadioMedium/simulations/MultiRadioShowcase.ned&apos;" deleteContents="false" description="Delete resource &apos;AgrIoT_6.1_RadioMedium/simulations/MultiRadioShowcase.ned&apos;" element1="/AgrIoT_6.1_RadioMedium/simulations/MultiRadioShowcase.ned" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1589525639430"/>
+</session>

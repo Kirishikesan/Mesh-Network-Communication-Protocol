@@ -1,0 +1,85 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20200508-18:57:12-41224 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t demonetwork n demonetwork cm 1
+MS id 1 d bgb=337,261
+MC id 2 c server t server pid 1 n host
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d p=58,150
+MC id 3 c client t client pid 1 n node
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MS id 3 d p=212,42
+CC sm 2 sg 3 dm 3 dg 0
+CS sm 2 sg 3 d ""
+CC sm 3 sg 3 dm 2 dg 0
+CS sm 3 sg 3 d ""
+MB sm 1 tm 2 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n 000 pe -1
+BS id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n 000 pe 0
+SH sm 2 sg 3 pd 0.1
+ES t 0.1
+CL id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n 000 pe 0 cid 10
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+
+E # 1 t 0.1 m 3 ce 0 msg 9
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n 001 pe -1
+BS id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n 001 pe 1
+SH sm 3 sg 3 pd 0.1
+ES t 0.2
+CL id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n 001 pe 1 cid 11
+
+E # 2 t 0.2 m 2 ce 1 msg 10
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n 011 pe -1
+BS id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n 011 pe 2
+SH sm 2 sg 3 pd 0.1
+ES t 0.3
+CL id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n 011 pe 2 cid 12
+
+E # 3 t 0.3 m 3 ce 2 msg 11
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n 011 pe -1
+BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n 011 pe 3
+SH sm 3 sg 3 pd 0.1
+ES t 0.4
+CL id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n 011 pe 3 cid 13
+
+E # 4 t 0.4 m 2 ce 3 msg 12
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n 101 pe -1
+BS id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n 101 pe 4
+SH sm 2 sg 3 pd 0.1
+ES t 0.5
+CL id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n 101 pe 4 cid 14
+
+E # 5 t 0.5 m 3 ce 4 msg 13
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n 011 pe -1
+BS id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n 011 pe 5
+SH sm 3 sg 3 pd 0.1
+ES t 0.6
+CL id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n 011 pe 5 cid 15
+
+E # 6 t 0.6 m 2 ce 5 msg 14
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n 101 pe -1
+BS id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n 101 pe 6
+SH sm 2 sg 3 pd 0.1
+ES t 0.7
+CL id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n 101 pe 6 cid 16
+
+E # 7 t 0.7 m 3 ce 6 msg 15
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n 111 pe -1
+BS id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n 111 pe 7
+SH sm 3 sg 3 pd 0.1
+ES t 0.8
+CL id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n 111 pe 7 cid 17
+
+E # 8 t 0.8 m 2 ce 7 msg 16
+CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n 111 pe -1
+BS id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n 111 pe 8
+SH sm 2 sg 3 pd 0.1
+ES t 0.9
+CL id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n 111 pe 8 cid 18
+
+E # 9 t 0.9 m 3 ce 8 msg 17
+SE e 0 c 13 m "No more events, simulation completed -- at t=0.9s, event #9"

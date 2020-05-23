@@ -1,0 +1,9 @@
+16:54:33 **** Build of configuration release for project AgrIoT_7.3_RadioMedium2 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_7.3_RadioMedium2/src'
+Creating executable: ../out/clang-release/src/AgrIoT_7.3_RadioMedium2.exe
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_7.3_RadioMedium2/src'
+
+16:54:38 Build Finished. 0 errors, 0 warnings. (took 5s.291ms)
+

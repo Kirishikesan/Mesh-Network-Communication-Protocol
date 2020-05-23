@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/agriot2 -n .:../src $*
+# for shared lib, use: opp_run -l ../src/agriot2 -n .:../src $*

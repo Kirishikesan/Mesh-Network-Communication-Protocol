@@ -1,0 +1,6 @@
+17:33:16 **** Incremental Build of configuration release for project DemoAgriot ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+17:33:17 Build Finished. 0 errors, 0 warnings. (took 527ms)
+

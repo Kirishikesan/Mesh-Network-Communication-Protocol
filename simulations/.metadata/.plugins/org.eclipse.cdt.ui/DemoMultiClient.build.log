@@ -1,0 +1,6 @@
+17:23:13 **** Incremental Build of configuration release for project DemoMultiClient ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+17:23:13 Build Finished. 0 errors, 0 warnings. (took 130ms)
+

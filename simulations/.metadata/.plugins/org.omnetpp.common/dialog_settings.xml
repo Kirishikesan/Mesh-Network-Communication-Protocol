@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="TemplateBasedWizard">
+		<item key="project.template" value="bundleentry://365.fwk698060532/template/emptylargeproject/"/>
+		<item key="nedfile.template" value="bundleentry://379.fwk633748696/templates/emptynedfile/"/>
+		<item key="inifile.template" value="bundleentry://373.fwk633748696/templates/inifile/"/>
+	</section>
+	<section name="ImportWizard">
+	</section>
+</section>

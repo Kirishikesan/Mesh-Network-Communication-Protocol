@@ -1,0 +1,91 @@
+version 2
+run General-0-20200515-16:43:13-242888
+attr configname General
+attr datetime 20200515-16:43:13
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network agriot_6_1_radiomedium.simulations.MultiRadioShowcase
+attr processid 242888
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.accessPoint.numWlanInterfaces 2
+param *.accessPoint.wlan[0].mgmt.ssid "\"wlan2.4\""
+param *.accessPoint.wlan[1].mgmt.ssid "\"wlan5\""
+param *.accessPoint.wlan[1].radio.bandName "\"5 GHz\""
+param *.host1.wlan[*].agent.defaultSsid "\"wlan2.4\""
+param *.host2.wlan[*].agent.defaultSsid "\"wlan5\""
+param *.host2.wlan[0].radio.bandName "\"5 GHz\""
+param *.host1.numApps 1
+param *.host1.app[0].typename "\"PingApp\""
+param *.host1.app[0].destAddr "\"host2\""
+param *.host1.app[0].printPing true
+param **.numMediumVisualizers 4
+param **.displaySignals true
+param *.visualizer.mediumVisualizer[0].nodeFilter "\"host1\""
+param *.visualizer.mediumVisualizer[0].signalColor "\"green\""
+param *.visualizer.mediumVisualizer[1].nodeFilter "\"host2\""
+param *.visualizer.mediumVisualizer[1].signalColor "\"green\""
+param *.visualizer.mediumVisualizer[2].nodeFilter "\"accessPoint\""
+param *.visualizer.mediumVisualizer[2].interfaceFilter "\"wlan[0]\""
+param *.visualizer.mediumVisualizer[2].signalColor "\"purple\""
+param *.visualizer.mediumVisualizer[3].nodeFilter "\"accessPoint\""
+param *.visualizer.mediumVisualizer[3].interfaceFilter "\"wlan[1]\""
+param *.visualizer.mediumVisualizer[3].signalColor "\"purple\""
+param *.visualizer.numDataLinkVisualizers 2
+param *.visualizer.dataLinkVisualizer[*].displayLinks true
+param *.visualizer.dataLinkVisualizer[*].activityLevel "\"peer\""
+param *.visualizer.dataLinkVisualizer[0].nodeFilter "\"host1 or accessPoint\""
+param *.visualizer.dataLinkVisualizer[0].lineColor "\"red\""
+param *.visualizer.dataLinkVisualizer[0].labelColor "\"red\""
+param *.visualizer.dataLinkVisualizer[1].nodeFilter "\"accessPoint or host2\""
+param *.visualizer.dataLinkVisualizer[1].lineColor "\"darkblue\""
+param *.visualizer.dataLinkVisualizer[1].labelColor "\"darkblue\""
+param *.visualizer.interfaceTableVisualizer[0].displayInterfaceTables true
+param *.visualizer.interfaceTableVisualizer[0].placementHint "\"top\""
+param *.visualizer.ieee80211Visualizer[0].displayAssociations true
+param **.arp.typename "\"GlobalArp\""
+
+vector 0 MultiRadioShowcase.host1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 MultiRadioShowcase.host1.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 MultiRadioShowcase.host2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 MultiRadioShowcase.host2.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 MultiRadioShowcase.accessPoint.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 MultiRadioShowcase.accessPoint.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 MultiRadioShowcase.accessPoint.wlan[1].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 MultiRadioShowcase.accessPoint.wlan[1].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 MultiRadioShowcase.host1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 MultiRadioShowcase.host2.wlan[0].radio receptionState:vector ETV
+attr inte

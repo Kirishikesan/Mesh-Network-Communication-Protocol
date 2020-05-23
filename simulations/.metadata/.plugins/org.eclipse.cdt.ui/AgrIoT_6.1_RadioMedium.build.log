@@ -1,0 +1,9 @@
+16:43:09 **** Incremental Build of configuration release for project AgrIoT_6.1_RadioMedium ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+
+16:43:10 Build Finished. 0 errors, 0 warnings. (took 470ms)
+

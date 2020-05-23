@@ -1,0 +1,64 @@
+16:33:26 **** Incremental Build of configuration release for project inet ****
+make MODE=release -j8 all 
+make[1]: Entering directory '/e/Projects/Agriot/INET/inet4/src'
+*** COMPILING with:
+clang++ -c -std=c++11 -O3 -DNDEBUG=1 -MMD -MP -MF .d    -isystem /usr/include -isystem /mingw64/include -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG -DWITH_OSGEARTH -DINET_EXPORT -Wno-overloaded-virtual -include inet/common/precompiled_release.h  -DINET_EXPORT -I. -IE:/Programs/omnetpp-5.6/include
+*** LINKING with:
+clang++ -shared  -o ../out/clang-release/src/libINET.dll -Wl,--no-as-needed -Wl,--whole-archive  -lws2_32 -Wl,--no-whole-archive -loppenvir -loppsim -lstdc++  -losg -losgText -losgDB -losgGA -losgViewer -losgUtil -lOpenThreads  -losgEarth -losgEarthUtil  -Wl,-rpath,E:/Programs/omnetpp-5.6/lib -Wl,-rpath,E:/Programs/omnetpp-5.6/tools/win64/lib -Wl,-rpath,. -L/usr/bin -L/usr/lib -L/mingw64/lib -LE:/Programs/omnetpp-5.6/lib ../out/clang-release/src/typeinfo.def
+Building...
+make[1]: Nothing to be done for 'all-pch'.
+make[1]: Leaving directory '/e/Projects/Agriot/INET/inet4/src'
+16:33:33 **** Incremental Build of configuration release for project AgrIoT_6.0 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.0/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.0/src'
+16:34:01 **** Incremental Build of configuration release for project inet ****
+make MODE=release -j8 all 
+make[1]: Entering directory '/e/Projects/Agriot/INET/inet4/src'
+*** COMPILING with:
+clang++ -c -std=c++11 -O3 -DNDEBUG=1 -MMD -MP -MF .d    -isystem /usr/include -isystem /mingw64/include -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG -DWITH_OSGEARTH -DINET_EXPORT -Wno-overloaded-virtual -include inet/common/precompiled_release.h  -DINET_EXPORT -I. -IE:/Programs/omnetpp-5.6/include
+*** LINKING with:
+clang++ -shared  -o ../out/clang-release/src/libINET.dll -Wl,--no-as-needed -Wl,--whole-archive  -lws2_32 -Wl,--no-whole-archive -loppenvir -loppsim -lstdc++  -losg -losgText -losgDB -losgGA -losgViewer -losgUtil -lOpenThreads  -losgEarth -losgEarthUtil  -Wl,-rpath,E:/Programs/omnetpp-5.6/lib -Wl,-rpath,E:/Programs/omnetpp-5.6/tools/win64/lib -Wl,-rpath,. -L/usr/bin -L/usr/lib -L/mingw64/lib -LE:/Programs/omnetpp-5.6/lib ../out/clang-release/src/typeinfo.def
+Building...
+make[1]: Nothing to be done for 'all-pch'.
+make[1]: Leaving directory '/e/Projects/Agriot/INET/inet4/src'
+16:34:09 **** Incremental Build of configuration release for project AgrIoT_6.1_RadioMedium ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+16:43:03 **** Incremental Build of configuration release for project inet ****
+make MODE=release -j8 all 
+make[1]: Entering directory '/e/Projects/Agriot/INET/inet4/src'
+*** COMPILING with:
+clang++ -c -std=c++11 -O3 -DNDEBUG=1 -MMD -MP -MF .d    -isystem /usr/include -isystem /mingw64/include -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG -DWITH_OSGEARTH -DINET_EXPORT -Wno-overloaded-virtual -include inet/common/precompiled_release.h  -DINET_EXPORT -I. -IE:/Programs/omnetpp-5.6/include
+*** LINKING with:
+clang++ -shared  -o ../out/clang-release/src/libINET.dll -Wl,--no-as-needed -Wl,--whole-archive  -lws2_32 -Wl,--no-whole-archive -loppenvir -loppsim -lstdc++  -losg -losgText -losgDB -losgGA -losgViewer -losgUtil -lOpenThreads  -losgEarth -losgEarthUtil  -Wl,-rpath,E:/Programs/omnetpp-5.6/lib -Wl,-rpath,E:/Programs/omnetpp-5.6/tools/win64/lib -Wl,-rpath,. -L/usr/bin -L/usr/lib -L/mingw64/lib -LE:/Programs/omnetpp-5.6/lib ../out/clang-release/src/typeinfo.def
+Building...
+make[1]: Nothing to be done for 'all-pch'.
+make[1]: Leaving directory '/e/Projects/Agriot/INET/inet4/src'
+16:43:09 **** Incremental Build of configuration release for project AgrIoT_6.1_RadioMedium ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_6.1_RadioMedium/src'
+16:52:00 **** Build of configuration release for project inet ****
+make MODE=release -j8 all 
+make[1]: Entering directory '/e/Projects/Agriot/INET/inet4/src'
+*** COMPILING with:
+clang++ -c -std=c++11 -O3 -DNDEBUG=1 -MMD -MP -MF .d    -isystem /usr/include -isystem /mingw64/include -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG -DWITH_OSGEARTH -DINET_EXPORT -Wno-overloaded-virtual -include inet/common/precompiled_release.h  -DINET_EXPORT -I. -IE:/Programs/omnetpp-5.6/include
+*** LINKING with:
+clang++ -shared  -o ../out/clang-release/src/libINET.dll -Wl,--no-as-needed -Wl,--whole-archive  -lws2_32 -Wl,--no-whole-archive -loppenvir -loppsim -lstdc++  -losg -losgText -losgDB -losgGA -losgViewer -losgUtil -lOpenThreads  -losgEarth -losgEarthUtil  -Wl,-rpath,E:/Programs/omnetpp-5.6/lib -Wl,-rpath,E:/Programs/omnetpp-5.6/tools/win64/lib -Wl,-rpath,. -L/usr/bin -L/usr/lib -L/mingw64/lib -LE:/Programs/omnetpp-5.6/lib ../out/clang-release/src/typeinfo.def
+Building...
+make[1]: Nothing to be done for 'all-pch'.
+make[1]: Leaving directory '/e/Projects/Agriot/INET/inet4/src'
+16:54:33 **** Build of configuration release for project AgrIoT_7.3_RadioMedium2 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_7.3_RadioMedium2/src'
+Creating executable: ../out/clang-release/src/AgrIoT_7.3_RadioMedium2.exe
+make[1]: Leaving directory '/e/Programs/omnetpp-5.6/samples/AgrIoT_7.3_RadioMedium2/src'

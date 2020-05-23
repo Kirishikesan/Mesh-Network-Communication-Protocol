@@ -1,0 +1,119 @@
+17:23:10 **** Incremental Build of configuration release for project AgrIoT3 ****
+make MODE=release all 
+client.cc
+client.cc:7:36: error: expected '{' after base class list
+class client : public cSimpleModule
+                                   ^
+                                    {
+client.cc:11:1: error: 'using namespace' is not allowed in classes
+using namespace omnetpp;
+^
+client.cc:12:1: error: 'using namespace' is not allowed in classes
+using namespace std;
+^
+client.cc:14:7: error: member 'client' has the same name as its class
+class client : public cSimpleModule
+      ^
+client.cc:7:7: error: missing '}' at end of definition of 'client'
+class client : public cSimpleModule
+      ^
+client.cc:34:1: note: still within definition of 'client' here
+Define_Module(client);
+^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:132:35: note: expanded from macro 'Define_Module'
+#define Define_Module(CLASSNAME)  __REGISTER_CLASS(CLASSNAME, omnetpp::cModule, "module")
+                                  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:144:3: note: expanded from macro '__REGISTER_CLASS'
+  __REGISTER_CLASS_X(CLASSNAME, BASECLASS, DESC, /*nothing*/ )
+  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:150:3: note: expanded from macro '__REGISTER_CLASS_X'
+  EXECUTE_ON_STARTUP(omnetpp::classes.getInstance()->add(new omnetpp::cObjectFactory(omnetpp::opp_typename(typeid(CLASSNAME)), MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_), MAKE_UNIQUE_WITHIN_FILE(__castfunc_), DESC)); EXTRACODE; )
+  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/onstartup.h:53:3: note: expanded from macro 'EXECUTE_ON_STARTUP'
+  namespace { \
+  ^
+client.cc:34:1: error: use of undeclared identifier '__factoryfunc_34'
+Define_Module(client);
+^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:132:35: note: expanded from macro 'Define_Module'
+#define Define_Module(CLASSNAME)  __REGISTER_CLASS(CLASSNAME, omnetpp::cModule, "module")
+                                  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:144:3: note: expanded from macro '__REGISTER_CLASS'
+  __REGISTER_CLASS_X(CLASSNAME, BASECLASS, DESC, /*nothing*/ )
+  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:150:128: note: expanded from macro '__REGISTER_CLASS_X'
+  EXECUTE_ON_STARTUP(omnetpp::classes.getInstance()->add(new omnetpp::cObjectFactory(omnetpp::opp_typename(typeid(CLASSNAME)), MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_), MAKE_UNIQUE_WITHIN_FILE(__castfunc_), DESC)); EXTRACODE; )
+                                                                                                                               ^
+note: (skipping 1 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+E:/Programs/omnetpp-5.6/include/omnetpp/onstartup.h:29:35: note: expanded from macro '__OPPCONCAT2'
+#define __OPPCONCAT2(prefix,line) __OPPCONCAT1(prefix,line)
+                                  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/onstartup.h:28:27: note: expanded from macro '__OPPCONCAT1'
+#define __OPPCONCAT1(x,y) x##y
+                          ^
+<scratch space>:82:1: note: expanded from here
+__factoryfunc_34
+^
+client.cc:34:1: error: use of undeclared identifier '__castfunc_34'
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:132:35: note: expanded from macro 'Define_Module'
+#define Define_Module(CLASSNAME)  __REGISTER_CLASS(CLASSNAME, omnetpp::cModule, "module")
+                                  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:144:3: note: expanded from macro '__REGISTER_CLASS'
+  __REGISTER_CLASS_X(CLASSNAME, BASECLASS, DESC, /*nothing*/ )
+  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/regmacros.h:150:169: note: expanded from macro '__REGISTER_CLASS_X'
+  EXECUTE_ON_STARTUP(omnetpp::classes.getInstance()->add(new omnetpp::cObjectFactory(omnetpp::opp_typename(typeid(CLASSNAME)), MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_), MAKE_UNIQUE_WITHIN_FILE(__castfunc_), DESC)); EXTRACODE; )
+                                                                                                                                                                        ^
+note: (skipping 1 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+E:/Programs/omnetpp-5.6/include/omnetpp/onstartup.h:29:35: note: expanded from macro '__OPPCONCAT2'
+#define __OPPCONCAT2(prefix,line) __OPPCONCAT1(prefix,line)
+                                  ^
+E:/Programs/omnetpp-5.6/include/omnetpp/onstartup.h:28:27: note: expanded from macro '__OPPCONCAT1'
+#define __OPPCONCAT1(x,y) x##y
+                          ^
+<scratch space>:84:1: note: expanded from here
+__castfunc_34
+^
+client.cc:37:14: error: out-of-line definition of 'initialize' does not match any declaration in 'client'
+void client::initialize()
+             ^~~~~~~~~~
+client.cc:43:14: error: out-of-line definition of 'handleMessage' does not match any declaration in 'client'
+void client::handleMessage(cMessage *msg)
+             ^~~~~~~~~~~~~
+client.cc:46:8: error: use of undeclared identifier 'counter'
+    if(counter==0){
+       ^
+client.cc:51:17: error: use of undeclared identifier 'counter'
+                counter++;
+                ^
+client.cc:52:14: error: use of undeclared identifier 'counter'
+    }else if(counter==1){
+             ^
+client.cc:57:9: error: use of undeclared identifier 'counter'
+        counter++;
+        ^
+client.cc:59:14: error: use of undeclared identifier 'counter'
+    }else if(counter==2){
+             ^
+client.cc:64:9: error: use of undeclared identifier 'counter'
+        counter++;
+        ^
+client.cc:66:14: error: use of undeclared identifier 'counter'
+    }else if(counter==3){
+             ^
+client.cc:71:9: error: use of undeclared identifier 'counter'
+        counter++;
+        ^
+client.cc:76:1: error: expected unqualified-id
+{
+^
+client.cc:98:16: error: out-of-line definition of 'convert' does not match any declaration in 'client'
+string client::convert(cMessage k){
+               ^~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:104: out/clang-release//client.o] Error 1
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+
+17:23:12 Build Failed. 20 errors, 0 warnings. (took 1s.344ms)
+
