@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/agriot_8_4_mobility3d -n .:../src $*
+# for shared lib, use: opp_run -l ../src/agriot_8_4_mobility3d -n .:../src $*
