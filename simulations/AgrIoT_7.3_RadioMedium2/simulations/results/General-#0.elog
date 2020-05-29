@@ -1,0 +1,153 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20200524-15:39:42-107612 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t agriot_6_1_radiomedium.simulations.MultiRadioShowcase n MultiRadioShowcase cm 1
+MS id 1 d bgb=657,300
+MC id 2 c omnetpp::cModule t inet.visualizer.integrated.IntegratedMultiCanvasVisualizer pid 1 n visualizer cm 1
+MS id 2 d p=50,50;i=block/app
+MC id 3 c inet::physicallayer::RadioMedium t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium pid 1 n radioMedium cm 1
+MS id 3 d p=50,100;i=misc/sun
+MC id 4 c inet::Ipv4NetworkConfigurator t inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator pid 1 n configurator
+MS id 4 d p=50,150;i=block/cogwheel
+MC id 5 c omnetpp::cModule t inet.node.inet.WirelessHost pid 1 n host1 cm 1
+MS id 5 d p=227,203;i=device/wifilaptop;bgb=1256,672
+GC m 5 g 1048576 n radioIn i 0 o 0
+MC id 6 c omnetpp::cModule t inet.node.inet.WirelessHost pid 1 n host2 cm 1
+MS id 6 d p=531,203;i=device/wifilaptop;bgb=1256,672
+GC m 6 g 1048576 n radioIn i 0 o 0
+MC id 7 c omnetpp::cModule t inet.node.wireless.AccessPoint pid 1 n accessPoint cm 1
+MS id 7 d p=384,100;i=device/accesspoint
+GC m 7 g 1048576 n radioIn i 0 o 0
+GC m 7 g 1048577 n radioIn i 1 o 0
+MC id 8 c inet::visualizer::SceneCanvasVisualizer t inet.visualizer.scene.SceneCanvasVisualizer pid 2 n sceneVisualizer[0]
+MS id 8 d p=150,100,row,100;i=block/app
+MC id 9 c inet::visualizer::PhysicalEnvironmentCanvasVisualizer t inet.visualizer.environment.PhysicalEnvironmentCanvasVisualizer pid 2 n physicalEnvironmentVisualizer[0]
+MS id 9 d p=150,200,row,100;i=block/app
+MC id 10 c inet::visualizer::NetworkNodeCanvasVisualizer t inet.visualizer.scene.NetworkNodeCanvasVisualizer pid 2 n networkNodeVisualizer[0]
+MS id 10 d p=150,300,row,100;i=block/app
+MC id 11 c inet::visualizer::NetworkConnectionCanvasVisualizer t inet.visualizer.scene.NetworkConnectionCanvasVisualizer pid 2 n networkConnectionVisualizer[0]
+MS id 11 d p=150,400,row,100;i=block/app
+MC id 12 c inet::visualizer::MobilityCanvasVisualizer t inet.visualizer.mobility.MobilityCanvasVisualizer pid 2 n mobilityVisualizer[0]
+MS id 12 d p=150,500,row,100;i=block/app
+MC id 13 c inet::visualizer::StatisticCanvasVisualizer t inet.visualizer.common.StatisticCanvasVisualizer pid 2 n statisticVisualizer[0]
+MS id 13 d p=150,600,row,100;i=block/app
+MC id 14 c inet::visualizer::InfoCanvasVisualizer t inet.visualizer.common.InfoCanvasVisualizer pid 2 n infoVisualizer[0]
+MS id 14 d p=150,700,row,100;i=block/app
+MC id 15 c inet::visualizer::EnergyStorageCanvasVisualizer t inet.visualizer.power.EnergyStorageCanvasVisualizer pid 2 n energyStorageVisualizer[0]
+MS id 15 d p=150,800,row,100;i=block/app
+MC id 16 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[0]
+MS id 16 d p=150,900,row,100;i=block/app
+MC id 17 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[1]
+MS id 17 d p=150,900,row,100;i=block/app
+MC id 18 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[2]
+MS id 18 d p=150,900,row,100;i=block/app
+MC id 19 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[3]
+MS id 19 d p=150,900,row,100;i=block/app
+MC id 20 c inet::visualizer::TracingObstacleLossCanvasVisualizer t inet.visualizer.physicallayer.TracingObstacleLossCanvasVisualizer pid 2 n obstacleLossVisualizer[0]
+MS id 20 d p=150,1000,row,100;i=block/app
+MC id 21 c inet::visualizer::PacketDropCanvasVisualizer t inet.visualizer.common.PacketDropCanvasVisualizer pid 2 n packetDropVisualizer[0]
+MS id 21 d p=150,1100,row,100;i=block/app
+MC id 22 c inet::visualizer::QueueCanvasVisualizer t inet.visualizer.common.QueueCanvasVisualizer pid 2 n queueVisualizer[0]
+MS id 22 d p=450,100,row,100;i=block/app
+MC id 23 c inet::visualizer::RadioCanvasVisualizer t inet.visualizer.physicallayer.RadioCanvasVisualizer pid 2 n radioVisualizer[0]
+MS id 23 d p=450,200,row,100;i=block/app
+MC id 24 c inet::visualizer::PhysicalLinkCanvasVisualizer t inet.visualizer.physicallayer.PhysicalLinkCanvasVisualizer pid 2 n physicalLinkVisualizer[0]
+MS id 24 d p=450,300,row,100;i=block/app
+MC id 25 c inet::visualizer::InterfaceTableCanvasVisualizer t inet.visualizer.linklayer.InterfaceTableCanvasVisualizer pid 2 n interfaceTableVisualizer[0]
+MS id 25 d p=450,400,row,100;i=block/app
+MC id 26 c inet::visualizer::DataLinkCanvasVisualizer t inet.visualizer.linklayer.DataLinkCanvasVisualizer pid 2 n dataLinkVisualizer[0]
+MS id 26 d p=450,500,row,100;i=block/app
+MC id 27 c inet::visualizer::DataLinkCanvasVisualizer t inet.visualizer.linklayer.DataLinkCanvasVisualizer pid 2 n dataLinkVisualizer[1]
+MS id 27 d p=450,500,row,100;i=block/app
+MC id 28 c inet::visualizer::LinkBreakCanvasVisualizer t inet.visualizer.linklayer.LinkBreakCanvasVisualizer pid 2 n linkBreakVisualizer[0]
+MS id 28 d p=450,600,row,100;i=block/app
+MC id 29 c inet::visualizer::Ieee80211CanvasVisualizer t inet.visualizer.linklayer.Ieee80211CanvasVisualizer pid 2 n ieee80211Visualizer[0]
+MS id 29 d p=450,700,row,25,row,100;i=block/app
+MC id 30 c inet::visualizer::NetworkRouteCanvasVisualizer t inet.visualizer.networklayer.NetworkRouteCanvasVisualizer pid 2 n networkRouteVisualizer[0]
+MS id 30 d p=450,800,row,100;i=block/app
+MC id 31 c inet::visualizer::RoutingTableCanvasVisualizer t inet.visualizer.networklayer.RoutingTableCanvasVisualizer pid 2 n routingTableVisualizer[0]
+MS id 31 d p=450,900,row,100;i=block/app
+MC id 32 c inet::visualizer::TransportRouteCanvasVisualizer t inet.visualizer.transportlayer.TransportRouteCanvasVisualizer pid 2 n transportRouteVisualizer[0]
+MS id 32 d p=450,1000,row,100;i=block/app
+MC id 33 c inet::visualizer::TransportConnectionCanvasVisualizer t inet.visualizer.transportlayer.TransportConnectionCanvasVisualizer pid 2 n transportConnectionVisualizer[0]
+MS id 33 d p=450,1100,row,100;i=block/app
+MC id 34 c inet::physicallayer::ConstantSpeedPropagation t inet.physicallayer.propagation.ConstantSpeedPropagation pid 3 n propagation cm 1
+MS id 34 d p=100,100;i=block/timer
+MC id 35 c inet::physicallayer::ScalarAnalogModel t inet.physicallayer.analogmodel.packetlevel.ScalarAnalogModel pid 3 n analogModel cm 1
+MS id 35 d p=100,200;i=block/tunnel
+MC id 36 c inet::physicallayer::IsotropicScalarBackgroundNoise t inet.physicallayer.backgroundnoise.IsotropicScalarBackgroundNoise pid 3 n backgroundNoise cm 1
+MS id 36 d p=100,300;i=block/mac
+MC id 37 c inet::physicallayer::FreeSpacePathLoss t inet.physicallayer.pathloss.FreeSpacePathLoss pid 3 n pathLoss cm 1
+MS id 37 d p=300,100;i=block/control
+MC id 38 c inet::physicallayer::MediumLimitCache t inet.physicallayer.common.packetlevel.MediumLimitCache pid 3 n mediumLimitCache cm 1
+MS id 38 d p=500,100;i=block/table2
+MC id 39 c inet::physicallayer::VectorCommunicationCache t inet.physicallayer.communicationcache.VectorCommunicationCache pid 3 n communicationCache cm 1
+MS id 39 d p=500,300;i=block/table2
+MC id 40 c inet::StationaryMobility t inet.mobility.static.StationaryMobility pid 5 n mobility
+MS id 40 d is=s;p=125,160;i=block/cogwheel
+MC id 41 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 5 n interfaceTable
+MS id 41 d is=s;p=125,240;i=block/table
+MC id 42 c inet::InterfaceEntry t inet.linklayer.loopback.LoopbackInterface pid 5 n lo[0] cm 1
+GC m 42 g 0 n upperLayerIn o 0
+GC m 42 g 3 n upperLayerOut o 1
+MS id 42 d p=750,526,row,150;i=block/ifcard;bgl=53
+MC id 43 c inet::InterfaceEntry t inet.linklayer.ieee80211.Ieee80211Interface pid 5 n wlan[0] cm 1
+GC m 43 g 0 n upperLayerIn o 0
+GC m 43 g 3 n upperLayerOut o 1
+GC m 43 g 4 n radioIn o 0
+MS id 43 d q=queue;p=375,616,row,150;i=block/ifcard
+CC sm 5 sg 1048576 dm 43 dg 4
+CS sm 5 sg 1048576 d m=s
+MC id 45 c inet::Ipv4NetworkLayer t inet.networklayer.ipv4.Ipv4NetworkLayer pid 5 n ipv4 cm 1
+GC m 45 g 0 n ifIn o 0
+GC m 45 g 3 n ifOut o 1
+GC m 45 g 4 n transportIn o 0
+GC m 45 g 7 n transportOut o 1
+MS id 45 d q=queue;p=375,376;i=block/fork
+MC id 46 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n nl
+MS id 46 d p=750,446;b=1000,5,,,,1;
+GC m 46 g 2621440 n out i 0 o 1
+CC sm 46 sg 2621440 dm 45 dg 0
+GC m 46 g 1048576 n in i 0 o 0
+CC sm 45 sg 3 dm 46 dg 1048576
+GC m 46 g 2621441 n out i 1 o 1
+CC sm 46 sg 2621441 dm 42 dg 0
+GC m 46 g 1048577 n in i 1 o 0
+CC sm 42 sg 3 dm 46 dg 1048577
+GC m 46 g 1048578 n in i 2 o 0
+CC sm 43 sg 3 dm 46 dg 1048578
+GC m 46 g 2621442 n out i 2 o 1
+CC sm 46 sg 2621442 dm 43 dg 0
+MC id 47 c inet::tcp::Tcp t inet.transportlayer.tcp.Tcp pid 5 n tcp
+GC m 47 g 0 n appIn o 0
+GC m 47 g 2 n ipIn o 0
+GC m 47 g 5 n appOut o 1
+GC m 47 g 7 n ipOut o 1
+MS id 47 d p=525,226;i=block/wheelbarrow
+MC id 48 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n tn
+MS id 48 d p=750,296;b=1000,5,,,,1;
+GC m 48 g 1048576 n in i 0 o 0
+CC sm 47 sg 7 dm 48 dg 1048576
+GC m 48 g 2621440 n out i 0 o 1
+CC sm 48 sg 2621440 dm 47 dg 2
+GC m 48 g 2621441 n out i 1 o 1
+CC sm 48 sg 2621441 dm 45 dg 4
+GC m 48 g 1048577 n in i 1 o 0
+CC sm 45 sg 7 dm 48 dg 1048577
+GC m 48 g 2621442 n out i 2 o 1
+GC m 46 g 1048579 n in i 3 o 0
+CC sm 48 sg 2621442 dm 46 dg 1048579
+GC m 46 g 2621443 n out i 3 o 1
+GC m 48 g 1048578 n in i 2 o 0
+CC sm 46 sg 2621443 dm 48 dg 1048578
+MC id 49 c inet::PingApp t inet.applications.pingapp.PingApp pid 5 n app[0]
+GC m 49 g 0 n socketIn o 0
+GC m 49 g 3 n socketOut o 1
+MS id 49 d p=375,76,row,150;i=block/app
+MC id 50 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n at
+MS id 50 d p=750,146;b=1000,5,,,,1;
+GC m 50 g 1048576 n in i 0 o 0
+CC sm 49 sg 3 dm 50 dg 1048576
+GC m 50 g 2621440 n out i 0 o 1
+CC sm 50 sg 2621440 dm 49 dg 0
+GC m 50 g 2621441 n out i 1 o 1

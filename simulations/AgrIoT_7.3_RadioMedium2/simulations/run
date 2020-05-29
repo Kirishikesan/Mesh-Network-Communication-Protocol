@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/agriot_6_1_radiomedium -n .:../src $*
+# for shared lib, use: opp_run -l ../src/agriot_6_1_radiomedium -n .:../src $*
