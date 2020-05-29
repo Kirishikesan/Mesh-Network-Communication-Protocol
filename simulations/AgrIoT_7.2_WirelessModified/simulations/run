@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/agriot_7_2_wirelessmodified -n .:../src $*
+# for shared lib, use: opp_run -l ../src/agriot_7_2_wirelessmodified -n .:../src $*
