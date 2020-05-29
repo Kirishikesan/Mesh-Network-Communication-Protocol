@@ -1,0 +1,546 @@
+file 4438945 1590722958                                         
+version 2
+run Wireless12-0-20200529-08:59:08-6628
+attr configname Wireless12
+attr datetime 20200529-08:59:08
+attr experiment Wireless12
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network WirelessC
+attr processid 6628
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.radioMedium.typename "\"ApskScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.centerFrequency 2GHz
+param *.host*.wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.host*.wlan[0].radio.centerFrequency 2GHz
+param *.host*.wlan[0].radio.bandwidth 2MHz
+param *.host*.wlan[0].radio.transmitter.power 1.4mW
+param *.host*.wlan[0].radio.transmitter.preambleDuration 10us
+param *.host*.wlan[0].radio.transmitter.headerLength 8B
+param *.host*.wlan[0].radio.receiver.sensitivity -85dBm
+param *.host*.wlan[0].radio.receiver.energyDetection -85dBm
+param *.host*.wlan[0].radio.receiver.snirThreshold 4dB
+param *.host*.mobility.initialZ 1.7m
+param *.physicalEnvironment.config "xmldoc(\"walls.xml\")"
+param *.radioMedium.obstacleLoss.typename "\"IdealObstacleLoss\""
+param *.configurator.addStaticRoutes false
+param *.host*.typename "\"AodvRouter\""
+param *.hostB.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.dataLinkVisualizer.packetFilter "\"AODV*\""
+param *.hostR*.mobility.typename "\"LinearMobility\""
+param *.hostR*.mobility.speed 12mps
+param *.hostR*.mobility.initialMovementHeading 270deg
+param *.host*.wlan[0].mac.queue.packetCapacity 10
+param *.visualizer.mobilityVisualizer.displayVelocities true
+param *.visualizer.mobilityVisualizer.displayMovementTrails true
+param *.host*.wlan[0].radio.energyConsumer.typename "\"StateBasedEpEnergyConsumer\""
+param *.host*.wlan[0].radio.energyConsumer.offPowerConsumption 0mW
+param *.host*.wlan[0].radio.energyConsumer.sleepPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.switchingPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.receiverIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.receiverBusyPowerConsumption 5mW
+param *.host*.wlan[0].radio.energyConsumer.receiverReceivingPowerConsumption 10mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterTransmittingPowerConsumption 100mW
+param *.host*.energyStorage.typename "\"IdealEpEnergyStorage\""
+param *.host*.wlan[0].radio.displayInterferenceRange false
+param *.hostR1.wlan[0].radio.displayCommunicationRange false
+param *.visualizer.mediumVisualizer.displaySignals false
+param *.host*.wlan[0].mac.useAck true
+param *.host*.wlan[0].typename "\"WirelessInterface\""
+param *.host*.wlan[0].radio.typename "\"UnitDiskRadio\""
+param *.host*.wlan[0].mac.typename "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.ackTimeout 300us
+param *.host*.wlan[0].radio.receiver.ignoreInterference false
+param *.host*.wlan[0].radio.transmitter.interferenceRange 500m
+param *.hostA.wlan[0].radio.displayInterferenceRange true
+param *.visualizer.dataLinkVisualizer.packetFilter "\"\""
+param *.host*.forwarding true
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.ipv4.routingTable.netmaskRoutes "\"\""
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.dataLinkVisualizer.displayLinks true
+param *.visualizer.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*LinkVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.packetFilter "\"UDPData*\""
+param *.host*.wlan[0].radio.transmitter.communicationRange 250m
+param *.hostR1.wlan[0].radio.displayCommunicationRange true
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"UDPData*\""
+param *.host*.ipv4.arp.typename "\"GlobalArp\""
+param *.hostA.numApps 1
+param *.hostA.app[0].typename "\"UdpBasicApp\""
+param *.hostA.app[0].destAddresses "\"hostB\""
+param *.hostA.app[0].destPort 5000
+param *.hostA.app[0].messageLength 1000B
+param *.hostA.app[0].sendInterval exponential(12ms)
+param *.hostA.app[0].packetName "\"UDPData\""
+param *.hostB.numApps 1
+param *.hostB.app[0].typename "\"UdpSink\""
+param *.hostB.app[0].localPort 5000
+param *.host*.wlan[0].typename "\"AckingWirelessInterface\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].radio.transmitter.communicationRange 500m
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].mac.headerLength 23B
+param *.host*.**.bitrate 1Mbps
+
+vector 0 WirelessC.hostA.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 1 WirelessC.hostB.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 2 WirelessC.hostR1.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 3 WirelessC.hostR2.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 4 WirelessC.hostR3.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 5 WirelessC.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 WirelessC.hostA.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 7 WirelessC.hostB.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 WirelessC.hostB.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 9 WirelessC.hostR1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 WirelessC.hostR1.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 11 WirelessC.hostR2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 WirelessC.hostR2.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 13 WirelessC.hostR3.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 14 WirelessC.hostR3.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 15 WirelessC.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 WirelessC.hostB.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 WirelessC.hostR1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 WirelessC.hostR2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 WirelessC.hostR3.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 WirelessC.hostA.app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 21 WirelessC.hostA.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 22 WirelessC.hostA.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 23 WirelessC.hostA.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 24 WirelessC.hostA.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 25 WirelessC.hostA.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 26 WirelessC.hostA.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 27 WirelessC.hostA.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 28 WirelessC.hostR2.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 29 WirelessC.hostR2.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 30 WirelessC.hostR2.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, vector(count)"
+vector 31 WirelessC.hostR2.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 32 WirelessC.hostR2.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 33 WirelessC.hostR2.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 34 WirelessC.hostR2.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 35 WirelessC.hostR2.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 36 WirelessC.hostR2.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 37 WirelessC.hostR1.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 38 WirelessC.hostR3.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 39 WirelessC.hostA.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 40 WirelessC.hostA.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, vector(count)"
+vector 41 WirelessC.hostR1.wlan[0].radio bitErrorRate:vector ETV
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, vector"
+vector 42 WirelessC.hostR1.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 43 WirelessC.hostR1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, vector(count)"
+vector 44 WirelessC.hostR3.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 45 WirelessC.hostR3.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, vector(count)"
+vector 46 WirelessC.hostR3.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 47 WirelessC.hostR3.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 48 WirelessC.hostR3.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 49 WirelessC.hostR3.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 50 WirelessC.hostR3.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 51 WirelessC.hostR3.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 52 WirelessC.hostB.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 53 WirelessC.hostB.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 54 WirelessC.hostB.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, vector(count)"
+vector 55 WirelessC.hostB.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 56 WirelessC.hostB.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 57 WirelessC.hostB.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 58 WirelessC.hostB.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 59 WirelessC.hostB.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 60 WirelessC.hostB.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 61 WirelessC.hostR1.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 62 WirelessC.hostR1.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 63 WirelessC.hostR1.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 64 WirelessC.hostR1.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 65 WirelessC.hostR1.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 66 WirelessC.hostR1.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 67 WirelessC.hostR1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 68 WirelessC.hostB.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 69 WirelessC.hostA.wlan[0].mac.queue packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, vector(packetBytes)"
+vector 70 WirelessC.hostA.wlan[0].mac packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, vector(packetBytes)"
+vector 71 WirelessC.hostR3.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 72 WirelessC.hostA.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 73 WirelessC.hostB.app[0] packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 74 WirelessC.hostB.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 75 WirelessC.hostB.app[0] endToEndDelay:vector ETV
+attr interpolationmode none
+attr source dataAge(packetReceived)
+attr title "end-to-end delay, vector"
+attr unit s
+vector 76 WirelessC.hostB.app[0] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(packetReceived)
+attr title "received packet sequence number, vector"
+vector 77 WirelessC.hostR2.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 78 WirelessC.hostR1.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 79 WirelessC.hostR2.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 80 WirelessC.hostR3.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 81 WirelessC.hostA.wlan[0].mac packetDropRetryLimitReached:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, vector(packetBytes)"
+vector 82 WirelessC.hostB.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 83 WirelessC.hostA.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 84 WirelessC.hostR1.wlan[0].mac.queue packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, vector(packetBytes)"
+vector 85 WirelessC.hostR1.wlan[0].mac packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, vector(packetBytes)"
+vector 86 WirelessC.hostR1.wlan[0].mac packetDropRetryLimitReached:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, vector(packetBytes)"
+vector 87 WirelessC.hostR2.wlan[0].mac.queue packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, vector(packetBytes)"
+vector 88 WirelessC.hostR2.wlan[0].mac packetDropQueueOverflow:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, vector(packetBytes)"
+vector 89 WirelessC.hostA.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+0	22614 307193 0 43084 0 17.104559579295 10858 0 0.1 94.829999999995 7.6716199999991
+1	329807 186514 0 42770 0 16.091639106088 6581 0 0.1 46.568000000002 3.2364560000001
+2	516321 330478 0 42899 0 16.464664391996 11623 0 0.1 91.241999999995 6.8346039999992
+3	846799 182071 0 43085 0 17.104560006979 6416 0 0.1 38.981 2.2601469999998
+4	1028870 202615 0 42771 0 16.091639509648 7156 0 0.1 42.996000000001 2.5235019999998
+5	1231485 39282 0 43084 0 17.104559579295 1517 0 3 3787 9845
+6	1270767 307184 0 43084 0 17.104559579295 10857 0 0.1 94.829999999995 7.6716199999991
+7	1577951 16215 0 42770 0 16.091639106088 631 0 3 1572 4086
+8	1594166 186505 0 42770 0 16.091639106088 6580 0 0.1 46.568000000002 3.2364560000001
+9	1780671 34939 0 37000 0 12.619273815525 1341 0 3 3347 8701
+10	1815610 342091 0 42899 0 16.464664391996 11622 0 0.1 91.241999999995 6.8346039999992
+11	2157701 11398 0 42720 0 16.082038035592 431 0 3 1072 2786
+12	2169099 188477 0 43085 0 17.104560006979 6415 0 0.1 38.981 2.2601469999998
+13	2357576 12700 0 42753 0 16.09141070272 481 0 3 1197 3111
+14	2370276 209761 0 42771 0 16.091639509648 7155 0 0.1 42.996000000001 2.5235019999998
+15	2580037 87815 0 43084 0 17.104559579295 3262 0 3 4151 8979
+16	2667852 65894 0 42770 0 16.091639106088 2451 0 3 3855 8905
+17	2733746 107449 0 42899 0 16.464664391996 3989 0 3 5834 13140
+18	2841195 71903 0 43085 0 17.104560006979 2680 0 3 4667 11089
+19	2913098 76803 0 42771 0 16.091639509648 2864 0 3 5010 12156
+20	2989901 53859 14 44009 0.015071169097 19.987575486221 1782 1000 1000 1782000 1782000000
+21	3043760 54363 16 44010 0.015071169097 19.987575486221 1800 32 1008 1796844 1810645296
+22	3098123 41647 21 43076 0.016558842123 17.103383579295 1401 79 1055 1460499 1539427857
+23	3139770 77265 21 43076 0.016558842123 17.103383579295 2802 0 11 27517 278913
+24	3217035 11022 21 43076 0.016558842123 17.103383579295 370 79 1055 375718 395218786
+25	3228057 14588 21 43076 0.016558842123 17.103383579295 370 0 1.643944255263 100.22801966045 46.11564204531
+26	3242645 139930 23 43084 0.016728842123 17.104559579295 3261 -0.68325359744154 -3.3457684246e-005 -1102.0182294221 497.4622151978
+27	3382575 81538 23 43084 0.016728842123 17.104559579295 3028 0 2 3028 4542
+28	3464113 115799 25 43085 0.016729375563 17.104560006979 2679 -0.17762992938294 -3.3458751126e-005 -249.08757692705 27.666707762165
+29	3579912 558 33 43088 0.017435375563 17.104560006979 20 28 32 628 19760
+30	3580470 549 33 43088 0.017435375563 17.104560006979 20 1 20 210 2870
+31	3581019 219 42 37847 0.022253689383 15.042947907357 8 28 32 248 7712
+32	3581238 2793 44 42234 0.022253689383 15.96271773683 95 75 1055 92409 96881871
+33	3584031 5068 44 42602 0.022253689383 16.046280701336 190 0 11 459 2967
+34	3589099 2582 44 42602 0.022253689383 16.046280701336 88 75 1055 85024 89090696
+35	3591681 3139 44 42602 0.022253689383 16.046280701336 88 0 0.267881554959 5.238119724916 0.88727203967776
+36	3594820 22736 46 42720 0.022323689383 16.082038035592 856 0 2 856 1284
+37	3617556 172340 49 42899 0.022324290724 16.464664391996 3988 -0.42135682481313 -4.4648581448e-005 -724.45061606132 210.28615294884
+38	3789896 124073 50 42771 0.022324356511 16.091639509648 2863 -0.16821016320127 -4.4648713022e-005 -252.42006629232 26.280356684337
+39	3913969 158 56 37867 0.023030222649 15.04385228888 6 28 32 180 5424
+40	3914127 152 56 37867 0.023030222649 15.04385228888 6 1 6 21 91
+41	3914279 51664 58 42759 0.023030290724 16.091411304061 1139 3.6829593678301e-007 0.052906934501793 1.8631982396313 0.064409883872081
+42	3965943 415 61 34062 0.023030290724 10.939961432765 15 28 32 464 14400
+43	3966358 406 61 34062 0.023030290724 10.939961432765 15 1 15 120 1240
+44	3966764 446 66 37008 0.023030356511 12.619274416866 16 28 32 496 15424
+45	3967210 437 66 37008 0.023030356511 12.619274416866 16 1 16 136 1496
+46	3967647 224 205 33806 0.342674943576 10.923395307455 8 28 32 248 7712
+47	3967871 3460 207 42728 0.342674943576 16.08203870272 118 75 1055 113734 119159246
+48	3971331 6260 207 42730 0.342674943576 16.08204870272 236 0 3 132 150
+49	3977591 3464 207 42730 0.342674943576 16.08204870272 118 75 1055 113734 119159246
+50	3981055 3863 207 42730 0.342674943576 16.08204870272 118 0 0.035911455218 0.29096307417 0.0054144273433245
+51	3984918 25340 209 42753 0.342744943576 16.09141070272 956 0 2 956 1434
+52	4010258 106984 211 42770 0.342745466896 16.091639106088 2450 -0.071067630212176 -0.000685490933792 -80.877851693133 3.6196488310955
+53	4117242 9389 219 42757 0.343451466896 16.091411106088 316 28 1008 309740 311940624
+54	4126631 8983 219 42757 0.343451466896 16.091411106088 316 1 316 50086 10568146
+55	4135614 169 221 33748 0.343451466896 10.911855167606 6 28 32 172 4944
+56	4135783 169 223 33824 0.343451466896 10.924239641636 6 75 79 454 34366
+57	4135952 326 223 33895 0.343451466896 10.926752978378 12 0 3 12 22
+58	4136278 169 223 33895 0.343451466896 10.926752978378 6 75 79 454 34366
+59	4136447 194 223 33895 0.343451466896 10.926752978378 6 0 0.002513336742 0.00378400511 7.906246312763e-006
+60	4136641 33632 236 42770 0.344001466896 16.091639106088 1256 0 2 1256 1884
+61	4170273 247 243 34541 0.344286439768 11.19230244043 9 28 32 272 8256
+62	4170520 7942 245 34543 0.344286439768 11.19230244043 266 75 1055 271830 286101130
+63	4178462 14557 245 36992 0.344286439768 12.618269815525 532 0 11 3618 32406
+64	4193019 5821 253 42760 0.344676141062 16.091411304061 199 75 1055 205045 215954975
+65	4198840 5113 253 36992 0.344676141062 12.618269815525 171 75 1055 171605 180363755
+66	4203953 6637 253 36992 0.344676141062 12.618269815525 171 0 1.584880569994 55.932369123008 40.294252177965
+67	4210590 72500 271 37000 0.345494591519 12.619273815525 2676 0 2 2676 4014
+68	4283090 140 308 34058 0.349086213485 10.939961165643 5 75 75 375 28125
+69	4283230 30679 362 40976 0.35262388807 15.664341607412 1031 79 1055 1084781 1144209071
+70	4313909 30679 362 40976 0.35262388807 15.664341607412 1031 79 1055 1084781 1144209071
+71	4344588 12110 383 38302 0.352624032162 15.043852574485 402 75 1055 420190 443006450
+72	4356698 9304 452 42722 0.370668933787 16.08203843875 313 1055 1055 330215 348376825
+73	4366002 9138 495 42758 0.379461600644 16.091411106088 307 1000 1000 307000 307000000
+74	4375140 3661 495 44020 0.1 20 200 0 560000 24560000 8006400000000
+75	4378801 12177 495 42758 0.379461600644 16.091411106088 307 0.263068629573 4.864089420062 248.57158590934 482.70798700459
+76	4390978 8797 495 42758 0.379461600644 16.091411106088 307 0 1366 139689 100895545
+77	4399775 3145 499 42159 0.379461745321 15.94428093566 107 1055 1055 112885 119093675
+78	4402920 6404 990 42666 0.480610735173 16.063769302677 213 18 1055 209282 220395644
+79	4409324 12687 3761 42762 1.115833308432 16.091411369848 421 75 1055 438275 461939125
+80	4422011 89 7300 35500 1.950735205826 11.745281445664 3 1055 1055 3165 3339075
+81	4422100 400 7475 40958 1.998231964231 15.66069071951 13 1055 1055 13715 14469325
+82	4422500 3562 9892 32861 3.526643592494 10.557493355893 119 18 1055 122434 129111872
+83	4426062 3091 9984 32804 3.553794408602 10.536283681957 103 1055 1055 108665 114641575
+84	4429153 2848 13818 33931 4.595586168978 10.927557245531 95 1055 1055 100225 105737375
+85	4432001 2848 13818 33931 4.595586168978 10.927557245531 95 1055 1055 100225 105737375
+86	4434849 401 30642 36992 9.720322609792 12.618269815525 13 1055 1055 13715 14469325
+87	4435250 216 39665 39884 15.362791867084 15.417228527494 7 1055 1055 7385 7791175
+88	4435466 216 39665 39884 15.362791867084 15.417228527494 7 1055 1055 7385 7791175
+89	4435682 3261 44020 44020 0.1 20 200 0 0 0 0
+
