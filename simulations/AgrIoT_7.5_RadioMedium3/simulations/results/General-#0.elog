@@ -1,0 +1,7336 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20200515-16:43:13-242888 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t agriot_6_1_radiomedium.simulations.MultiRadioShowcase n MultiRadioShowcase cm 1
+MS id 1 d bgb=657,300
+MC id 2 c omnetpp::cModule t inet.visualizer.integrated.IntegratedMultiCanvasVisualizer pid 1 n visualizer cm 1
+MS id 2 d p=50,50;i=block/app
+MC id 3 c inet::physicallayer::RadioMedium t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium pid 1 n radioMedium cm 1
+MS id 3 d p=50,100;i=misc/sun
+MC id 4 c inet::Ipv4NetworkConfigurator t inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator pid 1 n configurator
+MS id 4 d p=50,150;i=block/cogwheel
+MC id 5 c omnetpp::cModule t inet.node.inet.WirelessHost pid 1 n host1 cm 1
+MS id 5 d p=227,203;i=device/wifilaptop;bgb=1256,672
+GC m 5 g 1048576 n radioIn i 0 o 0
+MC id 6 c omnetpp::cModule t inet.node.inet.WirelessHost pid 1 n host2 cm 1
+MS id 6 d p=531,203;i=device/wifilaptop;bgb=1256,672
+GC m 6 g 1048576 n radioIn i 0 o 0
+MC id 7 c omnetpp::cModule t inet.node.wireless.AccessPoint pid 1 n accessPoint cm 1
+MS id 7 d p=384,100;i=device/accesspoint
+GC m 7 g 1048576 n radioIn i 0 o 0
+GC m 7 g 1048577 n radioIn i 1 o 0
+MC id 8 c inet::visualizer::SceneCanvasVisualizer t inet.visualizer.scene.SceneCanvasVisualizer pid 2 n sceneVisualizer[0]
+MS id 8 d p=150,100,row,100;i=block/app
+MC id 9 c inet::visualizer::PhysicalEnvironmentCanvasVisualizer t inet.visualizer.environment.PhysicalEnvironmentCanvasVisualizer pid 2 n physicalEnvironmentVisualizer[0]
+MS id 9 d p=150,200,row,100;i=block/app
+MC id 10 c inet::visualizer::NetworkNodeCanvasVisualizer t inet.visualizer.scene.NetworkNodeCanvasVisualizer pid 2 n networkNodeVisualizer[0]
+MS id 10 d p=150,300,row,100;i=block/app
+MC id 11 c inet::visualizer::NetworkConnectionCanvasVisualizer t inet.visualizer.scene.NetworkConnectionCanvasVisualizer pid 2 n networkConnectionVisualizer[0]
+MS id 11 d p=150,400,row,100;i=block/app
+MC id 12 c inet::visualizer::MobilityCanvasVisualizer t inet.visualizer.mobility.MobilityCanvasVisualizer pid 2 n mobilityVisualizer[0]
+MS id 12 d p=150,500,row,100;i=block/app
+MC id 13 c inet::visualizer::StatisticCanvasVisualizer t inet.visualizer.common.StatisticCanvasVisualizer pid 2 n statisticVisualizer[0]
+MS id 13 d p=150,600,row,100;i=block/app
+MC id 14 c inet::visualizer::InfoCanvasVisualizer t inet.visualizer.common.InfoCanvasVisualizer pid 2 n infoVisualizer[0]
+MS id 14 d p=150,700,row,100;i=block/app
+MC id 15 c inet::visualizer::EnergyStorageCanvasVisualizer t inet.visualizer.power.EnergyStorageCanvasVisualizer pid 2 n energyStorageVisualizer[0]
+MS id 15 d p=150,800,row,100;i=block/app
+MC id 16 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[0]
+MS id 16 d p=150,900,row,100;i=block/app
+MC id 17 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[1]
+MS id 17 d p=150,900,row,100;i=block/app
+MC id 18 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[2]
+MS id 18 d p=150,900,row,100;i=block/app
+MC id 19 c inet::visualizer::MediumCanvasVisualizer t inet.visualizer.physicallayer.MediumCanvasVisualizer pid 2 n mediumVisualizer[3]
+MS id 19 d p=150,900,row,100;i=block/app
+MC id 20 c inet::visualizer::TracingObstacleLossCanvasVisualizer t inet.visualizer.physicallayer.TracingObstacleLossCanvasVisualizer pid 2 n obstacleLossVisualizer[0]
+MS id 20 d p=150,1000,row,100;i=block/app
+MC id 21 c inet::visualizer::PacketDropCanvasVisualizer t inet.visualizer.common.PacketDropCanvasVisualizer pid 2 n packetDropVisualizer[0]
+MS id 21 d p=150,1100,row,100;i=block/app
+MC id 22 c inet::visualizer::QueueCanvasVisualizer t inet.visualizer.common.QueueCanvasVisualizer pid 2 n queueVisualizer[0]
+MS id 22 d p=450,100,row,100;i=block/app
+MC id 23 c inet::visualizer::RadioCanvasVisualizer t inet.visualizer.physicallayer.RadioCanvasVisualizer pid 2 n radioVisualizer[0]
+MS id 23 d p=450,200,row,100;i=block/app
+MC id 24 c inet::visualizer::PhysicalLinkCanvasVisualizer t inet.visualizer.physicallayer.PhysicalLinkCanvasVisualizer pid 2 n physicalLinkVisualizer[0]
+MS id 24 d p=450,300,row,100;i=block/app
+MC id 25 c inet::visualizer::InterfaceTableCanvasVisualizer t inet.visualizer.linklayer.InterfaceTableCanvasVisualizer pid 2 n interfaceTableVisualizer[0]
+MS id 25 d p=450,400,row,100;i=block/app
+MC id 26 c inet::visualizer::DataLinkCanvasVisualizer t inet.visualizer.linklayer.DataLinkCanvasVisualizer pid 2 n dataLinkVisualizer[0]
+MS id 26 d p=450,500,row,100;i=block/app
+MC id 27 c inet::visualizer::DataLinkCanvasVisualizer t inet.visualizer.linklayer.DataLinkCanvasVisualizer pid 2 n dataLinkVisualizer[1]
+MS id 27 d p=450,500,row,100;i=block/app
+MC id 28 c inet::visualizer::LinkBreakCanvasVisualizer t inet.visualizer.linklayer.LinkBreakCanvasVisualizer pid 2 n linkBreakVisualizer[0]
+MS id 28 d p=450,600,row,100;i=block/app
+MC id 29 c inet::visualizer::Ieee80211CanvasVisualizer t inet.visualizer.linklayer.Ieee80211CanvasVisualizer pid 2 n ieee80211Visualizer[0]
+MS id 29 d p=450,700,row,25,row,100;i=block/app
+MC id 30 c inet::visualizer::NetworkRouteCanvasVisualizer t inet.visualizer.networklayer.NetworkRouteCanvasVisualizer pid 2 n networkRouteVisualizer[0]
+MS id 30 d p=450,800,row,100;i=block/app
+MC id 31 c inet::visualizer::RoutingTableCanvasVisualizer t inet.visualizer.networklayer.RoutingTableCanvasVisualizer pid 2 n routingTableVisualizer[0]
+MS id 31 d p=450,900,row,100;i=block/app
+MC id 32 c inet::visualizer::TransportRouteCanvasVisualizer t inet.visualizer.transportlayer.TransportRouteCanvasVisualizer pid 2 n transportRouteVisualizer[0]
+MS id 32 d p=450,1000,row,100;i=block/app
+MC id 33 c inet::visualizer::TransportConnectionCanvasVisualizer t inet.visualizer.transportlayer.TransportConnectionCanvasVisualizer pid 2 n transportConnectionVisualizer[0]
+MS id 33 d p=450,1100,row,100;i=block/app
+MC id 34 c inet::physicallayer::ConstantSpeedPropagation t inet.physicallayer.propagation.ConstantSpeedPropagation pid 3 n propagation cm 1
+MS id 34 d p=100,100;i=block/timer
+MC id 35 c inet::physicallayer::ScalarAnalogModel t inet.physicallayer.analogmodel.packetlevel.ScalarAnalogModel pid 3 n analogModel cm 1
+MS id 35 d p=100,200;i=block/tunnel
+MC id 36 c inet::physicallayer::IsotropicScalarBackgroundNoise t inet.physicallayer.backgroundnoise.IsotropicScalarBackgroundNoise pid 3 n backgroundNoise cm 1
+MS id 36 d p=100,300;i=block/mac
+MC id 37 c inet::physicallayer::FreeSpacePathLoss t inet.physicallayer.pathloss.FreeSpacePathLoss pid 3 n pathLoss cm 1
+MS id 37 d p=300,100;i=block/control
+MC id 38 c inet::physicallayer::MediumLimitCache t inet.physicallayer.common.packetlevel.MediumLimitCache pid 3 n mediumLimitCache cm 1
+MS id 38 d p=500,100;i=block/table2
+MC id 39 c inet::physicallayer::VectorCommunicationCache t inet.physicallayer.communicationcache.VectorCommunicationCache pid 3 n communicationCache cm 1
+MS id 39 d p=500,300;i=block/table2
+MC id 40 c inet::StationaryMobility t inet.mobility.static.StationaryMobility pid 5 n mobility
+MS id 40 d is=s;p=125,160;i=block/cogwheel
+MC id 41 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 5 n interfaceTable
+MS id 41 d is=s;p=125,240;i=block/table
+MC id 42 c inet::InterfaceEntry t inet.linklayer.loopback.LoopbackInterface pid 5 n lo[0] cm 1
+GC m 42 g 0 n upperLayerIn o 0
+GC m 42 g 3 n upperLayerOut o 1
+MS id 42 d p=750,526,row,150;i=block/ifcard;bgl=53
+MC id 43 c inet::InterfaceEntry t inet.linklayer.ieee80211.Ieee80211Interface pid 5 n wlan[0] cm 1
+GC m 43 g 0 n upperLayerIn o 0
+GC m 43 g 3 n upperLayerOut o 1
+GC m 43 g 4 n radioIn o 0
+MS id 43 d q=queue;p=375,616,row,150;i=block/ifcard
+CC sm 5 sg 1048576 dm 43 dg 4
+CS sm 5 sg 1048576 d m=s
+MC id 45 c inet::Ipv4NetworkLayer t inet.networklayer.ipv4.Ipv4NetworkLayer pid 5 n ipv4 cm 1
+GC m 45 g 0 n ifIn o 0
+GC m 45 g 3 n ifOut o 1
+GC m 45 g 4 n transportIn o 0
+GC m 45 g 7 n transportOut o 1
+MS id 45 d q=queue;p=375,376;i=block/fork
+MC id 46 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n nl
+MS id 46 d p=750,446;b=1000,5,,,,1;
+GC m 46 g 2621440 n out i 0 o 1
+CC sm 46 sg 2621440 dm 45 dg 0
+GC m 46 g 1048576 n in i 0 o 0
+CC sm 45 sg 3 dm 46 dg 1048576
+GC m 46 g 2621441 n out i 1 o 1
+CC sm 46 sg 2621441 dm 42 dg 0
+GC m 46 g 1048577 n in i 1 o 0
+CC sm 42 sg 3 dm 46 dg 1048577
+GC m 46 g 1048578 n in i 2 o 0
+CC sm 43 sg 3 dm 46 dg 1048578
+GC m 46 g 2621442 n out i 2 o 1
+CC sm 46 sg 2621442 dm 43 dg 0
+MC id 47 c inet::Udp t inet.transportlayer.udp.Udp pid 5 n udp
+GC m 47 g 0 n appIn o 0
+GC m 47 g 2 n ipIn o 0
+GC m 47 g 5 n appOut o 1
+GC m 47 g 7 n ipOut o 1
+MS id 47 d p=375,226;i=block/transport
+MC id 48 c inet::tcp::Tcp t inet.transportlayer.tcp.Tcp pid 5 n tcp
+GC m 48 g 0 n appIn o 0
+GC m 48 g 2 n ipIn o 0
+GC m 48 g 5 n appOut o 1
+GC m 48 g 7 n ipOut o 1
+MS id 48 d p=525,226;i=block/wheelbarrow
+MC id 49 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n tn
+MS id 49 d p=750,296;b=1000,5,,,,1;
+GC m 49 g 1048576 n in i 0 o 0
+CC sm 47 sg 7 dm 49 dg 1048576
+GC m 49 g 2621440 n out i 0 o 1
+CC sm 49 sg 2621440 dm 47 dg 2
+GC m 49 g 1048577 n in i 1 o 0
+CC sm 48 sg 7 dm 49 dg 1048577
+GC m 49 g 2621441 n out i 1 o 1
+CC sm 49 sg 2621441 dm 48 dg 2
+GC m 49 g 2621442 n out i 2 o 1
+CC sm 49 sg 2621442 dm 45 dg 4
+GC m 49 g 1048578 n in i 2 o 0
+CC sm 45 sg 7 dm 49 dg 1048578
+GC m 49 g 2621443 n out i 3 o 1
+GC m 46 g 1048579 n in i 3 o 0
+CC sm 49 sg 2621443 dm 46 dg 1048579
+GC m 46 g 2621443 n out i 3 o 1
+GC m 49 g 1048579 n in i 3 o 0
+CC sm 46 sg 2621443 dm 49 dg 1048579
+MC id 50 c inet::PingApp t inet.applications.pingapp.PingApp pid 5 n app[0]
+GC m 50 g 0 n socketIn o 0
+GC m 50 g 3 n socketOut o 1
+MS id 50 d p=375,76,row,150;i=block/app
+MC id 51 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 5 n at
+MS id 51 d p=750,146;b=1000,5,,,,1;
+GC m 51 g 1048576 n in i 0 o 0
+CC sm 50 sg 3 dm 51 dg 1048576
+GC m 51 g 2621440 n out i 0 o 1
+CC sm 51 sg 2621440 dm 50 dg 0
+GC m 51 g 2621441 n out i 1 o 1
+CC sm 51 sg 2621441 dm 47 dg 0
+GC m 51 g 1048577 n in i 1 o 0
+CC sm 47 sg 5 dm 51 dg 1048577
+GC m 51 g 2621442 n out i 2 o 1
+CC sm 51 sg 2621442 dm 48 dg 0
+GC m 51 g 1048578 n in i 2 o 0
+CC sm 48 sg 5 dm 51 dg 1048578
+GC m 51 g 2621443 n out i 3 o 1
+GC m 49 g 1048580 n in i 4 o 0
+CC sm 51 sg 2621443 dm 49 dg 1048580
+GC m 49 g 2621444 n out i 4 o 1
+GC m 51 g 1048579 n in i 3 o 0
+CC sm 49 sg 2621444 dm 51 dg 1048579
+MC id 52 c inet::Loopback t inet.linklayer.loopback.Loopback pid 42 n lo
+GC m 52 g 0 n upperLayerIn o 0
+GC m 52 g 3 n upperLayerOut o 1
+MS id 52 d p=250,200;i=block/rxtx
+CC sm 42 sg 0 dm 52 dg 0
+CS sm 42 sg 0 d m=n
+CC sm 52 sg 3 dm 42 dg 3
+CS sm 52 sg 3 d m=n
+MC id 55 c inet::ieee80211::Ieee80211Mib t inet.linklayer.ieee80211.mib.Ieee80211Mib pid 43 n mib
+MS id 55 d is=s;p=100,100;i=block/table
+MC id 56 c inet::ieee80211::Ieee80211LlcLpd t inet.linklayer.ieee80211.llc.Ieee80211LlcLpd pid 43 n llc
+GC m 56 g 0 n upperLayerIn o 0
+GC m 56 g 3 n upperLayerOut o 1
+GC m 56 g 4 n lowerLayerIn o 0
+GC m 56 g 7 n lowerLayerOut o 1
+MS id 56 d p=250,200;i=block/layer
+MC id 57 c inet::ieee80211::Ieee80211AgentSta t inet.linklayer.ieee80211.mgmt.Ieee80211AgentSta pid 43 n agent
+GC m 57 g 0 n mgmtIn o 0
+GC m 57 g 3 n mgmtOut o 1
+MS id 57 d p=550,350;i=block/control
+MC id 58 c inet::ieee80211::Ieee80211MgmtSta t inet.linklayer.ieee80211.mgmt.Ieee80211MgmtSta pid 43 n mgmt
+GC m 58 g 0 n macIn o 0
+GC m 58 g 3 n macOut o 1
+GC m 58 g 4 n agentIn o 0
+GC m 58 g 7 n agentOut o 1
+MS id 58 d p=400,350;i=block/cogwheel
+MC id 59 c inet::ieee80211::Ieee80211Mac t inet.linklayer.ieee80211.mac.Ieee80211Mac pid 43 n mac cm 1
+GC m 59 g 0 n upperLayerIn o 0
+GC m 59 g 3 n upperLayerOut o 1
+GC m 59 g 4 n lowerLayerIn o 0
+GC m 59 g 7 n lowerLayerOut o 1
+GC m 59 g 8 n mgmtIn o 0
+GC m 59 g 11 n mgmtOut o 1
+MS id 59 d p=250,350;i=block/layer
+MC id 60 c inet::physicallayer::Ieee80211Radio t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadio pid 43 n radio cm 1
+GC m 60 g 0 n upperLayerIn o 0
+GC m 60 g 3 n upperLayerOut o 1
+GC m 60 g 4 n radioIn o 0
+MS id 60 d p=250,500;i=block/wrxtx
+CC sm 43 sg 4 dm 60 dg 4
+CS sm 43 sg 4 d m=s
+CC sm 59 sg 7 dm 60 dg 0
+CC sm 60 sg 3 dm 59 dg 4
+CC sm 59 sg 11 dm 58 dg 0
+CC sm 58 sg 3 dm 59 dg 8
+CC sm 58 sg 7 dm 57 dg 0
+CC sm 57 sg 3 dm 58 dg 4
+CC sm 56 sg 3 dm 43 dg 3
+CS sm 56 sg 3 d m=n
+CC sm 43 sg 0 dm 56 dg 0
+CS sm 43 sg 0 d m=n
+CC sm 56 sg 7 dm 59 dg 0
+CC sm 59 sg 3 dm 56 dg 4
+MC id 64 c inet::ieee80211::Dcf t inet.linklayer.ieee80211.mac.coordinationfunction.Dcf pid 59 n dcf cm 1
+MS id 64 d p=100,100;i=block/layer
+MC id 65 c inet::ieee80211::Ds t inet.linklayer.ieee80211.mac.Ds pid 59 n ds
+MS id 65 d p=400,100;i=block/routing
+MC id 66 c inet::ieee80211::Rx t inet.linklayer.ieee80211.mac.Rx pid 59 n rx
+MS id 66 d p=100,200;i=block/rx
+MC id 67 c inet::ieee80211::Tx t inet.linklayer.ieee80211.mac.Tx pid 59 n tx
+MS id 67 d p=250,200;i=block/tx
+MC id 68 c inet::ieee80211::Dcaf t inet.linklayer.ieee80211.mac.channelaccess.Dcaf pid 64 n channelAccess cm 1
+MS id 68 d p=150,100;i=block/star
+MC id 69 c inet::ieee80211::OriginatorMacDataService t inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService pid 64 n originatorMacDataService cm 1
+MS id 69 d p=150,200;i=block/fork
+MC id 70 c inet::ieee80211::RecipientMacDataService t inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService pid 64 n recipientMacDataService cm 1
+MS id 70 d p=150,300;i=block/join
+MC id 71 c inet::ieee80211::RateSelection t inet.linklayer.ieee80211.mac.rateselection.RateSelection pid 64 n rateSelection
+MS id 71 d p=350,100;i=block/cogwheel
+MC id 72 c inet::ieee80211::NonQosRecoveryProcedure t inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure pid 64 n recoveryProcedure
+MS id 72 d p=350,300;i=block/cogwheel
+MC id 73 c inet::ieee80211::OriginatorProtectionMechanism t inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism pid 64 n originatorProtectionMechanism
+MS id 73 d p=150,400;i=block/encrypt
+MC id 74 c inet::ieee80211::AckHandler t inet.linklayer.ieee80211.mac.originator.AckHandler pid 64 n ackHandler
+MS id 74 d p=350,400;i=block/table2
+MC id 75 c inet::ieee80211::OriginatorAckPolicy t inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy pid 64 n originatorAckPolicy
+MS id 75 d p=550,100;i=block/control
+MC id 76 c inet::ieee80211::RecipientAckPolicy t inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy pid 64 n recipientAckPolicy
+MS id 76 d p=550,200;i=block/control
+MC id 77 c inet::ieee80211::RtsPolicy t inet.linklayer.ieee80211.mac.originator.RtsPolicy pid 64 n rtsPolicy
+MS id 77 d p=550,300;i=block/control
+MC id 78 c inet::ieee80211::CtsPolicy t inet.linklayer.ieee80211.mac.recipient.CtsPolicy pid 64 n ctsPolicy
+MS id 78 d p=550,400;i=block/control
+MC id 79 c inet::queueing::PacketQueue t inet.linklayer.ieee80211.mac.queue.PendingQueue pid 68 n pendingQueue
+GC m 79 g 0 n in o 0
+GC m 79 g 3 n out o 1
+MS id 79 d p=100,100;i=block/queue
+MC id 80 c inet::ieee80211::InProgressFrames t inet.linklayer.ieee80211.mac.queue.InProgressFrames pid 68 n inProgressFrames
+MS id 80 d p=100,200;i=block/queue
+MC id 81 c inet::ieee80211::Contention t inet.linklayer.ieee80211.mac.contention.Contention pid 68 n contention
+MS id 81 d p=100,300;i=block/timer
+MC id 82 c inet::ieee80211::BasicFragmentationPolicy t inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy pid 69 n fragmentationPolicy
+MS id 82 d p=100,100;i=block/control
+MC id 83 c inet::physicallayer::IsotropicAntenna t inet.physicallayer.antenna.IsotropicAntenna pid 60 n antenna cm 1
+MS id 83 d p=100,100;i=device/antennatower
+MC id 84 c inet::physicallayer::Ieee80211ScalarTransmitter t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarTransmitter pid 60 n transmitter cm 1
+MS id 84 d p=100,200;i=block/wtx
+MC id 85 c inet::physicallayer::Ieee80211ScalarReceiver t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarReceiver pid 60 n receiver cm 1
+MS id 85 d p=100,300;i=block/wrx
+MC id 86 c inet::physicallayer::Ieee80211NistErrorModel t inet.physicallayer.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel pid 85 n errorModel cm 1
+MS id 86 d p=100,100;i=block/broadcast
+MC id 87 c inet::Ipv4NodeConfigurator t inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator pid 45 n configurator
+MS id 87 d is=s;p=100,100;i=block/cogwheel
+MC id 88 c inet::Ipv4RoutingTable t inet.networklayer.ipv4.Ipv4RoutingTable pid 45 n routingTable
+MS id 88 d is=s;p=100,200;i=block/table
+MC id 89 c inet::Ipv4NatTable t inet.networklayer.ipv4.Ipv4NatTable pid 45 n natTable
+MS id 89 d is=s;p=100,300;i=block/table
+MC id 90 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 45 n up
+MS id 90 d p=550,100;b=600,5,,,,1;
+MC id 91 c inet::Igmpv2 t inet.networklayer.ipv4.Igmpv2 pid 45 n igmp
+GC m 91 g 0 n ipIn o 0
+GC m 91 g 3 n ipOut o 1
+GC m 91 g 4 n routerIn o 0
+GC m 91 g 7 n routerOut o 1
+MS id 91 d p=400,200;i=block/cogwheel
+MC id 92 c inet::Icmp t inet.networklayer.ipv4.Icmp pid 45 n icmp
+GC m 92 g 0 n transportIn o 0
+GC m 92 g 3 n transportOut o 1
+GC m 92 g 4 n ipIn o 0
+GC m 92 g 7 n ipOut o 1
+MS id 92 d p=700,200;i=block/control
+MC id 93 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 45 n mp
+MS id 93 d p=550,300;b=600,5,,,,1;
+MC id 94 c inet::Ipv4 t inet.networklayer.ipv4.Ipv4 pid 45 n ip
+GC m 94 g 0 n transportIn o 0
+GC m 94 g 3 n transportOut o 1
+GC m 94 g 4 n queueIn o 0
+GC m 94 g 7 n queueOut o 1
+MS id 94 d q=queue;p=700,400;i=block/routing
+MC id 95 c inet::GlobalArp t inet.networklayer.arp.ipv4.GlobalArp pid 45 n arp
+GC m 95 g 0 n ifIn o 0
+GC m 95 g 3 n ifOut o 1
+MS id 95 d q=pendingQueue;p=400,400;i=block/layer
+MC id 96 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 45 n lp
+MS id 96 d p=550,500;b=600,5,,,,1;
+GC m 90 g 1048576 n in i 0 o 0
+CC sm 45 sg 4 dm 90 dg 1048576
+CS sm 45 sg 4 d m=n
+GC m 90 g 2621440 n out i 0 o 1
+CC sm 90 sg 2621440 dm 45 dg 7
+CS sm 90 sg 2621440 d m=n
+GC m 90 g 2621441 n out i 1 o 1
+CC sm 90 sg 2621441 dm 91 dg 4
+GC m 90 g 1048577 n in i 1 o 0
+CC sm 91 sg 7 dm 90 dg 1048577
+GC m 90 g 2621442 n out i 2 o 1
+GC m 93 g 1048576 n in i 0 o 0
+CC sm 90 sg 2621442 dm 93 dg 1048576
+GC m 93 g 2621440 n out i 0 o 1
+GC m 90 g 1048578 n in i 2 o 0
+CC sm 93 sg 2621440 dm 90 dg 1048578
+GC m 90 g 2621443 n out i 3 o 1
+CC sm 90 sg 2621443 dm 92 dg 0
+GC m 90 g 1048579 n in i 3 o 0
+CC sm 92 sg 3 dm 90 dg 1048579
+GC m 93 g 1048577 n in i 1 o 0
+CC sm 91 sg 3 dm 93 dg 1048577
+GC m 93 g 2621441 n out i 1 o 1
+CC sm 93 sg 2621441 dm 91 dg 0
+GC m 93 g 1048578 n in i 2 o 0
+CC sm 92 sg 7 dm 93 dg 1048578
+GC m 93 g 2621442 n out i 2 o 1
+CC sm 93 sg 2621442 dm 92 dg 4
+GC m 93 g 2621443 n out i 3 o 1
+CC sm 93 sg 2621443 dm 94 dg 0
+GC m 93 g 1048579 n in i 3 o 0
+CC sm 94 sg 3 dm 93 dg 1048579
+GC m 96 g 1048576 n in i 0 o 0
+CC sm 95 sg 3 dm 96 dg 1048576
+GC m 96 g 2621440 n out i 0 o 1
+CC sm 96 sg 2621440 dm 95 dg 0
+GC m 96 g 1048577 n in i 1 o 0
+CC sm 94 sg 7 dm 96 dg 1048577
+GC m 96 g 2621441 n out i 1 o 1
+CC sm 96 sg 2621441 dm 94 dg 4
+GC m 96 g 2621442 n out i 2 o 1
+CC sm 96 sg 2621442 dm 45 dg 3
+CS sm 96 sg 2621442 d m=s
+GC m 96 g 1048578 n in i 2 o 0
+CC sm 45 sg 0 dm 96 dg 1048578
+CS sm 45 sg 0 d m=s
+MC id 101 c inet::StationaryMobility t inet.mobility.static.StationaryMobility pid 6 n mobility
+MS id 101 d is=s;p=125,160;i=block/cogwheel
+MC id 102 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 6 n interfaceTable
+MS id 102 d is=s;p=125,240;i=block/table
+MC id 103 c inet::InterfaceEntry t inet.linklayer.loopback.LoopbackInterface pid 6 n lo[0] cm 1
+GC m 103 g 0 n upperLayerIn o 0
+GC m 103 g 3 n upperLayerOut o 1
+MS id 103 d p=750,526,row,150;i=block/ifcard;bgl=53
+MC id 104 c inet::InterfaceEntry t inet.linklayer.ieee80211.Ieee80211Interface pid 6 n wlan[0] cm 1
+GC m 104 g 0 n upperLayerIn o 0
+GC m 104 g 3 n upperLayerOut o 1
+GC m 104 g 4 n radioIn o 0
+MS id 104 d q=queue;p=375,616,row,150;i=block/ifcard
+CC sm 6 sg 1048576 dm 104 dg 4
+CS sm 6 sg 1048576 d m=s
+MC id 106 c inet::Ipv4NetworkLayer t inet.networklayer.ipv4.Ipv4NetworkLayer pid 6 n ipv4 cm 1
+GC m 106 g 0 n ifIn o 0
+GC m 106 g 3 n ifOut o 1
+GC m 106 g 4 n transportIn o 0
+GC m 106 g 7 n transportOut o 1
+MS id 106 d q=queue;p=375,376;i=block/fork
+MC id 107 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 6 n nl
+MS id 107 d p=750,446;b=1000,5,,,,1;
+GC m 107 g 2621440 n out i 0 o 1
+CC sm 107 sg 2621440 dm 106 dg 0
+GC m 107 g 1048576 n in i 0 o 0
+CC sm 106 sg 3 dm 107 dg 1048576
+GC m 107 g 2621441 n out i 1 o 1
+CC sm 107 sg 2621441 dm 103 dg 0
+GC m 107 g 1048577 n in i 1 o 0
+CC sm 103 sg 3 dm 107 dg 1048577
+GC m 107 g 1048578 n in i 2 o 0
+CC sm 104 sg 3 dm 107 dg 1048578
+GC m 107 g 2621442 n out i 2 o 1
+CC sm 107 sg 2621442 dm 104 dg 0
+MC id 108 c inet::Udp t inet.transportlayer.udp.Udp pid 6 n udp
+GC m 108 g 0 n appIn o 0
+GC m 108 g 2 n ipIn o 0
+GC m 108 g 5 n appOut o 1
+GC m 108 g 7 n ipOut o 1
+MS id 108 d p=375,226;i=block/transport
+MC id 109 c inet::tcp::Tcp t inet.transportlayer.tcp.Tcp pid 6 n tcp
+GC m 109 g 0 n appIn o 0
+GC m 109 g 2 n ipIn o 0
+GC m 109 g 5 n appOut o 1
+GC m 109 g 7 n ipOut o 1
+MS id 109 d p=525,226;i=block/wheelbarrow
+MC id 110 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 6 n tn
+MS id 110 d p=750,296;b=1000,5,,,,1;
+GC m 110 g 1048576 n in i 0 o 0
+CC sm 108 sg 7 dm 110 dg 1048576
+GC m 110 g 2621440 n out i 0 o 1
+CC sm 110 sg 2621440 dm 108 dg 2
+GC m 110 g 1048577 n in i 1 o 0
+CC sm 109 sg 7 dm 110 dg 1048577
+GC m 110 g 2621441 n out i 1 o 1
+CC sm 110 sg 2621441 dm 109 dg 2
+GC m 110 g 2621442 n out i 2 o 1
+CC sm 110 sg 2621442 dm 106 dg 4
+GC m 110 g 1048578 n in i 2 o 0
+CC sm 106 sg 7 dm 110 dg 1048578
+GC m 110 g 2621443 n out i 3 o 1
+GC m 107 g 1048579 n in i 3 o 0
+CC sm 110 sg 2621443 dm 107 dg 1048579
+GC m 107 g 2621443 n out i 3 o 1
+GC m 110 g 1048579 n in i 3 o 0
+CC sm 107 sg 2621443 dm 110 dg 1048579
+MC id 111 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 6 n at
+MS id 111 d p=750,146;b=1000,5,,,,1;
+GC m 111 g 2621440 n out i 0 o 1
+CC sm 111 sg 2621440 dm 108 dg 0
+GC m 111 g 1048576 n in i 0 o 0
+CC sm 108 sg 5 dm 111 dg 1048576
+GC m 111 g 2621441 n out i 1 o 1
+CC sm 111 sg 2621441 dm 109 dg 0
+GC m 111 g 1048577 n in i 1 o 0
+CC sm 109 sg 5 dm 111 dg 1048577
+GC m 111 g 2621442 n out i 2 o 1
+GC m 110 g 1048580 n in i 4 o 0
+CC sm 111 sg 2621442 dm 110 dg 1048580
+GC m 110 g 2621444 n out i 4 o 1
+GC m 111 g 1048578 n in i 2 o 0
+CC sm 110 sg 2621444 dm 111 dg 1048578
+MC id 112 c inet::Loopback t inet.linklayer.loopback.Loopback pid 103 n lo
+GC m 112 g 0 n upperLayerIn o 0
+GC m 112 g 3 n upperLayerOut o 1
+MS id 112 d p=250,200;i=block/rxtx
+CC sm 103 sg 0 dm 112 dg 0
+CS sm 103 sg 0 d m=n
+CC sm 112 sg 3 dm 103 dg 3
+CS sm 112 sg 3 d m=n
+MC id 115 c inet::ieee80211::Ieee80211Mib t inet.linklayer.ieee80211.mib.Ieee80211Mib pid 104 n mib
+MS id 115 d is=s;p=100,100;i=block/table
+MC id 116 c inet::ieee80211::Ieee80211LlcLpd t inet.linklayer.ieee80211.llc.Ieee80211LlcLpd pid 104 n llc
+GC m 116 g 0 n upperLayerIn o 0
+GC m 116 g 3 n upperLayerOut o 1
+GC m 116 g 4 n lowerLayerIn o 0
+GC m 116 g 7 n lowerLayerOut o 1
+MS id 116 d p=250,200;i=block/layer
+MC id 117 c inet::ieee80211::Ieee80211AgentSta t inet.linklayer.ieee80211.mgmt.Ieee80211AgentSta pid 104 n agent
+GC m 117 g 0 n mgmtIn o 0
+GC m 117 g 3 n mgmtOut o 1
+MS id 117 d p=550,350;i=block/control
+MC id 118 c inet::ieee80211::Ieee80211MgmtSta t inet.linklayer.ieee80211.mgmt.Ieee80211MgmtSta pid 104 n mgmt
+GC m 118 g 0 n macIn o 0
+GC m 118 g 3 n macOut o 1
+GC m 118 g 4 n agentIn o 0
+GC m 118 g 7 n agentOut o 1
+MS id 118 d p=400,350;i=block/cogwheel
+MC id 119 c inet::ieee80211::Ieee80211Mac t inet.linklayer.ieee80211.mac.Ieee80211Mac pid 104 n mac cm 1
+GC m 119 g 0 n upperLayerIn o 0
+GC m 119 g 3 n upperLayerOut o 1
+GC m 119 g 4 n lowerLayerIn o 0
+GC m 119 g 7 n lowerLayerOut o 1
+GC m 119 g 8 n mgmtIn o 0
+GC m 119 g 11 n mgmtOut o 1
+MS id 119 d p=250,350;i=block/layer
+MC id 120 c inet::physicallayer::Ieee80211Radio t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadio pid 104 n radio cm 1
+GC m 120 g 0 n upperLayerIn o 0
+GC m 120 g 3 n upperLayerOut o 1
+GC m 120 g 4 n radioIn o 0
+MS id 120 d p=250,500;i=block/wrxtx
+CC sm 104 sg 4 dm 120 dg 4
+CS sm 104 sg 4 d m=s
+CC sm 119 sg 7 dm 120 dg 0
+CC sm 120 sg 3 dm 119 dg 4
+CC sm 119 sg 11 dm 118 dg 0
+CC sm 118 sg 3 dm 119 dg 8
+CC sm 118 sg 7 dm 117 dg 0
+CC sm 117 sg 3 dm 118 dg 4
+CC sm 116 sg 3 dm 104 dg 3
+CS sm 116 sg 3 d m=n
+CC sm 104 sg 0 dm 116 dg 0
+CS sm 104 sg 0 d m=n
+CC sm 116 sg 7 dm 119 dg 0
+CC sm 119 sg 3 dm 116 dg 4
+MC id 124 c inet::ieee80211::Dcf t inet.linklayer.ieee80211.mac.coordinationfunction.Dcf pid 119 n dcf cm 1
+MS id 124 d p=100,100;i=block/layer
+MC id 125 c inet::ieee80211::Ds t inet.linklayer.ieee80211.mac.Ds pid 119 n ds
+MS id 125 d p=400,100;i=block/routing
+MC id 126 c inet::ieee80211::Rx t inet.linklayer.ieee80211.mac.Rx pid 119 n rx
+MS id 126 d p=100,200;i=block/rx
+MC id 127 c inet::ieee80211::Tx t inet.linklayer.ieee80211.mac.Tx pid 119 n tx
+MS id 127 d p=250,200;i=block/tx
+MC id 128 c inet::ieee80211::Dcaf t inet.linklayer.ieee80211.mac.channelaccess.Dcaf pid 124 n channelAccess cm 1
+MS id 128 d p=150,100;i=block/star
+MC id 129 c inet::ieee80211::OriginatorMacDataService t inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService pid 124 n originatorMacDataService cm 1
+MS id 129 d p=150,200;i=block/fork
+MC id 130 c inet::ieee80211::RecipientMacDataService t inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService pid 124 n recipientMacDataService cm 1
+MS id 130 d p=150,300;i=block/join
+MC id 131 c inet::ieee80211::RateSelection t inet.linklayer.ieee80211.mac.rateselection.RateSelection pid 124 n rateSelection
+MS id 131 d p=350,100;i=block/cogwheel
+MC id 132 c inet::ieee80211::NonQosRecoveryProcedure t inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure pid 124 n recoveryProcedure
+MS id 132 d p=350,300;i=block/cogwheel
+MC id 133 c inet::ieee80211::OriginatorProtectionMechanism t inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism pid 124 n originatorProtectionMechanism
+MS id 133 d p=150,400;i=block/encrypt
+MC id 134 c inet::ieee80211::AckHandler t inet.linklayer.ieee80211.mac.originator.AckHandler pid 124 n ackHandler
+MS id 134 d p=350,400;i=block/table2
+MC id 135 c inet::ieee80211::OriginatorAckPolicy t inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy pid 124 n originatorAckPolicy
+MS id 135 d p=550,100;i=block/control
+MC id 136 c inet::ieee80211::RecipientAckPolicy t inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy pid 124 n recipientAckPolicy
+MS id 136 d p=550,200;i=block/control
+MC id 137 c inet::ieee80211::RtsPolicy t inet.linklayer.ieee80211.mac.originator.RtsPolicy pid 124 n rtsPolicy
+MS id 137 d p=550,300;i=block/control
+MC id 138 c inet::ieee80211::CtsPolicy t inet.linklayer.ieee80211.mac.recipient.CtsPolicy pid 124 n ctsPolicy
+MS id 138 d p=550,400;i=block/control
+MC id 139 c inet::queueing::PacketQueue t inet.linklayer.ieee80211.mac.queue.PendingQueue pid 128 n pendingQueue
+GC m 139 g 0 n in o 0
+GC m 139 g 3 n out o 1
+MS id 139 d p=100,100;i=block/queue
+MC id 140 c inet::ieee80211::InProgressFrames t inet.linklayer.ieee80211.mac.queue.InProgressFrames pid 128 n inProgressFrames
+MS id 140 d p=100,200;i=block/queue
+MC id 141 c inet::ieee80211::Contention t inet.linklayer.ieee80211.mac.contention.Contention pid 128 n contention
+MS id 141 d p=100,300;i=block/timer
+MC id 142 c inet::ieee80211::BasicFragmentationPolicy t inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy pid 129 n fragmentationPolicy
+MS id 142 d p=100,100;i=block/control
+MC id 143 c inet::physicallayer::IsotropicAntenna t inet.physicallayer.antenna.IsotropicAntenna pid 120 n antenna cm 1
+MS id 143 d p=100,100;i=device/antennatower
+MC id 144 c inet::physicallayer::Ieee80211ScalarTransmitter t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarTransmitter pid 120 n transmitter cm 1
+MS id 144 d p=100,200;i=block/wtx
+MC id 145 c inet::physicallayer::Ieee80211ScalarReceiver t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarReceiver pid 120 n receiver cm 1
+MS id 145 d p=100,300;i=block/wrx
+MC id 146 c inet::physicallayer::Ieee80211NistErrorModel t inet.physicallayer.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel pid 145 n errorModel cm 1
+MS id 146 d p=100,100;i=block/broadcast
+MC id 147 c inet::Ipv4NodeConfigurator t inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator pid 106 n configurator
+MS id 147 d is=s;p=100,100;i=block/cogwheel
+MC id 148 c inet::Ipv4RoutingTable t inet.networklayer.ipv4.Ipv4RoutingTable pid 106 n routingTable
+MS id 148 d is=s;p=100,200;i=block/table
+MC id 149 c inet::Ipv4NatTable t inet.networklayer.ipv4.Ipv4NatTable pid 106 n natTable
+MS id 149 d is=s;p=100,300;i=block/table
+MC id 150 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 106 n up
+MS id 150 d p=550,100;b=600,5,,,,1;
+MC id 151 c inet::Igmpv2 t inet.networklayer.ipv4.Igmpv2 pid 106 n igmp
+GC m 151 g 0 n ipIn o 0
+GC m 151 g 3 n ipOut o 1
+GC m 151 g 4 n routerIn o 0
+GC m 151 g 7 n routerOut o 1
+MS id 151 d p=400,200;i=block/cogwheel
+MC id 152 c inet::Icmp t inet.networklayer.ipv4.Icmp pid 106 n icmp
+GC m 152 g 0 n transportIn o 0
+GC m 152 g 3 n transportOut o 1
+GC m 152 g 4 n ipIn o 0
+GC m 152 g 7 n ipOut o 1
+MS id 152 d p=700,200;i=block/control
+MC id 153 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 106 n mp
+MS id 153 d p=550,300;b=600,5,,,,1;
+MC id 154 c inet::Ipv4 t inet.networklayer.ipv4.Ipv4 pid 106 n ip
+GC m 154 g 0 n transportIn o 0
+GC m 154 g 3 n transportOut o 1
+GC m 154 g 4 n queueIn o 0
+GC m 154 g 7 n queueOut o 1
+MS id 154 d q=queue;p=700,400;i=block/routing
+MC id 155 c inet::GlobalArp t inet.networklayer.arp.ipv4.GlobalArp pid 106 n arp
+GC m 155 g 0 n ifIn o 0
+GC m 155 g 3 n ifOut o 1
+MS id 155 d q=pendingQueue;p=400,400;i=block/layer
+MC id 156 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 106 n lp
+MS id 156 d p=550,500;b=600,5,,,,1;
+GC m 150 g 1048576 n in i 0 o 0
+CC sm 106 sg 4 dm 150 dg 1048576
+CS sm 106 sg 4 d m=n
+GC m 150 g 2621440 n out i 0 o 1
+CC sm 150 sg 2621440 dm 106 dg 7
+CS sm 150 sg 2621440 d m=n
+GC m 150 g 2621441 n out i 1 o 1
+CC sm 150 sg 2621441 dm 151 dg 4
+GC m 150 g 1048577 n in i 1 o 0
+CC sm 151 sg 7 dm 150 dg 1048577
+GC m 150 g 2621442 n out i 2 o 1
+GC m 153 g 1048576 n in i 0 o 0
+CC sm 150 sg 2621442 dm 153 dg 1048576
+GC m 153 g 2621440 n out i 0 o 1
+GC m 150 g 1048578 n in i 2 o 0
+CC sm 153 sg 2621440 dm 150 dg 1048578
+GC m 150 g 2621443 n out i 3 o 1
+CC sm 150 sg 2621443 dm 152 dg 0
+GC m 150 g 1048579 n in i 3 o 0
+CC sm 152 sg 3 dm 150 dg 1048579
+GC m 153 g 1048577 n in i 1 o 0
+CC sm 151 sg 3 dm 153 dg 1048577
+GC m 153 g 2621441 n out i 1 o 1
+CC sm 153 sg 2621441 dm 151 dg 0
+GC m 153 g 1048578 n in i 2 o 0
+CC sm 152 sg 7 dm 153 dg 1048578
+GC m 153 g 2621442 n out i 2 o 1
+CC sm 153 sg 2621442 dm 152 dg 4
+GC m 153 g 2621443 n out i 3 o 1
+CC sm 153 sg 2621443 dm 154 dg 0
+GC m 153 g 1048579 n in i 3 o 0
+CC sm 154 sg 3 dm 153 dg 1048579
+GC m 156 g 1048576 n in i 0 o 0
+CC sm 155 sg 3 dm 156 dg 1048576
+GC m 156 g 2621440 n out i 0 o 1
+CC sm 156 sg 2621440 dm 155 dg 0
+GC m 156 g 1048577 n in i 1 o 0
+CC sm 154 sg 7 dm 156 dg 1048577
+GC m 156 g 2621441 n out i 1 o 1
+CC sm 156 sg 2621441 dm 154 dg 4
+GC m 156 g 2621442 n out i 2 o 1
+CC sm 156 sg 2621442 dm 106 dg 3
+CS sm 156 sg 2621442 d m=s
+GC m 156 g 1048578 n in i 2 o 0
+CC sm 106 sg 0 dm 156 dg 1048578
+CS sm 106 sg 0 d m=s
+MC id 161 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 7 n interfaceTable
+MS id 161 d is=s;p=100,200;i=block/table
+MC id 162 c inet::StationaryMobility t inet.mobility.static.StationaryMobility pid 7 n mobility
+MS id 162 d is=s;p=100,400;i=block/cogwheel
+MC id 163 c inet::MacAddressTable t inet.linklayer.ethernet.switch.MacAddressTable pid 7 n macTable
+MS id 163 d is=s;p=100,300;i=block/table2
+MC id 164 c inet::Ieee8021dRelay t inet.linklayer.ieee8021d.relay.Ieee8021dRelay pid 7 n relayUnit
+GC m 164 g 0 n ifIn o 0
+GC m 164 g 3 n ifOut o 1
+GC m 164 g 4 n upperLayerIn o 0
+GC m 164 g 7 n upperLayerOut o 1
+MS id 164 d p=400,100;i=block/broadcast;bgb=425,114
+MC id 165 c inet::MessageDispatcher t inet.common.MessageDispatcher pid 7 n nl
+MS id 165 d p=800,200;b=1200,5,,,,1;
+MC id 166 c inet::InterfaceEntry t inet.linklayer.ieee80211.Ieee80211Interface pid 7 n wlan[0] cm 1
+GC m 166 g 0 n upperLayerIn o 0
+GC m 166 g 3 n upperLayerOut o 1
+GC m 166 g 4 n radioIn o 0
+MS id 166 d q=queue;p=250,300,row,150;i=block/ifcard
+MC id 167 c inet::InterfaceEntry t inet.linklayer.ieee80211.Ieee80211Interface pid 7 n wlan[1] cm 1
+GC m 167 g 0 n upperLayerIn o 0
+GC m 167 g 3 n upperLayerOut o 1
+GC m 167 g 4 n radioIn o 0
+MS id 167 d q=queue;p=250,300,row,150;i=block/ifcard
+GC m 165 g 2621440 n out i 0 o 1
+CC sm 165 sg 2621440 dm 164 dg 0
+GC m 165 g 1048576 n in i 0 o 0
+CC sm 164 sg 3 dm 165 dg 1048576
+CC sm 7 sg 1048576 dm 166 dg 4
+CS sm 7 sg 1048576 d m=s
+GC m 165 g 1048577 n in i 1 o 0
+CC sm 166 sg 3 dm 165 dg 1048577
+GC m 165 g 2621441 n out i 1 o 1
+CC sm 165 sg 2621441 dm 166 dg 0
+CC sm 7 sg 1048577 dm 167 dg 4
+CS sm 7 sg 1048577 d m=s
+GC m 165 g 1048578 n in i 2 o 0
+CC sm 167 sg 3 dm 165 dg 1048578
+GC m 165 g 2621442 n out i 2 o 1
+CC sm 165 sg 2621442 dm 167 dg 0
+MC id 170 c inet::ieee80211::Ieee80211Mib t inet.linklayer.ieee80211.mib.Ieee80211Mib pid 166 n mib
+MS id 170 d is=s;p=100,100;i=block/table
+MC id 171 c inet::ieee80211::Ieee80211Portal t inet.linklayer.ieee80211.portal.Ieee80211Portal pid 166 n llc
+GC m 171 g 0 n upperLayerIn o 0
+GC m 171 g 3 n upperLayerOut o 1
+GC m 171 g 4 n lowerLayerIn o 0
+GC m 171 g 7 n lowerLayerOut o 1
+MS id 171 d p=250,200;i=block/layer
+MC id 172 c inet::ieee80211::Ieee80211MgmtAp t inet.linklayer.ieee80211.mgmt.Ieee80211MgmtAp pid 166 n mgmt
+GC m 172 g 0 n macIn o 0
+GC m 172 g 3 n macOut o 1
+GC m 172 g 4 n agentIn o 0
+GC m 172 g 7 n agentOut o 1
+MS id 172 d p=400,350;i=block/cogwheel
+MC id 173 c inet::ieee80211::Ieee80211Mac t inet.linklayer.ieee80211.mac.Ieee80211Mac pid 166 n mac cm 1
+GC m 173 g 0 n upperLayerIn o 0
+GC m 173 g 3 n upperLayerOut o 1
+GC m 173 g 4 n lowerLayerIn o 0
+GC m 173 g 7 n lowerLayerOut o 1
+GC m 173 g 8 n mgmtIn o 0
+GC m 173 g 11 n mgmtOut o 1
+MS id 173 d p=250,350;i=block/layer
+MC id 174 c inet::physicallayer::Ieee80211Radio t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadio pid 166 n radio cm 1
+GC m 174 g 0 n upperLayerIn o 0
+GC m 174 g 3 n upperLayerOut o 1
+GC m 174 g 4 n radioIn o 0
+MS id 174 d p=250,500;i=block/wrxtx
+CC sm 166 sg 4 dm 174 dg 4
+CS sm 166 sg 4 d m=s
+CC sm 173 sg 7 dm 174 dg 0
+CC sm 174 sg 3 dm 173 dg 4
+CC sm 173 sg 11 dm 172 dg 0
+CC sm 172 sg 3 dm 173 dg 8
+CC sm 171 sg 3 dm 166 dg 3
+CS sm 171 sg 3 d m=n
+CC sm 166 sg 0 dm 171 dg 0
+CS sm 166 sg 0 d m=n
+CC sm 171 sg 7 dm 173 dg 0
+CC sm 173 sg 3 dm 171 dg 4
+MC id 178 c inet::ieee80211::Dcf t inet.linklayer.ieee80211.mac.coordinationfunction.Dcf pid 173 n dcf cm 1
+MS id 178 d p=100,100;i=block/layer
+MC id 179 c inet::ieee80211::Ds t inet.linklayer.ieee80211.mac.Ds pid 173 n ds
+MS id 179 d p=400,100;i=block/routing
+MC id 180 c inet::ieee80211::Rx t inet.linklayer.ieee80211.mac.Rx pid 173 n rx
+MS id 180 d p=100,200;i=block/rx
+MC id 181 c inet::ieee80211::Tx t inet.linklayer.ieee80211.mac.Tx pid 173 n tx
+MS id 181 d p=250,200;i=block/tx
+MC id 182 c inet::ieee80211::Dcaf t inet.linklayer.ieee80211.mac.channelaccess.Dcaf pid 178 n channelAccess cm 1
+MS id 182 d p=150,100;i=block/star
+MC id 183 c inet::ieee80211::OriginatorMacDataService t inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService pid 178 n originatorMacDataService cm 1
+MS id 183 d p=150,200;i=block/fork
+MC id 184 c inet::ieee80211::RecipientMacDataService t inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService pid 178 n recipientMacDataService cm 1
+MS id 184 d p=150,300;i=block/join
+MC id 185 c inet::ieee80211::RateSelection t inet.linklayer.ieee80211.mac.rateselection.RateSelection pid 178 n rateSelection
+MS id 185 d p=350,100;i=block/cogwheel
+MC id 186 c inet::ieee80211::NonQosRecoveryProcedure t inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure pid 178 n recoveryProcedure
+MS id 186 d p=350,300;i=block/cogwheel
+MC id 187 c inet::ieee80211::OriginatorProtectionMechanism t inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism pid 178 n originatorProtectionMechanism
+MS id 187 d p=150,400;i=block/encrypt
+MC id 188 c inet::ieee80211::AckHandler t inet.linklayer.ieee80211.mac.originator.AckHandler pid 178 n ackHandler
+MS id 188 d p=350,400;i=block/table2
+MC id 189 c inet::ieee80211::OriginatorAckPolicy t inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy pid 178 n originatorAckPolicy
+MS id 189 d p=550,100;i=block/control
+MC id 190 c inet::ieee80211::RecipientAckPolicy t inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy pid 178 n recipientAckPolicy
+MS id 190 d p=550,200;i=block/control
+MC id 191 c inet::ieee80211::RtsPolicy t inet.linklayer.ieee80211.mac.originator.RtsPolicy pid 178 n rtsPolicy
+MS id 191 d p=550,300;i=block/control
+MC id 192 c inet::ieee80211::CtsPolicy t inet.linklayer.ieee80211.mac.recipient.CtsPolicy pid 178 n ctsPolicy
+MS id 192 d p=550,400;i=block/control
+MC id 193 c inet::queueing::PacketQueue t inet.linklayer.ieee80211.mac.queue.PendingQueue pid 182 n pendingQueue
+GC m 193 g 0 n in o 0
+GC m 193 g 3 n out o 1
+MS id 193 d p=100,100;i=block/queue
+MC id 194 c inet::ieee80211::InProgressFrames t inet.linklayer.ieee80211.mac.queue.InProgressFrames pid 182 n inProgressFrames
+MS id 194 d p=100,200;i=block/queue
+MC id 195 c inet::ieee80211::Contention t inet.linklayer.ieee80211.mac.contention.Contention pid 182 n contention
+MS id 195 d p=100,300;i=block/timer
+MC id 196 c inet::ieee80211::BasicFragmentationPolicy t inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy pid 183 n fragmentationPolicy
+MS id 196 d p=100,100;i=block/control
+MC id 197 c inet::physicallayer::IsotropicAntenna t inet.physicallayer.antenna.IsotropicAntenna pid 174 n antenna cm 1
+MS id 197 d p=100,100;i=device/antennatower
+MC id 198 c inet::physicallayer::Ieee80211ScalarTransmitter t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarTransmitter pid 174 n transmitter cm 1
+MS id 198 d p=100,200;i=block/wtx
+MC id 199 c inet::physicallayer::Ieee80211ScalarReceiver t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarReceiver pid 174 n receiver cm 1
+MS id 199 d p=100,300;i=block/wrx
+MC id 200 c inet::physicallayer::Ieee80211NistErrorModel t inet.physicallayer.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel pid 199 n errorModel cm 1
+MS id 200 d p=100,100;i=block/broadcast
+MC id 201 c inet::ieee80211::Ieee80211Mib t inet.linklayer.ieee80211.mib.Ieee80211Mib pid 167 n mib
+MS id 201 d is=s;p=100,100;i=block/table
+MC id 202 c inet::ieee80211::Ieee80211Portal t inet.linklayer.ieee80211.portal.Ieee80211Portal pid 167 n llc
+GC m 202 g 0 n upperLayerIn o 0
+GC m 202 g 3 n upperLayerOut o 1
+GC m 202 g 4 n lowerLayerIn o 0
+GC m 202 g 7 n lowerLayerOut o 1
+MS id 202 d p=250,200;i=block/layer
+MC id 203 c inet::ieee80211::Ieee80211MgmtAp t inet.linklayer.ieee80211.mgmt.Ieee80211MgmtAp pid 167 n mgmt
+GC m 203 g 0 n macIn o 0
+GC m 203 g 3 n macOut o 1
+GC m 203 g 4 n agentIn o 0
+GC m 203 g 7 n agentOut o 1
+MS id 203 d p=400,350;i=block/cogwheel
+MC id 204 c inet::ieee80211::Ieee80211Mac t inet.linklayer.ieee80211.mac.Ieee80211Mac pid 167 n mac cm 1
+GC m 204 g 0 n upperLayerIn o 0
+GC m 204 g 3 n upperLayerOut o 1
+GC m 204 g 4 n lowerLayerIn o 0
+GC m 204 g 7 n lowerLayerOut o 1
+GC m 204 g 8 n mgmtIn o 0
+GC m 204 g 11 n mgmtOut o 1
+MS id 204 d p=250,350;i=block/layer
+MC id 205 c inet::physicallayer::Ieee80211Radio t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadio pid 167 n radio cm 1
+GC m 205 g 0 n upperLayerIn o 0
+GC m 205 g 3 n upperLayerOut o 1
+GC m 205 g 4 n radioIn o 0
+MS id 205 d p=250,500;i=block/wrxtx
+CC sm 167 sg 4 dm 205 dg 4
+CS sm 167 sg 4 d m=s
+CC sm 204 sg 7 dm 205 dg 0
+CC sm 205 sg 3 dm 204 dg 4
+CC sm 204 sg 11 dm 203 dg 0
+CC sm 203 sg 3 dm 204 dg 8
+CC sm 202 sg 3 dm 167 dg 3
+CS sm 202 sg 3 d m=n
+CC sm 167 sg 0 dm 202 dg 0
+CS sm 167 sg 0 d m=n
+CC sm 202 sg 7 dm 204 dg 0
+CC sm 204 sg 3 dm 202 dg 4
+MC id 209 c inet::ieee80211::Dcf t inet.linklayer.ieee80211.mac.coordinationfunction.Dcf pid 204 n dcf cm 1
+MS id 209 d p=100,100;i=block/layer
+MC id 210 c inet::ieee80211::Ds t inet.linklayer.ieee80211.mac.Ds pid 204 n ds
+MS id 210 d p=400,100;i=block/routing
+MC id 211 c inet::ieee80211::Rx t inet.linklayer.ieee80211.mac.Rx pid 204 n rx
+MS id 211 d p=100,200;i=block/rx
+MC id 212 c inet::ieee80211::Tx t inet.linklayer.ieee80211.mac.Tx pid 204 n tx
+MS id 212 d p=250,200;i=block/tx
+MC id 213 c inet::ieee80211::Dcaf t inet.linklayer.ieee80211.mac.channelaccess.Dcaf pid 209 n channelAccess cm 1
+MS id 213 d p=150,100;i=block/star
+MC id 214 c inet::ieee80211::OriginatorMacDataService t inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService pid 209 n originatorMacDataService cm 1
+MS id 214 d p=150,200;i=block/fork
+MC id 215 c inet::ieee80211::RecipientMacDataService t inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService pid 209 n recipientMacDataService cm 1
+MS id 215 d p=150,300;i=block/join
+MC id 216 c inet::ieee80211::RateSelection t inet.linklayer.ieee80211.mac.rateselection.RateSelection pid 209 n rateSelection
+MS id 216 d p=350,100;i=block/cogwheel
+MC id 217 c inet::ieee80211::NonQosRecoveryProcedure t inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure pid 209 n recoveryProcedure
+MS id 217 d p=350,300;i=block/cogwheel
+MC id 218 c inet::ieee80211::OriginatorProtectionMechanism t inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism pid 209 n originatorProtectionMechanism
+MS id 218 d p=150,400;i=block/encrypt
+MC id 219 c inet::ieee80211::AckHandler t inet.linklayer.ieee80211.mac.originator.AckHandler pid 209 n ackHandler
+MS id 219 d p=350,400;i=block/table2
+MC id 220 c inet::ieee80211::OriginatorAckPolicy t inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy pid 209 n originatorAckPolicy
+MS id 220 d p=550,100;i=block/control
+MC id 221 c inet::ieee80211::RecipientAckPolicy t inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy pid 209 n recipientAckPolicy
+MS id 221 d p=550,200;i=block/control
+MC id 222 c inet::ieee80211::RtsPolicy t inet.linklayer.ieee80211.mac.originator.RtsPolicy pid 209 n rtsPolicy
+MS id 222 d p=550,300;i=block/control
+MC id 223 c inet::ieee80211::CtsPolicy t inet.linklayer.ieee80211.mac.recipient.CtsPolicy pid 209 n ctsPolicy
+MS id 223 d p=550,400;i=block/control
+MC id 224 c inet::queueing::PacketQueue t inet.linklayer.ieee80211.mac.queue.PendingQueue pid 213 n pendingQueue
+GC m 224 g 0 n in o 0
+GC m 224 g 3 n out o 1
+MS id 224 d p=100,100;i=block/queue
+MC id 225 c inet::ieee80211::InProgressFrames t inet.linklayer.ieee80211.mac.queue.InProgressFrames pid 213 n inProgressFrames
+MS id 225 d p=100,200;i=block/queue
+MC id 226 c inet::ieee80211::Contention t inet.linklayer.ieee80211.mac.contention.Contention pid 213 n contention
+MS id 226 d p=100,300;i=block/timer
+MC id 227 c inet::ieee80211::BasicFragmentationPolicy t inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy pid 214 n fragmentationPolicy
+MS id 227 d p=100,100;i=block/control
+MC id 228 c inet::physicallayer::IsotropicAntenna t inet.physicallayer.antenna.IsotropicAntenna pid 205 n antenna cm 1
+MS id 228 d p=100,100;i=device/antennatower
+MC id 229 c inet::physicallayer::Ieee80211ScalarTransmitter t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarTransmitter pid 205 n transmitter cm 1
+MS id 229 d p=100,200;i=block/wtx
+MC id 230 c inet::physicallayer::Ieee80211ScalarReceiver t inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarReceiver pid 205 n receiver cm 1
+MS id 230 d p=100,300;i=block/wrx
+MC id 231 c inet::physicallayer::Ieee80211NistErrorModel t inet.physicallayer.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel pid 230 n errorModel cm 1
+MS id 231 d p=100,100;i=block/broadcast
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 8 m initialize(0)
+ME
+MB sm 1 tm 9 m initialize(0)
+ME
+MB sm 1 tm 10 m initialize(0)
+ME
+MB sm 1 tm 11 m initialize(0)
+ME
+MB sm 1 tm 12 m initialize(0)
+ME
+MB sm 1 tm 13 m initialize(0)
+ME
+MB sm 1 tm 14 m initialize(0)
+ME
+MB sm 1 tm 15 m initialize(0)
+ME
+MB sm 1 tm 16 m initialize(0)
+ME
+MB sm 1 tm 17 m initialize(0)
+ME
+MB sm 1 tm 18 m initialize(0)
+ME
+MB sm 1 tm 19 m initialize(0)
+ME
+MB sm 1 tm 20 m initialize(0)
+ME
+MB sm 1 tm 21 m initialize(0)
+ME
+MB sm 1 tm 22 m initialize(0)
+ME
+MB sm 1 tm 23 m initialize(0)
+ME
+MB sm 1 tm 24 m initialize(0)
+ME
+MB sm 1 tm 25 m initialize(0)
+ME
+MB sm 1 tm 26 m initialize(0)
+ME
+MB sm 1 tm 27 m initialize(0)
+ME
+MB sm 1 tm 28 m initialize(0)
+ME
+MB sm 1 tm 29 m initialize(0)
+ME
+MB sm 1 tm 30 m initialize(0)
+ME
+MB sm 1 tm 31 m initialize(0)
+ME
+MB sm 1 tm 32 m initialize(0)
+ME
+MB sm 1 tm 33 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n removeNonInterferingTransmissions pe -1
+ME
+MB sm 1 tm 34 m initialize(0)
+ME
+MB sm 1 tm 35 m initialize(0)
+ME
+MB sm 1 tm 36 m initialize(0)
+ME
+MB sm 1 tm 37 m initialize(0)
+ME
+MB sm 1 tm 38 m initialize(0)
+ME
+MB sm 1 tm 39 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+ME
+MB sm 1 tm 40 m initialize(0)
+ME
+MB sm 1 tm 41 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 42 m initialize(0)
+ME
+MB sm 1 tm 52 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 43 m initialize(0)
+ME
+MB sm 1 tm 55 m initialize(0)
+ME
+MB sm 1 tm 56 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 57 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n startUp k 1 pe -1
+BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n startUp k 1 pe 0
+ES t 0.193768234528
+ME
+MB sm 1 tm 58 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 59 m initialize(0)
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 64 m initialize(0)
+ME
+MB sm 1 tm 68 m initialize(0)
+ME
+MB sm 1 tm 79 m initialize(0)
+ME
+MB sm 1 tm 80 m initialize(0)
+MB sm 80 tm 12 m ""
+ME
+MS id 80 d "t=0 packets;p=100,200;i=block/queue"
+ME
+MB sm 1 tm 81 m initialize(0)
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n startTx pe -1
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n channelGranted pe -1
+MB sm 81 tm 12 m ""
+ME
+MS id 81 d t=IDLE;p=100,300;i=block/timer
+ME
+MB sm 1 tm 69 m initialize(0)
+ME
+MB sm 1 tm 82 m initialize(0)
+ME
+MB sm 1 tm 70 m initialize(0)
+ME
+MB sm 1 tm 71 m initialize(0)
+ME
+MB sm 1 tm 72 m initialize(0)
+ME
+MB sm 1 tm 73 m initialize(0)
+ME
+MB sm 1 tm 74 m initialize(0)
+ME
+MB sm 1 tm 75 m initialize(0)
+ME
+MB sm 1 tm 76 m initialize(0)
+ME
+MB sm 1 tm 77 m initialize(0)
+ME
+MB sm 1 tm 78 m initialize(0)
+ME
+MB sm 1 tm 65 m initialize(0)
+ME
+MB sm 1 tm 66 m initialize(0)
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n NAV pe -1
+ME
+MB sm 1 tm 67 m initialize(0)
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n endIFS pe -1
+ME
+MB sm 1 tm 60 m initialize(0)
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n switchTimer pe -1
+CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n transmissionTimer pe -1
+ME
+MB sm 1 tm 83 m initialize(0)
+ME
+MB sm 1 tm 84 m initialize(0)
+ME
+MB sm 1 tm 85 m initialize(0)
+ME
+MB sm 1 tm 86 m initialize(0)
+ME
+MB sm 1 tm 45 m initialize(0)
+ME
+MB sm 1 tm 87 m initialize(0)
+ME
+MB sm 1 tm 88 m initialize(0)
+ME
+MB sm 1 tm 89 m initialize(0)
+ME
+MB sm 1 tm 90 m initialize(0)
+ME
+MB sm 1 tm 91 m initialize(0)
+ME
+MB sm 1 tm 92 m initialize(0)
+ME
+MB sm 1 tm 93 m initialize(0)
+ME
+MB sm 1 tm 94 m initialize(0)
+CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+MB sm 94 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+ME
+MB sm 94 tm 96 m handleRegisterService
+MB sm 96 tm 46 m handleRegisterService
+MB sm 46 tm 56 m handleRegisterService
+ME
+MB sm 46 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 94 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+ME
+MB sm 94 tm 96 m handleRegisterService
+MB sm 96 tm 46 m handleRegisterService
+MB sm 46 tm 56 m handleRegisterService
+ME
+MB sm 46 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 94 tm 96 m handleRegisterProtocol
+MB sm 96 tm 46 m handleRegisterProtocol
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+MB sm 46 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 94 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 94 tm 96 m handleRegisterProtocol
+MB sm 96 tm 46 m handleRegisterProtocol
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+MB sm 46 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 94 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 1 tm 95 m initialize(0)
+CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 96 m initialize(0)
+ME
+MB sm 1 tm 46 m initialize(0)
+ME
+MB sm 1 tm 47 m initialize(0)
+CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 48 m initialize(0)
+CM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 49 m initialize(0)
+ME
+MB sm 1 tm 50 m initialize(0)
+CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n sendPing k 1001 pe -1
+ME
+MB sm 1 tm 51 m initialize(0)
+ME
+MB sm 1 tm 6 m initialize(0)
+ME
+MB sm 1 tm 101 m initialize(0)
+ME
+MB sm 1 tm 102 m initialize(0)
+CM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 103 m initialize(0)
+ME
+MB sm 1 tm 112 m initialize(0)
+CM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 104 m initialize(0)
+ME
+MB sm 1 tm 115 m initialize(0)
+ME
+MB sm 1 tm 116 m initialize(0)
+CM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 117 m initialize(0)
+CM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n startUp k 1 pe -1
+BS id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n startUp k 1 pe 0
+ES t 0.115314512467
+ME
+MB sm 1 tm 118 m initialize(0)
+CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 119 m initialize(0)
+CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 124 m initialize(0)
+ME
+MB sm 1 tm 128 m initialize(0)
+ME
+MB sm 1 tm 139 m initialize(0)
+ME
+MB sm 1 tm 140 m initialize(0)
+MB sm 140 tm 12 m ""
+ME
+MS id 140 d "t=0 packets;p=100,200;i=block/queue"
+ME
+MB sm 1 tm 141 m initialize(0)
+CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n startTx pe -1
+CM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n channelGranted pe -1
+MB sm 141 tm 12 m ""
+ME
+MS id 141 d t=IDLE;p=100,300;i=block/timer
+ME
+MB sm 1 tm 129 m initialize(0)
+ME
+MB sm 1 tm 142 m initialize(0)
+ME
+MB sm 1 tm 130 m initialize(0)
+ME
+MB sm 1 tm 131 m initialize(0)
+ME
+MB sm 1 tm 132 m initialize(0)
+ME
+MB sm 1 tm 133 m initialize(0)
+ME
+MB sm 1 tm 134 m initialize(0)
+ME
+MB sm 1 tm 135 m initialize(0)
+ME
+MB sm 1 tm 136 m initialize(0)
+ME
+MB sm 1 tm 137 m initialize(0)
+ME
+MB sm 1 tm 138 m initialize(0)
+ME
+MB sm 1 tm 125 m initialize(0)
+ME
+MB sm 1 tm 126 m initialize(0)
+CM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n NAV pe -1
+ME
+MB sm 1 tm 127 m initialize(0)
+CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n endIFS pe -1
+ME
+MB sm 1 tm 120 m initialize(0)
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n switchTimer pe -1
+CM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n transmissionTimer pe -1
+ME
+MB sm 1 tm 143 m initialize(0)
+ME
+MB sm 1 tm 144 m initialize(0)
+ME
+MB sm 1 tm 145 m initialize(0)
+ME
+MB sm 1 tm 146 m initialize(0)
+ME
+MB sm 1 tm 106 m initialize(0)
+ME
+MB sm 1 tm 147 m initialize(0)
+ME
+MB sm 1 tm 148 m initialize(0)
+ME
+MB sm 1 tm 149 m initialize(0)
+ME
+MB sm 1 tm 150 m initialize(0)
+ME
+MB sm 1 tm 151 m initialize(0)
+ME
+MB sm 1 tm 152 m initialize(0)
+ME
+MB sm 1 tm 153 m initialize(0)
+ME
+MB sm 1 tm 154 m initialize(0)
+CM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+MB sm 154 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+ME
+MB sm 154 tm 156 m handleRegisterService
+MB sm 156 tm 107 m handleRegisterService
+MB sm 107 tm 116 m handleRegisterService
+ME
+MB sm 107 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 154 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+ME
+MB sm 154 tm 156 m handleRegisterService
+MB sm 156 tm 107 m handleRegisterService
+MB sm 107 tm 116 m handleRegisterService
+ME
+MB sm 107 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 154 tm 156 m handleRegisterProtocol
+MB sm 156 tm 107 m handleRegisterProtocol
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+MB sm 107 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 154 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 154 tm 156 m handleRegisterProtocol
+MB sm 156 tm 107 m handleRegisterProtocol
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+MB sm 107 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 154 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 1 tm 155 m initialize(0)
+CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 156 m initialize(0)
+ME
+MB sm 1 tm 107 m initialize(0)
+ME
+MB sm 1 tm 108 m initialize(0)
+CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 109 m initialize(0)
+CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 110 m initialize(0)
+ME
+MB sm 1 tm 111 m initialize(0)
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 161 m initialize(0)
+CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 162 m initialize(0)
+ME
+MB sm 1 tm 163 m initialize(0)
+CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 164 m initialize(0)
+CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 165 m initialize(0)
+ME
+MB sm 1 tm 166 m initialize(0)
+ME
+MB sm 1 tm 170 m initialize(0)
+ME
+MB sm 1 tm 171 m initialize(0)
+ME
+MB sm 1 tm 172 m initialize(0)
+CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n beaconTimer pe -1
+ME
+MB sm 1 tm 173 m initialize(0)
+CM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 178 m initialize(0)
+ME
+MB sm 1 tm 182 m initialize(0)
+ME
+MB sm 1 tm 193 m initialize(0)
+ME
+MB sm 1 tm 194 m initialize(0)
+MB sm 194 tm 12 m ""
+ME
+MS id 194 d "t=0 packets;p=100,200;i=block/queue"
+ME
+MB sm 1 tm 195 m initialize(0)
+CM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n startTx pe -1
+CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n channelGranted pe -1
+MB sm 195 tm 12 m ""
+ME
+MS id 195 d t=IDLE;p=100,300;i=block/timer
+ME
+MB sm 1 tm 183 m initialize(0)
+ME
+MB sm 1 tm 196 m initialize(0)
+ME
+MB sm 1 tm 184 m initialize(0)
+ME
+MB sm 1 tm 185 m initialize(0)
+ME
+MB sm 1 tm 186 m initialize(0)
+ME
+MB sm 1 tm 187 m initialize(0)
+ME
+MB sm 1 tm 188 m initialize(0)
+ME
+MB sm 1 tm 189 m initialize(0)
+ME
+MB sm 1 tm 190 m initialize(0)
+ME
+MB sm 1 tm 191 m initialize(0)
+ME
+MB sm 1 tm 192 m initialize(0)
+ME
+MB sm 1 tm 179 m initialize(0)
+ME
+MB sm 1 tm 180 m initialize(0)
+CM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n NAV pe -1
+ME
+MB sm 1 tm 181 m initialize(0)
+CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n endIFS pe -1
+ME
+MB sm 1 tm 174 m initialize(0)
+CM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n switchTimer pe -1
+CM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n transmissionTimer pe -1
+ME
+MB sm 1 tm 197 m initialize(0)
+ME
+MB sm 1 tm 198 m initialize(0)
+ME
+MB sm 1 tm 199 m initialize(0)
+ME
+MB sm 1 tm 200 m initialize(0)
+ME
+MB sm 1 tm 167 m initialize(0)
+ME
+MB sm 1 tm 201 m initialize(0)
+ME
+MB sm 1 tm 202 m initialize(0)
+ME
+MB sm 1 tm 203 m initialize(0)
+CM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n beaconTimer pe -1
+ME
+MB sm 1 tm 204 m initialize(0)
+CM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+ME
+MB sm 1 tm 209 m initialize(0)
+ME
+MB sm 1 tm 213 m initialize(0)
+ME
+MB sm 1 tm 224 m initialize(0)
+ME
+MB sm 1 tm 225 m initialize(0)
+MB sm 225 tm 12 m ""
+ME
+MS id 225 d "t=0 packets;p=100,200;i=block/queue"
+ME
+MB sm 1 tm 226 m initialize(0)
+CM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n startTx pe -1
+CM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n channelGranted pe -1
+MB sm 226 tm 12 m ""
+ME
+MS id 226 d t=IDLE;p=100,300;i=block/timer
+ME
+MB sm 1 tm 214 m initialize(0)
+ME
+MB sm 1 tm 227 m initialize(0)
+ME
+MB sm 1 tm 215 m initialize(0)
+ME
+MB sm 1 tm 216 m initialize(0)
+ME
+MB sm 1 tm 217 m initialize(0)
+ME
+MB sm 1 tm 218 m initialize(0)
+ME
+MB sm 1 tm 219 m initialize(0)
+ME
+MB sm 1 tm 220 m initialize(0)
+ME
+MB sm 1 tm 221 m initialize(0)
+ME
+MB sm 1 tm 222 m initialize(0)
+ME
+MB sm 1 tm 223 m initialize(0)
+ME
+MB sm 1 tm 210 m initialize(0)
+ME
+MB sm 1 tm 211 m initialize(0)
+CM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n NAV pe -1
+ME
+MB sm 1 tm 212 m initialize(0)
+CM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n endIFS pe -1
+ME
+MB sm 1 tm 205 m initialize(0)
+CM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n ActiveOperationTimeout pe -1
+CM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n ActiveOperationExtraTimer pe -1
+CM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n switchTimer pe -1
+CM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n transmissionTimer pe -1
+ME
+MB sm 1 tm 228 m initialize(0)
+ME
+MB sm 1 tm 229 m initialize(0)
+ME
+MB sm 1 tm 230 m initialize(0)
+ME
+MB sm 1 tm 231 m initialize(0)
+ME
+MB sm 1 tm 8 m initialize(1)
+ME
+MB sm 1 tm 9 m initialize(1)
+ME
+MB sm 1 tm 10 m initialize(1)
+ME
+MB sm 1 tm 11 m initialize(1)
+ME
+MB sm 1 tm 12 m initialize(1)
+ME
+MB sm 1 tm 13 m initialize(1)
+ME
+MB sm 1 tm 14 m initialize(1)
+ME
+MB sm 1 tm 15 m initialize(1)
+ME
+MB sm 1 tm 16 m initialize(1)
+ME
+MB sm 1 tm 17 m initialize(1)
+ME
+MB sm 1 tm 18 m initialize(1)
+ME
+MB sm 1 tm 19 m initialize(1)
+ME
+MB sm 1 tm 20 m initialize(1)
+ME
+MB sm 1 tm 21 m initialize(1)
+ME
+MB sm 1 tm 22 m initialize(1)
+ME
+MB sm 1 tm 23 m initialize(1)
+ME
+MB sm 1 tm 24 m initialize(1)
+ME
+MB sm 1 tm 25 m initialize(1)
+ME
+MB sm 1 tm 26 m initialize(1)
+ME
+MB sm 1 tm 27 m initialize(1)
+ME
+MB sm 1 tm 28 m initialize(1)
+ME
+MB sm 1 tm 29 m initialize(1)
+ME
+MB sm 1 tm 30 m initialize(1)
+ME
+MB sm 1 tm 31 m initialize(1)
+ME
+MB sm 1 tm 32 m initialize(1)
+ME
+MB sm 1 tm 33 m initialize(1)
+ME
+MB sm 1 tm 3 m initialize(1)
+ME
+MB sm 1 tm 35 m initialize(1)
+ME
+MB sm 1 tm 38 m initialize(1)
+ME
+MB sm 1 tm 4 m initialize(1)
+ME
+MB sm 1 tm 40 m initialize(1)
+ME
+MB sm 1 tm 41 m initialize(1)
+ME
+MB sm 1 tm 42 m initialize(1)
+ME
+MB sm 1 tm 52 m initialize(1)
+ME
+MB sm 1 tm 43 m initialize(1)
+ME
+MB sm 1 tm 56 m initialize(1)
+ME
+MB sm 1 tm 57 m initialize(1)
+ME
+MB sm 1 tm 58 m initialize(1)
+ME
+MB sm 1 tm 59 m initialize(1)
+ME
+MB sm 1 tm 64 m initialize(1)
+ME
+MB sm 1 tm 68 m initialize(1)
+ME
+MB sm 1 tm 79 m initialize(1)
+ME
+MB sm 1 tm 81 m initialize(1)
+ME
+MB sm 1 tm 71 m initialize(1)
+ME
+MB sm 1 tm 72 m initialize(1)
+ME
+MB sm 1 tm 73 m initialize(1)
+ME
+MB sm 1 tm 75 m initialize(1)
+ME
+MB sm 1 tm 76 m initialize(1)
+ME
+MB sm 1 tm 77 m initialize(1)
+ME
+MB sm 1 tm 78 m initialize(1)
+ME
+MB sm 1 tm 66 m initialize(1)
+ME
+MB sm 1 tm 67 m initialize(1)
+ME
+MB sm 1 tm 60 m initialize(1)
+ME
+MB sm 1 tm 84 m initialize(1)
+ME
+MB sm 1 tm 85 m initialize(1)
+ME
+MB sm 1 tm 87 m initialize(1)
+ME
+MB sm 1 tm 88 m initialize(1)
+ME
+MB sm 1 tm 89 m initialize(1)
+ME
+MB sm 1 tm 91 m initialize(1)
+ME
+MB sm 1 tm 92 m initialize(1)
+ME
+MB sm 1 tm 94 m initialize(1)
+ME
+MB sm 1 tm 95 m initialize(1)
+ME
+MB sm 1 tm 47 m initialize(1)
+ME
+MB sm 1 tm 48 m initialize(1)
+ME
+MB sm 1 tm 50 m initialize(1)
+ME
+MB sm 1 tm 101 m initialize(1)
+ME
+MB sm 1 tm 102 m initialize(1)
+ME
+MB sm 1 tm 103 m initialize(1)
+ME
+MB sm 1 tm 112 m initialize(1)
+ME
+MB sm 1 tm 104 m initialize(1)
+ME
+MB sm 1 tm 116 m initialize(1)
+ME
+MB sm 1 tm 117 m initialize(1)
+ME
+MB sm 1 tm 118 m initialize(1)
+ME
+MB sm 1 tm 119 m initialize(1)
+ME
+MB sm 1 tm 124 m initialize(1)
+ME
+MB sm 1 tm 128 m initialize(1)
+ME
+MB sm 1 tm 139 m initialize(1)
+ME
+MB sm 1 tm 141 m initialize(1)
+ME
+MB sm 1 tm 131 m initialize(1)
+ME
+MB sm 1 tm 132 m initialize(1)
+ME
+MB sm 1 tm 133 m initialize(1)
+ME
+MB sm 1 tm 135 m initialize(1)
+ME
+MB sm 1 tm 136 m initialize(1)
+ME
+MB sm 1 tm 137 m initialize(1)
+ME
+MB sm 1 tm 138 m initialize(1)
+ME
+MB sm 1 tm 126 m initialize(1)
+ME
+MB sm 1 tm 127 m initialize(1)
+ME
+MB sm 1 tm 120 m initialize(1)
+ME
+MB sm 1 tm 144 m initialize(1)
+ME
+MB sm 1 tm 145 m initialize(1)
+ME
+MB sm 1 tm 147 m initialize(1)
+ME
+MB sm 1 tm 148 m initialize(1)
+ME
+MB sm 1 tm 149 m initialize(1)
+ME
+MB sm 1 tm 151 m initialize(1)
+ME
+MB sm 1 tm 152 m initialize(1)
+ME
+MB sm 1 tm 154 m initialize(1)
+ME
+MB sm 1 tm 155 m initialize(1)
+ME
+MB sm 1 tm 108 m initialize(1)
+ME
+MB sm 1 tm 109 m initialize(1)
+ME
+MB sm 1 tm 161 m initialize(1)
+ME
+MB sm 1 tm 162 m initialize(1)
+ME
+MB sm 1 tm 163 m initialize(1)
+ME
+MB sm 1 tm 164 m initialize(1)
+ME
+MB sm 1 tm 166 m initialize(1)
+ME
+MB sm 1 tm 171 m initialize(1)
+ME
+MB sm 1 tm 172 m initialize(1)
+ME
+MB sm 1 tm 173 m initialize(1)
+ME
+MB sm 1 tm 178 m initialize(1)
+ME
+MB sm 1 tm 182 m initialize(1)
+ME
+MB sm 1 tm 193 m initialize(1)
+ME
+MB sm 1 tm 195 m initialize(1)
+ME
+MB sm 1 tm 185 m initialize(1)
+ME
+MB sm 1 tm 186 m initialize(1)
+ME
+MB sm 1 tm 187 m initialize(1)
+ME
+MB sm 1 tm 189 m initialize(1)
+ME
+MB sm 1 tm 190 m initialize(1)
+ME
+MB sm 1 tm 191 m initialize(1)
+ME
+MB sm 1 tm 192 m initialize(1)
+ME
+MB sm 1 tm 180 m initialize(1)
+ME
+MB sm 1 tm 181 m initialize(1)
+ME
+MB sm 1 tm 174 m initialize(1)
+ME
+MB sm 1 tm 198 m initialize(1)
+ME
+MB sm 1 tm 199 m initialize(1)
+ME
+MB sm 1 tm 167 m initialize(1)
+ME
+MB sm 1 tm 202 m initialize(1)
+ME
+MB sm 1 tm 203 m initialize(1)
+ME
+MB sm 1 tm 204 m initialize(1)
+ME
+MB sm 1 tm 209 m initialize(1)
+ME
+MB sm 1 tm 213 m initialize(1)
+ME
+MB sm 1 tm 224 m initialize(1)
+ME
+MB sm 1 tm 226 m initialize(1)
+ME
+MB sm 1 tm 216 m initialize(1)
+ME
+MB sm 1 tm 217 m initialize(1)
+ME
+MB sm 1 tm 218 m initialize(1)
+ME
+MB sm 1 tm 220 m initialize(1)
+ME
+MB sm 1 tm 221 m initialize(1)
+ME
+MB sm 1 tm 222 m initialize(1)
+ME
+MB sm 1 tm 223 m initialize(1)
+ME
+MB sm 1 tm 211 m initialize(1)
+ME
+MB sm 1 tm 212 m initialize(1)
+ME
+MB sm 1 tm 205 m initialize(1)
+ME
+MB sm 1 tm 229 m initialize(1)
+ME
+MB sm 1 tm 230 m initialize(1)
+ME
+MB sm 1 tm 8 m initialize(2)
+ME
+MB sm 1 tm 9 m initialize(2)
+ME
+MB sm 1 tm 10 m initialize(2)
+ME
+MB sm 1 tm 11 m initialize(2)
+ME
+MB sm 1 tm 12 m initialize(2)
+ME
+MB sm 1 tm 13 m initialize(2)
+ME
+MB sm 1 tm 14 m initialize(2)
+ME
+MB sm 1 tm 15 m initialize(2)
+ME
+MB sm 1 tm 16 m initialize(2)
+ME
+MB sm 1 tm 17 m initialize(2)
+ME
+MB sm 1 tm 18 m initialize(2)
+ME
+MB sm 1 tm 19 m initialize(2)
+ME
+MB sm 1 tm 20 m initialize(2)
+ME
+MB sm 1 tm 21 m initialize(2)
+ME
+MB sm 1 tm 22 m initialize(2)
+ME
+MB sm 1 tm 23 m initialize(2)
+ME
+MB sm 1 tm 24 m initialize(2)
+ME
+MB sm 1 tm 25 m initialize(2)
+ME
+MB sm 1 tm 26 m initialize(2)
+ME
+MB sm 1 tm 27 m initialize(2)
+ME
+MB sm 1 tm 28 m initialize(2)
+ME
+MB sm 1 tm 29 m initialize(2)
+ME
+MB sm 1 tm 30 m initialize(2)
+ME
+MB sm 1 tm 31 m initialize(2)
+ME
+MB sm 1 tm 32 m initialize(2)
+ME
+MB sm 1 tm 33 m initialize(2)
+ME
+MB sm 1 tm 3 m initialize(2)
+ME
+MB sm 1 tm 35 m initialize(2)
+ME
+MB sm 1 tm 38 m initialize(2)
+ME
+MB sm 1 tm 4 m initialize(2)
+ME
+MB sm 1 tm 40 m initialize(2)
+MB sm 40 tm 12 m ""
+ME
+MS id 5 d p=227.000000,203;i=device/wifilaptop;bgb=1256,672
+MB sm 40 tm 12 m ""
+ME
+MS id 5 d p=227.000000,203.000000;i=device/wifilaptop;bgb=1256,672
+MB sm 40 tm 12 m ""
+ME
+MS id 5 d a=0.000000;p=227.000000,203.000000;i=device/wifilaptop;bgb=1256,672
+MB sm 40 tm 12 m ""
+ME
+ME
+MB sm 1 tm 41 m initialize(2)
+ME
+MB sm 1 tm 42 m initialize(2)
+MB sm 42 tm 41 m ""
+ME
+MB sm 42 tm 25 m ""
+ME
+MB sm 42 tm 46 m handleRegisterInterface
+MB sm 46 tm 96 m handleRegisterInterface
+ME
+MB sm 46 tm 49 m handleRegisterInterface
+MB sm 49 tm 90 m handleRegisterInterface
+MB sm 90 tm 93 m handleRegisterInterface
+ME
+ME
+MB sm 49 tm 51 m handleRegisterInterface
+ME
+ME
+ME
+ME
+MB sm 1 tm 52 m initialize(2)
+MB sm 52 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 52 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 43 m initialize(2)
+MB sm 43 tm 41 m ""
+ME
+MB sm 43 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 43 tm 25 m ""
+ME
+MB sm 43 tm 46 m handleRegisterInterface
+MB sm 46 tm 96 m handleRegisterInterface
+ME
+MB sm 46 tm 49 m handleRegisterInterface
+MB sm 49 tm 90 m handleRegisterInterface
+MB sm 90 tm 93 m handleRegisterInterface
+ME
+ME
+MB sm 49 tm 51 m handleRegisterInterface
+ME
+ME
+ME
+ME
+MB sm 1 tm 56 m initialize(2)
+ME
+MB sm 1 tm 57 m initialize(2)
+ME
+MB sm 1 tm 58 m initialize(2)
+ME
+MB sm 1 tm 59 m initialize(2)
+MB sm 59 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 59 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 59 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 64 m initialize(2)
+ME
+MB sm 1 tm 68 m initialize(2)
+ME
+MB sm 1 tm 79 m initialize(2)
+ME
+MB sm 1 tm 81 m initialize(2)
+ME
+MB sm 1 tm 71 m initialize(2)
+ME
+MB sm 1 tm 72 m initialize(2)
+ME
+MB sm 1 tm 73 m initialize(2)
+ME
+MB sm 1 tm 75 m initialize(2)
+ME
+MB sm 1 tm 76 m initialize(2)
+ME
+MB sm 1 tm 77 m initialize(2)
+ME
+MB sm 1 tm 78 m initialize(2)
+ME
+MB sm 1 tm 66 m initialize(2)
+ME
+MB sm 1 tm 67 m initialize(2)
+ME
+MB sm 1 tm 60 m initialize(2)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+MB sm 60 tm 16 m ""
+ME
+MB sm 60 tm 17 m ""
+ME
+MB sm 60 tm 18 m ""
+ME
+MB sm 60 tm 19 m ""
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Changing radio channel to 0.
+ME
+MB sm 1 tm 84 m initialize(2)
+ME
+MB sm 1 tm 85 m initialize(2)
+ME
+MB sm 1 tm 87 m initialize(2)
+ME
+MB sm 1 tm 88 m initialize(2)
+ME
+MB sm 1 tm 89 m initialize(2)
+ME
+MB sm 1 tm 91 m initialize(2)
+ME
+MB sm 1 tm 92 m initialize(2)
+ME
+MB sm 1 tm 94 m initialize(2)
+ME
+MB sm 1 tm 95 m initialize(2)
+ME
+MB sm 1 tm 47 m initialize(2)
+ME
+MB sm 1 tm 48 m initialize(2)
+ME
+MB sm 1 tm 50 m initialize(2)
+ME
+MB sm 1 tm 101 m initialize(2)
+MB sm 101 tm 12 m ""
+ME
+MS id 6 d p=531.000000,203;i=device/wifilaptop;bgb=1256,672
+MB sm 101 tm 12 m ""
+ME
+MS id 6 d p=531.000000,203.000000;i=device/wifilaptop;bgb=1256,672
+MB sm 101 tm 12 m ""
+ME
+MS id 6 d a=0.000000;p=531.000000,203.000000;i=device/wifilaptop;bgb=1256,672
+MB sm 101 tm 12 m ""
+ME
+ME
+MB sm 1 tm 102 m initialize(2)
+ME
+MB sm 1 tm 103 m initialize(2)
+MB sm 103 tm 102 m ""
+ME
+MB sm 103 tm 25 m ""
+ME
+MB sm 103 tm 107 m handleRegisterInterface
+MB sm 107 tm 156 m handleRegisterInterface
+ME
+MB sm 107 tm 110 m handleRegisterInterface
+MB sm 110 tm 150 m handleRegisterInterface
+MB sm 150 tm 153 m handleRegisterInterface
+ME
+ME
+MB sm 110 tm 111 m handleRegisterInterface
+ME
+ME
+ME
+ME
+MB sm 1 tm 112 m initialize(2)
+MB sm 112 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 112 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 104 m initialize(2)
+MB sm 104 tm 102 m ""
+ME
+MB sm 104 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 104 tm 25 m ""
+ME
+MB sm 104 tm 107 m handleRegisterInterface
+MB sm 107 tm 156 m handleRegisterInterface
+ME
+MB sm 107 tm 110 m handleRegisterInterface
+MB sm 110 tm 150 m handleRegisterInterface
+MB sm 150 tm 153 m handleRegisterInterface
+ME
+ME
+MB sm 110 tm 111 m handleRegisterInterface
+ME
+ME
+ME
+ME
+MB sm 1 tm 116 m initialize(2)
+ME
+MB sm 1 tm 117 m initialize(2)
+ME
+MB sm 1 tm 118 m initialize(2)
+ME
+MB sm 1 tm 119 m initialize(2)
+MB sm 119 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 119 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 119 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 124 m initialize(2)
+ME
+MB sm 1 tm 128 m initialize(2)
+ME
+MB sm 1 tm 139 m initialize(2)
+ME
+MB sm 1 tm 141 m initialize(2)
+ME
+MB sm 1 tm 131 m initialize(2)
+ME
+MB sm 1 tm 132 m initialize(2)
+ME
+MB sm 1 tm 133 m initialize(2)
+ME
+MB sm 1 tm 135 m initialize(2)
+ME
+MB sm 1 tm 136 m initialize(2)
+ME
+MB sm 1 tm 137 m initialize(2)
+ME
+MB sm 1 tm 138 m initialize(2)
+ME
+MB sm 1 tm 126 m initialize(2)
+ME
+MB sm 1 tm 127 m initialize(2)
+ME
+MB sm 1 tm 120 m initialize(2)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+MB sm 120 tm 16 m ""
+ME
+MB sm 120 tm 17 m ""
+ME
+MB sm 120 tm 18 m ""
+ME
+MB sm 120 tm 19 m ""
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Changing radio channel to 0.
+ME
+MB sm 1 tm 144 m initialize(2)
+ME
+MB sm 1 tm 145 m initialize(2)
+ME
+MB sm 1 tm 147 m initialize(2)
+ME
+MB sm 1 tm 148 m initialize(2)
+ME
+MB sm 1 tm 149 m initialize(2)
+ME
+MB sm 1 tm 151 m initialize(2)
+ME
+MB sm 1 tm 152 m initialize(2)
+ME
+MB sm 1 tm 154 m initialize(2)
+ME
+MB sm 1 tm 155 m initialize(2)
+ME
+MB sm 1 tm 108 m initialize(2)
+ME
+MB sm 1 tm 109 m initialize(2)
+ME
+MB sm 1 tm 161 m initialize(2)
+ME
+MB sm 1 tm 162 m initialize(2)
+MB sm 162 tm 12 m ""
+ME
+MS id 7 d p=384.000000,100;i=device/accesspoint
+MB sm 162 tm 12 m ""
+ME
+MS id 7 d p=384.000000,100.000000;i=device/accesspoint
+MB sm 162 tm 12 m ""
+ME
+MS id 7 d a=0.000000;p=384.000000,100.000000;i=device/accesspoint
+MB sm 162 tm 12 m ""
+ME
+ME
+MB sm 1 tm 163 m initialize(2)
+ME
+MB sm 1 tm 164 m initialize(2)
+ME
+MB sm 1 tm 166 m initialize(2)
+MB sm 166 tm 161 m ""
+ME
+MB sm 166 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 166 tm 25 m ""
+ME
+MB sm 166 tm 165 m handleRegisterInterface
+ME
+ME
+MB sm 1 tm 171 m initialize(2)
+ME
+MB sm 1 tm 172 m initialize(2)
+BS id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n beaconTimer pe 0
+ES t 0.043758720998
+ME
+MB sm 1 tm 173 m initialize(2)
+MB sm 173 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 173 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 173 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 178 m initialize(2)
+ME
+MB sm 1 tm 182 m initialize(2)
+ME
+MB sm 1 tm 193 m initialize(2)
+ME
+MB sm 1 tm 195 m initialize(2)
+ME
+MB sm 1 tm 185 m initialize(2)
+ME
+MB sm 1 tm 186 m initialize(2)
+ME
+MB sm 1 tm 187 m initialize(2)
+ME
+MB sm 1 tm 189 m initialize(2)
+ME
+MB sm 1 tm 190 m initialize(2)
+ME
+MB sm 1 tm 191 m initialize(2)
+ME
+MB sm 1 tm 192 m initialize(2)
+ME
+MB sm 1 tm 180 m initialize(2)
+ME
+MB sm 1 tm 181 m initialize(2)
+ME
+MB sm 1 tm 174 m initialize(2)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+MB sm 174 tm 16 m ""
+ME
+MB sm 174 tm 17 m ""
+ME
+MB sm 174 tm 18 m ""
+ME
+MB sm 174 tm 19 m ""
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Changing radio channel to 0.
+MB sm 174 tm 172 m ""
+- INFO (Ieee80211MgmtAp)MultiRadioShowcase.accessPoint.wlan[0].mgmt:updating channel number
+ME
+ME
+MB sm 1 tm 198 m initialize(2)
+ME
+MB sm 1 tm 199 m initialize(2)
+ME
+MB sm 1 tm 167 m initialize(2)
+MB sm 167 tm 161 m ""
+ME
+MB sm 167 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 167 tm 25 m ""
+ME
+MB sm 167 tm 165 m handleRegisterInterface
+ME
+ME
+MB sm 1 tm 202 m initialize(2)
+ME
+MB sm 1 tm 203 m initialize(2)
+BS id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n beaconTimer pe 0
+ES t 0.029753460526
+ME
+MB sm 1 tm 204 m initialize(2)
+MB sm 204 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 204 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+MB sm 204 tm 161 m ""
+MB sm 161 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 209 m initialize(2)
+ME
+MB sm 1 tm 213 m initialize(2)
+ME
+MB sm 1 tm 224 m initialize(2)
+ME
+MB sm 1 tm 226 m initialize(2)
+ME
+MB sm 1 tm 216 m initialize(2)
+ME
+MB sm 1 tm 217 m initialize(2)
+ME
+MB sm 1 tm 218 m initialize(2)
+ME
+MB sm 1 tm 220 m initialize(2)
+ME
+MB sm 1 tm 221 m initialize(2)
+ME
+MB sm 1 tm 222 m initialize(2)
+ME
+MB sm 1 tm 223 m initialize(2)
+ME
+MB sm 1 tm 211 m initialize(2)
+ME
+MB sm 1 tm 212 m initialize(2)
+ME
+MB sm 1 tm 205 m initialize(2)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+MB sm 205 tm 16 m ""
+ME
+MB sm 205 tm 17 m ""
+ME
+MB sm 205 tm 18 m ""
+ME
+MB sm 205 tm 19 m ""
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Radio mode changed from [1mOFF[0m to [1mOFF[0m.
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Changing radio channel to 0.
+MB sm 205 tm 203 m ""
+- INFO (Ieee80211MgmtAp)MultiRadioShowcase.accessPoint.wlan[1].mgmt:updating channel number
+ME
+ME
+MB sm 1 tm 229 m initialize(2)
+ME
+MB sm 1 tm 230 m initialize(2)
+ME
+MB sm 1 tm 8 m initialize(3)
+ME
+MB sm 1 tm 9 m initialize(3)
+ME
+MB sm 1 tm 10 m initialize(3)
+ME
+MB sm 1 tm 11 m initialize(3)
+ME
+MB sm 1 tm 12 m initialize(3)
+ME
+MB sm 1 tm 13 m initialize(3)
+ME
+MB sm 1 tm 14 m initialize(3)
+ME
+MB sm 1 tm 15 m initialize(3)
+ME
+MB sm 1 tm 16 m initialize(3)
+ME
+MB sm 1 tm 17 m initialize(3)
+ME
+MB sm 1 tm 18 m initialize(3)
+ME
+MB sm 1 tm 19 m initialize(3)
+ME
+MB sm 1 tm 20 m initialize(3)
+ME
+MB sm 1 tm 21 m initialize(3)
+ME
+MB sm 1 tm 22 m initialize(3)
+ME
+MB sm 1 tm 23 m initialize(3)
+ME
+MB sm 1 tm 24 m initialize(3)
+ME
+MB sm 1 tm 25 m initialize(3)
+ME
+MB sm 1 tm 26 m initialize(3)
+ME
+MB sm 1 tm 27 m initialize(3)
+ME
+MB sm 1 tm 28 m initialize(3)
+ME
+MB sm 1 tm 29 m initialize(3)
+ME
+MB sm 1 tm 30 m initialize(3)
+ME
+MB sm 1 tm 31 m initialize(3)
+ME
+MB sm 1 tm 32 m initialize(3)
+ME
+MB sm 1 tm 33 m initialize(3)
+ME
+MB sm 1 tm 3 m initialize(3)
+ME
+MB sm 1 tm 35 m initialize(3)
+ME
+MB sm 1 tm 38 m initialize(3)
+ME
+MB sm 1 tm 4 m initialize(3)
+ME
+MB sm 1 tm 40 m initialize(3)
+ME
+MB sm 1 tm 41 m initialize(3)
+ME
+MB sm 1 tm 42 m initialize(3)
+ME
+MB sm 1 tm 52 m initialize(3)
+ME
+MB sm 1 tm 43 m initialize(3)
+ME
+MB sm 1 tm 56 m initialize(3)
+ME
+MB sm 1 tm 57 m initialize(3)
+ME
+MB sm 1 tm 58 m initialize(3)
+ME
+MB sm 1 tm 59 m initialize(3)
+MB sm 59 tm 64 m receiveSignal
+ME
+MB sm 59 tm 68 m receiveSignal
+ME
+MB sm 59 tm 71 m receiveSignal
+ME
+MB sm 59 tm 73 m receiveSignal
+ME
+MB sm 59 tm 75 m receiveSignal
+ME
+MB sm 59 tm 76 m receiveSignal
+ME
+MB sm 59 tm 77 m receiveSignal
+ME
+MB sm 59 tm 78 m receiveSignal
+ME
+MB sm 59 tm 60 m ""
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mRECEIVER[0m.
+MB sm 60 tm 59 m receiveSignal
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Changing radio reception state from [1mUNDEFINED[0m to [1mIDLE[0m.
+MB sm 60 tm 59 m receiveSignal
+MB sm 59 tm 66 m ""
+ME
+ME
+ME
+ME
+MB sm 1 tm 64 m initialize(3)
+CM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n startRxTimeout pe -1
+ME
+MB sm 1 tm 68 m initialize(3)
+MB sm 68 tm 81 m "medium FREE"
+ME
+ME
+MB sm 1 tm 79 m initialize(3)
+ME
+MB sm 1 tm 81 m initialize(3)
+ME
+MB sm 1 tm 71 m initialize(3)
+ME
+MB sm 1 tm 72 m initialize(3)
+ME
+MB sm 1 tm 73 m initialize(3)
+ME
+MB sm 1 tm 75 m initialize(3)
+ME
+MB sm 1 tm 76 m initialize(3)
+ME
+MB sm 1 tm 77 m initialize(3)
+ME
+MB sm 1 tm 78 m initialize(3)
+ME
+MB sm 1 tm 66 m initialize(3)
+ME
+MB sm 1 tm 67 m initialize(3)
+ME
+MB sm 1 tm 60 m initialize(3)
+ME
+MB sm 1 tm 84 m initialize(3)
+ME
+MB sm 1 tm 85 m initialize(3)
+ME
+MB sm 1 tm 87 m initialize(3)
+ME
+MB sm 1 tm 88 m initialize(3)
+ME
+MB sm 1 tm 89 m initialize(3)
+ME
+MB sm 1 tm 91 m initialize(3)
+ME
+MB sm 1 tm 92 m initialize(3)
+ME
+MB sm 1 tm 94 m initialize(3)
+ME
+MB sm 1 tm 95 m initialize(3)
+ME
+MB sm 1 tm 47 m initialize(3)
+ME
+MB sm 1 tm 48 m initialize(3)
+ME
+MB sm 1 tm 50 m initialize(3)
+ME
+MB sm 1 tm 101 m initialize(3)
+ME
+MB sm 1 tm 102 m initialize(3)
+ME
+MB sm 1 tm 103 m initialize(3)
+ME
+MB sm 1 tm 112 m initialize(3)
+ME
+MB sm 1 tm 104 m initialize(3)
+ME
+MB sm 1 tm 116 m initialize(3)
+ME
+MB sm 1 tm 117 m initialize(3)
+ME
+MB sm 1 tm 118 m initialize(3)
+ME
+MB sm 1 tm 119 m initialize(3)
+MB sm 119 tm 124 m receiveSignal
+ME
+MB sm 119 tm 128 m receiveSignal
+ME
+MB sm 119 tm 131 m receiveSignal
+ME
+MB sm 119 tm 133 m receiveSignal
+ME
+MB sm 119 tm 135 m receiveSignal
+ME
+MB sm 119 tm 136 m receiveSignal
+ME
+MB sm 119 tm 137 m receiveSignal
+ME
+MB sm 119 tm 138 m receiveSignal
+ME
+MB sm 119 tm 120 m ""
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mRECEIVER[0m.
+MB sm 120 tm 119 m receiveSignal
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Changing radio reception state from [1mUNDEFINED[0m to [1mIDLE[0m.
+MB sm 120 tm 119 m receiveSignal
+MB sm 119 tm 126 m ""
+ME
+ME
+ME
+ME
+MB sm 1 tm 124 m initialize(3)
+CM id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n startRxTimeout pe -1
+ME
+MB sm 1 tm 128 m initialize(3)
+MB sm 128 tm 141 m "medium FREE"
+ME
+ME
+MB sm 1 tm 139 m initialize(3)
+ME
+MB sm 1 tm 141 m initialize(3)
+ME
+MB sm 1 tm 131 m initialize(3)
+ME
+MB sm 1 tm 132 m initialize(3)
+ME
+MB sm 1 tm 133 m initialize(3)
+ME
+MB sm 1 tm 135 m initialize(3)
+ME
+MB sm 1 tm 136 m initialize(3)
+ME
+MB sm 1 tm 137 m initialize(3)
+ME
+MB sm 1 tm 138 m initialize(3)
+ME
+MB sm 1 tm 126 m initialize(3)
+ME
+MB sm 1 tm 127 m initialize(3)
+ME
+MB sm 1 tm 120 m initialize(3)
+ME
+MB sm 1 tm 144 m initialize(3)
+ME
+MB sm 1 tm 145 m initialize(3)
+ME
+MB sm 1 tm 147 m initialize(3)
+ME
+MB sm 1 tm 148 m initialize(3)
+ME
+MB sm 1 tm 149 m initialize(3)
+ME
+MB sm 1 tm 151 m initialize(3)
+ME
+MB sm 1 tm 152 m initialize(3)
+ME
+MB sm 1 tm 154 m initialize(3)
+ME
+MB sm 1 tm 155 m initialize(3)
+ME
+MB sm 1 tm 108 m initialize(3)
+ME
+MB sm 1 tm 109 m initialize(3)
+ME
+MB sm 1 tm 161 m initialize(3)
+ME
+MB sm 1 tm 162 m initialize(3)
+ME
+MB sm 1 tm 163 m initialize(3)
+ME
+MB sm 1 tm 164 m initialize(3)
+MB sm 164 tm 165 m handleRegisterService
+ME
+MB sm 164 tm 165 m handleRegisterService
+ME
+MB sm 164 tm 165 m handleRegisterProtocol
+ME
+MB sm 164 tm 165 m handleRegisterProtocol
+ME
+ME
+MB sm 1 tm 166 m initialize(3)
+ME
+MB sm 1 tm 171 m initialize(3)
+ME
+MB sm 1 tm 172 m initialize(3)
+ME
+MB sm 1 tm 173 m initialize(3)
+MB sm 173 tm 178 m receiveSignal
+ME
+MB sm 173 tm 182 m receiveSignal
+ME
+MB sm 173 tm 185 m receiveSignal
+ME
+MB sm 173 tm 187 m receiveSignal
+ME
+MB sm 173 tm 189 m receiveSignal
+ME
+MB sm 173 tm 190 m receiveSignal
+ME
+MB sm 173 tm 191 m receiveSignal
+ME
+MB sm 173 tm 192 m receiveSignal
+ME
+MB sm 173 tm 174 m ""
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Radio mode changed from [1mOFF[0m to [1mRECEIVER[0m.
+MB sm 174 tm 173 m receiveSignal
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Changing radio reception state from [1mUNDEFINED[0m to [1mIDLE[0m.
+MB sm 174 tm 173 m receiveSignal
+MB sm 173 tm 180 m ""
+ME
+ME
+ME
+ME
+MB sm 1 tm 178 m initialize(3)
+CM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n startRxTimeout pe -1
+ME
+MB sm 1 tm 182 m initialize(3)
+MB sm 182 tm 195 m "medium FREE"
+ME
+ME
+MB sm 1 tm 193 m initialize(3)
+ME
+MB sm 1 tm 195 m initialize(3)
+ME
+MB sm 1 tm 185 m initialize(3)
+ME
+MB sm 1 tm 186 m initialize(3)
+ME
+MB sm 1 tm 187 m initialize(3)
+ME
+MB sm 1 tm 189 m initialize(3)
+ME
+MB sm 1 tm 190 m initialize(3)
+ME
+MB sm 1 tm 191 m initialize(3)
+ME
+MB sm 1 tm 192 m initialize(3)
+ME
+MB sm 1 tm 180 m initialize(3)
+ME
+MB sm 1 tm 181 m initialize(3)
+ME
+MB sm 1 tm 174 m initialize(3)
+ME
+MB sm 1 tm 198 m initialize(3)
+ME
+MB sm 1 tm 199 m initialize(3)
+ME
+MB sm 1 tm 167 m initialize(3)
+ME
+MB sm 1 tm 202 m initialize(3)
+ME
+MB sm 1 tm 203 m initialize(3)
+ME
+MB sm 1 tm 204 m initialize(3)
+MB sm 204 tm 209 m receiveSignal
+ME
+MB sm 204 tm 213 m receiveSignal
+ME
+MB sm 204 tm 216 m receiveSignal
+ME
+MB sm 204 tm 218 m receiveSignal
+ME
+MB sm 204 tm 220 m receiveSignal
+ME
+MB sm 204 tm 221 m receiveSignal
+ME
+MB sm 204 tm 222 m receiveSignal
+ME
+MB sm 204 tm 223 m receiveSignal
+ME
+MB sm 204 tm 205 m ""
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Radio mode changed from [1mOFF[0m to [1mRECEIVER[0m.
+MB sm 205 tm 204 m receiveSignal
+ME
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Changing radio reception state from [1mUNDEFINED[0m to [1mIDLE[0m.
+MB sm 205 tm 204 m receiveSignal
+MB sm 204 tm 211 m ""
+ME
+ME
+ME
+ME
+MB sm 1 tm 209 m initialize(3)
+CM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n startRxTimeout pe -1
+ME
+MB sm 1 tm 213 m initialize(3)
+MB sm 213 tm 226 m "medium FREE"
+ME
+ME
+MB sm 1 tm 224 m initialize(3)
+ME
+MB sm 1 tm 226 m initialize(3)
+ME
+MB sm 1 tm 216 m initialize(3)
+ME
+MB sm 1 tm 217 m initialize(3)
+ME
+MB sm 1 tm 218 m initialize(3)
+ME
+MB sm 1 tm 220 m initialize(3)
+ME
+MB sm 1 tm 221 m initialize(3)
+ME
+MB sm 1 tm 222 m initialize(3)
+ME
+MB sm 1 tm 223 m initialize(3)
+ME
+MB sm 1 tm 211 m initialize(3)
+ME
+MB sm 1 tm 212 m initialize(3)
+ME
+MB sm 1 tm 205 m initialize(3)
+ME
+MB sm 1 tm 229 m initialize(3)
+ME
+MB sm 1 tm 230 m initialize(3)
+ME
+MB sm 1 tm 8 m initialize(4)
+ME
+MB sm 1 tm 9 m initialize(4)
+ME
+MB sm 1 tm 10 m initialize(4)
+ME
+MB sm 1 tm 11 m initialize(4)
+ME
+MB sm 1 tm 12 m initialize(4)
+ME
+MB sm 1 tm 13 m initialize(4)
+ME
+MB sm 1 tm 14 m initialize(4)
+ME
+MB sm 1 tm 15 m initialize(4)
+ME
+MB sm 1 tm 16 m initialize(4)
+ME
+MB sm 1 tm 17 m initialize(4)
+ME
+MB sm 1 tm 18 m initialize(4)
+ME
+MB sm 1 tm 19 m initialize(4)
+ME
+MB sm 1 tm 20 m initialize(4)
+ME
+MB sm 1 tm 21 m initialize(4)
+ME
+MB sm 1 tm 22 m initialize(4)
+ME
+MB sm 1 tm 23 m initialize(4)
+ME
+MB sm 1 tm 24 m initialize(4)
+ME
+MB sm 1 tm 25 m initialize(4)
+ME
+MB sm 1 tm 26 m initialize(4)
+ME
+MB sm 1 tm 27 m initialize(4)
+ME
+MB sm 1 tm 28 m initialize(4)
+ME
+MB sm 1 tm 29 m initialize(4)
+ME
+MB sm 1 tm 30 m initialize(4)
+ME
+MB sm 1 tm 31 m initialize(4)
+ME
+MB sm 1 tm 32 m initialize(4)
+ME
+MB sm 1 tm 33 m initialize(4)
+ME
+MB sm 1 tm 3 m initialize(4)
+ME
+MB sm 1 tm 35 m initialize(4)
+ME
+MB sm 1 tm 38 m initialize(4)
+ME
+MB sm 1 tm 4 m initialize(4)
+- INFO (Ipv4NetworkConfigurator)MultiRadioShowcase.configurator:Computing static network configuration (addresses and routes).
+ME
+MB sm 1 tm 40 m initialize(4)
+ME
+MB sm 1 tm 41 m initialize(4)
+ME
+MB sm 1 tm 42 m initialize(4)
+ME
+MB sm 1 tm 52 m initialize(4)
+ME
+MB sm 1 tm 43 m initialize(4)
+ME
+MB sm 1 tm 56 m initialize(4)
+ME
+MB sm 1 tm 57 m initialize(4)
+ME
+MB sm 1 tm 58 m initialize(4)
+ME
+MB sm 1 tm 59 m initialize(4)
+ME
+MB sm 1 tm 64 m initialize(4)
+ME
+MB sm 1 tm 68 m initialize(4)
+ME
+MB sm 1 tm 79 m initialize(4)
+ME
+MB sm 1 tm 81 m initialize(4)
+ME
+MB sm 1 tm 71 m initialize(4)
+ME
+MB sm 1 tm 72 m initialize(4)
+ME
+MB sm 1 tm 73 m initialize(4)
+ME
+MB sm 1 tm 75 m initialize(4)
+ME
+MB sm 1 tm 76 m initialize(4)
+ME
+MB sm 1 tm 77 m initialize(4)
+ME
+MB sm 1 tm 78 m initialize(4)
+ME
+MB sm 1 tm 66 m initialize(4)
+ME
+MB sm 1 tm 67 m initialize(4)
+ME
+MB sm 1 tm 60 m initialize(4)
+ME
+MB sm 1 tm 84 m initialize(4)
+ME
+MB sm 1 tm 85 m initialize(4)
+ME
+MB sm 1 tm 87 m initialize(4)
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 91 m ""
+ME
+ME
+MB sm 1 tm 88 m initialize(4)
+ME
+MB sm 1 tm 89 m initialize(4)
+ME
+MB sm 1 tm 91 m initialize(4)
+ME
+MB sm 1 tm 92 m initialize(4)
+ME
+MB sm 1 tm 94 m initialize(4)
+ME
+MB sm 1 tm 95 m initialize(4)
+ME
+MB sm 1 tm 47 m initialize(4)
+ME
+MB sm 1 tm 48 m initialize(4)
+ME
+MB sm 1 tm 50 m initialize(4)
+ME
+MB sm 1 tm 101 m initialize(4)
+ME
+MB sm 1 tm 102 m initialize(4)
+ME
+MB sm 1 tm 103 m initialize(4)
+ME
+MB sm 1 tm 112 m initialize(4)
+ME
+MB sm 1 tm 104 m initialize(4)
+ME
+MB sm 1 tm 116 m initialize(4)
+ME
+MB sm 1 tm 117 m initialize(4)
+ME
+MB sm 1 tm 118 m initialize(4)
+ME
+MB sm 1 tm 119 m initialize(4)
+ME
+MB sm 1 tm 124 m initialize(4)
+ME
+MB sm 1 tm 128 m initialize(4)
+ME
+MB sm 1 tm 139 m initialize(4)
+ME
+MB sm 1 tm 141 m initialize(4)
+ME
+MB sm 1 tm 131 m initialize(4)
+ME
+MB sm 1 tm 132 m initialize(4)
+ME
+MB sm 1 tm 133 m initialize(4)
+ME
+MB sm 1 tm 135 m initialize(4)
+ME
+MB sm 1 tm 136 m initialize(4)
+ME
+MB sm 1 tm 137 m initialize(4)
+ME
+MB sm 1 tm 138 m initialize(4)
+ME
+MB sm 1 tm 126 m initialize(4)
+ME
+MB sm 1 tm 127 m initialize(4)
+ME
+MB sm 1 tm 120 m initialize(4)
+ME
+MB sm 1 tm 144 m initialize(4)
+ME
+MB sm 1 tm 145 m initialize(4)
+ME
+MB sm 1 tm 147 m initialize(4)
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 151 m ""
+ME
+ME
+MB sm 1 tm 148 m initialize(4)
+ME
+MB sm 1 tm 149 m initialize(4)
+ME
+MB sm 1 tm 151 m initialize(4)
+ME
+MB sm 1 tm 152 m initialize(4)
+ME
+MB sm 1 tm 154 m initialize(4)
+ME
+MB sm 1 tm 155 m initialize(4)
+ME
+MB sm 1 tm 108 m initialize(4)
+ME
+MB sm 1 tm 109 m initialize(4)
+ME
+MB sm 1 tm 161 m initialize(4)
+ME
+MB sm 1 tm 162 m initialize(4)
+ME
+MB sm 1 tm 163 m initialize(4)
+ME
+MB sm 1 tm 164 m initialize(4)
+ME
+MB sm 1 tm 166 m initialize(4)
+ME
+MB sm 1 tm 171 m initialize(4)
+ME
+MB sm 1 tm 172 m initialize(4)
+ME
+MB sm 1 tm 173 m initialize(4)
+ME
+MB sm 1 tm 178 m initialize(4)
+ME
+MB sm 1 tm 182 m initialize(4)
+ME
+MB sm 1 tm 193 m initialize(4)
+ME
+MB sm 1 tm 195 m initialize(4)
+ME
+MB sm 1 tm 185 m initialize(4)
+ME
+MB sm 1 tm 186 m initialize(4)
+ME
+MB sm 1 tm 187 m initialize(4)
+ME
+MB sm 1 tm 189 m initialize(4)
+ME
+MB sm 1 tm 190 m initialize(4)
+ME
+MB sm 1 tm 191 m initialize(4)
+ME
+MB sm 1 tm 192 m initialize(4)
+ME
+MB sm 1 tm 180 m initialize(4)
+ME
+MB sm 1 tm 181 m initialize(4)
+ME
+MB sm 1 tm 174 m initialize(4)
+ME
+MB sm 1 tm 198 m initialize(4)
+ME
+MB sm 1 tm 199 m initialize(4)
+ME
+MB sm 1 tm 167 m initialize(4)
+ME
+MB sm 1 tm 202 m initialize(4)
+ME
+MB sm 1 tm 203 m initialize(4)
+ME
+MB sm 1 tm 204 m initialize(4)
+ME
+MB sm 1 tm 209 m initialize(4)
+ME
+MB sm 1 tm 213 m initialize(4)
+ME
+MB sm 1 tm 224 m initialize(4)
+ME
+MB sm 1 tm 226 m initialize(4)
+ME
+MB sm 1 tm 216 m initialize(4)
+ME
+MB sm 1 tm 217 m initialize(4)
+ME
+MB sm 1 tm 218 m initialize(4)
+ME
+MB sm 1 tm 220 m initialize(4)
+ME
+MB sm 1 tm 221 m initialize(4)
+ME
+MB sm 1 tm 222 m initialize(4)
+ME
+MB sm 1 tm 223 m initialize(4)
+ME
+MB sm 1 tm 211 m initialize(4)
+ME
+MB sm 1 tm 212 m initialize(4)
+ME
+MB sm 1 tm 205 m initialize(4)
+ME
+MB sm 1 tm 229 m initialize(4)
+ME
+MB sm 1 tm 230 m initialize(4)
+ME
+MB sm 1 tm 8 m initialize(5)
+ME
+MB sm 1 tm 9 m initialize(5)
+ME
+MB sm 1 tm 10 m initialize(5)
+ME
+MB sm 1 tm 11 m initialize(5)
+ME
+MB sm 1 tm 12 m initialize(5)
+ME
+MB sm 1 tm 13 m initialize(5)
+ME
+MB sm 1 tm 14 m initialize(5)
+ME
+MB sm 1 tm 15 m initialize(5)
+ME
+MB sm 1 tm 16 m initialize(5)
+ME
+MB sm 1 tm 17 m initialize(5)
+ME
+MB sm 1 tm 18 m initialize(5)
+ME
+MB sm 1 tm 19 m initialize(5)
+ME
+MB sm 1 tm 20 m initialize(5)
+ME
+MB sm 1 tm 21 m initialize(5)
+ME
+MB sm 1 tm 22 m initialize(5)
+ME
+MB sm 1 tm 23 m initialize(5)
+ME
+MB sm 1 tm 24 m initialize(5)
+ME
+MB sm 1 tm 25 m initialize(5)
+ME
+MB sm 1 tm 26 m initialize(5)
+ME
+MB sm 1 tm 27 m initialize(5)
+ME
+MB sm 1 tm 28 m initialize(5)
+ME
+MB sm 1 tm 29 m initialize(5)
+ME
+MB sm 1 tm 30 m initialize(5)
+ME
+MB sm 1 tm 31 m initialize(5)
+ME
+MB sm 1 tm 32 m initialize(5)
+ME
+MB sm 1 tm 33 m initialize(5)
+ME
+MB sm 1 tm 3 m initialize(5)
+ME
+MB sm 1 tm 35 m initialize(5)
+ME
+MB sm 1 tm 38 m initialize(5)
+ME
+MB sm 1 tm 4 m initialize(5)
+ME
+MB sm 1 tm 40 m initialize(5)
+ME
+MB sm 1 tm 41 m initialize(5)
+ME
+MB sm 1 tm 42 m initialize(5)
+ME
+MB sm 1 tm 52 m initialize(5)
+ME
+MB sm 1 tm 43 m initialize(5)
+ME
+MB sm 1 tm 56 m initialize(5)
+ME
+MB sm 1 tm 57 m initialize(5)
+ME
+MB sm 1 tm 58 m initialize(5)
+ME
+MB sm 1 tm 59 m initialize(5)
+ME
+MB sm 1 tm 64 m initialize(5)
+ME
+MB sm 1 tm 68 m initialize(5)
+ME
+MB sm 1 tm 79 m initialize(5)
+ME
+MB sm 1 tm 81 m initialize(5)
+ME
+MB sm 1 tm 71 m initialize(5)
+ME
+MB sm 1 tm 72 m initialize(5)
+ME
+MB sm 1 tm 73 m initialize(5)
+ME
+MB sm 1 tm 75 m initialize(5)
+ME
+MB sm 1 tm 76 m initialize(5)
+ME
+MB sm 1 tm 77 m initialize(5)
+ME
+MB sm 1 tm 78 m initialize(5)
+ME
+MB sm 1 tm 66 m initialize(5)
+ME
+MB sm 1 tm 67 m initialize(5)
+ME
+MB sm 1 tm 60 m initialize(5)
+ME
+MB sm 1 tm 84 m initialize(5)
+ME
+MB sm 1 tm 85 m initialize(5)
+ME
+MB sm 1 tm 87 m initialize(5)
+- DETAIL (Ipv4NodeConfigurator)MultiRadioShowcase.host1.ipv4.configurator:Configuring network interface MultiRadioShowcase.host1.wlan0.
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+MB sm 87 tm 41 m ""
+MB sm 41 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 88 m initialize(5)
+ME
+MB sm 1 tm 89 m initialize(5)
+ME
+MB sm 1 tm 91 m initialize(5)
+MB sm 91 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 91 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 91 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 91 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 1 tm 92 m initialize(5)
+ME
+MB sm 1 tm 94 m initialize(5)
+ME
+MB sm 1 tm 95 m initialize(5)
+ME
+MB sm 1 tm 47 m initialize(5)
+ME
+MB sm 1 tm 48 m initialize(5)
+ME
+MB sm 1 tm 50 m initialize(5)
+ME
+MB sm 1 tm 101 m initialize(5)
+ME
+MB sm 1 tm 102 m initialize(5)
+ME
+MB sm 1 tm 103 m initialize(5)
+ME
+MB sm 1 tm 112 m initialize(5)
+ME
+MB sm 1 tm 104 m initialize(5)
+ME
+MB sm 1 tm 116 m initialize(5)
+ME
+MB sm 1 tm 117 m initialize(5)
+ME
+MB sm 1 tm 118 m initialize(5)
+ME
+MB sm 1 tm 119 m initialize(5)
+ME
+MB sm 1 tm 124 m initialize(5)
+ME
+MB sm 1 tm 128 m initialize(5)
+ME
+MB sm 1 tm 139 m initialize(5)
+ME
+MB sm 1 tm 141 m initialize(5)
+ME
+MB sm 1 tm 131 m initialize(5)
+ME
+MB sm 1 tm 132 m initialize(5)
+ME
+MB sm 1 tm 133 m initialize(5)
+ME
+MB sm 1 tm 135 m initialize(5)
+ME
+MB sm 1 tm 136 m initialize(5)
+ME
+MB sm 1 tm 137 m initialize(5)
+ME
+MB sm 1 tm 138 m initialize(5)
+ME
+MB sm 1 tm 126 m initialize(5)
+ME
+MB sm 1 tm 127 m initialize(5)
+ME
+MB sm 1 tm 120 m initialize(5)
+ME
+MB sm 1 tm 144 m initialize(5)
+ME
+MB sm 1 tm 145 m initialize(5)
+ME
+MB sm 1 tm 147 m initialize(5)
+- DETAIL (Ipv4NodeConfigurator)MultiRadioShowcase.host2.ipv4.configurator:Configuring network interface MultiRadioShowcase.host2.wlan0.
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+MB sm 147 tm 102 m ""
+MB sm 102 tm 25 m ""
+ME
+ME
+ME
+MB sm 1 tm 148 m initialize(5)
+ME
+MB sm 1 tm 149 m initialize(5)
+ME
+MB sm 1 tm 151 m initialize(5)
+MB sm 151 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 151 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 151 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 151 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 1 tm 152 m initialize(5)
+ME
+MB sm 1 tm 154 m initialize(5)
+ME
+MB sm 1 tm 155 m initialize(5)
+ME
+MB sm 1 tm 108 m initialize(5)
+ME
+MB sm 1 tm 109 m initialize(5)
+ME
+MB sm 1 tm 161 m initialize(5)
+ME
+MB sm 1 tm 162 m initialize(5)
+ME
+MB sm 1 tm 163 m initialize(5)
+ME
+MB sm 1 tm 164 m initialize(5)
+ME
+MB sm 1 tm 166 m initialize(5)
+ME
+MB sm 1 tm 171 m initialize(5)
+ME
+MB sm 1 tm 172 m initialize(5)
+ME
+MB sm 1 tm 173 m initialize(5)
+ME
+MB sm 1 tm 178 m initialize(5)
+ME
+MB sm 1 tm 182 m initialize(5)
+ME
+MB sm 1 tm 193 m initialize(5)
+ME
+MB sm 1 tm 195 m initialize(5)
+ME
+MB sm 1 tm 185 m initialize(5)
+ME
+MB sm 1 tm 186 m initialize(5)
+ME
+MB sm 1 tm 187 m initialize(5)
+ME
+MB sm 1 tm 189 m initialize(5)
+ME
+MB sm 1 tm 190 m initialize(5)
+ME
+MB sm 1 tm 191 m initialize(5)
+ME
+MB sm 1 tm 192 m initialize(5)
+ME
+MB sm 1 tm 180 m initialize(5)
+ME
+MB sm 1 tm 181 m initialize(5)
+ME
+MB sm 1 tm 174 m initialize(5)
+ME
+MB sm 1 tm 198 m initialize(5)
+ME
+MB sm 1 tm 199 m initialize(5)
+ME
+MB sm 1 tm 167 m initialize(5)
+ME
+MB sm 1 tm 202 m initialize(5)
+ME
+MB sm 1 tm 203 m initialize(5)
+ME
+MB sm 1 tm 204 m initialize(5)
+ME
+MB sm 1 tm 209 m initialize(5)
+ME
+MB sm 1 tm 213 m initialize(5)
+ME
+MB sm 1 tm 224 m initialize(5)
+ME
+MB sm 1 tm 226 m initialize(5)
+ME
+MB sm 1 tm 216 m initialize(5)
+ME
+MB sm 1 tm 217 m initialize(5)
+ME
+MB sm 1 tm 218 m initialize(5)
+ME
+MB sm 1 tm 220 m initialize(5)
+ME
+MB sm 1 tm 221 m initialize(5)
+ME
+MB sm 1 tm 222 m initialize(5)
+ME
+MB sm 1 tm 223 m initialize(5)
+ME
+MB sm 1 tm 211 m initialize(5)
+ME
+MB sm 1 tm 212 m initialize(5)
+ME
+MB sm 1 tm 205 m initialize(5)
+ME
+MB sm 1 tm 229 m initialize(5)
+ME
+MB sm 1 tm 230 m initialize(5)
+ME
+MB sm 1 tm 8 m initialize(6)
+ME
+MB sm 1 tm 9 m initialize(6)
+ME
+MB sm 1 tm 10 m initialize(6)
+ME
+MB sm 1 tm 11 m initialize(6)
+ME
+MB sm 1 tm 12 m initialize(6)
+ME
+MB sm 1 tm 13 m initialize(6)
+ME
+MB sm 1 tm 14 m initialize(6)
+ME
+MB sm 1 tm 15 m initialize(6)
+ME
+MB sm 1 tm 16 m initialize(6)
+ME
+MB sm 1 tm 17 m initialize(6)
+ME
+MB sm 1 tm 18 m initialize(6)
+ME
+MB sm 1 tm 19 m initialize(6)
+ME
+MB sm 1 tm 20 m initialize(6)
+ME
+MB sm 1 tm 21 m initialize(6)
+ME
+MB sm 1 tm 22 m initialize(6)
+ME
+MB sm 1 tm 23 m initialize(6)
+ME
+MB sm 1 tm 24 m initialize(6)
+ME
+MB sm 1 tm 25 m initialize(6)
+ME
+MB sm 1 tm 26 m initialize(6)
+ME
+MB sm 1 tm 27 m initialize(6)
+ME
+MB sm 1 tm 28 m initialize(6)
+ME
+MB sm 1 tm 29 m initialize(6)
+ME
+MB sm 1 tm 30 m initialize(6)
+ME
+MB sm 1 tm 31 m initialize(6)
+ME
+MB sm 1 tm 32 m initialize(6)
+ME
+MB sm 1 tm 33 m initialize(6)
+ME
+MB sm 1 tm 3 m initialize(6)
+ME
+MB sm 1 tm 35 m initialize(6)
+ME
+MB sm 1 tm 38 m initialize(6)
+ME
+MB sm 1 tm 4 m initialize(6)
+ME
+MB sm 1 tm 40 m initialize(6)
+ME
+MB sm 1 tm 41 m initialize(6)
+ME
+MB sm 1 tm 42 m initialize(6)
+ME
+MB sm 1 tm 52 m initialize(6)
+ME
+MB sm 1 tm 43 m initialize(6)
+ME
+MB sm 1 tm 56 m initialize(6)
+ME
+MB sm 1 tm 57 m initialize(6)
+ME
+MB sm 1 tm 58 m initialize(6)
+ME
+MB sm 1 tm 59 m initialize(6)
+ME
+MB sm 1 tm 64 m initialize(6)
+ME
+MB sm 1 tm 68 m initialize(6)
+ME
+MB sm 1 tm 79 m initialize(6)
+ME
+MB sm 1 tm 81 m initialize(6)
+ME
+MB sm 1 tm 71 m initialize(6)
+ME
+MB sm 1 tm 72 m initialize(6)
+ME
+MB sm 1 tm 73 m initialize(6)
+ME
+MB sm 1 tm 75 m initialize(6)
+ME
+MB sm 1 tm 76 m initialize(6)
+ME
+MB sm 1 tm 77 m initialize(6)
+ME
+MB sm 1 tm 78 m initialize(6)
+ME
+MB sm 1 tm 66 m initialize(6)
+ME
+MB sm 1 tm 67 m initialize(6)
+ME
+MB sm 1 tm 60 m initialize(6)
+ME
+MB sm 1 tm 84 m initialize(6)
+ME
+MB sm 1 tm 85 m initialize(6)
+ME
+MB sm 1 tm 87 m initialize(6)
+ME
+MB sm 1 tm 88 m initialize(6)
+ME
+MB sm 1 tm 89 m initialize(6)
+ME
+MB sm 1 tm 91 m initialize(6)
+ME
+MB sm 1 tm 92 m initialize(6)
+ME
+MB sm 1 tm 94 m initialize(6)
+ME
+MB sm 1 tm 95 m initialize(6)
+ME
+MB sm 1 tm 47 m initialize(6)
+ME
+MB sm 1 tm 48 m initialize(6)
+ME
+MB sm 1 tm 50 m initialize(6)
+ME
+MB sm 1 tm 101 m initialize(6)
+ME
+MB sm 1 tm 102 m initialize(6)
+ME
+MB sm 1 tm 103 m initialize(6)
+ME
+MB sm 1 tm 112 m initialize(6)
+ME
+MB sm 1 tm 104 m initialize(6)
+ME
+MB sm 1 tm 116 m initialize(6)
+ME
+MB sm 1 tm 117 m initialize(6)
+ME
+MB sm 1 tm 118 m initialize(6)
+ME
+MB sm 1 tm 119 m initialize(6)
+ME
+MB sm 1 tm 124 m initialize(6)
+ME
+MB sm 1 tm 128 m initialize(6)
+ME
+MB sm 1 tm 139 m initialize(6)
+ME
+MB sm 1 tm 141 m initialize(6)
+ME
+MB sm 1 tm 131 m initialize(6)
+ME
+MB sm 1 tm 132 m initialize(6)
+ME
+MB sm 1 tm 133 m initialize(6)
+ME
+MB sm 1 tm 135 m initialize(6)
+ME
+MB sm 1 tm 136 m initialize(6)
+ME
+MB sm 1 tm 137 m initialize(6)
+ME
+MB sm 1 tm 138 m initialize(6)
+ME
+MB sm 1 tm 126 m initialize(6)
+ME
+MB sm 1 tm 127 m initialize(6)
+ME
+MB sm 1 tm 120 m initialize(6)
+ME
+MB sm 1 tm 144 m initialize(6)
+ME
+MB sm 1 tm 145 m initialize(6)
+ME
+MB sm 1 tm 147 m initialize(6)
+ME
+MB sm 1 tm 148 m initialize(6)
+ME
+MB sm 1 tm 149 m initialize(6)
+ME
+MB sm 1 tm 151 m initialize(6)
+ME
+MB sm 1 tm 152 m initialize(6)
+ME
+MB sm 1 tm 154 m initialize(6)
+ME
+MB sm 1 tm 155 m initialize(6)
+ME
+MB sm 1 tm 108 m initialize(6)
+ME
+MB sm 1 tm 109 m initialize(6)
+ME
+MB sm 1 tm 161 m initialize(6)
+ME
+MB sm 1 tm 162 m initialize(6)
+ME
+MB sm 1 tm 163 m initialize(6)
+ME
+MB sm 1 tm 164 m initialize(6)
+ME
+MB sm 1 tm 166 m initialize(6)
+ME
+MB sm 1 tm 171 m initialize(6)
+ME
+MB sm 1 tm 172 m initialize(6)
+ME
+MB sm 1 tm 173 m initialize(6)
+ME
+MB sm 1 tm 178 m initialize(6)
+ME
+MB sm 1 tm 182 m initialize(6)
+ME
+MB sm 1 tm 193 m initialize(6)
+ME
+MB sm 1 tm 195 m initialize(6)
+ME
+MB sm 1 tm 185 m initialize(6)
+ME
+MB sm 1 tm 186 m initialize(6)
+ME
+MB sm 1 tm 187 m initialize(6)
+ME
+MB sm 1 tm 189 m initialize(6)
+ME
+MB sm 1 tm 190 m initialize(6)
+ME
+MB sm 1 tm 191 m initialize(6)
+ME
+MB sm 1 tm 192 m initialize(6)
+ME
+MB sm 1 tm 180 m initialize(6)
+ME
+MB sm 1 tm 181 m initialize(6)
+ME
+MB sm 1 tm 174 m initialize(6)
+ME
+MB sm 1 tm 198 m initialize(6)
+ME
+MB sm 1 tm 199 m initialize(6)
+ME
+MB sm 1 tm 167 m initialize(6)
+ME
+MB sm 1 tm 202 m initialize(6)
+ME
+MB sm 1 tm 203 m initialize(6)
+ME
+MB sm 1 tm 204 m initialize(6)
+ME
+MB sm 1 tm 209 m initialize(6)
+ME
+MB sm 1 tm 213 m initialize(6)
+ME
+MB sm 1 tm 224 m initialize(6)
+ME
+MB sm 1 tm 226 m initialize(6)
+ME
+MB sm 1 tm 216 m initialize(6)
+ME
+MB sm 1 tm 217 m initialize(6)
+ME
+MB sm 1 tm 218 m initialize(6)
+ME
+MB sm 1 tm 220 m initialize(6)
+ME
+MB sm 1 tm 221 m initialize(6)
+ME
+MB sm 1 tm 222 m initialize(6)
+ME
+MB sm 1 tm 223 m initialize(6)
+ME
+MB sm 1 tm 211 m initialize(6)
+ME
+MB sm 1 tm 212 m initialize(6)
+ME
+MB sm 1 tm 205 m initialize(6)
+ME
+MB sm 1 tm 229 m initialize(6)
+ME
+MB sm 1 tm 230 m initialize(6)
+ME
+MB sm 1 tm 8 m initialize(7)
+ME
+MB sm 1 tm 9 m initialize(7)
+ME
+MB sm 1 tm 10 m initialize(7)
+ME
+MB sm 1 tm 11 m initialize(7)
+ME
+MB sm 1 tm 12 m initialize(7)
+ME
+MB sm 1 tm 13 m initialize(7)
+ME
+MB sm 1 tm 14 m initialize(7)
+ME
+MB sm 1 tm 15 m initialize(7)
+ME
+MB sm 1 tm 16 m initialize(7)
+ME
+MB sm 1 tm 17 m initialize(7)
+ME
+MB sm 1 tm 18 m initialize(7)
+ME
+MB sm 1 tm 19 m initialize(7)
+ME
+MB sm 1 tm 20 m initialize(7)
+ME
+MB sm 1 tm 21 m initialize(7)
+ME
+MB sm 1 tm 22 m initialize(7)
+ME
+MB sm 1 tm 23 m initialize(7)
+ME
+MB sm 1 tm 24 m initialize(7)
+ME
+MB sm 1 tm 25 m initialize(7)
+ME
+MB sm 1 tm 26 m initialize(7)
+ME
+MB sm 1 tm 27 m initialize(7)
+ME
+MB sm 1 tm 28 m initialize(7)
+ME
+MB sm 1 tm 29 m initialize(7)
+ME
+MB sm 1 tm 30 m initialize(7)
+ME
+MB sm 1 tm 31 m initialize(7)
+ME
+MB sm 1 tm 32 m initialize(7)
+ME
+MB sm 1 tm 33 m initialize(7)
+ME
+MB sm 1 tm 3 m initialize(7)
+ME
+MB sm 1 tm 35 m initialize(7)
+ME
+MB sm 1 tm 38 m initialize(7)
+ME
+MB sm 1 tm 4 m initialize(7)
+ME
+MB sm 1 tm 40 m initialize(7)
+ME
+MB sm 1 tm 41 m initialize(7)
+ME
+MB sm 1 tm 42 m initialize(7)
+ME
+MB sm 1 tm 52 m initialize(7)
+ME
+MB sm 1 tm 43 m initialize(7)
+ME
+MB sm 1 tm 56 m initialize(7)
+ME
+MB sm 1 tm 57 m initialize(7)
+ME
+MB sm 1 tm 58 m initialize(7)
+ME
+MB sm 1 tm 59 m initialize(7)
+ME
+MB sm 1 tm 64 m initialize(7)
+ME
+MB sm 1 tm 68 m initialize(7)
+ME
+MB sm 1 tm 79 m initialize(7)
+ME
+MB sm 1 tm 81 m initialize(7)
+ME
+MB sm 1 tm 71 m initialize(7)
+ME
+MB sm 1 tm 72 m initialize(7)
+ME
+MB sm 1 tm 73 m initialize(7)
+ME
+MB sm 1 tm 75 m initialize(7)
+ME
+MB sm 1 tm 76 m initialize(7)
+ME
+MB sm 1 tm 77 m initialize(7)
+ME
+MB sm 1 tm 78 m initialize(7)
+ME
+MB sm 1 tm 66 m initialize(7)
+ME
+MB sm 1 tm 67 m initialize(7)
+ME
+MB sm 1 tm 60 m initialize(7)
+ME
+MB sm 1 tm 84 m initialize(7)
+ME
+MB sm 1 tm 85 m initialize(7)
+ME
+MB sm 1 tm 87 m initialize(7)
+- DETAIL (Ipv4NodeConfigurator)MultiRadioShowcase.host1.ipv4.configurator:Configuring routing table of MultiRadioShowcase.host1.
+MB sm 87 tm 88 m addRoute(...)
+- INFO (Ipv4RoutingTable)MultiRadioShowcase.host1.ipv4.routingTable:add route S 10.0.0.2/32 gw:* metric:0 if:wlan0
+ME
+ME
+MB sm 1 tm 88 m initialize(7)
+ME
+MB sm 1 tm 89 m initialize(7)
+ME
+MB sm 1 tm 91 m initialize(7)
+ME
+MB sm 1 tm 92 m initialize(7)
+ME
+MB sm 1 tm 94 m initialize(7)
+ME
+MB sm 1 tm 95 m initialize(7)
+ME
+MB sm 1 tm 47 m initialize(7)
+ME
+MB sm 1 tm 48 m initialize(7)
+ME
+MB sm 1 tm 50 m initialize(7)
+ME
+MB sm 1 tm 101 m initialize(7)
+ME
+MB sm 1 tm 102 m initialize(7)
+ME
+MB sm 1 tm 103 m initialize(7)
+ME
+MB sm 1 tm 112 m initialize(7)
+ME
+MB sm 1 tm 104 m initialize(7)
+ME
+MB sm 1 tm 116 m initialize(7)
+ME
+MB sm 1 tm 117 m initialize(7)
+ME
+MB sm 1 tm 118 m initialize(7)
+ME
+MB sm 1 tm 119 m initialize(7)
+ME
+MB sm 1 tm 124 m initialize(7)
+ME
+MB sm 1 tm 128 m initialize(7)
+ME
+MB sm 1 tm 139 m initialize(7)
+ME
+MB sm 1 tm 141 m initialize(7)
+ME
+MB sm 1 tm 131 m initialize(7)
+ME
+MB sm 1 tm 132 m initialize(7)
+ME
+MB sm 1 tm 133 m initialize(7)
+ME
+MB sm 1 tm 135 m initialize(7)
+ME
+MB sm 1 tm 136 m initialize(7)
+ME
+MB sm 1 tm 137 m initialize(7)
+ME
+MB sm 1 tm 138 m initialize(7)
+ME
+MB sm 1 tm 126 m initialize(7)
+ME
+MB sm 1 tm 127 m initialize(7)
+ME
+MB sm 1 tm 120 m initialize(7)
+ME
+MB sm 1 tm 144 m initialize(7)
+ME
+MB sm 1 tm 145 m initialize(7)
+ME
+MB sm 1 tm 147 m initialize(7)
+- DETAIL (Ipv4NodeConfigurator)MultiRadioShowcase.host2.ipv4.configurator:Configuring routing table of MultiRadioShowcase.host2.
+MB sm 147 tm 148 m addRoute(...)
+- INFO (Ipv4RoutingTable)MultiRadioShowcase.host2.ipv4.routingTable:add route S 10.0.0.1/32 gw:* metric:0 if:wlan0
+ME
+ME
+MB sm 1 tm 148 m initialize(7)
+ME
+MB sm 1 tm 149 m initialize(7)
+ME
+MB sm 1 tm 151 m initialize(7)
+ME
+MB sm 1 tm 152 m initialize(7)
+ME
+MB sm 1 tm 154 m initialize(7)
+ME
+MB sm 1 tm 155 m initialize(7)
+ME
+MB sm 1 tm 108 m initialize(7)
+ME
+MB sm 1 tm 109 m initialize(7)
+ME
+MB sm 1 tm 161 m initialize(7)
+ME
+MB sm 1 tm 162 m initialize(7)
+ME
+MB sm 1 tm 163 m initialize(7)
+ME
+MB sm 1 tm 164 m initialize(7)
+ME
+MB sm 1 tm 166 m initialize(7)
+ME
+MB sm 1 tm 171 m initialize(7)
+ME
+MB sm 1 tm 172 m initialize(7)
+ME
+MB sm 1 tm 173 m initialize(7)
+ME
+MB sm 1 tm 178 m initialize(7)
+ME
+MB sm 1 tm 182 m initialize(7)
+ME
+MB sm 1 tm 193 m initialize(7)
+ME
+MB sm 1 tm 195 m initialize(7)
+ME
+MB sm 1 tm 185 m initialize(7)
+ME
+MB sm 1 tm 186 m initialize(7)
+ME
+MB sm 1 tm 187 m initialize(7)
+ME
+MB sm 1 tm 189 m initialize(7)
+ME
+MB sm 1 tm 190 m initialize(7)
+ME
+MB sm 1 tm 191 m initialize(7)
+ME
+MB sm 1 tm 192 m initialize(7)
+ME
+MB sm 1 tm 180 m initialize(7)
+ME
+MB sm 1 tm 181 m initialize(7)
+ME
+MB sm 1 tm 174 m initialize(7)
+ME
+MB sm 1 tm 198 m initialize(7)
+ME
+MB sm 1 tm 199 m initialize(7)
+ME
+MB sm 1 tm 167 m initialize(7)
+ME
+MB sm 1 tm 202 m initialize(7)
+ME
+MB sm 1 tm 203 m initialize(7)
+ME
+MB sm 1 tm 204 m initialize(7)
+ME
+MB sm 1 tm 209 m initialize(7)
+ME
+MB sm 1 tm 213 m initialize(7)
+ME
+MB sm 1 tm 224 m initialize(7)
+ME
+MB sm 1 tm 226 m initialize(7)
+ME
+MB sm 1 tm 216 m initialize(7)
+ME
+MB sm 1 tm 217 m initialize(7)
+ME
+MB sm 1 tm 218 m initialize(7)
+ME
+MB sm 1 tm 220 m initialize(7)
+ME
+MB sm 1 tm 221 m initialize(7)
+ME
+MB sm 1 tm 222 m initialize(7)
+ME
+MB sm 1 tm 223 m initialize(7)
+ME
+MB sm 1 tm 211 m initialize(7)
+ME
+MB sm 1 tm 212 m initialize(7)
+ME
+MB sm 1 tm 205 m initialize(7)
+ME
+MB sm 1 tm 229 m initialize(7)
+ME
+MB sm 1 tm 230 m initialize(7)
+ME
+MB sm 1 tm 8 m initialize(8)
+ME
+MB sm 1 tm 9 m initialize(8)
+ME
+MB sm 1 tm 10 m initialize(8)
+ME
+MB sm 1 tm 11 m initialize(8)
+ME
+MB sm 1 tm 12 m initialize(8)
+ME
+MB sm 1 tm 13 m initialize(8)
+ME
+MB sm 1 tm 14 m initialize(8)
+ME
+MB sm 1 tm 15 m initialize(8)
+ME
+MB sm 1 tm 16 m initialize(8)
+ME
+MB sm 1 tm 17 m initialize(8)
+ME
+MB sm 1 tm 18 m initialize(8)
+ME
+MB sm 1 tm 19 m initialize(8)
+ME
+MB sm 1 tm 20 m initialize(8)
+ME
+MB sm 1 tm 21 m initialize(8)
+ME
+MB sm 1 tm 22 m initialize(8)
+ME
+MB sm 1 tm 23 m initialize(8)
+ME
+MB sm 1 tm 24 m initialize(8)
+ME
+MB sm 1 tm 25 m initialize(8)
+ME
+MB sm 1 tm 26 m initialize(8)
+ME
+MB sm 1 tm 27 m initialize(8)
+ME
+MB sm 1 tm 28 m initialize(8)
+ME
+MB sm 1 tm 29 m initialize(8)
+ME
+MB sm 1 tm 30 m initialize(8)
+ME
+MB sm 1 tm 31 m initialize(8)
+ME
+MB sm 1 tm 32 m initialize(8)
+ME
+MB sm 1 tm 33 m initialize(8)
+ME
+MB sm 1 tm 3 m initialize(8)
+ME
+MB sm 1 tm 35 m initialize(8)
+ME
+MB sm 1 tm 38 m initialize(8)
+ME
+MB sm 1 tm 4 m initialize(8)
+ME
+MB sm 1 tm 40 m initialize(8)
+ME
+MB sm 1 tm 41 m initialize(8)
+ME
+MB sm 1 tm 42 m initialize(8)
+ME
+MB sm 1 tm 52 m initialize(8)
+ME
+MB sm 1 tm 43 m initialize(8)
+ME
+MB sm 1 tm 56 m initialize(8)
+ME
+MB sm 1 tm 57 m initialize(8)
+ME
+MB sm 1 tm 58 m initialize(8)
+ME
+MB sm 1 tm 59 m initialize(8)
+ME
+MB sm 1 tm 64 m initialize(8)
+ME
+MB sm 1 tm 68 m initialize(8)
+ME
+MB sm 1 tm 79 m initialize(8)
+ME
+MB sm 1 tm 81 m initialize(8)
+ME
+MB sm 1 tm 71 m initialize(8)
+ME
+MB sm 1 tm 72 m initialize(8)
+ME
+MB sm 1 tm 73 m initialize(8)
+ME
+MB sm 1 tm 75 m initialize(8)
+ME
+MB sm 1 tm 76 m initialize(8)
+ME
+MB sm 1 tm 77 m initialize(8)
+ME
+MB sm 1 tm 78 m initialize(8)
+ME
+MB sm 1 tm 66 m initialize(8)
+ME
+MB sm 1 tm 67 m initialize(8)
+ME
+MB sm 1 tm 60 m initialize(8)
+ME
+MB sm 1 tm 84 m initialize(8)
+ME
+MB sm 1 tm 85 m initialize(8)
+ME
+MB sm 1 tm 87 m initialize(8)
+ME
+MB sm 1 tm 88 m initialize(8)
+ME
+MB sm 1 tm 89 m initialize(8)
+MB sm 89 tm 12 m ""
+ME
+MS id 89 d "t=0 entries;is=s;p=100,300;i=block/table"
+ME
+MB sm 1 tm 91 m initialize(8)
+ME
+MB sm 1 tm 92 m initialize(8)
+MB sm 92 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+ME
+MB sm 92 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 92 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+ME
+MB sm 92 tm 93 m handleRegisterService
+MB sm 93 tm 90 m handleRegisterService
+MB sm 90 tm 49 m handleRegisterService
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 92 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 92 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 92 tm 93 m handleRegisterProtocol
+MB sm 93 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 92 tm 90 m handleRegisterProtocol
+MB sm 90 tm 49 m handleRegisterProtocol
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 1 tm 94 m initialize(8)
+ME
+MB sm 1 tm 95 m initialize(8)
+ME
+MB sm 1 tm 47 m initialize(8)
+ME
+MB sm 1 tm 48 m initialize(8)
+ME
+MB sm 1 tm 50 m initialize(8)
+ME
+MB sm 1 tm 101 m initialize(8)
+ME
+MB sm 1 tm 102 m initialize(8)
+ME
+MB sm 1 tm 103 m initialize(8)
+ME
+MB sm 1 tm 112 m initialize(8)
+ME
+MB sm 1 tm 104 m initialize(8)
+ME
+MB sm 1 tm 116 m initialize(8)
+ME
+MB sm 1 tm 117 m initialize(8)
+ME
+MB sm 1 tm 118 m initialize(8)
+ME
+MB sm 1 tm 119 m initialize(8)
+ME
+MB sm 1 tm 124 m initialize(8)
+ME
+MB sm 1 tm 128 m initialize(8)
+ME
+MB sm 1 tm 139 m initialize(8)
+ME
+MB sm 1 tm 141 m initialize(8)
+ME
+MB sm 1 tm 131 m initialize(8)
+ME
+MB sm 1 tm 132 m initialize(8)
+ME
+MB sm 1 tm 133 m initialize(8)
+ME
+MB sm 1 tm 135 m initialize(8)
+ME
+MB sm 1 tm 136 m initialize(8)
+ME
+MB sm 1 tm 137 m initialize(8)
+ME
+MB sm 1 tm 138 m initialize(8)
+ME
+MB sm 1 tm 126 m initialize(8)
+ME
+MB sm 1 tm 127 m initialize(8)
+ME
+MB sm 1 tm 120 m initialize(8)
+ME
+MB sm 1 tm 144 m initialize(8)
+ME
+MB sm 1 tm 145 m initialize(8)
+ME
+MB sm 1 tm 147 m initialize(8)
+ME
+MB sm 1 tm 148 m initialize(8)
+ME
+MB sm 1 tm 149 m initialize(8)
+MB sm 149 tm 12 m ""
+ME
+MS id 149 d "t=0 entries;is=s;p=100,300;i=block/table"
+ME
+MB sm 1 tm 151 m initialize(8)
+ME
+MB sm 1 tm 152 m initialize(8)
+MB sm 152 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+ME
+MB sm 152 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 152 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+ME
+MB sm 152 tm 153 m handleRegisterService
+MB sm 153 tm 150 m handleRegisterService
+MB sm 150 tm 110 m handleRegisterService
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 152 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 152 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+ME
+MB sm 152 tm 153 m handleRegisterProtocol
+MB sm 153 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 152 tm 150 m handleRegisterProtocol
+MB sm 150 tm 110 m handleRegisterProtocol
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 1 tm 154 m initialize(8)
+ME
+MB sm 1 tm 155 m initialize(8)
+ME
+MB sm 1 tm 108 m initialize(8)
+ME
+MB sm 1 tm 109 m initialize(8)
+ME
+MB sm 1 tm 161 m initialize(8)
+ME
+MB sm 1 tm 162 m initialize(8)
+ME
+MB sm 1 tm 163 m initialize(8)
+ME
+MB sm 1 tm 164 m initialize(8)
+ME
+MB sm 1 tm 166 m initialize(8)
+ME
+MB sm 1 tm 171 m initialize(8)
+ME
+MB sm 1 tm 172 m initialize(8)
+ME
+MB sm 1 tm 173 m initialize(8)
+ME
+MB sm 1 tm 178 m initialize(8)
+ME
+MB sm 1 tm 182 m initialize(8)
+ME
+MB sm 1 tm 193 m initialize(8)
+ME
+MB sm 1 tm 195 m initialize(8)
+ME
+MB sm 1 tm 185 m initialize(8)
+ME
+MB sm 1 tm 186 m initialize(8)
+ME
+MB sm 1 tm 187 m initialize(8)
+ME
+MB sm 1 tm 189 m initialize(8)
+ME
+MB sm 1 tm 190 m initialize(8)
+ME
+MB sm 1 tm 191 m initialize(8)
+ME
+MB sm 1 tm 192 m initialize(8)
+ME
+MB sm 1 tm 180 m initialize(8)
+ME
+MB sm 1 tm 181 m initialize(8)
+ME
+MB sm 1 tm 174 m initialize(8)
+ME
+MB sm 1 tm 198 m initialize(8)
+ME
+MB sm 1 tm 199 m initialize(8)
+ME
+MB sm 1 tm 167 m initialize(8)
+ME
+MB sm 1 tm 202 m initialize(8)
+ME
+MB sm 1 tm 203 m initialize(8)
+ME
+MB sm 1 tm 204 m initialize(8)
+ME
+MB sm 1 tm 209 m initialize(8)
+ME
+MB sm 1 tm 213 m initialize(8)
+ME
+MB sm 1 tm 224 m initialize(8)
+ME
+MB sm 1 tm 226 m initialize(8)
+ME
+MB sm 1 tm 216 m initialize(8)
+ME
+MB sm 1 tm 217 m initialize(8)
+ME
+MB sm 1 tm 218 m initialize(8)
+ME
+MB sm 1 tm 220 m initialize(8)
+ME
+MB sm 1 tm 221 m initialize(8)
+ME
+MB sm 1 tm 222 m initialize(8)
+ME
+MB sm 1 tm 223 m initialize(8)
+ME
+MB sm 1 tm 211 m initialize(8)
+ME
+MB sm 1 tm 212 m initialize(8)
+ME
+MB sm 1 tm 205 m initialize(8)
+ME
+MB sm 1 tm 229 m initialize(8)
+ME
+MB sm 1 tm 230 m initialize(8)
+ME
+MB sm 1 tm 8 m initialize(9)
+ME
+MB sm 1 tm 9 m initialize(9)
+ME
+MB sm 1 tm 10 m initialize(9)
+ME
+MB sm 1 tm 11 m initialize(9)
+ME
+MB sm 1 tm 12 m initialize(9)
+ME
+MB sm 1 tm 13 m initialize(9)
+ME
+MB sm 1 tm 14 m initialize(9)
+ME
+MB sm 1 tm 15 m initialize(9)
+ME
+MB sm 1 tm 16 m initialize(9)
+ME
+MB sm 1 tm 17 m initialize(9)
+ME
+MB sm 1 tm 18 m initialize(9)
+ME
+MB sm 1 tm 19 m initialize(9)
+ME
+MB sm 1 tm 20 m initialize(9)
+ME
+MB sm 1 tm 21 m initialize(9)
+ME
+MB sm 1 tm 22 m initialize(9)
+ME
+MB sm 1 tm 23 m initialize(9)
+ME
+MB sm 1 tm 24 m initialize(9)
+ME
+MB sm 1 tm 25 m initialize(9)
+ME
+MB sm 1 tm 26 m initialize(9)
+ME
+MB sm 1 tm 27 m initialize(9)
+ME
+MB sm 1 tm 28 m initialize(9)
+ME
+MB sm 1 tm 29 m initialize(9)
+ME
+MB sm 1 tm 30 m initialize(9)
+ME
+MB sm 1 tm 31 m initialize(9)
+ME
+MB sm 1 tm 32 m initialize(9)
+ME
+MB sm 1 tm 33 m initialize(9)
+ME
+MB sm 1 tm 3 m initialize(9)
+ME
+MB sm 1 tm 35 m initialize(9)
+ME
+MB sm 1 tm 38 m initialize(9)
+ME
+MB sm 1 tm 4 m initialize(9)
+ME
+MB sm 1 tm 40 m initialize(9)
+ME
+MB sm 1 tm 41 m initialize(9)
+ME
+MB sm 1 tm 42 m initialize(9)
+ME
+MB sm 1 tm 52 m initialize(9)
+ME
+MB sm 1 tm 43 m initialize(9)
+ME
+MB sm 1 tm 56 m initialize(9)
+ME
+MB sm 1 tm 57 m initialize(9)
+ME
+MB sm 1 tm 58 m initialize(9)
+ME
+MB sm 1 tm 59 m initialize(9)
+ME
+MB sm 1 tm 64 m initialize(9)
+ME
+MB sm 1 tm 68 m initialize(9)
+ME
+MB sm 1 tm 79 m initialize(9)
+ME
+MB sm 1 tm 81 m initialize(9)
+ME
+MB sm 1 tm 71 m initialize(9)
+ME
+MB sm 1 tm 72 m initialize(9)
+ME
+MB sm 1 tm 73 m initialize(9)
+ME
+MB sm 1 tm 75 m initialize(9)
+ME
+MB sm 1 tm 76 m initialize(9)
+ME
+MB sm 1 tm 77 m initialize(9)
+ME
+MB sm 1 tm 78 m initialize(9)
+ME
+MB sm 1 tm 66 m initialize(9)
+ME
+MB sm 1 tm 67 m initialize(9)
+ME
+MB sm 1 tm 60 m initialize(9)
+ME
+MB sm 1 tm 84 m initialize(9)
+ME
+MB sm 1 tm 85 m initialize(9)
+ME
+MB sm 1 tm 87 m initialize(9)
+ME
+MB sm 1 tm 88 m initialize(9)
+ME
+MB sm 1 tm 89 m initialize(9)
+ME
+MB sm 1 tm 91 m initialize(9)
+ME
+MB sm 1 tm 92 m initialize(9)
+ME
+MB sm 1 tm 94 m initialize(9)
+ME
+MB sm 1 tm 95 m initialize(9)
+ME
+MB sm 1 tm 47 m initialize(9)
+MB sm 47 tm 51 m handleRegisterService
+MB sm 51 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 47 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 47 tm 51 m handleRegisterService
+MB sm 51 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 47 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 47 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 47 tm 51 m handleRegisterProtocol
+MB sm 51 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 47 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 47 tm 51 m handleRegisterProtocol
+MB sm 51 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+ME
+MB sm 1 tm 48 m initialize(9)
+MB sm 48 tm 51 m handleRegisterService
+MB sm 51 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 48 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 48 tm 51 m handleRegisterService
+MB sm 51 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 48 tm 49 m handleRegisterService
+MB sm 49 tm 90 m handleRegisterService
+MB sm 90 tm 91 m handleRegisterService
+ME
+MB sm 90 tm 93 m handleRegisterService
+MB sm 93 tm 91 m handleRegisterService
+ME
+MB sm 93 tm 92 m handleRegisterService
+ME
+MB sm 93 tm 94 m handleRegisterService
+ME
+ME
+MB sm 90 tm 92 m handleRegisterService
+ME
+ME
+MB sm 49 tm 46 m handleRegisterService
+MB sm 46 tm 96 m handleRegisterService
+MB sm 96 tm 94 m handleRegisterService
+ME
+ME
+MB sm 46 tm 56 m handleRegisterService
+ME
+ME
+MB sm 49 tm 51 m handleRegisterService
+ME
+ME
+MB sm 48 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 48 tm 51 m handleRegisterProtocol
+MB sm 51 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 48 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 51 m handleRegisterProtocol
+ME
+ME
+MB sm 48 tm 51 m handleRegisterProtocol
+MB sm 51 tm 49 m handleRegisterProtocol
+MB sm 49 tm 90 m handleRegisterProtocol
+MB sm 90 tm 91 m handleRegisterProtocol
+ME
+MB sm 90 tm 93 m handleRegisterProtocol
+MB sm 93 tm 91 m handleRegisterProtocol
+ME
+MB sm 93 tm 92 m handleRegisterProtocol
+ME
+MB sm 93 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 90 tm 92 m handleRegisterProtocol
+ME
+ME
+MB sm 49 tm 46 m handleRegisterProtocol
+MB sm 46 tm 96 m handleRegisterProtocol
+MB sm 96 tm 94 m handleRegisterProtocol
+ME
+ME
+MB sm 46 tm 56 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+ME
+MB sm 1 tm 50 m initialize(9)
+ME
+MB sm 1 tm 101 m initialize(9)
+ME
+MB sm 1 tm 102 m initialize(9)
+ME
+MB sm 1 tm 103 m initialize(9)
+ME
+MB sm 1 tm 112 m initialize(9)
+ME
+MB sm 1 tm 104 m initialize(9)
+ME
+MB sm 1 tm 116 m initialize(9)
+ME
+MB sm 1 tm 117 m initialize(9)
+ME
+MB sm 1 tm 118 m initialize(9)
+ME
+MB sm 1 tm 119 m initialize(9)
+ME
+MB sm 1 tm 124 m initialize(9)
+ME
+MB sm 1 tm 128 m initialize(9)
+ME
+MB sm 1 tm 139 m initialize(9)
+ME
+MB sm 1 tm 141 m initialize(9)
+ME
+MB sm 1 tm 131 m initialize(9)
+ME
+MB sm 1 tm 132 m initialize(9)
+ME
+MB sm 1 tm 133 m initialize(9)
+ME
+MB sm 1 tm 135 m initialize(9)
+ME
+MB sm 1 tm 136 m initialize(9)
+ME
+MB sm 1 tm 137 m initialize(9)
+ME
+MB sm 1 tm 138 m initialize(9)
+ME
+MB sm 1 tm 126 m initialize(9)
+ME
+MB sm 1 tm 127 m initialize(9)
+ME
+MB sm 1 tm 120 m initialize(9)
+ME
+MB sm 1 tm 144 m initialize(9)
+ME
+MB sm 1 tm 145 m initialize(9)
+ME
+MB sm 1 tm 147 m initialize(9)
+ME
+MB sm 1 tm 148 m initialize(9)
+ME
+MB sm 1 tm 149 m initialize(9)
+ME
+MB sm 1 tm 151 m initialize(9)
+ME
+MB sm 1 tm 152 m initialize(9)
+ME
+MB sm 1 tm 154 m initialize(9)
+ME
+MB sm 1 tm 155 m initialize(9)
+ME
+MB sm 1 tm 108 m initialize(9)
+MB sm 108 tm 111 m handleRegisterService
+MB sm 111 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 108 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 108 tm 111 m handleRegisterService
+MB sm 111 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 108 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 108 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 108 tm 111 m handleRegisterProtocol
+MB sm 111 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 108 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 108 tm 111 m handleRegisterProtocol
+MB sm 111 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+ME
+MB sm 1 tm 109 m initialize(9)
+MB sm 109 tm 111 m handleRegisterService
+MB sm 111 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 109 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 109 tm 111 m handleRegisterService
+MB sm 111 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+ME
+ME
+MB sm 109 tm 110 m handleRegisterService
+MB sm 110 tm 150 m handleRegisterService
+MB sm 150 tm 151 m handleRegisterService
+ME
+MB sm 150 tm 153 m handleRegisterService
+MB sm 153 tm 151 m handleRegisterService
+ME
+MB sm 153 tm 152 m handleRegisterService
+ME
+MB sm 153 tm 154 m handleRegisterService
+ME
+ME
+MB sm 150 tm 152 m handleRegisterService
+ME
+ME
+MB sm 110 tm 107 m handleRegisterService
+MB sm 107 tm 156 m handleRegisterService
+MB sm 156 tm 154 m handleRegisterService
+ME
+ME
+MB sm 107 tm 116 m handleRegisterService
+ME
+ME
+MB sm 110 tm 111 m handleRegisterService
+ME
+ME
+MB sm 109 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 109 tm 111 m handleRegisterProtocol
+MB sm 111 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+MB sm 109 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 111 m handleRegisterProtocol
+ME
+ME
+MB sm 109 tm 111 m handleRegisterProtocol
+MB sm 111 tm 110 m handleRegisterProtocol
+MB sm 110 tm 150 m handleRegisterProtocol
+MB sm 150 tm 151 m handleRegisterProtocol
+ME
+MB sm 150 tm 153 m handleRegisterProtocol
+MB sm 153 tm 151 m handleRegisterProtocol
+ME
+MB sm 153 tm 152 m handleRegisterProtocol
+ME
+MB sm 153 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 150 tm 152 m handleRegisterProtocol
+ME
+ME
+MB sm 110 tm 107 m handleRegisterProtocol
+MB sm 107 tm 156 m handleRegisterProtocol
+MB sm 156 tm 154 m handleRegisterProtocol
+ME
+ME
+MB sm 107 tm 116 m handleRegisterProtocol
+ME
+ME
+ME
+ME
+ME
+MB sm 1 tm 161 m initialize(9)
+ME
+MB sm 1 tm 162 m initialize(9)
+ME
+MB sm 1 tm 163 m initialize(9)
+ME
+MB sm 1 tm 164 m initialize(9)
+ME
+MB sm 1 tm 166 m initialize(9)
+ME
+MB sm 1 tm 171 m initialize(9)
+ME
+MB sm 1 tm 172 m initialize(9)
+ME
+MB sm 1 tm 173 m initialize(9)
+ME
+MB sm 1 tm 178 m initialize(9)
+ME
+MB sm 1 tm 182 m initialize(9)
+ME
+MB sm 1 tm 193 m initialize(9)
+ME
+MB sm 1 tm 195 m initialize(9)
+ME
+MB sm 1 tm 185 m initialize(9)
+ME
+MB sm 1 tm 186 m initialize(9)
+ME
+MB sm 1 tm 187 m initialize(9)
+ME
+MB sm 1 tm 189 m initialize(9)
+ME
+MB sm 1 tm 190 m initialize(9)
+ME
+MB sm 1 tm 191 m initialize(9)
+ME
+MB sm 1 tm 192 m initialize(9)
+ME
+MB sm 1 tm 180 m initialize(9)
+ME
+MB sm 1 tm 181 m initialize(9)
+ME
+MB sm 1 tm 174 m initialize(9)
+ME
+MB sm 1 tm 198 m initialize(9)
+ME
+MB sm 1 tm 199 m initialize(9)
+ME
+MB sm 1 tm 167 m initialize(9)
+ME
+MB sm 1 tm 202 m initialize(9)
+ME
+MB sm 1 tm 203 m initialize(9)
+ME
+MB sm 1 tm 204 m initialize(9)
+ME
+MB sm 1 tm 209 m initialize(9)
+ME
+MB sm 1 tm 213 m initialize(9)
+ME
+MB sm 1 tm 224 m initialize(9)
+ME
+MB sm 1 tm 226 m initialize(9)
+ME
+MB sm 1 tm 216 m initialize(9)
+ME
+MB sm 1 tm 217 m initialize(9)
+ME
+MB sm 1 tm 218 m initialize(9)
+ME
+MB sm 1 tm 220 m initialize(9)
+ME
+MB sm 1 tm 221 m initialize(9)
+ME
+MB sm 1 tm 222 m initialize(9)
+ME
+MB sm 1 tm 223 m initialize(9)
+ME
+MB sm 1 tm 211 m initialize(9)
+ME
+MB sm 1 tm 212 m initialize(9)
+ME
+MB sm 1 tm 205 m initialize(9)
+ME
+MB sm 1 tm 229 m initialize(9)
+ME
+MB sm 1 tm 230 m initialize(9)
+ME
+MB sm 1 tm 8 m initialize(10)
+ME
+MB sm 1 tm 9 m initialize(10)
+ME
+MB sm 1 tm 10 m initialize(10)
+ME
+MB sm 1 tm 11 m initialize(10)
+ME
+MB sm 1 tm 12 m initialize(10)
+ME
+MB sm 1 tm 13 m initialize(10)
+ME
+MB sm 1 tm 14 m initialize(10)
+ME
+MB sm 1 tm 15 m initialize(10)
+ME
+MB sm 1 tm 16 m initialize(10)
+ME
+MB sm 1 tm 17 m initialize(10)
+ME
+MB sm 1 tm 18 m initialize(10)
+ME
+MB sm 1 tm 19 m initialize(10)
+ME
+MB sm 1 tm 20 m initialize(10)
+ME
+MB sm 1 tm 21 m initialize(10)
+ME
+MB sm 1 tm 22 m initialize(10)
+ME
+MB sm 1 tm 23 m initialize(10)
+ME
+MB sm 1 tm 24 m initialize(10)
+ME
+MB sm 1 tm 25 m initialize(10)
+ME
+MB sm 1 tm 26 m initialize(10)
+ME
+MB sm 1 tm 27 m initialize(10)
+ME
+MB sm 1 tm 28 m initialize(10)
+ME
+MB sm 1 tm 29 m initialize(10)
+ME
+MB sm 1 tm 30 m initialize(10)
+ME
+MB sm 1 tm 31 m initialize(10)
+ME
+MB sm 1 tm 32 m initialize(10)
+ME
+MB sm 1 tm 33 m initialize(10)
+ME
+MB sm 1 tm 3 m initialize(10)
+ME
+MB sm 1 tm 35 m initialize(10)
+ME
+MB sm 1 tm 38 m initialize(10)
+ME
+MB sm 1 tm 4 m initialize(10)
+ME
+MB sm 1 tm 40 m initialize(10)
+ME
+MB sm 1 tm 41 m initialize(10)
+ME
+MB sm 1 tm 42 m initialize(10)
+ME
+MB sm 1 tm 52 m initialize(10)
+ME
+MB sm 1 tm 43 m initialize(10)
+ME
+MB sm 1 tm 56 m initialize(10)
+ME
+MB sm 1 tm 57 m initialize(10)
+ME
+MB sm 1 tm 58 m initialize(10)
+ME
+MB sm 1 tm 59 m initialize(10)
+ME
+MB sm 1 tm 64 m initialize(10)
+ME
+MB sm 1 tm 68 m initialize(10)
+ME
+MB sm 1 tm 79 m initialize(10)
+ME
+MB sm 1 tm 81 m initialize(10)
+ME
+MB sm 1 tm 71 m initialize(10)
+ME
+MB sm 1 tm 72 m initialize(10)
+ME
+MB sm 1 tm 73 m initialize(10)
+ME
+MB sm 1 tm 75 m initialize(10)
+ME
+MB sm 1 tm 76 m initialize(10)
+ME
+MB sm 1 tm 77 m initialize(10)
+ME
+MB sm 1 tm 78 m initialize(10)
+ME
+MB sm 1 tm 66 m initialize(10)
+ME
+MB sm 1 tm 67 m initialize(10)
+ME
+MB sm 1 tm 60 m initialize(10)
+ME
+MB sm 1 tm 84 m initialize(10)
+ME
+MB sm 1 tm 85 m initialize(10)
+ME
+MB sm 1 tm 87 m initialize(10)
+ME
+MB sm 1 tm 88 m initialize(10)
+ME
+MB sm 1 tm 89 m initialize(10)
+ME
+MB sm 1 tm 91 m initialize(10)
+ME
+MB sm 1 tm 92 m initialize(10)
+ME
+MB sm 1 tm 94 m initialize(10)
+ME
+MB sm 1 tm 95 m initialize(10)
+ME
+MB sm 1 tm 47 m initialize(10)
+ME
+MB sm 1 tm 48 m initialize(10)
+ME
+MB sm 1 tm 50 m initialize(10)
+ME
+MB sm 1 tm 101 m initialize(10)
+ME
+MB sm 1 tm 102 m initialize(10)
+ME
+MB sm 1 tm 103 m initialize(10)
+ME
+MB sm 1 tm 112 m initialize(10)
+ME
+MB sm 1 tm 104 m initialize(10)
+ME
+MB sm 1 tm 116 m initialize(10)
+ME
+MB sm 1 tm 117 m initialize(10)
+ME
+MB sm 1 tm 118 m initialize(10)
+ME
+MB sm 1 tm 119 m initialize(10)
+ME
+MB sm 1 tm 124 m initialize(10)
+ME
+MB sm 1 tm 128 m initialize(10)
+ME
+MB sm 1 tm 139 m initialize(10)
+ME
+MB sm 1 tm 141 m initialize(10)
+ME
+MB sm 1 tm 131 m initialize(10)
+ME
+MB sm 1 tm 132 m initialize(10)
+ME
+MB sm 1 tm 133 m initialize(10)
+ME
+MB sm 1 tm 135 m initialize(10)
+ME
+MB sm 1 tm 136 m initialize(10)
+ME
+MB sm 1 tm 137 m initialize(10)
+ME
+MB sm 1 tm 138 m initialize(10)
+ME
+MB sm 1 tm 126 m initialize(10)
+ME
+MB sm 1 tm 127 m initialize(10)
+ME
+MB sm 1 tm 120 m initialize(10)
+ME
+MB sm 1 tm 144 m initialize(10)
+ME
+MB sm 1 tm 145 m initialize(10)
+ME
+MB sm 1 tm 147 m initialize(10)
+ME
+MB sm 1 tm 148 m initialize(10)
+ME
+MB sm 1 tm 149 m initialize(10)
+ME
+MB sm 1 tm 151 m initialize(10)
+ME
+MB sm 1 tm 152 m initialize(10)
+ME
+MB sm 1 tm 154 m initialize(10)
+ME
+MB sm 1 tm 155 m initialize(10)
+ME
+MB sm 1 tm 108 m initialize(10)
+ME
+MB sm 1 tm 109 m initialize(10)
+ME
+MB sm 1 tm 161 m initialize(10)
+ME
+MB sm 1 tm 162 m initialize(10)
+ME
+MB sm 1 tm 163 m initialize(10)
+ME
+MB sm 1 tm 164 m initialize(10)
+ME
+MB sm 1 tm 166 m initialize(10)
+ME
+MB sm 1 tm 171 m initialize(10)
+ME
+MB sm 1 tm 172 m initialize(10)
+ME
+MB sm 1 tm 173 m initialize(10)
+ME
+MB sm 1 tm 178 m initialize(10)
+ME
+MB sm 1 tm 182 m initialize(10)
+ME
+MB sm 1 tm 193 m initialize(10)
+ME
+MB sm 1 tm 195 m initialize(10)
+ME
+MB sm 1 tm 185 m initialize(10)
+ME
+MB sm 1 tm 186 m initialize(10)
+ME
+MB sm 1 tm 187 m initialize(10)
+ME
+MB sm 1 tm 189 m initialize(10)
+ME
+MB sm 1 tm 190 m initialize(10)
+ME
+MB sm 1 tm 191 m initialize(10)
+ME
+MB sm 1 tm 192 m initialize(10)
+ME
+MB sm 1 tm 180 m initialize(10)
+ME
+MB sm 1 tm 181 m initialize(10)
+ME
+MB sm 1 tm 174 m initialize(10)
+ME
+MB sm 1 tm 198 m initialize(10)
+ME
+MB sm 1 tm 199 m initialize(10)
+ME
+MB sm 1 tm 167 m initialize(10)
+ME
+MB sm 1 tm 202 m initialize(10)
+ME
+MB sm 1 tm 203 m initialize(10)
+ME
+MB sm 1 tm 204 m initialize(10)
+ME
+MB sm 1 tm 209 m initialize(10)
+ME
+MB sm 1 tm 213 m initialize(10)
+ME
+MB sm 1 tm 224 m initialize(10)
+ME
+MB sm 1 tm 226 m initialize(10)
+ME
+MB sm 1 tm 216 m initialize(10)
+ME
+MB sm 1 tm 217 m initialize(10)
+ME
+MB sm 1 tm 218 m initialize(10)
+ME
+MB sm 1 tm 220 m initialize(10)
+ME
+MB sm 1 tm 221 m initialize(10)
+ME
+MB sm 1 tm 222 m initialize(10)
+ME
+MB sm 1 tm 223 m initialize(10)
+ME
+MB sm 1 tm 211 m initialize(10)
+ME
+MB sm 1 tm 212 m initialize(10)
+ME
+MB sm 1 tm 205 m initialize(10)
+ME
+MB sm 1 tm 229 m initialize(10)
+ME
+MB sm 1 tm 230 m initialize(10)
+ME
+MB sm 1 tm 8 m initialize(11)
+ME
+MB sm 1 tm 9 m initialize(11)
+ME
+MB sm 1 tm 10 m initialize(11)
+ME
+MB sm 1 tm 11 m initialize(11)
+ME
+MB sm 1 tm 12 m initialize(11)
+ME
+MB sm 1 tm 13 m initialize(11)
+ME
+MB sm 1 tm 14 m initialize(11)
+ME
+MB sm 1 tm 15 m initialize(11)
+ME
+MB sm 1 tm 16 m initialize(11)
+ME
+MB sm 1 tm 17 m initialize(11)
+ME
+MB sm 1 tm 18 m initialize(11)
+ME
+MB sm 1 tm 19 m initialize(11)
+ME
+MB sm 1 tm 20 m initialize(11)
+ME
+MB sm 1 tm 21 m initialize(11)
+ME
+MB sm 1 tm 22 m initialize(11)
+ME
+MB sm 1 tm 23 m initialize(11)
+ME
+MB sm 1 tm 24 m initialize(11)
+ME
+MB sm 1 tm 25 m initialize(11)
+ME
+MB sm 1 tm 26 m initialize(11)
+ME
+MB sm 1 tm 27 m initialize(11)
+ME
+MB sm 1 tm 28 m initialize(11)
+ME
+MB sm 1 tm 29 m initialize(11)
+ME
+MB sm 1 tm 30 m initialize(11)
+ME
+MB sm 1 tm 31 m initialize(11)
+ME
+MB sm 1 tm 32 m initialize(11)
+ME
+MB sm 1 tm 33 m initialize(11)
+ME
+MB sm 1 tm 3 m initialize(11)
+ME
+MB sm 1 tm 35 m initialize(11)
+ME
+MB sm 1 tm 38 m initialize(11)
+ME
+MB sm 1 tm 4 m initialize(11)
+ME
+MB sm 1 tm 40 m initialize(11)
+ME
+MB sm 1 tm 41 m initialize(11)
+ME
+MB sm 1 tm 42 m initialize(11)
+ME
+MB sm 1 tm 52 m initialize(11)
+ME
+MB sm 1 tm 43 m initialize(11)
+ME
+MB sm 1 tm 56 m initialize(11)
+ME
+MB sm 1 tm 57 m initialize(11)
+ME
+MB sm 1 tm 58 m initialize(11)
+ME
+MB sm 1 tm 59 m initialize(11)
+ME
+MB sm 1 tm 64 m initialize(11)
+ME
+MB sm 1 tm 68 m initialize(11)
+ME
+MB sm 1 tm 79 m initialize(11)
+ME
+MB sm 1 tm 81 m initialize(11)
+ME
+MB sm 1 tm 71 m initialize(11)
+ME
+MB sm 1 tm 72 m initialize(11)
+ME
+MB sm 1 tm 73 m initialize(11)
+ME
+MB sm 1 tm 75 m initialize(11)
+ME
+MB sm 1 tm 76 m initialize(11)
+ME
+MB sm 1 tm 77 m initialize(11)
+ME
+MB sm 1 tm 78 m initialize(11)
+ME
+MB sm 1 tm 66 m initialize(11)
+ME
+MB sm 1 tm 67 m initialize(11)
+ME
+MB sm 1 tm 60 m initialize(11)
+ME
+MB sm 1 tm 84 m initialize(11)
+ME
+MB sm 1 tm 85 m initialize(11)
+ME
+MB sm 1 tm 87 m initialize(11)
+ME
+MB sm 1 tm 88 m initialize(11)
+ME
+MB sm 1 tm 89 m initialize(11)
+ME
+MB sm 1 tm 91 m initialize(11)
+ME
+MB sm 1 tm 92 m initialize(11)
+ME
+MB sm 1 tm 94 m initialize(11)
+ME
+MB sm 1 tm 95 m initialize(11)
+ME
+MB sm 1 tm 47 m initialize(11)
+ME
+MB sm 1 tm 48 m initialize(11)
+ME
+MB sm 1 tm 50 m initialize(11)
+BS id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n sendPing k 1001 pe 0
+ES t 0.84426574409
+ME
+MB sm 1 tm 101 m initialize(11)
+ME
+MB sm 1 tm 102 m initialize(11)
+ME
+MB sm 1 tm 103 m initialize(11)
+ME
+MB sm 1 tm 112 m initialize(11)
+ME
+MB sm 1 tm 104 m initialize(11)
+ME
+MB sm 1 tm 116 m initialize(11)
+ME
+MB sm 1 tm 117 m initialize(11)
+ME
+MB sm 1 tm 118 m initialize(11)
+ME
+MB sm 1 tm 119 m initialize(11)
+ME
+MB sm 1 tm 124 m initialize(11)
+ME
+MB sm 1 tm 128 m initialize(11)
+ME
+MB sm 1 tm 139 m initialize(11)
+ME
+MB sm 1 tm 141 m initialize(11)
+ME
+MB sm 1 tm 131 m initialize(11)
+ME
+MB sm 1 tm 132 m initialize(11)
+ME
+MB sm 1 tm 133 m initialize(11)
+ME
+MB sm 1 tm 135 m initialize(11)
+ME
+MB sm 1 tm 136 m initialize(11)
+ME
+MB sm 1 tm 137 m initialize(11)
+ME
+MB sm 1 tm 138 m initialize(11)
+ME
+MB sm 1 tm 126 m initialize(11)
+ME
+MB sm 1 tm 127 m initialize(11)
+ME
+MB sm 1 tm 120 m initialize(11)
+ME
+MB sm 1 tm 144 m initialize(11)
+ME
+MB sm 1 tm 145 m initialize(11)
+ME
+MB sm 1 tm 147 m initialize(11)
+ME
+MB sm 1 tm 148 m initialize(11)
+ME
+MB sm 1 tm 149 m initialize(11)
+ME
+MB sm 1 tm 151 m initialize(11)
+ME
+MB sm 1 tm 152 m initialize(11)
+ME
+MB sm 1 tm 154 m initialize(11)
+ME
+MB sm 1 tm 155 m initialize(11)
+ME
+MB sm 1 tm 108 m initialize(11)
+ME
+MB sm 1 tm 109 m initialize(11)
+ME
+MB sm 1 tm 161 m initialize(11)
+ME
+MB sm 1 tm 162 m initialize(11)
+ME
+MB sm 1 tm 163 m initialize(11)
+ME
+MB sm 1 tm 164 m initialize(11)
+ME
+MB sm 1 tm 166 m initialize(11)
+ME
+MB sm 1 tm 171 m initialize(11)
+ME
+MB sm 1 tm 172 m initialize(11)
+ME
+MB sm 1 tm 173 m initialize(11)
+ME
+MB sm 1 tm 178 m initialize(11)
+ME
+MB sm 1 tm 182 m initialize(11)
+ME
+MB sm 1 tm 193 m initialize(11)
+ME
+MB sm 1 tm 195 m initialize(11)
+ME
+MB sm 1 tm 185 m initialize(11)
+ME
+MB sm 1 tm 186 m initialize(11)
+ME
+MB sm 1 tm 187 m initialize(11)
+ME
+MB sm 1 tm 189 m initialize(11)
+ME
+MB sm 1 tm 190 m initialize(11)
+ME
+MB sm 1 tm 191 m initialize(11)
+ME
+MB sm 1 tm 192 m initialize(11)
+ME
+MB sm 1 tm 180 m initialize(11)
+ME
+MB sm 1 tm 181 m initialize(11)
+ME
+MB sm 1 tm 174 m initialize(11)
+ME
+MB sm 1 tm 198 m initialize(11)
+ME
+MB sm 1 tm 199 m initialize(11)
+ME
+MB sm 1 tm 167 m initialize(11)
+ME
+MB sm 1 tm 202 m initialize(11)
+ME
+MB sm 1 tm 203 m initialize(11)
+ME
+MB sm 1 tm 204 m initialize(11)
+ME
+MB sm 1 tm 209 m initialize(11)
+ME
+MB sm 1 tm 213 m initialize(11)
+ME
+MB sm 1 tm 224 m initialize(11)
+ME
+MB sm 1 tm 226 m initialize(11)
+ME
+MB sm 1 tm 216 m initialize(11)
+ME
+MB sm 1 tm 217 m initialize(11)
+ME
+MB sm 1 tm 218 m initialize(11)
+ME
+MB sm 1 tm 220 m initialize(11)
+ME
+MB sm 1 tm 221 m initialize(11)
+ME
+MB sm 1 tm 222 m initialize(11)
+ME
+MB sm 1 tm 223 m initialize(11)
+ME
+MB sm 1 tm 211 m initialize(11)
+ME
+MB sm 1 tm 212 m initialize(11)
+ME
+MB sm 1 tm 205 m initialize(11)
+ME
+MB sm 1 tm 229 m initialize(11)
+ME
+MB sm 1 tm 230 m initialize(11)
+ME
+MB sm 1 tm 8 m initialize(12)
+ME
+MB sm 1 tm 9 m initialize(12)
+ME
+MB sm 1 tm 10 m initialize(12)
+ME
+MB sm 1 tm 11 m initialize(12)
+ME
+MB sm 1 tm 12 m initialize(12)
+ME
+MB sm 1 tm 13 m initialize(12)
+ME
+MB sm 1 tm 14 m initialize(12)
+ME
+MB sm 1 tm 15 m initialize(12)
+ME
+MB sm 1 tm 16 m initialize(12)
+ME
+MB sm 1 tm 17 m initialize(12)
+ME
+MB sm 1 tm 18 m initialize(12)
+ME
+MB sm 1 tm 19 m initialize(12)
+ME
+MB sm 1 tm 20 m initialize(12)
+ME
+MB sm 1 tm 21 m initialize(12)
+ME
+MB sm 1 tm 22 m initialize(12)
+ME
+MB sm 1 tm 23 m initialize(12)
+ME
+MB sm 1 tm 24 m initialize(12)
+ME
+MB sm 1 tm 25 m initialize(12)
+ME
+MB sm 1 tm 26 m initialize(12)
+ME
+MB sm 1 tm 27 m initialize(12)
+ME
+MB sm 1 tm 28 m initialize(12)
+ME
+MB sm 1 tm 29 m initialize(12)
+ME
+MB sm 1 tm 30 m initialize(12)
+ME
+MB sm 1 tm 31 m initialize(12)
+ME
+MB sm 1 tm 32 m initialize(12)
+ME
+MB sm 1 tm 33 m initialize(12)
+ME
+MB sm 1 tm 3 m initialize(12)
+- INFO (Ieee80211ScalarRadioMedium)MultiRadioShowcase.radioMedium:Initialized (inet::physicallayer::RadioMedium)radioMedium, propagation = { ConstantSpeedPropagation, ignoreMovementDuringTransmission = 1, ignoreMovementDuringPropagation = 1, ignoreMovementDuringReception = 1, propagationSpeed = 2.99792e+008 mps }, pathLoss = { FreeSpacePathLoss, alpha = 2, systemLoss = 1 }, analogModel = { ScalarAnalogModel }, obstacleLoss = nullptr, backgroundNoise = { IsotropicScalarBackgroundNoise, power = 0.01 pW, bandwidth = 22 MHz }, mediumLimitCache = { RadioMediumLimits, minConstraintArea = (227, 100, 0) m, maxConstraintArea = (531, 203, 0) m, maxSpeed = 0 mps, maxTransmissionPower = 20 mW, minInterferencePower = 0.01 pW, minReceptionPower = 3.16228 pW, maxAntennaGain = 1, minInterferenceTime = 0.000000000001, maxTransmissionDuration = 0.01, maxCommunicationRange = 790.523 m, maxInterferenceRange = 14057.7 m }, neighborCache = nullptr, communicationCache = { VectorCommunicationCache }
+ME
+MB sm 1 tm 35 m initialize(12)
+ME
+MB sm 1 tm 38 m initialize(12)
+ME
+MB sm 1 tm 4 m initialize(12)
+ME
+MB sm 1 tm 40 m initialize(12)
+ME
+MB sm 1 tm 41 m initialize(12)
+ME
+MB sm 1 tm 42 m initialize(12)
+ME
+MB sm 1 tm 52 m initialize(12)
+ME
+MB sm 1 tm 43 m initialize(12)
+ME
+MB sm 1 tm 56 m initialize(12)
+ME
+MB sm 1 tm 57 m initialize(12)
+ME
+MB sm 1 tm 58 m initialize(12)
+ME
+MB sm 1 tm 59 m initialize(12)
+ME
+MB sm 1 tm 64 m initialize(12)
+ME
+MB sm 1 tm 68 m initialize(12)
+ME
+MB sm 1 tm 79 m initialize(12)
+MB sm 79 tm 12 m ""
+ME
+MS id 79 d "t=contains 0 pk (0 B) pushed 0\npopped 0 removed 0 dropped 0;p=100,100;i=block/queue"
+ME
+MB sm 1 tm 81 m initialize(12)
+ME
+MB sm 1 tm 71 m initialize(12)
+ME
+MB sm 1 tm 72 m initialize(12)
+ME
+MB sm 1 tm 73 m initialize(12)
+ME
+MB sm 1 tm 75 m initialize(12)
+ME
+MB sm 1 tm 76 m initialize(12)
+ME
+MB sm 1 tm 77 m initialize(12)
+ME
+MB sm 1 tm 78 m initialize(12)
+ME
+MB sm 1 tm 66 m initialize(12)
+ME
+MB sm 1 tm 67 m initialize(12)
+ME
+MB sm 1 tm 60 m initialize(12)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host1.wlan[0].radio:Initialized (inet::physicallayer::Ieee80211Radio)radio, antenna = { IsotropicAntenna }, transmitter = { Ieee80211ScalarTransmitter, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 2.4 GHz }, mode = { Ieee80211ErpOfdmMode }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 2.4 GHz }, channelNumber = 0 }, preambleDuration = -9223372.036854775808, headerLength = 24 B, bitrate = -1 bps, power = 20 mW, modulation = { BpskModulation }, centerFrequency = 2.412 GHz, bandwidth = nan Hz }, receiver = { Ieee80211ScalarReceiver, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 2.4 GHz }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 2.4 GHz }, channelNumber = 0 }, errorModel = { Ieee80211NistErrorModel }, energyDetection = 3.16228 pW, sensitivity = 3.16228 pW, modulation = { BpskModulation }, centerFrequency = 2.412 GHz, bandwidth = 22 MHz, snirThreshold = 2.51189 }
+ME
+MB sm 1 tm 84 m initialize(12)
+ME
+MB sm 1 tm 85 m initialize(12)
+ME
+MB sm 1 tm 87 m initialize(12)
+ME
+MB sm 1 tm 88 m initialize(12)
+ME
+MB sm 1 tm 89 m initialize(12)
+ME
+MB sm 1 tm 91 m initialize(12)
+ME
+MB sm 1 tm 92 m initialize(12)
+ME
+MB sm 1 tm 94 m initialize(12)
+ME
+MB sm 1 tm 95 m initialize(12)
+ME
+MB sm 1 tm 47 m initialize(12)
+ME
+MB sm 1 tm 48 m initialize(12)
+ME
+MB sm 1 tm 50 m initialize(12)
+ME
+MB sm 1 tm 101 m initialize(12)
+ME
+MB sm 1 tm 102 m initialize(12)
+ME
+MB sm 1 tm 103 m initialize(12)
+ME
+MB sm 1 tm 112 m initialize(12)
+ME
+MB sm 1 tm 104 m initialize(12)
+ME
+MB sm 1 tm 116 m initialize(12)
+ME
+MB sm 1 tm 117 m initialize(12)
+ME
+MB sm 1 tm 118 m initialize(12)
+ME
+MB sm 1 tm 119 m initialize(12)
+ME
+MB sm 1 tm 124 m initialize(12)
+ME
+MB sm 1 tm 128 m initialize(12)
+ME
+MB sm 1 tm 139 m initialize(12)
+MB sm 139 tm 12 m ""
+ME
+MS id 139 d "t=contains 0 pk (0 B) pushed 0\npopped 0 removed 0 dropped 0;p=100,100;i=block/queue"
+ME
+MB sm 1 tm 141 m initialize(12)
+ME
+MB sm 1 tm 131 m initialize(12)
+ME
+MB sm 1 tm 132 m initialize(12)
+ME
+MB sm 1 tm 133 m initialize(12)
+ME
+MB sm 1 tm 135 m initialize(12)
+ME
+MB sm 1 tm 136 m initialize(12)
+ME
+MB sm 1 tm 137 m initialize(12)
+ME
+MB sm 1 tm 138 m initialize(12)
+ME
+MB sm 1 tm 126 m initialize(12)
+ME
+MB sm 1 tm 127 m initialize(12)
+ME
+MB sm 1 tm 120 m initialize(12)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.host2.wlan[0].radio:Initialized (inet::physicallayer::Ieee80211Radio)radio, antenna = { IsotropicAntenna }, transmitter = { Ieee80211ScalarTransmitter, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 5 GHz }, mode = { Ieee80211ErpOfdmMode }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 5 GHz }, channelNumber = 0 }, preambleDuration = -9223372.036854775808, headerLength = 24 B, bitrate = -1 bps, power = 20 mW, modulation = { BpskModulation }, centerFrequency = 5.0025 GHz, bandwidth = nan Hz }, receiver = { Ieee80211ScalarReceiver, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 5 GHz }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 5 GHz }, channelNumber = 0 }, errorModel = { Ieee80211NistErrorModel }, energyDetection = 3.16228 pW, sensitivity = 3.16228 pW, modulation = { BpskModulation }, centerFrequency = 5.0025 GHz, bandwidth = 22 MHz, snirThreshold = 2.51189 }
+ME
+MB sm 1 tm 144 m initialize(12)
+ME
+MB sm 1 tm 145 m initialize(12)
+ME
+MB sm 1 tm 147 m initialize(12)
+ME
+MB sm 1 tm 148 m initialize(12)
+ME
+MB sm 1 tm 149 m initialize(12)
+ME
+MB sm 1 tm 151 m initialize(12)
+ME
+MB sm 1 tm 152 m initialize(12)
+ME
+MB sm 1 tm 154 m initialize(12)
+ME
+MB sm 1 tm 155 m initialize(12)
+ME
+MB sm 1 tm 108 m initialize(12)
+ME
+MB sm 1 tm 109 m initialize(12)
+ME
+MB sm 1 tm 161 m initialize(12)
+ME
+MB sm 1 tm 162 m initialize(12)
+ME
+MB sm 1 tm 163 m initialize(12)
+ME
+MB sm 1 tm 164 m initialize(12)
+ME
+MB sm 1 tm 166 m initialize(12)
+ME
+MB sm 1 tm 171 m initialize(12)
+ME
+MB sm 1 tm 172 m initialize(12)
+ME
+MB sm 1 tm 173 m initialize(12)
+ME
+MB sm 1 tm 178 m initialize(12)
+ME
+MB sm 1 tm 182 m initialize(12)
+ME
+MB sm 1 tm 193 m initialize(12)
+MB sm 193 tm 12 m ""
+ME
+MS id 193 d "t=contains 0 pk (0 B) pushed 0\npopped 0 removed 0 dropped 0;p=100,100;i=block/queue"
+ME
+MB sm 1 tm 195 m initialize(12)
+ME
+MB sm 1 tm 185 m initialize(12)
+ME
+MB sm 1 tm 186 m initialize(12)
+ME
+MB sm 1 tm 187 m initialize(12)
+ME
+MB sm 1 tm 189 m initialize(12)
+ME
+MB sm 1 tm 190 m initialize(12)
+ME
+MB sm 1 tm 191 m initialize(12)
+ME
+MB sm 1 tm 192 m initialize(12)
+ME
+MB sm 1 tm 180 m initialize(12)
+ME
+MB sm 1 tm 181 m initialize(12)
+ME
+MB sm 1 tm 174 m initialize(12)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[0].radio:Initialized (inet::physicallayer::Ieee80211Radio)radio, antenna = { IsotropicAntenna }, transmitter = { Ieee80211ScalarTransmitter, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 2.4 GHz }, mode = { Ieee80211ErpOfdmMode }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 2.4 GHz }, channelNumber = 0 }, preambleDuration = -9223372.036854775808, headerLength = 24 B, bitrate = -1 bps, power = 20 mW, modulation = { BpskModulation }, centerFrequency = 2.412 GHz, bandwidth = nan Hz }, receiver = { Ieee80211ScalarReceiver, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 2.4 GHz }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 2.4 GHz }, channelNumber = 0 }, errorModel = { Ieee80211NistErrorModel }, energyDetection = 3.16228 pW, sensitivity = 3.16228 pW, modulation = { BpskModulation }, centerFrequency = 2.412 GHz, bandwidth = 22 MHz, snirThreshold = 2.51189 }
+ME
+MB sm 1 tm 198 m initialize(12)
+ME
+MB sm 1 tm 199 m initialize(12)
+ME
+MB sm 1 tm 167 m initialize(12)
+ME
+MB sm 1 tm 202 m initialize(12)
+ME
+MB sm 1 tm 203 m initialize(12)
+ME
+MB sm 1 tm 204 m initialize(12)
+ME
+MB sm 1 tm 209 m initialize(12)
+ME
+MB sm 1 tm 213 m initialize(12)
+ME
+MB sm 1 tm 224 m initialize(12)
+MB sm 224 tm 12 m ""
+ME
+MS id 224 d "t=contains 0 pk (0 B) pushed 0\npopped 0 removed 0 dropped 0;p=100,100;i=block/queue"
+ME
+MB sm 1 tm 226 m initialize(12)
+ME
+MB sm 1 tm 216 m initialize(12)
+ME
+MB sm 1 tm 217 m initialize(12)
+ME
+MB sm 1 tm 218 m initialize(12)
+ME
+MB sm 1 tm 220 m initialize(12)
+ME
+MB sm 1 tm 221 m initialize(12)
+ME
+MB sm 1 tm 222 m initialize(12)
+ME
+MB sm 1 tm 223 m initialize(12)
+ME
+MB sm 1 tm 211 m initialize(12)
+ME
+MB sm 1 tm 212 m initialize(12)
+ME
+MB sm 1 tm 205 m initialize(12)
+- INFO (Ieee80211ScalarRadio)MultiRadioShowcase.accessPoint.wlan[1].radio:Initialized (inet::physicallayer::Ieee80211Radio)radio, antenna = { IsotropicAntenna }, transmitter = { Ieee80211ScalarTransmitter, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 5 GHz }, mode = { Ieee80211ErpOfdmMode }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 5 GHz }, channelNumber = 0 }, preambleDuration = -9223372.036854775808, headerLength = 24 B, bitrate = -1 bps, power = 20 mW, modulation = { BpskModulation }, centerFrequency = 5.0025 GHz, bandwidth = nan Hz }, receiver = { Ieee80211ScalarReceiver, modeSet = { Ieee80211ModeSet, name = g(mixed) }, band = { Ieee80211Band, name = 5 GHz }, channel = { Ieee80211Channel, band = { Ieee80211Band, name = 5 GHz }, channelNumber = 0 }, errorModel = { Ieee80211NistErrorModel }, energyDetection = 3.16228 pW, sensitivity = 3.16228 pW, modulation = { BpskModulation }, centerFrequency = 5.0025 GHz, bandwidth = 22 MHz, snirThreshold = 2.51189 }
+ME
+MB sm 1 tm 229 m initialize(12)
+ME
+MB sm 1 tm 230 m initialize(12)
+ME
+MB sm 40 tm 12 m ""
+ME
+MS id 40 d "t=p: (227\\, 203\\, 0) m\nv: (0\\, 0\\, 0) m;is=s;p=125,160;i=block/cogwheel"
+MB sm 41 tm 12 m ""
+ME
+MS id 41 d is=s;p=125,240;i=block/table
+MB sm 41 tm 12 m ""
+ME
+MS id 41 d "t=2 interfaces;is=s;p=125,240;i=block/table"
+MB sm 52 tm 12 m ""
+ME
+MS id 52 d p=250,200;i=block/rxtx
+MB sm 52 tm 12 m ""
+ME
+MS id 52 d "t=rcv:0 snt:0;p=250,200;i=block/rxtx"
+MB sm 42 tm 12 m ""
+ME
+MS id 42 d "t=127.0.0.1 (100)\n00-00-00-00-00-00;p=750,526,row,150;i=block/ifcard;bgl=53"
+MB sm 55 tm 12 m ""
+ME
+MS id 55 d "t=Address: 0A-AA-00-00-00-01\nSSID: \\, 00-00-00-00-00-00\nInfrastructure\\, STA\\, Non-QoS\nNot associated;is=s;p=100,100;i=block/table"
+MB sm 56 tm 12 m ""
+ME
+MS id 56 d p=250,200;i=block/layer
+MB sm 58 tm 12 m ""
+ME
+MS id 58 d p=400,350;i=block/cogwheel
+MB sm 68 tm 12 m ""
+ME
+MS id 68 d t=Idle;p=150,100;i=block/star
+MB sm 66 tm 12 m ""
+ME
+MS id 66 d t=FREE;p=100,200;i=block/rx
+MB sm 67 tm 12 m ""
+ME
+MS id 67 d t=IDLE;p=250,200;i=block/tx
+MB sm 59 tm 12 m ""
+ME
+MS id 59 d p=250,350;i=block/layer
+MB sm 60 tm 12 m ""
+ME
+MS id 60 d p=250,500;i=block/wrxtx
+MB sm 43 tm 12 m ""
+ME
+MS id 43 d "t=10.0.0.1 (101)\n0A-AA-00-00-00-01;q=queue;p=375,616,row,150;i=block/ifcard"
+MB sm 88 tm 12 m ""
+ME
+MS id 88 d "t=routerId: 10.0.0.1\n3+0 routes;is=s;p=100,200;i=block/table"
+MB sm 94 tm 12 m ""
+ME
+MS id 94 d q=queue;p=700,400;i=block/routing
+MB sm 95 tm 12 m ""
+ME
+MS id 95 d q=pendingQueue;p=400,400;i=block/layer
+MB sm 47 tm 12 m ""
+ME
+MS id 47 d p=375,226;i=block/transport
+MB sm 47 tm 12 m ""
+ME
+MS id 47 d "t=passed up: 0 pks\nsent: 0 pks;p=375,226;i=block/transport"
+MB sm 48 tm 12 m ""
+ME
+MS id 48 d p=525,226;i=block/wheelbarrow
+MB sm 50 tm 12 m ""
+ME
+MS id 50 d p=375,76,row,150;i=block/app
+MB sm 50 tm 12 m ""
+ME
+MS id 50 d "t=sent: 0 pks\nrcvd: 0 pks;p=375,76,row,150;i=block/app"
+MB sm 101 tm 12 m ""
+ME
+MS id 101 d "t=p: (531\\, 203\\, 0) m\nv: (0\\, 0\\, 0) m;is=s;p=125,160;i=block/cogwheel"
+MB sm 102 tm 12 m ""
+ME
+MS id 102 d is=s;p=125,240;i=block/table
+MB sm 102 tm 12 m ""
+ME
+MS id 102 d "t=2 interfaces;is=s;p=125,240;i=block/table"
+MB sm 112 tm 12 m ""
+ME
+MS id 112 d p=250,200;i=block/rxtx
+MB sm 112 tm 12 m ""
+ME
+MS id 112 d "t=rcv:0 snt:0;p=250,200;i=block/rxtx"
+MB sm 103 tm 12 m ""
+ME
+MS id 103 d "t=127.0.0.1 (100)\n00-00-00-00-00-00;p=750,526,row,150;i=block/ifcard;bgl=53"
+MB sm 115 tm 12 m ""
+ME
+MS id 115 d "t=Address: 0A-AA-00-00-00-02\nSSID: \\, 00-00-00-00-00-00\nInfrastructure\\, STA\\, Non-QoS\nNot associated;is=s;p=100,100;i=block/table"
+MB sm 116 tm 12 m ""
+ME
+MS id 116 d p=250,200;i=block/layer
+MB sm 118 tm 12 m ""
+ME
+MS id 118 d p=400,350;i=block/cogwheel
+MB sm 128 tm 12 m ""
+ME
+MS id 128 d t=Idle;p=150,100;i=block/star
+MB sm 126 tm 12 m ""
+ME
+MS id 126 d t=FREE;p=100,200;i=block/rx
+MB sm 127 tm 12 m ""
+ME
+MS id 127 d t=IDLE;p=250,200;i=block/tx
+MB sm 119 tm 12 m ""
+ME
+MS id 119 d p=250,350;i=block/layer
+MB sm 120 tm 12 m ""
+ME
+MS id 120 d p=250,500;i=block/wrxtx
+MB sm 104 tm 12 m ""
+ME
+MS id 104 d "t=10.0.0.2 (101)\n0A-AA-00-00-00-02;q=queue;p=375,616,row,150;i=block/ifcard"
+MB sm 148 tm 12 m ""
+ME
+MS id 148 d "t=routerId: 10.0.0.2\n3+0 routes;is=s;p=100,200;i=block/table"
+MB sm 154 tm 12 m ""
+ME
+MS id 154 d q=queue;p=700,400;i=block/routing
+MB sm 155 tm 12 m ""
+ME
+MS id 155 d q=pendingQueue;p=400,400;i=block/layer
+MB sm 108 tm 12 m ""
+ME
+MS id 108 d p=375,226;i=block/transport
+MB sm 108 tm 12 m ""
+ME
+MS id 108 d "t=passed up: 0 pks\nsent: 0 pks;p=375,226;i=block/transport"
+MB sm 109 tm 12 m ""
+ME
+MS id 109 d p=525,226;i=block/wheelbarrow
+MB sm 161 tm 12 m ""
+ME
+MS id 161 d is=s;p=100,200;i=block/table
+MB sm 161 tm 12 m ""
+ME
+MS id 161 d "t=2 interfaces;is=s;p=100,200;i=block/table"
+MB sm 162 tm 12 m ""
+ME
+MS id 162 d "t=p: (384\\, 100\\, 0) m\nv: (0\\, 0\\, 0) m;is=s;p=100,400;i=block/cogwheel"
+MB sm 163 tm 12 m ""
+ME
+MS id 163 d "t=addr: 0\nvlan: 0;is=s;p=100,300;i=block/table2"
+MB sm 164 tm 12 m ""
+ME
+MS id 164 d p=400,100;i=block/broadcast;bgb=425,114
+MB sm 170 tm 12 m ""
+ME
+MS id 170 d "t=Address: 0A-AA-00-00-00-03\nSSID: wlan2.4\\, 0A-AA-00-00-00-03\nInfrastructure\\, AP\\, Non-QoS;is=s;p=100,100;i=block/table"
+MB sm 172 tm 12 m ""
+ME
+MS id 172 d p=400,350;i=block/cogwheel
+MB sm 182 tm 12 m ""
+ME
+MS id 182 d t=Idle;p=150,100;i=block/star
+MB sm 180 tm 12 m ""
+ME
+MS id 180 d t=FREE;p=100,200;i=block/rx
+MB sm 181 tm 12 m ""
+ME
+MS id 181 d t=IDLE;p=250,200;i=block/tx
+MB sm 173 tm 12 m ""
+ME
+MS id 173 d p=250,350;i=block/layer
+MB sm 174 tm 12 m ""
+ME
+MS id 174 d p=250,500;i=block/wrxtx
+MB sm 166 tm 12 m ""
+ME
+MS id 166 d "t=accessPoint.wlan[0] (100)\n0A-AA-00-00-00-03;q=queue;p=250,300,row,150;i=block/ifcard"
+MB sm 201 tm 12 m ""
+ME
+MS id 201 d "t=Address: 0A-AA-00-00-00-04\nSSID: wlan5\\, 0A-AA-00-00-00-04\nInfrastructure\\, AP\\, Non-QoS;is=s;p=100,100;i=block/table"
+MB sm 203 tm 12 m ""
+ME
+MS id 203 d p=400,350;i=block/cogwheel
+MB sm 213 tm 12 m ""
+ME
+MS id 213 d t=Idle;p=150,100;i=block/star
+MB sm 211 tm 12 m ""
+ME
+MS id 211 d t=FREE;p=100,200;i=block/rx
+MB sm 212 tm 12 m ""
+ME
+MS id 212 d t=IDLE;p=250,200;i=block/tx
+MB sm 204 tm 12 m ""
+ME
+MS id 204 d p=250,350;i=block/layer
+MB sm 205 tm 12 m ""
+ME
+MS id 205 d p=250,500;i=block/wrxtx
+MB sm 167 tm 12 m ""
+ME
+MS id 167 d "t=accessPoint.wlan[1] (101)\n0A-AA-00-00-00-04;q=queue;p=250,300,row,150;i=block/ifcard"
+MB sm 41 tm 12 m ""
+ME
+MS id 41 d "t=2 interfaces;is=s;p=125,240;i=block/table"
+MB sm 52 tm 12 m ""
+ME
+MS id 52 d "t=rcv:0 snt:0;p=250,200;i=block/rxtx"
+MB sm 56 tm 12 m ""
+ME
+MS id 56 d p=250,200;i=block/layer
+MB sm 58 tm 12 m ""
+ME
+MS id 58 d p=400,350;i=block/cogwheel
+MB sm 59 tm 12 m ""
+ME
+MS id 59 d p=250,350;i=block/layer
+MB sm 60 tm 12 m ""
+ME
+MS id 60 d p=250,500;i=block/wrxtx
+MB sm 94 tm 12 m ""
+ME
+MS id 94 d q=queue;p=700,400;i=block/routing
+MB sm 95 tm 12 m ""
+ME
+MS id 95 d q=pendingQueue;p=400,400;i=block/layer
+MB sm 47 tm 12 m ""
+ME
+MS id 47 d "t=passed up: 0 pks\nsent: 0 pks;p=375,226;i=block/transport"
+MB sm 48 tm 12 m ""
+ME
+MS id 48 d p=525,226;i=block/wheelbarrow
+MB sm 50 tm 12 m ""
+ME
+MS id 50 d "t=sent: 0 pks\nrcvd: 0 pks;p=375,76,row,150;i=block/app"
+MB sm 102 tm 12 m ""
+ME
+MS id 102 d "t=2 interfaces;is=s;p=125,240;i=block/table"
+MB sm 112 tm 12 m ""
+ME
+MS id 112 d "t=rcv:0 snt:0;p=250,200;i=block/rxtx"
+MB sm 116 tm 12 m ""
+ME
+MS id 116 d p=250,200;i=block/layer
+MB sm 118 tm 12 m ""
+ME
+MS id 118 d p=400,350;i=block/cogwheel
+MB sm 119 tm 12 m ""
+ME
+MS id 119 d p=250,350;i=block/layer
+MB sm 120 tm 12 m ""
+ME
+MS id 120 d p=250,500;i=block/wrxtx
+MB sm 154 tm 12 m ""
+ME
+MS id 154 d q=queue;p=700,400;i=block/routing
+MB sm 155 tm 12 m ""
+ME
+MS id 155 d q=pendingQueue;p=400,400;i=block/layer
+MB sm 108 tm 12 m ""
+ME
+MS id 108 d "t=passed up: 0 pks\nsent: 0 pks;p=375,226;i=block/transport"
+MB sm 109 tm 12 m ""
+ME
+MS id 109 d p=525,226;i=block/wheelbarrow
+MB sm 161 tm 12 m ""
+ME
+MS id 161 d "t=2 interfaces;is=s;p=100,200;i=block/table"
+MB sm 164 tm 12 m ""
+ME
+MS id 164 d p=400,100;i=block/broadcast;bgb=425,114
+MB sm 172 tm 12 m ""
+ME
+MS id 172 d p=400,350;i=block/cogwheel
+MB sm 173 tm 12 m ""
+ME
+MS id 173 d p=250,350;i=block/layer
+MB sm 174 tm 12 m ""
+ME
+MS id 174 d p=250,500;i=block/wrxtx
+MB sm 203 tm 12 m ""
+ME
+MS id 203 d p=400,350;i=block/co
